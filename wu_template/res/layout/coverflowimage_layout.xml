@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <wu.a.lib.view.CoverFlowImage
+        xmlns:coverFlow="http://schemas.android.com/apk/res/com.android.wjx.customview"
+        android:id="@+id/Gallery01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F00" />
+
+</LinearLayout>

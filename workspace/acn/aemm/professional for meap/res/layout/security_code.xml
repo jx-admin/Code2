@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bodyBK" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titleBK"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bodyMarginLR"
+                android:text="@string/repairwordSTR"
+                android:textColor="@color/titleFontC" />
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/marginTB"
+                android:layout_marginRight="@dimen/marginR"
+                android:layout_marginTop="@dimen/marginTB"
+                android:text="@string/submitSTR" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bodyMarginLR"
+            android:layout_marginRight="@dimen/bodyMarginLR"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/decription_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/quanstion_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/verify_iv"
+                    android:layout_width="60dip"
+                    android:layout_height="30dip"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/refresh_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:textColor="#99f"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/nextpice" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/answer_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/error_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f00" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:id="@+id/personalizationlayout" android:background="@drawable/personalization_main_background"  android:layout_width="wrap_content" android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<Button android:paddingTop="73dp" android:paddingBottom="73dp" android:paddingRight="83dp" android:paddingLeft="82dp" android:layout_x="-19dp" android:layout_y="29dp" android:text="Skin" android:id="@+id/skin" android:layout_marginRight="500dp" android:background="@drawable/personal_main_button_background" android:textColor="@color/write" android:textSize="18sp" android:layout_margin="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+<Button android:paddingTop="73dp" android:paddingBottom="73dp" android:paddingRight="67dp" android:paddingLeft="60dp" android:layout_x="151dp" android:layout_y="30dp" android:text="Wallpaper" android:background="@drawable/personal_main_button_background" android:id="@+id/wallpaper" android:textColor="@color/write" android:textSize="16sp" android:layout_margin="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+<Button android:paddingTop="73dp" android:paddingBottom="73dp" android:paddingRight="78dp" android:paddingLeft="77dp" android:layout_x="64dp" android:layout_y="169dp" android:text="Scene" android:background="@drawable/personal_main_button_background" android:textColor="@color/write" android:textSize="18sp" android:id="@+id/scene" android:layout_margin="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+<Button android:paddingTop="73dp" android:paddingBottom="73dp" android:paddingRight="82dp" android:paddingLeft="82dp" android:layout_x="-20dp" android:layout_y="309dp" android:text="Icon" android:background="@drawable/personal_main_button_background" android:textColor="@color/write" android:textSize="18sp" android:id="@+id/icon" android:layout_margin="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+<Button android:paddingTop="73dp" android:paddingBottom="73dp" android:paddingRight="60dp" android:paddingLeft="57dp" android:layout_x="150dp" android:layout_y="310dp" android:text="Lock Screen" android:background="@drawable/personal_main_button_background" android:textColor="@color/write" android:textSize="16sp" android:id="@+id/lockscreen" android:layout_margin="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+</AbsoluteLayout>

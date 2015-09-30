@@ -1,0 +1,52 @@
+1. 拍照
+1.1 拍照片的API的实现都在Camera.java里面，文件路径如下
+frameworks/base/core/java/android/hardware/Camera.java
+
+我们需要关心的几个API如下
+public static Camera open(int cameraId);
+public static Camera open();
+
+启动自带相机程序时会异常终止并退出。
+可以通过强制当前进程方式解决。这种方法也有个小缺陷，就是，需要按一下回车键才能操作屏幕。
+if(true) {
+    android.os.Process.killProcess(android.os.Process.myPid());
+    System.exit(0);
+}
+
+1.2 native API在android_hardware_Camera.cpp里面，文件路径如下
+frameworks/base/core/jni/android_hardware_Camera.cpp
+java API startPreview，对应jni函数名为，
+android_hardware_Camera_startPreview
+直接在这个函数返回。缺点是Camera Application不再响应回车键，只能用Home键退出程序。
+
+2. 录像
+1.1 录像API实现都在MediaRecorder.java里面，文件路径如下
+frameworks/base/media/java/android/media/MediaRecorder.java
+
+录像的启动步骤大概如下（参照代码注释），
+recorder = new MediaRecorder();
+recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+recorder.setOutputFile(PATH_NAME);
+recorder.prepare();
+recorder.start();   // Recording is now started
+....
+
+由于除了下面这三个函数之外都是Native API，所以如果打算只在java层屏蔽录像的话这三个API都是可以的，
+prepare函数会检查输出文件，所以可以只在prepare函数做屏蔽处理。
+在prepare函数扔出异常会导致系统自带相机程序异常终止退出。
+public void setOutputFile(FileDescriptor fd) throws IllegalStateException
+public void setOutputFile(String path) throws IllegalStateException
+public void prepare() throws IllegalStateException, IOException;
+
+和拍照一样，也可已通过强制进程退出解决。
+
+除了上面列出的几个函数还有这个：
+public native void setCamera(Camera c);
+
+也就是MediaRecorder是要依赖Camera的，如果Camera被屏蔽掉了，MediaRecorder自然就无法启动。
+
+1.2 native API在android_media_MediaRecorder.cpp里面，文件路径如下
+frameworks/base/media/jni/android_media_MediaRecorder.cpp
+java API start 对应的jni函数为android_media_MediaRecorder_start，也是直接返回。这个方案对于录像来说可行，还没有罚发现问题。

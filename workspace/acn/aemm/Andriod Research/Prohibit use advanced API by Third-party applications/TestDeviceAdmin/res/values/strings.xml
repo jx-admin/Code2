@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, TestDeviceAdmin!</string>
+    <string name="app_name">TestDeviceAdmin</string>
+     <string name="activity_sample_device_admin">My Device Admin</string>
+    <string name="sample_device_admin">Sample Device Admin</string>
+    <string name="sample_device_admin_description">Sample code for writing
+        a DeviceAdmin class.  This implementation provides a UI (in ApiDemos)
+        for you to directly control what the DeviceAdmin does with the
+        system.</string>
+
+    <string name="sample_device_admin_summary">Demonstration of a DeviceAdmin
+        class for administering the user\'s device.</string>
+    <string name="enable_admin">Enable Admin</string>
+    <string name="disable_admin">Disable Admin</string>
+    <string name="password_quality">Password Quality</string>
+    <string name="password_length_hint">Minimum Length</string>
+    <string name="set_password">Set Password</string>
+    <string name="password_hint">Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="max_failed_pw_hint">Password Attempts Wipe Data</string>
+    <string name="force_lock">Force Lock</string>
+    <string name="wipe_data">Wipe Data</string>
+    <string name="wipe_all_data">Wipe All Data</string>
+    <string name="timeout_hint">Max screen timeout</string>
+    <string name="set_timeout_label">Set Timeout</string>
+</resources>

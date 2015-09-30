@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="sys_log_keep_day">
+		<item>1day</item>
+		<item>2days</item>
+		<item>3days</item>
+		<item>4days</item>
+		<item>5days</item>
+		<item>6days</item>
+		<item>7days</item>
+		<item>8days</item>
+		<item>9days</item>
+		<item>10days</item>
+		<item>20days</item>
+		<item>30days</item>
+	</string-array>
+	<string-array name="sys_log_keep_dayvalues">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+	</string-array>
+	
+<string-array name="sys_pushrate_entries">     
+		<item>30 minute</item>
+		<item>40 minute</item>
+		<item>50 minute</item>
+		<item>60 minute</item>
+		<item>120 minute</item>
+	</string-array>
+	<!-- 下面单位是毫秒 60*1000=60000=1分钟 -->
+	<string-array name="sys_pushrate_entryValues">	 
+		<item>1800000</item>
+		<item>2400000</item>
+		<item>3000000</item>
+		<item>3600000</item>
+		<item>7200000</item>
+	</string-array>
+	
+	
+
+	<string-array name="sys_log_keep_grade">
+		<item>Debug(Debug)</item>
+		<item>Info(Information)</item>
+		<item>Error(Error)</item>
+	</string-array>
+	<string-array name="sys_log_keep_gradevalues">
+		<item>D</item>
+		<item>I</item>
+		<item>E</item>
+	</string-array>
+
+
+</resources>

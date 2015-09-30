@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <!-- apk item -->
+    <!-- icon -->
+
+    <include layout="@layout/icon_item" />
+
+    <com.aess.aemm.view.EllipsizingTextView
+        android:id="@+id/apk_descrip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="@dimen/apk_descrip_l_margin"
+        android:layout_marginTop="@dimen/edit_half"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="Descreiption TextView01 第三方的会计法斯科拉的房间上的机房接受对方即可舒服点地方就爱上了第三方第三方的会计法斯科拉的房间上的机房接受对方即可舒服点地方就爱上了第三方"
+        android:visibility="gone" />
+
+</LinearLayout>

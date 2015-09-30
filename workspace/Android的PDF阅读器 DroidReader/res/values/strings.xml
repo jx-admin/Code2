@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">DroidReader</string>
+<string name="app_desc">An Open Source PDF Reader for the Android Platform</string>
+<string name="button_page_cancel">Cancel</string>
+<string name="button_page_open">Open</string>
+<string name="button_pwddialog_cancel">Cancel</string>
+<string name="button_pwddialog_open">Open PDF...</string>
+<string name="button_ok">OK</string>
+<string name="error_no_filemanager_installed">No filemanager found that we could use!</string>
+<string name="error_no_such_page">Sorry, no such page!</string>
+<string name="error_only_file_uris">Sorry, only &quot;file://&quot; URIs are currently supported.</string>
+<string name="error_opening_document">Failed to open the document. The PDF file might be broken.</string>
+<string name="error_wrong_password">The password you have given is incorrect!</string>
+<string name="eula_title">License</string>
+<string name="eula_accept">Accept</string>
+<string name="eula_refuse">Refuse</string>
+<string name="menu_zoom">Zoom</string>
+<string name="menu_zoom_in">Zoom in...</string>
+<string name="menu_zoom_out">Zoom out...</string>
+<string name="menu_zoom_fit">Fit to page</string>
+<string name="menu_zoom_fitw">Fit to page width</string>
+<string name="menu_zoom_fith">Fit to page height</string>
+<string name="menu_zoom_orig">Reset to 100%</string>
+<string name="menu_rotation">Rotate</string>
+<string name="menu_rotation_left">Rotate 90° left</string>
+<string name="menu_rotation_right">Rotate 90° right</string>
+<string name="menu_file">File</string>
+<string name="menu_file_open">Open PDF</string>
+<string name="menu_file_options">Preferences</string>
+<string name="menu_file_about">About DroidReader</string>
+<string name="menu_file_quit">Quit DroidReader</string>
+<string name="menu_goto">Go to...</string>
+<string name="menu_goto_first">first page</string>
+<string name="menu_goto_last">last page</string>
+<string name="menu_goto_ask">enter page no...</string>
+<string name="open_title">Open PDF File...</string>
+<string name="prompt_goto_page">Enter the page number you want to jump to:</string>
+<string name="prompt_password">The file you are opening is protected with a password. Please enter it here:</string>
+<string name="prefs_zoom">Zoom on startup:</string>
+<string name="prefs_zoom_type">Zoom type</string>
+<string name="prefs_zoom_percent">Zoom in Percent</string>
+<string-array name="prefs_zoom_entries">
+ <item>Fit to page</item>
+ <item>Fit to page width</item>
+ <item>Fit to page height</item>
+ <item>Set fixed zoom factor</item>
+</string-array>
+<string-array name="prefs_zoom_values">
+ <item>-1</item>
+ <item>-2</item>
+ <item>-3</item>
+ <item>0</item>
+</string-array>
+<string name="prefs_advanced">Advanced preferences</string>
+<string name="prefs_dpi_auto">Auto DPI</string>
+<string name="prefs_dpi_manual">Manual DPI</string>
+<string name="prefs_tile_size_by_factor">Calc tile size by factor</string>
+<string name="prefs_tile_size_factor">Factor</string>
+<string name="prefs_tile_size_x">Shorter tile side</string>
+<string name="prefs_tile_size_y">Longer tile side</string>
+<string name="prefs_dpi">Display: DPI</string>
+<string name="prefs_tile_size">Render engine tile size</string>
+<string name="prefs_cid_fonts">CID fonts</string>
+<string name="prefs_cid_default_font">/system/fonts/DroidSansFallback.ttf</string>
+<string name="prefs_cid_font_Adobe_CNS1_mincho">Adobe-CNS1 Mincho</string>
+<string name="prefs_cid_font_Adobe_CNS1_gothic">Adobe-CNS1 Gothic</string>
+<string name="prefs_cid_font_Adobe_GB1_mincho">Adobe-GB1 Mincho</string>
+<string name="prefs_cid_font_Adobe_GB1_gothic">Adobe-GB1 Gothic</string>
+<string name="prefs_cid_font_Adobe_Japan1_mincho">Adobe-Japan1 Mincho</string>
+<string name="prefs_cid_font_Adobe_Japan1_gothic">Adobe-Japan1 Gothic</string>
+<string name="prefs_cid_font_Adobe_Japan2_mincho">Adobe-Japan2 Mincho</string>
+<string name="prefs_cid_font_Adobe_Japan2_gothic">Adobe-Japan2 Gothic</string>
+<string name="prefs_cid_font_Adobe_Korea1_mincho">Adobe-Korea1 Mincho</string>
+<string name="prefs_cid_font_Adobe_Korea1_gothic">Adobe-Korea1 Gothic</string>
+<string name="status_no_document">No document loaded.</string>
+<string name="status_page_rendering">Rendering page...</string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+<style name="halp_Transparent">
+　　<item name="android:windowBackground">@color/halp_transparent</item>
+　　<item name="android:windowIsTranslucent">true</item>
+　　<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+　　</style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
+    <style name="splash_style">
+        <item name="android:background">@drawable/bk</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:padding">@dimen/margin_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="setmenu_radioButton" parent="radioButton">
+        <item name="android:textColor">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="page_index_circle">
+        <item name="android:layout_width">@dimen/page_index_circle_size</item>
+        <item name="android:layout_height">@dimen/page_index_circle_size</item>
+        <item name="android:layout_marginRight">@dimen/page_index_circle_margin</item>
+        <item name="android:layout_marginLeft">@dimen/page_index_circle_margin</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="page_index_radioButton" parent="page_index_circle">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/page_circle_index_selector</item>
+    </style>
+
+    <style name="table_bolder_view2">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/table_bolder_color</item>
+    </style>
+
+    <style name="set_meal_title_text_style">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/setmeal_list_item_text_color</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:paddingBottom">@dimen/margin_small</item>
+        <item name="android:paddingTop">@dimen/margin_small</item>
+    </style>
+
+    <style name="set_meal_content_text_style">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/setmeal_list_item_text_color</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:minLines">2</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+</resources>

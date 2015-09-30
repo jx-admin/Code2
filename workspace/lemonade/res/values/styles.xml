@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>  
+     
+	<style
+        name="dialog_fullscreen">
+        
+		<item
+            name="android:windowNoTitle">true</item>
+        
+		<item
+            name="android:windowBackground">@android:color/transparent</item>
+    
+	</style>
+
+
+    <style name="Theme" parent="android:Theme.Wallpaper">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in_fast</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_fast</item>
+    </style>
+    
+    <style name="WorkspaceIcon">
+        <item name="android:textSize">13dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/shortcut_selector</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+    </style>
+
+    <style name="WorkspaceIcon.Portrait">
+        <item name="android:drawablePadding">5dip</item>
+        <item name="android:paddingTop">4dip</item>
+        <item name="android:layout_marginLeft">3dip</item>
+        <item name="android:layout_marginRight">3dip</item>
+        <item name="android:layout_marginTop">13dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+    </style>
+
+    <style name="WorkspaceIcon.Landscape">
+        <item name="android:drawablePadding">3dip</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="SearchButton" parent="@android:style/Widget.Button.Small">
+        <item name="android:paddingTop">7dip</item>
+        <item name="android:paddingBottom">9dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+    </style>
+
+    <style name="HotseatButton">
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="HotseatButton.Left">
+        <item name="android:layout_marginLeft">0dip</item>
+    </style>
+    <style name="HotseatButton.Right">
+        <item name="android:layout_marginRight">0dip</item>
+    </style>
+    
+    
+    
+    
+  <style name="PersonalizationTransparent">  
+    <item name="android:windowBackground">@color/transparent_background</item>  
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowIsTranslucent">true</item>     
+   
+   <!--  <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item> -->
+    
+    <!--  <item name="android:windowAnimationStyle">@style/Animation</item>  -->
+    
+  </style> 
+
+    <!-- <style name="Animation"> 
+
+        <item name="android:activityOpenEnterAnimation">@null</item>
+
+        <item name="android:activityOpenExitAnimation">@null</item>
+
+        <item name="android:activityCloseEnterAnimation">@null</item>
+
+        <item name="android:activityCloseExitAnimation">@null</item>
+
+        <item name="android:taskOpenEnterAnimation">@null</item>
+
+        <item name="android:taskOpenExitAnimation">@null</item>
+
+        <item name="android:taskCloseEnterAnimation">@null</item>
+
+        <item name="android:taskCloseExitAnimation">@null</item>
+
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+
+        <item name="android:taskToFrontExitAnimation">@null</item>
+
+        <item name="android:taskToBackEnterAnimation">@null</item>
+
+        <item name="android:taskToBackExitAnimation">@null</item>
+
+    </style>
+ -->
+    
+
+</resources>

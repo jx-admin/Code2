@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">wifi测试程序</string>
+    <string name="app_name">wifi测试程序</string>
+    <string name="old_ssid_str">需要修改的网络SSID：</string>
+    <string name="ssid_str">网络SSID：</string>
+    <string name="ssid_default">accenture</string>
+    <string name="word_str">无线密码：</string>
+    <string name="word_default">1234567890</string>
+    <string name="del_str">删除</string>
+    <string name="mod_str">修改</string>
+    <string name="add_str">添加</string>
+    <string name="not_find">网络不存在</string>
+    <string name="add_fail">配置添加失败.</string>
+    <string name="add_success">配置添加成功.</string>
+    <string name="close">关闭wifi</string>
+    <string name="open">打开wifi</string>
+    <string name="open_success">wifi已打开.</string>
+    <string name="close_success">wifi已关闭.</string>
+    <string name="load_success">程序启动...初始化成功.</string>
+</resources>

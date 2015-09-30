@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<EditText android:hint="have a try." android:id="@+id/word_et" android:text=""
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></EditText>
+	<Button android:text="@android:string/ok" android:id="@+id/sure_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+</LinearLayout>

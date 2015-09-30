@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="start_when_boot_completed"
+            android:summary="@string/start_when_boot_completed_summary"
+            android:title="@string/start_when_boot_completed_title" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="clear_cache"
+            android:summary="@string/clear_cache_summary"
+            android:title="@string/clear_cache_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="kill_bgprocess"
+            android:summary="@string/kill_bgprocess_summary"
+            android:title="@string/kill_bgprocess_title" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="double_click_close"
+            android:summary="@string/double_click_close_summary"
+            android:title="@string/double_click_close_title" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <PreferenceScreen
+            android:summary="@string/about_summary"
+            android:title="@string/about_title" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.cnblogs.com/lefter" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

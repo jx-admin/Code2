@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/phone_color_selector_size_w"
+    android:layout_height="@dimen/phone_color_selector_size_h"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/phone_color_selector_padding_top"
+        android:background="#c6c6c6"
+        android:orientation="horizontal"
+        android:padding="1px" >
+
+        <LinearLayout
+            android:id="@+id/bottom_color"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:background="#00ffff" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name_color_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1px"
+            android:layout_weight="120"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/selector_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:background="@drawable/color_select_bk"
+        android:visibility="gone" />
+
+</RelativeLayout>

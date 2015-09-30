@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pid" />
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/lonlatlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <EditText
+                android:id="@+id/editlat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/editlon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="switch" />
+    </LinearLayout>
+
+    <com.baidu.lbsapi.panoramaview.PanoramaView
+        android:id="@+id/panorama"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/linearlayout1"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/button_style"
+        android:text="添加图片标注" />
+    <Button
+        android:id="@+id/textbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/button"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/button_style"
+        android:text="添加文字标注" />
+
+    <TextView
+        android:id="@+id/road"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:visibility="gone" />
+ 	<com.baidu.lbsapi.album.IndoorPhotoAlbumView
+	    android:id="@+id/ssphoto_id"
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_alignParentBottom="true"
+	    android:scrollbars="none" 
+	    android:visibility="gone">
+	
+	</com.baidu.lbsapi.album.IndoorPhotoAlbumView>
+
+</RelativeLayout>

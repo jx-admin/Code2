@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/listView_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.accenture.mbank.view.QuickReturnListView
+            android:id="@+id/account_all_record_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000" >
+        </com.accenture.mbank.view.QuickReturnListView>
+
+        <com.accenture.mbank.view.QuickReturnListView
+            android:id="@+id/account_deposit_record_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:visibility="gone" >
+        </com.accenture.mbank.view.QuickReturnListView>
+
+        <com.accenture.mbank.view.QuickReturnListView
+            android:id="@+id/account_with_record_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:visibility="gone" >
+        </com.accenture.mbank.view.QuickReturnListView>
+    </LinearLayout>
+    <!-- header -->
+
+    <LinearLayout
+        android:id="@+id/header_view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/header_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/account_header_layout" />
+
+        <LinearLayout
+            android:id="@+id/account_detail_record"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:id="@+id/account_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/details_account_type"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/details_account_type"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/details_overdraftGranted"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/details_overdraftGranted"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/details_overdraftUsed"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/details_overdraftUsed"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/small_business_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_medium"
+                            android:text="@string/details_overdraftDiscounted"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_overdraftDiscounted"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_medium"
+                            android:text="@string/details_totalPresentations"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/details_totalPresentations"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:gravity="left" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- card details start -->
+
+            <LinearLayout
+                android:id="@+id/cards_details_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/onwer"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/onwer_value"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="123321" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/state"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/state_value"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="state" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/iban_code"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/iban_code_value"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/pan_card_number"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pan_card_number_value"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="expiration" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:text="@string/expiration"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/expiration_value"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- cards details end -->
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/charts_total_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/charts_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/charts_layout_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/chart_bg_top_bar"
+        android:orientation="horizontal" >
+
+        <!-- left -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium" >
+
+                <ImageView
+                    android:id="@+id/chart_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/accountType_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/accountType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:textSize="@dimen/text_chart_bar" />
+
+                    <ImageView
+                        android:id="@+id/isPreferredStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/icona_carta_stella"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/accountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_weight="1"
+                    android:ellipsize="middle"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textSize="@dimen/text_chart_bar"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- middle, smaller than others -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.12"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mid_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="@string/available_balance"
+                android:textSize="@dimen/text_chart_bar" />
+
+            <TextView
+                android:id="@+id/mid_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- right -->
+
+        <TableLayout
+            android:id="@+id/chart_bar_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <!-- Row 1 -->
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/row1_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/balance_account"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar" />
+
+                <TextView
+                    android:id="@+id/row1_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="@dimen/padding_small_mini"
+                    android:text=""
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Row2 -->
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/row2_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/deposits"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar" />
+
+                <TextView
+                    android:id="@+id/row2_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="@dimen/padding_small_mini"
+                    android:text=""
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Row 3 -->
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/row3_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/withdrawals"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar" />
+
+                <TextView
+                    android:id="@+id/row3_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="@dimen/padding_small_mini"
+                    android:text=""
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_chart_bar"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chart_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/charts_layout_top_bar"
+        android:background="@color/gray_chart_top_seprator1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/chart_seperator"
+        android:background="@color/gray_chart_top_seprator2" >
+    </LinearLayout>
+
+</RelativeLayout>

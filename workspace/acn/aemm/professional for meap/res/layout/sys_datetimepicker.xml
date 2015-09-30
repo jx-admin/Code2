@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/picker_layout" android:gravity="center_horizontal"
+	android:layout_height="wrap_content" android:orientation="vertical"
+	android:layout_width="fill_parent" android:background="@drawable/sys_dialog_bg">
+	<TextView android:textColor="#9DD8FF" android:textSize="22dip"
+		android:text="body"
+		android:id="@+id/picker_message"
+		android:padding="10dip" 
+		android:layout_margin="5dip"
+		android:background="@drawable/datetimepicker"
+		android:layout_width="fill_parent"
+		android:gravity="center_horizontal|right"
+		android:layout_height="wrap_content">
+	</TextView>
+	<DatePicker android:id="@+id/datepicker" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	<TimePicker android:id="@+id/timepicker" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	<LinearLayout android:layout_height="wrap_content" 
+		android:orientation="horizontal" android:layout_width="fill_parent">
+		<Button android:text="确定" android:layout_weight="1"
+			android:id="@+id/picker_positiveButton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+		<Button android:text="取消" android:layout_weight="1"
+			android:id="@+id/picker_negativeButton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" />
+	</LinearLayout>
+</LinearLayout>

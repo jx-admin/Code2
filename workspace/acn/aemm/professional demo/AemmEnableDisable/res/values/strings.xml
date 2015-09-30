@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AemmEnableDisable!</string>
+    <string name="app_name">AemmEnableDisable</string>
+    <string name="EnableCamera">EnableCamera</string>
+    <string name="DisableCamera">DisableCamera</string>
+    <string name="EnableDial"></string>
+    <string name="EnableDial2">EnableDial</string>
+    <string name="DisableDial">DisableDial</string>
+    <string name="edittext">com.xuye.AemmEnableDisable</string>
+    <string name="AddComponent">AddComponent</string>
+    <string name="DeleteComponent">DeleteComponent</string>
+    <string name="EnableInstall">EnableInstall</string>
+	<string name="DisableInstall">DisableInstall</string>
+	<string name="EnableMMS">EnableMMS</string>
+	<string name="DisableMMS">DisableMMS</string>
+	<string name="EnableSMS">EnableSMS</string>
+	<string name="DisableSMS">DisableSMS</string>
+	<string name="AddWifi">AddWifi</string>
+	<string name="DeleteWifi">DeleteWifi</string>
+	<string name="EnableAudio">EnableAudio</string>
+	<string name="DisableAudio">DisableAudio</string>
+	<string name="EnableVideo">EnableVideo</string>
+	<string name="DisableVideo">DisableVideo</string>
+	<string name="AddApplication">AddApplication</string>
+	<string name="DeleteApplication">DeleteApplication</string>
+	<string name="AddAPN">AddAPN</string>
+	<string name="DeleteAPN">DeleteAPN</string>
+	<string name="AddVPN">AddVPN</string>
+	<string name="DeleteVPN">DeleteVPN</string>
+	<string name="AddEmail">AddEmail</string>
+	<string name="DeleteEmail">DeleteEmail</string>
+</resources>

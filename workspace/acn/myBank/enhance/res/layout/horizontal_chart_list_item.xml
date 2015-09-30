@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ids :icon title_text initial percent -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/timescale_account__on" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frank&apos;s account" />
+
+        <TextView
+            android:id="@+id/initial"
+            style="@style/title_text_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="initial:155.00$" />
+
+        <TextView
+            android:id="@+id/final_text"
+            style="@style/title_text_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="initial:155.00$" />
+
+        <TextView
+            android:id="@+id/percent"
+            style="@style/title_text_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="initial:155.00$" />
+    </LinearLayout>
+
+</RelativeLayout>

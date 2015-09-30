@@ -1,0 +1,39 @@
+1. 数据发送
+SmsManager.java:
+API层。分别调用ISms里面对应的函数。
+sendTextMessage
+sendMultipartTextMessage
+sendDataMessage
+
+ISms.aidl:
+声明下面的函数:
+sendData
+sendText
+sendMultipartText
+
+IccSmsInterfaceManager.java:
+实现上面的函数。函数内部通过SMSDispatcher类来转发。
+
+SMSDispatcher.java:
+这是一个抽象类。
+
+GsmSMSDispatcher.java and CdmaSMSDispatcher.java:
+GsmSMSDispatcher和CdmaSMSDispatcher分别基于gsm网络和cdma网络实现SMSDispatcher里的abstract函数。
+最终所有数据通过CommandsInterface类的sendSMS函数来转发。
+
+CommandsInterface.java:
+这是一个接口类。
+
+RIL.java:
+RIL实现CommandsInterface接口。
+sendSMS函数通过socket把数据发送出去。
+
+2. 数据接收
+GsmSMSDispatcher.java和CdmaSMSDispatcher.java
+这两个类处理完数据(根据是sms, mms还是普通wap push message分别进行处理)以后发出一个广播。
+
+SMSDispatcher.java:
+SMSDispatcher向RIL注册事件回调通知。SMSDispatcher的回调函数把数据派发到GsmSMSDispatcher.java和CdmaSMSDispatcher.java。
+
+RIL.java:
+RIL实现一个接受数据的线程。该线程把数据派发到已注册的相关模块。

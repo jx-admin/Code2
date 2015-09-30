@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.payment.NewRecentPaymentItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/line" />
+
+    <RelativeLayout
+        android:id="@+id/recent_expander_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/recent_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="15:04:2012" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/recent_expand_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toLeftOf="@+id/recent_expand_result"
+            android:layout_toRightOf="@+id/recent_time"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="bank transfer" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/recent_expand_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toLeftOf="@+id/recent_expand_btn"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="+$1000" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/recent_expand_btn"
+            android:layout_width="@dimen/toggle_button_width"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_large"
+            android:background="@drawable/payment_expand_selector"
+            android:textOff=""
+            android:textOn="" >
+        </ToggleButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/recent_expanded_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:visibility="gone"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/three_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/four_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/five_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!--
+        <Button
+            android:id="@+id/recent_recover_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="@drawable/recover_selector"
+            android:text="@string/recover" >
+        </Button>
+        -->
+
+        <ImageButton
+            android:id="@+id/recent_recover_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/recover_selector" >
+        </ImageButton>
+    </LinearLayout>
+
+</com.accenture.mbank.view.payment.NewRecentPaymentItem>

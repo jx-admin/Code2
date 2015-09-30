@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+     <Button android:id="@+id/pick_contact"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="pick_contact">
+        <requestFocus />
+    </Button>
+
+    <Button android:id="@+id/pick_person"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="pick_person">
+    </Button>
+
+    <Button android:id="@+id/pick_phone"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="pick_phone">
+    </Button>
+
+    <Button android:id="@+id/pick_address"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="pick_address">
+    </Button>
+
+</LinearLayout>

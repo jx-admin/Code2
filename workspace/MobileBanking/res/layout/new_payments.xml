@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/new_payments_step_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/new_payments_step1_rb"
+            style="@style/payment_radio_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/new_payments_step1"
+            android:text="@string/new_payments_step1" />
+
+        <RadioButton
+            android:id="@+id/new_payments_step2_rb"
+            style="@style/payment_radio_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/new_payments_step2"
+            android:text="@string/new_payments_step2" />
+
+        <RadioButton
+            android:id="@+id/new_payments_step3_rb"
+            style="@style/payment_radio_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/new_payments_step3"
+            android:text="@string/new_payments_step3" />
+    </RadioGroup>
+
+    <com.accenture.mbank.view.payment.ResizeLayout
+        android:id="@+id/payment_lin"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/background"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/payment_type_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wellcome_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="6" >
+
+                    <Spinner
+                        android:id="@+id/payment_type_sp"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_smaller"
+                        android:layout_marginTop="@dimen/margin_smaller"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:paddingBottom="@dimen/margin_small_mini"
+                        android:paddingTop="@dimen/margin_small"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/payment_type_et"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Bank transfer" />
+
+                        <ImageView
+                            android:id="@+id/payment_type_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/step1_on" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/payer_detail_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:background="@drawable/account_data_closed"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/payer_detail_title_tv"
+                        style="@style/payment_black_shadow_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/payer_detail_context_tv"
+                        style="@style/payment_black_shadow_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="TextView"
+                        android:textSize="@dimen/text_small_size" />
+                </LinearLayout>
+
+                <com.custom.view.CoverFlow
+                    xmlns:coverflow="http://schemas.android.com/apk/res/com.accenture.mbank"
+                    android:id="@+id/account_folders_cf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dip"
+                    android:gravity="center_vertical"
+                    coverflow:imageHeight="110dip"
+                    coverflow:imageWidth="100dip" />
+
+                <include
+                    android:id="@+id/payment_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/new_payment_bill"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/payment_blank_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/new_payment_blank_bill"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/payment_mav_rav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/new_payment_mav_rav"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/amountbar_lin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@drawable/amountbar"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small_mini"
+                        android:text="$" />
+
+                    <com.custom.view.CustomEditText
+                        android:id="@+id/amount_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:digits="1234567890,"
+                        android:gravity="right"
+                        android:inputType="none"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <com.custom.view.CoverFlow
+                    xmlns:coverflow="http://schemas.android.com/apk/res/com.accenture.mbank"
+                    android:id="@+id/payee_folders_cf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dip"
+                    android:gravity="center_vertical"
+                    coverflow:imageHeight="110dip"
+                    coverflow:imageWidth="100dip" />
+
+                <com.custom.view.CoverFlow
+                    xmlns:coverflow="http://schemas.android.com/apk/res/com.accenture.mbank"
+                    android:id="@+id/phone_payee_folders_cf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dip"
+                    coverflow:imageHeight="110dip"
+                    coverflow:imageWidth="100dip" />
+
+                <LinearLayout
+                    android:id="@+id/payee_detail_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:background="@drawable/account_data_closed"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_small"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/payee_detail_title_tv"
+                        style="@style/payment_black_shadow_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/payee_detail_context_tv"
+                        style="@style/payment_black_shadow_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="TextView"
+                        android:textSize="@dimen/text_small_size" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/top_up_amount_gv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@drawable/sim_topup_bar"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="$20"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$25"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$50"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$100"
+                        android:visibility="gone" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/execution_date_lin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@drawable/btn"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:visibility="gone"
+                    android:weightSum="5" >
+
+                    <TextView
+                        style="@style/gray_text_white_shadow_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_small_mini"
+                        android:text="Date" />
+
+                    <EditText
+                        android:id="@+id/execution_date_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:focusable="false"
+                        android:inputType="date" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/description_et "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:lines="5" >
+                </EditText>
+            </LinearLayout>
+        </ScrollView>
+    </com.accenture.mbank.view.payment.ResizeLayout>
+
+    <include
+        android:id="@+id/new_payments1_clu"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        layout="@layout/new_payments1"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/proceed_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/np_proceed_lin" />
+
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xLarge"
+        android:background="@drawable/account_data_closed"
+        android:drawableLeft="@drawable/ok"
+        android:drawablePadding="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_large"
+        android:text="@string/payment_executed_successfully"
+        android:textColor="@color/white" />
+
+</LinearLayout>

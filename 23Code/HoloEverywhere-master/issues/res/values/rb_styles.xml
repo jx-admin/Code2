@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Holo.Issues.I701.AlertDialogButton" parent="Holo.Button.Borderless.Small">
+    <item name="android:background">@drawable/i701_button</item>
+  </style>
+  <style name="Holo.Issues.I701.AlertDialogTheme" parent="Holo.Theme.Dialog.Alert">
+    <item name="alertDialogTitleDividerColor">@color/holo_green_light</item>
+    <item name="android:windowTitleStyle">@style/Holo.Issues.I701.AlertDialogWindowTitle</item>
+    <item name="buttonBarButtonStyle">@style/Holo.Issues.I701.AlertDialogButton</item>
+  </style>
+  <style name="Holo.Issues.I701.AlertDialogWindowTitle" parent="Holo.DialogWindowTitle">
+    <item name="android:textAppearance">@style/Holo.Issues.I701.AlertDialogWindowTitle.TextAppearance</item>
+  </style>
+  <style name="Holo.Issues.I701.AlertDialogWindowTitle.TextAppearance" parent="Holo.TextAppearance.DialogWindowTitle">
+    <item name="android:textColor">@color/holo_green_light</item>
+  </style>
+  <style name="Holo.Issues.I701.Theme" parent="Holo.Theme">
+    <item name="alertDialogTheme">@style/Holo.Issues.I701.AlertDialogTheme</item>
+  </style>
+  <style name="Holo.Issues.I723.SpinnerItem" parent="Holo.TextView.SpinnerItem">
+    <item name="android:textAppearance">@style/Holo.Issues.I723.SpinnerItem.TextAppearance</item>
+  </style>
+  <style name="Holo.Issues.I723.SpinnerItem.DropDown" parent="Holo.TextView.SpinnerItem.DropDown">
+    <item name="android:textAppearance">@style/Holo.Issues.I723.SpinnerItem.TextAppearance</item>
+  </style>
+  <style name="Holo.Issues.I723.SpinnerItem.TextAppearance" parent="Holo.TextAppearance.TextView.SpinnerItem">
+    <item name="android:textColor">@color/holo_blue_dark</item>
+    <item name="android:textSize">30sp</item>
+  </style>
+  <style name="Holo.Issues.I723.Theme" parent="Holo.Theme">
+    <item name="spinnerDropDownItemStyle">@style/Holo.Issues.I723.SpinnerItem.DropDown</item>
+    <item name="spinnerItemStyle">@style/Holo.Issues.I723.SpinnerItem</item>
+  </style>
+  <style name="Holo.Issues.I796.Theme" parent="Holo.Theme">
+    <item name="i796Icon1">@drawable/i796_icon_1_holo_dark</item>
+    <item name="i796Icon2">@drawable/i796_icon_2_holo_dark</item>
+    <item name="i796Icon3">@drawable/i796_icon_3_holo_dark</item>
+  </style>
+  <style name="Holo.Issues.I796.Theme.Light" parent="Holo.Theme.Light">
+    <item name="i796Icon1">@drawable/i796_icon_1_holo_light</item>
+    <item name="i796Icon2">@drawable/i796_icon_2_holo_light</item>
+    <item name="i796Icon3">@drawable/i796_icon_3_holo_light</item>
+  </style>
+  <style name="Holo.Issues.I796.Theme.Light.DarkActionBar" parent="Holo.Theme.Light.DarkActionBar">
+    <item name="i796Icon1">@drawable/i796_icon_1_holo_dark</item>
+    <item name="i796Icon2">@drawable/i796_icon_2_holo_dark</item>
+    <item name="i796Icon3">@drawable/i796_icon_3_holo_dark</item>
+  </style>
+</resources>

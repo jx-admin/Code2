@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout android:id="@+id/RelativeLayout02"
+		android:layout_height="50px" android:layout_width="fill_parent"
+		android:background="#ffffff"></RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout03"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="#808080" android:layout_above="@+id/RelativeLayout04"
+		android:layout_below="@+id/RelativeLayout02">
+		<ListView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/list_view"></ListView>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/RelativeLayout04"
+		android:layout_height="50px" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" android:background="#ffffff"></RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PanoramaViewDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="panorama_tips">\t\t百度地图SDK为您免费提供全景图的功能。\n
+        \t\t利用接口，可查询、开启并操作更丰富的全景图。\n
+        \t\t以下三个示例分别向您展示了三种调启全景图的入口，您可在实际操作中灵活运用。\n
+        \t\t全景图还提供了Item绘制能力，您可在第三个示例中查看具体使用方法。</string>
+
+    <string name="demo_title_panorama">打开全景</string>
+    <string name="demo_desc_panorama1">通过pid获取全景</string>
+    <string name="demo_desc_panorama2">通过位置信息经纬度获取全景</string>
+    <string name="demo_desc_panorama3">通过位置信息墨卡托坐标获取全景</string>
+    <string name="demo_desc_panorama4">添加标注到全景图</string>
+    <string name="demo_desc_panorama5">内景图展示</string>
+    <string name="demo_desc_panorama6">测试</string>
+</resources>

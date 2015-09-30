@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_gravity="center" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" >
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 android:src="@drawable/sharing_other"
+                />
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="9dip"
+                android:background="@drawable/sharing_selector"
+                android:src="@drawable/a_dont_delete"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                 />
+
+            <ImageView
+                android:id="@+id/state_iv"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_margin="4dip"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/sharing_state_saw" 
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </LinearLayout>
+    
+	<ProgressBar
+                android:id="@+id/load_pb"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dip"
+                android:layout_height="@dimen/app_item_download_progressbar_h"
+                android:layout_gravity="center_horizontal|bottom"
+                android:max="100"
+                android:paddingLeft="@dimen/download_pb_lr_margin"
+                android:paddingRight="@dimen/download_pb_lr_margin"
+                android:progressDrawable="@drawable/sharing_progress_drawable"
+                android:visibility="gone" />
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:text="TextView" />
+
+</LinearLayout>

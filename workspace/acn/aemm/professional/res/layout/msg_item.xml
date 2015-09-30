@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aess.aemm.view.msg.MsgItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/msgtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/alarms1" />
+
+    <CheckBox
+        android:id="@+id/msgisel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingRight="4dip"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/msgtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/msgisel"
+        android:layout_toRightOf="@id/msgtype"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/msgtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/msgtitle"
+        android:layout_below="@+id/msgtitle"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/msgcnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/msgtime"
+        android:layout_alignBottom="@+id/msgtime"
+        android:layout_below="@id/msgtitle"
+        android:layout_toLeftOf="@id/msgisel"
+        android:layout_toRightOf="@+id/msgtime"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</com.aess.aemm.view.msg.MsgItem>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kya define left & right key -->
+<resources>
+
+    <array translatable="false" name="hotseat_icons">
+        <item>@drawable/hotseat_phone</item>
+        <item>@drawable/hotseat_message</item>
+    </array>
+    
+    <string-array name="settings_sorting_values" translatable="false">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="title_sys_app">Guangdong Telecom</string>
+  <string name="title_sys_manage">system management</string>
+  <string name="title_sys_dataupdate">data update</string>
+  <string name="title_sys_logUpload">log upload</string>
+  <string name="title_sys_changPassword">password change</string>
+  <string name="title_sys_traffic">traffic information</string>
+  <string name="title_sys_location">GPS nebula images</string>
+  <string name="title_sys_camera">photo upload</string>
+  
+  <string name="back_to_top">back to top</string>
+	<string name="query">query</string>
+	<string name="yes">yes</string>
+	<string name="no">no</string>
+	<string name="define">define</string>
+	<string name="nativenetid">native networks：</string>
+	<string name="more">more</string>
+	<string name="save">save</string>
+	<string name="submit">submit</string>	
+	<string name="download">download</string>
+	<string name="download_fail">download failed</string>
+	<string name="upload">upload</string>
+	<string name="uploading">uploading...</string>
+	<string name="upload_sucess">upload successful</string>
+	<string name="upload_fail">upload failed</string>
+	<string name="system_tip">system tip</string>
+	<string name="start_fail">start[%1$s]abnormal</string>
+	<string name="upgrade">upgrade</string>
+	<string name="doing">doing</string>
+	<string name="sevice_returnNull">Server returns null！</string>
+	<string name="please_selectOne">Please select one</string>
+	<string name="tree_window">tree window</string>
+	
+	<string name="sys_network_enabled">Did not find the network，unable to connect to server！</string>
+	<string name="sys_upgrade_immediately">Upgrade immediately？</string>
+	<string name="sys_discover_newVersion">discover new version</string>
+	<string name="sys_exit_title">exit confirmation</string>
+	<string name="sys_exit_confirm">Confirm exit？</string>
+	<string name="sys_logout_title">logout confirmation</string>
+	<string name="sys_logout_confirm">Confirm logout[%1$s]？</string>
+	<string name="sys_uninstall_tip">You have not installed[%1$s],install now？</string>
+	<string name="sys_install_tip">installer download</string>
+	<string name="sys_install_downloading">downloading the installation package</string>
+	<string name="sys_unknown_error">unknown error</string>
+	<string name="sys_error_title">system error</string>
+	<string name="sys_error_reportConfrim">System occurs error, do you want to send the report？</string>
+	<string name="sys_dataUpdate_sucess">data update successful！</string>
+	<string name="sys_upgrade_callbackFail_request">Occurs error, continue upgrading？</string>
+	
+	<string name="sys_logining">logining...</string>
+	<string name="sys_login_denial">Account or password cannot be null。</string>
+	<string name="sys_login_fail">login failed:</string>
+	<string name="sys_login_passwordError">Password incorrect！</string>
+	<string name="sys_login_noLocalAccount">Local account does not exit</string>
+	<string name="sys_login_userMessage">Unable to obtain user account information</string>
+	
+	<string name="sys_dataUpdate_ing">upgrading[%1$s]</string>
+	<string name="sys_dataUpdate_fail">Upgrade[%1$s]failed!</string>
+  <string name="sys_dataUpdate_exception">Upgrade[%1$s]anomaly!</string>
+		
+	<string name="sys_traffic_today">today</string>
+	<string name="sys_traffic_week">this week</string>
+	<string name="sys_traffic_month">this month</string>
+	
+	<string name="sys_uploadLog_sucess">log upload successful</string>
+	<string name="sys_uploadLog_fail">log upload failed</string>
+	
+	<string name="sys_location_state">status：</string>
+	<string name="sys_location_satelliteNum">satellite：</string>
+	<string name="sys_location_longitude">longitude：</string>
+	<string name="sys_location_latitude">latitude：</string>
+	<string name="sys_location_altitude">altitude：</string>
+	<string name="sys_location_accuracy">accuracy：</string>
+	<string name="sys_location_time">time：</string>
+	<string name="sys_location_speed">speed：</string>
+	<string name="sys_location_positioning">positioning...</string>
+	<string name="sys_location_positioned">positioned</string>	
+	<string name="sys_location_providerEnabled">Please turn on GPS module</string>	
+	
+	<string name="sys_camera_nophoto">Please click camera</string>	
+	<string name="sys_sign_title">electronic signature</string>
+	<string name="sys_sign_define">confirm signature</string>
+	<string name="sys_sign_clear">Double-click the signature pad to clear the content。</string>
+	<string name="sys_sign_save_successed">Signature file saved successfully。</string>
+	<string name="sys_sign_no_signed">You have not started to sign。</string>
+</resources>

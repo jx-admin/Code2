@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+        android:background="@drawable/account_bk">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_small"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.custom.view.DoubleShadowTextView
+            android:id="@+id/accountname_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="false"
+            android:lines="2"
+            android:minLines="2"
+            android:text="Frank&apos;s sdfasfasfsafsaf" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="15dip"
+            android:background="@drawable/account_data_opened_divider" />
+
+        <com.custom.view.DoubleShadowTextView
+            android:id="@+id/label3_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_balance"
+            android:textSize="9sp" />
+
+        <com.custom.view.DoubleShadowTextView
+            android:id="@+id/account_available_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:textSize="9sp" 
+            android:text="$100,000.99" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.AccountExpandedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/account_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_medium" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/frank_account" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/income_house" />
+    </RadioGroup>
+
+</com.accenture.mbank.view.AccountExpandedLayout>

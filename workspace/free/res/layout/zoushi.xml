@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="vertical" android:id="@id/myRadioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/myRadioNian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="年走势图" />
+        <RadioButton android:id="@id/myRadioYue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="月走势图" />
+        <RadioButton android:id="@id/myRadioRi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日走势图" />
+    </RadioGroup>
+    <TextView android:id="@id/TextView01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello_world" />
+    <DatePicker android:id="@id/myDate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@id/TextView02" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+    <Button android:id="@id/ButtonChakan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="查看" />
+</LinearLayout>

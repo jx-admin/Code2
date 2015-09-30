@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="480dip"
+    android:layout_height="200dip" 
+    android:orientation="horizontal">
+
+        <com.aphidmobile.flip.FlipViewController
+            xmlns:flip="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/flip_controller1"
+            android:layout_width="240dip"
+            android:layout_height="200dip"
+            android:layout_weight="1"
+            flip:orientation="vertical_bottom" />
+
+        <com.aphidmobile.flip.FlipViewController
+            xmlns:flip="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/flip_controller2"
+            android:layout_width="240dip"
+            android:layout_height="200dip"
+            android:layout_weight="1"
+            flip:orientation="vertical_top" />
+
+</LinearLayout>

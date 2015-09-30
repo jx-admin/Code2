@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#990000" >
+
+        <TextView
+            android:id="@+id/tv_netease_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:text="@string/news_top_left_text1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_netease_top"
+            android:text="@string/news_top_left_text2"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/duoyun"
+            android:contentDescription="@string/img_duoyun_desc" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:background="@drawable/bg_header_top">
+
+        <LinearLayout
+            android:id="@+id/header_item"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_tops" />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_info" />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_blog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_blog" />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_magazine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_magazine" />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_domain" />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_title_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    style="@style/header_title_style"
+                    android:gravity="center"
+                    android:text="@string/title_news_category_more" />
+                
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

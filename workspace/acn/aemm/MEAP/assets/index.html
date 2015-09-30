@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>Javascript Bridge</title>
+
+		<style type="text/css">
+			button{height: 2em;}
+			p{padding: 1em; border: solid;}
+		</style>
+
+		<script type="text/javascript" charset="utf-8" src="js/MobileSDKPlguin.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/actions.js"></script>
+		
+		<!--Customer Javascript-->
+		<script type="text/javascript" charset="utf-8">
+			
+			window.onload = init;
+
+			function init(){
+
+			}
+
+			function getDeviceModelName(){
+				document.getElementById("content").innerHTML = "";
+				sdkBridge(MobileSDK.Device.ModelName, onSuccess, onFailed);
+			}
+
+			function getDevicePlatform(){
+				document.getElementById("content").innerHTML = "";
+				sdkBridge(MobileSDK.Device.Platform, onSuccess, onFailed);
+			}
+
+			function getDevicePlatformVersion(){
+				document.getElementById("content").innerHTML = "";
+				sdkBridge(MobileSDK.Device.PlatformVersion, onSuccess, onFailed);
+			}
+
+			function getDeviceUUID(){
+				document.getElementById("content").innerHTML = "";
+				sdkBridge(MobileSDK.Device.UUID, onSuccess, onFailed);
+			}
+
+			function getDeviceSimCarrierName(){
+				document.getElementById("content").innerHTML = "";
+				sdkBridge(MobileSDK.Device.SimCarrierName, onSuccess, onFailed);
+			}
+
+			function onSuccess(json){
+				document.getElementById("content").innerHTML = "ModelName:"+json.modelName + "  Platform: " + json.platform + "  PlatformVersion: " + json.platformVersion + "  SimCarrierName: " + json.simCarrierName;
+			}
+
+			function onFailed(){
+				document.getElementByID("content").innerHTML = "Action Error!!!";
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<h3>API:[获取设备信息]</h3>
+		<h5>点击按钮后在下方显示结果</h5>
+		<button onclick="getDeviceModelName()">设备新型号名</button>
+		<button onclick="getDevicePlatform()">设备操作系统</button>
+		<button onclick="getDevicePlatformVersion()">设备操作系统版本</button>
+		<button onclick="getDeviceSimCarrierName()">运营商</button>
+		<p id="content"></p>
+	</body>
+
+</html>

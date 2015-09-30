@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">effect</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="transformation_type_classic">经典</string>
+    <string name="transformation_type_random">随机</string>
+    <string name="transformation_type_custom_random">自定义随机</string>
+    <string name="transformation_type_cube_outside">立方体</string>
+    <string name="transformation_type_roll_away">车轮</string>
+    <string name="transformation_type_page_slide_down">忐忑</string>
+    <string name="transformation_type_falldown">扇面</string>
+    <string name="transformation_type_stack">层叠</string>
+    <string name="transformation_type_rotate">旋转</string>
+    <string name="transformation_type_icon_collection">聚散</string>
+    <string name="transformation_type_chord">琴弦</string>
+    <string name="transformation_type_flippy">追风</string>
+    <string name="transformation_type_crossfade">飘渺</string>
+    <string name="transformation_type_snake">贪食蛇</string>
+    <string name="transformation_type_swirl">漩涡</string>
+    <string name="transformation_type_cylinder">圆柱</string>
+    <string name="transformation_type_sphere">球</string>
+    <string name="transformation_type_distort">扭转</string>
+    <string name="transformation_type_turn">拨片</string>
+    <string name="transformation_type_extrusion">推拉门</string>
+</resources>

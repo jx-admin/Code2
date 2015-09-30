@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">eStore</string>
+    <string name="description">Enterprise Mobile Solution</string>
+    
+     <string name="installed">installed</string>
+    <string name="uninstalled">uninstalled</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="ignore">Ignore</string>
+    <string name="open">Open</string>
+    <string name="alert">Prompt</string>
+    
+    <string name="update">Update</string>
+    <string name="install">Install</string>
+    <string name="apk_disable">You can not install this application</string>
+    <string name="app_disable">You can not run this application</string>
+    <string name="install_disable">You cannot install applications on this device</string>
+    <string name="lowermemerry">No enough space  to download</string>
+    <string name="apk_load_fail">Download fail</string>
+    <string name="new_app_load">You have received new applications</string>
+    
+    <string name="updata_by_hand">Update</string>
+    <string name="hall_updata_title">the Enterprise Hall needs to be updated</string>
+    <string name="hall_updata_content">Update or not?</string>
+    <string name="app_unexsit">This program does not exist or is uninstalled, move it to the uninstalled area or not?</string>
+    <string name="apk_file_erro">The analysis of Installation package is incorrect</string>
+    <string name="app_erro">Program error</string>
+    <string name="is_install">Do you want to install </string>
+    <string name="gps_unable">GPS is out of service</string>
+    
+    <!-- updata -->
+    <string name="updata_executing">Updating</string>
+    <string name="network_erro">Network Anomaly</string>
+    <string name="update_over">Update finish</string>
+    <string name="update_failed">Update fail</string>
+    <string name="updata_erro">Checking for update goes wrong</string>
+    <string name="updata_finish">Checking for update completes</string>
+    <string name="updata_app_push">You have %d new applications to install</string>
+    <string name="passpolicy">Password policy</string>
+    <string name="rootcertificate">CA certificate</string>
+    <string name="pkcscertificate">PSK certificate</string>
+    <string name="restrictions">Restrictions</string>  
+    
+    <!-- login -->
+    <string name="name_str">User name</string>
+    <string name="password_str">Password</string>
+    <string name="imei_str">DeviceId</string>
+    <string name="login_str">Login</string>
+    <string name="cancel_str">Cancel</string>
+    <string name="inputname_hint">Please input user name</string>
+    <string name="inputpassword_hint">Please input password</string>
+    <string name="username_null">Please input user name</string>
+	<string name="password_null">Please input password</string>
+	<string name="inputimei_hint">Please input DeviceId</string>
+	<string name="imei_null">Please input DeviceId</string>
+
+    <!-- message -->
+    <string name="notification_message">You have received a new message</string>
+    <string name="checkupdate">Updating...</string>
+    <string name="SerPushInfo">You have received new applications!</string>
+    
+    <string name="aemm_device_admin">Enterprise Application Store</string>
+    <string name="aemm_device_admin_description">Enterprise Application Hall is the Management Control Program of enterprise applications in the mobile device.</string>
+    <string name="app_version">0.3.0718.001</string>
+    <string name="lock_client">Device was locked，Please get password from administrator</string>
+    
+    <string name="device_showToast_onEnabled">Device Management:Enabled</string>
+    <string name="device_showToast_onDisabled">Device Management:Disabled</string>
+    <string name="device_showToast_onDisableRequested">This is an optional message,warning about disabling users request</string>
+    <string name="device_showToast_onPasswordChanged">Device Management:Password has changed</string>
+    <string name="device_showToast_onPasswordFailed">Device Management:Fail to change password</string>
+    <string name="device_showToast_onPasswordSucceeded">Device Management:Password changed successfully</string>
+
+    <string name="label">AEMM account</string>
+    <string name="third_party_label">The third party account</string>
+    <string name="ui_activity_authenticating">Authenticating\u2026</string>
+    <string
+        name="login_activity_loginfail_text_both">The username or password isn\'t valid or the networkd is broken. An AEMM account is
+        required. Please try again. </string>
+    <string
+        name="login_activity_loginfail_text_pwmissing">Type the password for this account.</string>
+    <string
+        name="login_activity_loginfail_text_pwonly">You entered the wrong password or your account has changed.
+        Please re-enter your password.</string>
+    <string
+        name="login_error_user_already_exist">User already exists.</string>
+    <string
+        name="login_error_invalid_username_password">Invalid user name or password.</string>
+    <string
+        name="login_error_user_doesnot_exist">User does not exist.</string>
+    <string
+        name="login_error_device_doesnot_exist">Device ID does not exist.</string>
+    <string
+        name="login_activity_newaccount_text">Type your AEMM account. </string>
+      
+</resources>

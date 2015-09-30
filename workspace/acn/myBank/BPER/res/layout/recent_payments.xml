@@ -1,0 +1,79 @@
+<com.accenture.mbank.view.RecentPayments xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:orientation="vertical" >
+
+                <RadioGroup
+                    android:id="@+id/type_of_payment_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_medium" >
+
+                    <RadioButton
+                        android:id="@+id/frank_account_type_rbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/radio_button_selector"
+                        android:paddingBottom="@dimen/radio_button_top_padding"
+                        android:paddingLeft="@dimen/radio_button_text_padding"
+                        android:paddingTop="@dimen/radio_button_top_padding"
+                        android:text="@string/frank_account" />
+
+                    <RadioButton
+                        android:id="@+id/income_house_type_rbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/radio_button_selector"
+                        android:paddingBottom="@dimen/radio_button_top_padding"
+                        android:paddingLeft="@dimen/radio_button_text_padding"
+                        android:paddingTop="@dimen/radio_button_top_padding"
+                        android:text="@string/income_house" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountsLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/frank_account_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_details"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/income_house_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.accenture.mbank.view.RecentPayments>

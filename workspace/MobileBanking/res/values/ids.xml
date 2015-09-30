@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="login_btn" type="id">false</item>
+    <item name="username_input" type="id">false</item>
+    <item name="password_input" type="id">false</item>
+    <item name="adBar_btn" type="id">false</item>
+    <item name="safety_btn" type="id">false</item>
+    <item name="locate_branch_btn" type="id">false</item>
+    <item name="watch_demo_btn" type="id">false</item>
+    
+    <item name="news_title" type="id">false</item>
+    <item name="news_img" type="id">false</item>
+    <item name="news_content" type="id">false</item>
+    <item name="news_url" type="id">false</item>
+    <item name="tab_radio_group" type="id">false</item>
+    <item name="tab_content" type="id">false</item>
+	<item name="input" type="id"></item>
+	<item name="decode" type="id"/>
+	<item name="quit" type="id"/>
+	<item name="decode_succeeded" type="id"/>
+	<item name="decode_failed" type="id"/>
+
+	<item name="auto_focus" type="id"/>
+	<item name="restart_preview" type="id"/>
+	<item name="material_detail" type="id"></item>
+	<item name="material" type="id"/>
+	<item name="cTetMsg2" type="id"></item>
+	<item name="search" type="id"/>
+
+</resources>

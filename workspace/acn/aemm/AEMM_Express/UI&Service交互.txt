@@ -1,0 +1,32 @@
+UI ，Service 交互文档
+
+1、下发应用
+构造类型为HallMassagedb.APPMSG的intent,通过广播发送
+
+普通的应用和应用大厅的更新采用相同的方式，考虑有可能会存在
+大厅没有启动的情况，后台service 在获取应用更新的时候
+会先在本地数据库里存储，此时记录的 flag 字段 为 NEWAPP = -1
+
+提供调用接口
+（1）查询所以的apk记录 queryAllApkContents（）
+（2）查询flag为某个具体值的 apk记录，queryApkContentswithFlag
+（3）更新某条具体记录updateApkContentwithRowId（），需要传入具体记录的id
+（4） 删除某个apk的记录deleteApkContentwithNameandFlag，需要传入 apkId,和flag
+
+
+2、普通类型的消息（如：更新状态的显示）
+构造类型为STATUSMSG的intent,通过广播发送
+
+
+3 、登录流程
+3.1 后台service察觉需要登录，会通知UI，弹出登录提示框
+      如果需要登录，可直接调用Login.showLogin（）方法
+
+3.2 UI在弹出登录输入框之后，通过 startService方法启动后台登录流程，
+其中intent具体情况可参考Login.showLogin
+
+
+
+sessionId 应该在本地存储，登录成功后服务器会返回给手机一个sessionId,
+下次登录时候直接把此sessionId,发送给服务器，就可以不用再输入用户名和密码了。
+

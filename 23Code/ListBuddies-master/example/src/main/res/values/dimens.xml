@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="item_height_small">150dp</dimen>
+    <dimen name="item_height_tall">220dp</dimen>
+    <dimen name="gap">3dp</dimen>
+    <dimen name="divider_height">@dimen/gap</dimen>
+    <dimen name="standar_padding">8dp</dimen>
+    <dimen name="standar_padding_small">4dp</dimen>
+    <dimen name="spinner_width">100dp</dimen>
+    <dimen name="touchable_ui">@android:dimen/app_icon_size</dimen>
+    <!--@android:dimen/navigation_bar_height(48dp)-->
+    <dimen name="margin_top_customization_fragment">48dp</dimen>
+</resources>

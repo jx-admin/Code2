@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">TestContentProvider</string>
+    <string name="ProviderReadPermission">android.permission.READ_XUYE</string>
+    <string name="readPermison">Read provider permission</string>
+    <string name="read_permission_dis">Allow user read provider</string>
+    <string name="writePermission">write provider</string>
+    <string name="write_persmission_dis">can write provider</string>
+</resources>

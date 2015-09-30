@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.PortfolioDetailItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4" >
+
+        <TextView
+            android:id="@+id/port_detail_title"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/one_row_item"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/description_1"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/port_detail_price"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/one_row_item"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/price"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/port_detail_date_price"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/one_row_item"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/date_price"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/port_detail_quantity"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/one_row_item"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/quantity"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/separation_line" />
+
+</com.accenture.mbank.view.PortfolioDetailItem>

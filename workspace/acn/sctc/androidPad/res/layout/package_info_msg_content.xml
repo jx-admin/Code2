@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_mid"
+    android:layout_marginRight="@dimen/margin_mid"
+    android:layout_weight="@integer/right_content_weight"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:gravity="left"
+            android:text="中国电信宽带服务"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/text_xmiddle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:lines="3"
+            android:text="电信宽带，高速稳定，畅享极速的快感，体验速度与激情!"
+            android:textColor="#ff8a00"
+            android:textSize="@dimen/text_normal" />
+
+        <GridView
+            android:id="@+id/colors_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:numColumns="3"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </GridView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/select_setmeal_pls" />
+
+        <Button
+            android:id="@+id/select_setmeal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_dark_yellow_radius_selector"
+            android:text="@string/click_select_setmeal" />
+
+        <ImageView
+            android:id="@+id/setmeal_content_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/setmeal_content_arrow_donw" />
+
+        <LinearLayout
+            android:id="@+id/setmeal_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_smid"
+            android:background="@drawable/border_yellow"
+            android:divider="@drawable/setmeal_content_divier"
+            android:orientation="vertical"
+            android:padding="1px"
+            android:showDividers="middle" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_to_shopping_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:background="@drawable/add_to_shopping_car_selector"
+        android:text="@string/add_to_shoping_cart" />
+
+</RelativeLayout>

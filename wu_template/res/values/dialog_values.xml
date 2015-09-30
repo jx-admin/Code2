@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_text_margin_top">8dip</dimen>
+    <dimen name="login_text_margin_bottom">2dip</dimen>
+    <dimen name="login_margin_LR">5dip</dimen>
+
+    <color name="login_text_color">#fff</color>
+    <color name="login_message_color">#f00</color>
+
+</resources>

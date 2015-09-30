@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/confirmation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:background="@drawable/button_ask_pin_selector" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/confirmation_btn"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/bper_payment_step_layout" />
+
+            <TextView
+                android:id="@+id/page_title"
+                style="@style/bper_payment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/account_title_info"
+                layout="@layout/account_info_title" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/separation_line"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:showDividers="middle"
+                android:stretchColumns="*"
+                android:shrinkColumns="1" >
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bper_askpin_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bper_askpin_input"
+        android:visibility="gone" />
+
+</RelativeLayout>

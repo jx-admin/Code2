@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+com.act.sctc.ui.SetMealItem -->
+<com.act.sctc.ui.SetMealItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/setmeal_item_border"
+    android:orientation="vertical"
+    android:padding="2dip" >
+
+    <TextView
+        android:id="@+id/titel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="乐享3G上网版"
+        android:textColor="@color/setmeal_title_blue"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/add_car_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="@string/_add_to_shoping_cart"
+        android:textColor="@color/setmeal_title_yellow"
+        android:textSize="@dimen/text_normal" />
+
+    <TableLayout
+        android:id="@+id/info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/titel_tv"
+        android:orientation="vertical"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_t1"
+                style="@style/set_meal_title_text_style"
+                android:background="#C9F0FF"
+                android:text="@string/month_rent" />
+
+            <TextView
+                android:id="@+id/tv_t2"
+                style="@style/set_meal_title_text_style"
+                android:layout_marginLeft="1px"
+                android:background="#C9F0FF"
+                android:text="@string/domestic_traffic" />
+
+            <TextView
+                android:id="@+id/tv_t3"
+                style="@style/set_meal_title_text_style"
+                android:layout_marginLeft="1px"
+                android:background="#C9F0FF"
+                android:text="@string/wifi_time" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/content_1_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:background="#E9F8FF"
+                android:text="@string/month_rent" />
+
+            <TextView
+                android:id="@+id/content_2_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1px"
+                android:background="#E9F8FF"
+                android:text="@string/domestic_traffic" />
+
+            <TextView
+                android:id="@+id/content_3_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1px"
+                android:background="#E9F8FF"
+                android:text="@string/wifi_time" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px" >
+
+            <TextView
+                android:id="@+id/tv_t4"
+                style="@style/set_meal_title_text_style"
+                android:background="#C9F0FF"
+                android:text="@string/freeinlandcall" />
+
+            <TextView
+                android:id="@+id/tv_t5"
+                style="@style/set_meal_title_text_style"
+                android:layout_marginLeft="1px"
+                android:background="#C9F0FF"
+                android:text="@string/sms_count" />
+
+            <TextView
+                android:id="@+id/tv_t6"
+                style="@style/set_meal_title_text_style"
+                android:layout_marginLeft="1px"
+                android:background="#C9F0FF"
+                android:text="@string/mms_count" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/content_4_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:background="#E9F8FF"
+                android:text="@string/month_rent" />
+
+            <TextView
+                android:id="@+id/content_5_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1px"
+                android:background="#E9F8FF"
+                android:text="@string/domestic_traffic" />
+
+            <TextView
+                android:id="@+id/content_6_1"
+                style="@style/set_meal_content_text_style"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1px"
+                android:background="#E9F8FF"
+                android:text="@string/wifi_time" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/vs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/vs_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/vs_title_yellow"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingLeft="@dimen/margin_mid"
+            android:paddingTop="@dimen/margin_normal"
+            android:text="VS 其他同类套餐"
+            android:textColor="@color/vs_title_text_color"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/tv_vs_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/vs_title_tv"
+            android:background="#D6D2D3"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_xsmall"
+            android:paddingLeft="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_large"
+            android:paddingTop="@dimen/margin_xsmall"
+            android:text="@string/vs_setmeal_dis_vertical"
+            android:textColor="#F9791D"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/setmeal_vs_dis_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/vs_title_tv"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/tv_vs_left"
+            android:background="@drawable/setmeal_dis_content_bk"
+            android:gravity="center_vertical"
+            android:lineSpacingMultiplier="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_large"
+            android:text="同档次套餐包含流量和时长全面超过联通，时长最高比联通多200%，流量最高多50%。"
+            android:textColor="#F9791D"
+            android:textSize="@dimen/text_normal" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/vs_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/vs_1" />
+
+</com.act.sctc.ui.SetMealItem>

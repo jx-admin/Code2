@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.RotateTitleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/title_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/investments_icon" />
+	
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_large"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/accountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="aaaaaaaa" />
+
+        <TextView
+            android:id="@+id/updateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaaaaaaa" />
+    </LinearLayout>
+
+</com.accenture.mbank.view.RotateTitleView>

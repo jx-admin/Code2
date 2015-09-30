@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/dialog_layout" android:gravity="center_horizontal"
+	android:layout_height="wrap_content" android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:background="@drawable/sys_dialog_bg">
+	<TextView android:textColor="#FFFFFF" android:textSize="25dip"
+		android:text="title" android:id="@+id/dialog_title"
+		android:layout_width="fill_parent"
+		android:drawableLeft="@drawable/sys_confirm_icon"
+		android:layout_height="wrap_content"
+		android:src="@drawable/sys_confirm_icon"
+		android:layout_gravity="center_vertical">
+	</TextView>
+	<LinearLayout android:layout_height="1dip"
+		android:background="@drawable/sys_break_line"
+		android:layout_width="fill_parent"
+		android:layout_marginBottom="5dip">
+	</LinearLayout>
+	<ScrollView android:layout_width="fill_parent"
+		android:id="@+id/dialog_scroll" android:layout_height="fill_parent"
+		android:scrollbars="vertical" android:fadingEdge="vertical">
+	</ScrollView>
+	<LinearLayout android:id="@+id/dialog_buttonBar"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:layout_width="fill_parent">
+	</LinearLayout>
+</LinearLayout>

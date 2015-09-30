@@ -1,0 +1,35 @@
+<project name="custom_rules">
+
+	<tstamp>
+		<format property="bper.current.time" pattern="yyyyMMdd" />
+	</tstamp>
+
+	<property name="bper.url.environment" value="URL_PREFIX_ROME8" />
+	<property name="bper.environment" value="PROD" />
+
+	<property name="bper.build.name"
+		value="BPER-Android-${bper.current.time}-${bper.environment}.apk" />
+	
+	<property name="bper.src.dir" value="./src" />
+
+	<property name="bper.dst.dir" value="./dist" />
+	<property name="bper.bin.dir" value="./bin" />
+
+	<target name="-post-build">
+
+		<copy file="${bper.bin.dir}/BPER_Native-release.apk" toFile="${bper.dst.dir}/${bper.build.name}" overwrite="true">
+		</copy>
+
+	</target>
+
+
+	<target name="-pre-build">
+		
+		<copy file="./Contants.java" toFile="${bper.src.dir}/com/accenture/mbank/util/Contants.java" overwrite="true">
+			<filterset>
+				<filter token="BPER_ENVIRONMENT" value="${bper.url.environment}" />
+			</filterset>
+		</copy>
+	</target>
+
+</project>

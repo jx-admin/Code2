@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/wifi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="wjfi"
+        android:visibility="gone" />
+    
+    <Button
+        android:id="@+id/gprs_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/wifi_btn"
+        android:layout_below="@+id/textView1"
+        android:text="gprs"
+        android:visibility="gone" />
+    
+
+    <Button
+        android:id="@+id/gps_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wifi_btn"
+        android:text="gps"
+        android:visibility="gone" />
+    
+    <Button 
+        android:id="@+id/sms_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wifi_btn"
+        android:layout_toRightOf="@id/gps_btn"
+        android:text="sms"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/record_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/gps_btn"
+        android:layout_marginTop="17dp"
+        android:text="record"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_btn"
+        android:text="call"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/call_end_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_btn"
+        android:layout_toRightOf="@id/call_btn"
+        android:text="callEnd"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/call_btn"
+        android:text="service"
+        android:visibility="gone" />
+
+</RelativeLayout>

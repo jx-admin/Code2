@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TranslucentTheme" parent="Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/TranslucentActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:spinnerStyle">@style/SpinnerAppTheme</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemAppTheme</item>
+    </style>
+
+    <style name="BaseActivity.Theme" parent="TranslucentTheme">
+        <item name="android:displayOptions">homeAsUp|showTitle|showHome</item>
+    </style>
+</resources>

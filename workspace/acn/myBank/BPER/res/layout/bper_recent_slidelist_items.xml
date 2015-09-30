@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_tabellaswipe_recover"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/show_item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="TextView"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_smaller"
+                android:text="TextView"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_smaller"
+                android:text="TextView"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"  />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_smaller"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="TextView"
+                android:textSize="@dimen/text_small"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:src="@drawable/arrow_payment_details" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/hide_item"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/show_item"
+        android:animateLayoutChanges="true"
+        android:background="#cfcfcf" >
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_tabellaswipe_recover" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<project name="custom_rules">
+
+	<tstamp>
+		<format property="bper.current.time" pattern="yyyyMMdd" />
+	</tstamp>
+
+	<property name="bper.url.js.environment" value="3" />
+	<property name="bper.environment" value="STAGING" />
+
+	<property name="bper.build.name"
+		value="BPER-Android-${bper.current.time}-${bper.environment}.apk" />
+	
+	<property name="bper.asset.dir" value="./assets/myBank_20120210/js" />
+
+	<property name="bper.dst.dir" value="./dist" />
+	<property name="bper.bin.dir" value="./bin" />
+
+	<target name="-post-build">
+
+		<copy file="${bper.bin.dir}/BPER_Hybrid_AndroidActivity-release.apk" toFile="${bper.dst.dir}/${bper.build.name}" overwrite="true">
+		</copy>
+
+	</target>
+
+
+	<target name="-pre-build">
+		
+		<copy file="./urlJs.js" toFile="${bper.asset.dir}/urlJs.js" overwrite="true">
+			<filterset>
+				<filter token="BPER_ENVIRONMENT" value="${bper.url.js.environment}" />
+			</filterset>
+		</copy>
+	</target>
+
+</project>

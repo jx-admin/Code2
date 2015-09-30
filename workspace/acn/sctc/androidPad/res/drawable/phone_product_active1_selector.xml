@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/yellow_radius_bk" android:state_pressed="true"/>
+    <item android:drawable="@drawable/yellow_radius_bk" android:state_checkable="true"/>
+    <item android:drawable="@drawable/yellow_radius_bk" android:state_activated="true"/>
+
+    <item android:state_checkable="false" android:state_pressed="false"><shape>
+            <solid android:color="@color/dark_light" />
+
+            <corners android:radius="@dimen/corner_radius" />
+        </shape></item>
+
+</selector>

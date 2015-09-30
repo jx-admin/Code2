@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <!-- login -->
+    <dimen name="login_text_margin_top">8dip</dimen>
+    <dimen name="login_text_margin_bottom">2dip</dimen>
+    <dimen name="login_margin_LR">5dip</dimen>
+    <color name="login_text_color">#ddd</color>
+    <color name="login_message_color">#f00</color>
+
+    
+    <dimen name="index_margin_left_right">6dip</dimen>
+    <color  name = "transparent" >#0000</color >
+    <color name="c_uninstall">#3000</color>
+</resources>

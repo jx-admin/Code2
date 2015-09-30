@@ -1,0 +1,9 @@
+MIDlet-Jar-Size: 53945
+MIDlet-1: TrafficView,/res/icons/command.png,com.ultrapower.midlet.TrafficView
+MIDlet-Jar-URL: TrafficCam.jar
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Version: 1.1.3
+MIDlet-Name: TrafficCam Midlet Suite
+MIDlet-Vendor: Midlet Suite Vendor
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http

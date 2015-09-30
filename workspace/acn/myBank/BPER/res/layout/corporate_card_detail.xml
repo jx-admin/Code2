@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:weightSum="8" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            layout="@layout/main_title" />
+
+        <include
+            android:id="@+id/account_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7.2"
+            layout="@layout/corporate_card_details_content" >
+        </include>
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/menu"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_layout" />
+
+</FrameLayout>

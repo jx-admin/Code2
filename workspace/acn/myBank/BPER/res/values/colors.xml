@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#ff646464</color>
+    <color name="light_gray">#ff999999</color>
+    <color name="lighter_gray">#ffa8a8a8</color>
+    <color name="light_gray1">#cfcfcf</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="dimgray2">#88494949</color>
+    <color name="chart_title">#888888</color>
+    <!-- Chart color, chart bg -->
+    <color name="chart_bg_top_bar">#efefef</color>
+    <color name="chart_bg_1">#e4e4e4</color>
+    <color name="chart_bg_2">#eeeeee</color>
+    <!-- Chart color, account blue -->
+    <color name="xycolor_account">#FF65B0CC</color>
+    <color name="xytouchcolor_account">#6465B0CC</color>
+    <color name="xydetailcolor_account">#C865B0CC</color>
+    <!-- Chart color, card pink -->
+    <color name="xycolor_card">#FFDA4692</color>
+    <color name="xytouchcolor_card">#64DA4692</color>
+    <color name="xydetailcolor_card">#C8DA4692</color>
+    <color name="color_card_circle">#d8007a</color>
+    <!-- Chart color, loan red -->
+    <color name="xycolor_loan">#FFD03031</color>
+    <color name="xytouchcolor_loan">#64D03031</color>
+    <color name="xydetailcolor_loan">#C8D03031</color>
+    <color name="xypopupcolor_loan">#FFD03031</color>
+    <!-- Color investment -->
+    <color name="xycolor_investment">#E35803</color>
+    <color name="loans_balance_bg">#FFC30103</color>
+    <color name="card_user">#D21D7A</color>
+    <color name="account_balance_bg">#60A7C2</color>
+    <color name="green_text">#006629</color>
+    <color name="payment_account">#209D4C</color>
+    <color name="button_search_map">#0000ff</color>
+    <color name="bg_color">#D9D9D9</color>
+    <color name="green">#49A100</color>
+    <color name="red">#C82420</color>
+    <color name="gray_chart_top_seprator1">#aaaaaa</color>
+    <color name="gray_chart_top_seprator2">#FFFFFF</color>
+    <!-- color Contact Link -->
+    <color name="link_color">#0B80D4</color>
+
+</resources>

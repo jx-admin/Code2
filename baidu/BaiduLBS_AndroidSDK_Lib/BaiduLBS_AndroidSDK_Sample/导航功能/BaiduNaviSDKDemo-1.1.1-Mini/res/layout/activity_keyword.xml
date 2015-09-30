@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+
+        <CheckedTextView 
+            android:id="@+id/netmode_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:clickable="true"
+            android:text="@string/offline"
+            />
+        
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:hint="@string/search_hint"
+            android:maxLength="20"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/suggest_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:text="@string/suggest_start" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_marginLeft="8dip"
+            android:text="@string/search_start" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:fadingEdgeLength="0dip"
+        android:smoothScrollbar="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/search_tips"
+        android:textSize="17sp" />
+
+</LinearLayout>

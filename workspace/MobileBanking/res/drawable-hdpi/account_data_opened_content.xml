@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+    android:layout_width="@dimen/payment_account_card_size"
+    android:layout_height="@dimen/payment_account_card_size"
+        android:background="@drawable/account_bk"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_small">
+
+        <com.accenture.mbank.view.payment.DoubleShadowTextView
+            android:id="@+id/accountname_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frank&apos;s sdfasfasfsafsaf" />
+
+        <com.accenture.mbank.view.payment.DoubleShadowTextView
+            android:id="@+id/account_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="account" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="15dip"
+            android:background="@drawable/account_data_opened_divider" />
+
+        <com.accenture.mbank.view.payment.DoubleShadowTextView
+            android:id="@+id/account_available_tv"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="available balance"
+            android:textSize="10sp" />
+
+        <com.accenture.mbank.view.payment.DoubleShadowTextView
+            android:id="@+id/account_available_value"
+            style="@style/payment_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$100,000.99" />
+    </LinearLayout>
+
+</LinearLayout>

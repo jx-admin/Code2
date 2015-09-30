@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowBackground">@drawable/login_dialog_bk</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	<style name="Transparent">
+		<item name="android:windowBackground">@color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+	</style>
+</resources>

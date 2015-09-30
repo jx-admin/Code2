@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="参数配置">
+	　　
+	<EditTextPreference android:key="sys_ws_ip"
+		android:defaultValue="@string/sys_ws_ip" android:dialogTitle="输入服务器地址"
+		android:title="服务器设置" android:summary="填写服务器地址" />
+
+	<PreferenceScreen  android:title="系统日志设置" >
+		<CheckBoxPreference   android:key="sys_log_switch"
+			android:title="开关" android:summaryOn="日志记录功能开启"
+			android:summaryOff="日志记录功能关闭" android:defaultValue="true" />
+		<ListPreference android:key="sys_log_day" android:title="保留时间"
+			android:summary="点击设置日志保留时间，默认保留7天" android:dialogTitle="设置保留时间"
+			android:entries="@array/sys_log_keep_day"
+			android:entryValues="@array/sys_log_keep_dayvalues"
+			android:defaultValue="7" 
+			 android:dependency="sys_log_switch"/>
+		<ListPreference android:key="sys_log_leval" android:title="记录等级"
+			android:summary="点击设置日志记录等级" android:dialogTitle="设置记录等级"
+			android:entries="@array/sys_log_keep_grade"
+			android:entryValues="@array/sys_log_keep_gradevalues"
+			android:defaultValue="I" 
+			 android:dependency="sys_log_switch" />
+	</PreferenceScreen>
+	
+	<PreferenceScreen  android:title="推送设置"   android:key="sys_push$PreferenceScreen" >
+		<CheckBoxPreference android:key="sys_push_switch"
+			android:title="开关" android:summaryOn="推送功能开启"
+			android:summaryOff="推送功能开启关闭" android:defaultValue="true" />
+		<ListPreference android:key="sys_pushrate" android:title="推送频率"
+			android:summary="点击设置推送频率(默认30分钟)" android:dialogTitle="设置推送频率"
+			android:entries="@array/sys_pushrate_entries"
+			android:entryValues="@array/sys_pushrate_entryValues"
+			android:defaultValue="1800000"  
+		     android:dependency="sys_push_switch"
+			  />
+	</PreferenceScreen>
+
+
+</PreferenceScreen>

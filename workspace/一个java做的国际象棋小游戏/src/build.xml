@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+
+<project name="javaChess" default="usage" basedir=".">
+
+  <!-- =================================================================== -->
+  <!-- Global initialization                                               -->
+  <!-- =================================================================== -->
+  <property name="javaChess.build.version" value="0.1.0pre-alpha2"/>
+  <property name="javaChess.root.dir" value=".."/>
+  <property name="javaChess.src.dir" value="."/>
+  <property name="javaChess.build.dir" value="${javaChess.root.dir}/build"/>
+  <property name="javaChess.build.classes" value="${javaChess.build.dir}/classes"/>
+  <property name="javaChess.lib.dir" value="${javaChess.root.dir}/lib"/>
+  <property name="javaChess.javadocs.dir" value="${javaChess.root.dir}/docs/javadoc"/>   
+  <property name="javaChess.src.manifest" value="${javaChess.src.dir}/de/manifest.mf"/> 
+  <property name="javaChess.build.manifest" value="${javaChess.build.dir}/classes/de/manifest.mf"/>   
+  <property name="javaChess.test.report" value="${javaChess.root.dir}/test/report/"/>
+
+  <!-- =================================================================== -->
+  <!-- Initialization target                                               -->
+  <!-- =================================================================== -->
+  <target name="init">
+
+    <tstamp>
+        <format property="year" pattern="yyyy"/>
+    </tstamp>
+
+    <property name="javaChess.root.dir" value=".."/>
+ 
+    <path id="java.tools.classpath">
+      <pathelement path="${JAVA_HOME}/lib/tools.jar" />
+    </path>
+
+    <path id="javaChess.compile.classpath">
+      <pathelement path="${javaChess.lib.dir}/junit.jar" />
+      <pathelement path="${javaChess.lib.dir}/antlrall.jar" />
+    </path>
+
+    <!-- In order to use ant optional tasks which use jars that are not -->
+    <!-- copied into ANT_HOME/lib, we must declare the tasks ourselves. -->
+
+    <path id="ant.optional.classpath">
+      <pathelement location="${ant.home}/optional.jar" />
+      <pathelement location="${javaChess.lib.dir}/junit.jar" />
+    </path>
+
+    <taskdef name="junit"
+             classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+      <classpath>
+	 <path refid="ant.optional.classpath"/>
+      </classpath>
+    </taskdef>
+
+    <taskdef name="junitreport"
+             classname="org.apache.tools.ant.taskdefs.optional.junit.XMLResultAggregator">
+      <classpath>
+	 <path refid="ant.optional.classpath" />
+	 <pathelement location="${javaChess.lib.dir}/junit.jar" />
+      </classpath>
+    </taskdef>
+
+    <!-- End of support section for ant optional tasks                  -->
+
+    <property name="name" value="javaChess"/>
+
+    <echo message="------------------- ${name} ----------------"/>
+    <echo message="Using ${ant.version}"/>
+
+    <!-- TODO:  Change name to javadoc.packages -->
+    
+    <property name="packages" value="de.java_chess.javaChess.*"/>
+
+  </target>
+
+  <!-- Note this file can only make Ant display values set in the file correctly, -->
+  <!-- but external values in the environment or properties file will be operational.  -->
+
+  <!-- =================================================================== -->
+  <!-- Help on usage                                                       -->
+  <!-- =================================================================== -->
+  <target name="usage" depends="init">
+    <echo>
+
+${Name} Build file
+-------------------------------------------------------------
+
+ available targets are:
+
+   generateparser       --> generates the parser sources from the grammars 
+   compile              --> compiles the source code to the tree under ${javaChess.build.dir}
+   package              --> generates the ${name}.jar file
+   test                 --> run the tests
+   prepare-docs         --> writes the documentation to ${javaChess.javadocs.dir}
+   clean                --> cleans up the ${javaChess.build.dir} directory
+   distribution         --> build a distribution
+   usage                --> show this message (default)
+
+ See the comments inside the build.xml file for more details.
+-------------------------------------------------------------
+    </echo>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Prepares the build directory                                        -->
+  <!-- =================================================================== -->
+  <target name="prepare" depends="init">
+    <!-- create directories -->
+    <echo message="Preparing the build directories"/>
+    <mkdir dir="${javaChess.build.dir}"/>
+    <copy todir="${javaChess.build.classes}/de/java_chess/javaChess/renderer2d/images/">
+      <fileset dir="${javaChess.src.dir}/de/java_chess/javaChess/renderer2d/images/" includes="**/**" excludes="CVS/**" />
+    </copy> 
+  </target> 
+
+  <!-- =================================================================== -->
+  <!-- Generates the parsers from the grammars by using Antlr              -->
+  <!-- =================================================================== -->
+  <target name="generateparser" depends="prepare">
+    <echo message="Generate parsers"/>
+
+    <java fork="yes" classname="antlr.Tool" classpath="${javaChess.lib.dir}/antlrall.jar">
+          <arg line="-o ${javaChess.src.dir}/de/java_chess/javaChess/pgn  ${javaChess.src.dir}/de/java_chess/javaChess/pgn/pgn.g"/>
+    </java>
+
+  </target>  
+  
+  <!-- =================================================================== -->
+  <!-- Compiles the source directory                                       -->
+  <!-- =================================================================== -->
+  <target name="compile" depends="prepare">
+
+    <echo message="Compiling the sources"/>
+
+    <!-- create directories -->
+    <mkdir dir="${javaChess.build.classes}"/>
+    <copy file="${javaChess.src.manifest}" tofile="${javaChess.build.manifest}" filtering="on" overwrite="on" />
+    <javac srcdir="${javaChess.src.dir}"
+           destdir="${javaChess.build.classes}"
+	   includes="de/java_chess/javaChess/**/*.java"
+           debug="${debug}"
+           deprecation="${deprecation}"
+           optimize="${optimize}">
+       <classpath>
+	  <path refid="javaChess.compile.classpath"/>
+       </classpath>
+    </javac>
+
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the class package                                           -->
+  <!-- =================================================================== -->
+  <target name="package" depends="compile">
+    <jar jarfile="${javaChess.build.dir}/${name}.jar"
+         basedir="${javaChess.build.classes}"
+         includes="de/java_chess/javaChess/**"
+         excludes="*.txt,*.bat,*.xml,*.sh"
+         manifest="${javaChess.build.manifest}"/>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Run the junit tests.                                                -->
+  <!-- =================================================================== -->
+  <target name="test" depends="compile">
+    <java classname="junit.swingui.TestRunner" fork="yes">
+      <arg value="de.java_chess.javaChess.test.JavaChessTest"/> 
+      <classpath>
+        <pathelement location="${javaChess.lib.dir}/junit.jar"/>
+        <pathelement path="${javaChess.build.classes}"/>
+      </classpath>  
+    </java>
+
+    <!--  The following version could be used for batch tests
+    <junit printsummary="true" haltonfailure="false" errorproperty="junit.failure" fork="yes">
+        <classpath>
+            <pathelement path="${javaChess.build.classes}"/>
+            <pathelement location="${javaChess.lib.dir}/junit.jar"/>
+        </classpath>
+        <formatter type="plain"/>
+        <test name="de.java_chess.javaChess.test.JavaChessTest"
+              todir="${javaChess.test.report}/junit/output/">
+      </test>
+    </junit>   
+    -->
+  </target>  
+
+  <!-- =================================================================== -->
+  <!-- Prepares the docs                                                   -->
+  <!-- =================================================================== -->
+  <target name="prepare-docs" depends="init, javadocs">
+  </target>
+
+  <target name="javadocs" depends="init">
+    <mkdir dir="${javaChess.javadocs.dir}"/>
+
+    <!-- Links allow reference to external classes from within JavaChess javadocs -->
+    <javadoc sourcepath="${javaChess.src.dir}"
+             destdir="${javaChess.javadocs.dir}"
+             packagenames="${packages}"
+	     use="${javadoc.use}"
+	     private="${javadoc.private}"
+	     splitindex="${javadoc.splitindex}"
+	     author="${javadoc.author}"
+	     windowtitle="JavaChess Documentation"
+	     overview="${javaChess.javadocs.dir}/overview-javaChess.html">
+      <classpath>
+	  <path refid="javaChess.compile.classpath"/>
+      </classpath>
+      <link offline="true"
+            href="${jdk.javadoc.link}"
+            packagelistLoc="${jdk.javadoc.link}"/>
+      <link offline="true"
+            href="${log4j.javadoc.link}"
+            packagelistLoc="${log4j.javadoc.link}"/>
+      <link offline="true"
+            href="${xerces.javadoc.link}"
+            packagelistLoc="${xerces.javadoc.link}"/>
+    </javadoc>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Clean targets                                                       -->
+  <!-- =================================================================== -->
+  <target name="clean" depends="init">
+
+    <delete dir="${javaChess.build.dir}/classes"/>
+    <delete dir="${javaChess.build.dir}/bin"/>
+
+    <!-- TODO: Some of these are obsolete -->
+    <delete quiet="true">
+        <fileset dir="${javaChess.build.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </delete>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Creates the source distribution                                     -->
+  <!-- =================================================================== -->
+  <target name="distribution">
+    <echo message="Building the distribution files (zip)"/>
+    <mkdir dir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}"/>
+    <copy todir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}/src">
+      <fileset dir="${javaChess.src.dir}" includes="**/*.java **/*.gif **/*.png **/manifest.mf **/build.xml" excludes="CVS/** **/*~"/>
+    </copy>    
+    <copy todir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}/docs">
+      <fileset dir="${javaChess.root.dir}/docs" includes="**/*" excludes="CVS/** **/*~"/>
+    </copy>
+    <copy todir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}">
+      <fileset dir="${javaChess.root.dir}" includes="readme.txt LICENSE" excludes="CVS/** **/*~"/>
+    </copy>    
+    <copy todir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}/build">
+      <fileset dir="${javaChess.root.dir}/build" includes="*.jar"/>
+    </copy>
+    <zip zipfile="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}.zip" basedir="${javaChess.root.dir}" includes="Java-Chess-${javaChess.build.version}/**"/>
+    <delete dir="${javaChess.root.dir}/Java-Chess-${javaChess.build.version}"/>
+  </target>     
+
+</project>

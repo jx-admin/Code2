@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff71b8f6"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/downloadContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#a111a8c6"
+        android:cacheColorHint="#00000000" />
+
+</LinearLayout>

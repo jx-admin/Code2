@@ -1,0 +1,7 @@
+<EditText
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/input_page"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:lines="1"
+	android:inputType="number"/>

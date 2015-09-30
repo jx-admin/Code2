@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- port  -->
+    <!-- hall -->
+    <dimen name="hall_margin_LR">30dip</dimen>
+    <dimen name="area_install_h">275dip</dimen>
+    <dimen name="area_uninstall_h">162dip</dimen>
+    <dimen name="botem_info_h">63dip</dimen>
+    <dimen name="install_page_lines">3px</dimen>
+    <dimen name="install_page_columns">4px</dimen>
+    <dimen name="uninstall_page_lines">2px</dimen>
+    <dimen name="uninstall_page_columns">1px</dimen>
+    
+    <!-- message -->
+    <dimen name="updata_btn_margin_t">4dip</dimen>
+    <dimen name="updata_btn_margin_r">2dip</dimen>
+    <dimen name="message_margin_l">10dip</dimen>
+    <dimen name="message_margin_r">17dip</dimen>
+    <dimen name="message_margin_t">0dip</dimen>
+    <dimen name="message_margin_d">16dip</dimen>
+    
+</resources>

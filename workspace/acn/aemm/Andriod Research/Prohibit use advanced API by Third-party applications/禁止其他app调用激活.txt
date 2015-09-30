@@ -1,0 +1,43 @@
+测试用的包名为：com.aemm.demo
+******************************************************************************************************
+方法一：直接干掉激活deviceAdmin的activity。当在setting里点击其他app的device admin时，界面弹不出来
+packages/app/Settings/src/com/android/settings/DeviceAdminAdd.java
+*******************************************************************************************************
+增加的代码在line106
+ protected void onCreate(Bundle icicle) {
+......
+       if (cn == null) {
+            Log.w(TAG, "No component specified in " + getIntent().getAction());
+            finish();
+            return;
+        }
+        //add by fengyun to disable other apps open this activity
+        if (!cn.getPackageName().equals(String.valueOf("com.aemm.demo"))) {
+             Log.w(TAG, "not aemm" + cn.getPackageName());
+             finish();
+             return;
+        }
+        if (DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN.equals(getIntent().getAction())) {
+......
+}
+
+******************************************************************************************************
+方法二：在DevicePolicyManagerService.java里区分。当在setting里点击其他app的device admin时，界面可以弹出来，
+但是点击激活，不起作用。
+framworks/base/services/java/com/android/server/DevicePolicyManagerService.java
+*******************************************************************************************************
+增加的代码在line547附近
+public void setActiveAdmin(ComponentName adminReceiver) {
+......
+ if (info == null) {
+            throw new IllegalArgumentException("Bad admin: " + adminReceiver);
+        }
+        //add by fengyun
+        //disable set active if app is aemm
+        String packageName = adminReceiver.getPackageName();
+        if (!packageName.equals(String.valueOf("com.aemm.demo"))) {
+        	return;
+        }
+        synchronized (this) {
+......
+}

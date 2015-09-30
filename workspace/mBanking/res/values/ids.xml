@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="userInfoAccountList"/>
+	<item name="input" type="id"></item>
+	<item name="decode" type="id"/>
+	<item name="quit" type="id"/>
+	<item name="decode_succeeded" type="id"/>
+	<item name="decode_failed" type="id"/>
+
+	<item name="auto_focus" type="id"/>
+	<item name="restart_preview" type="id"/>
+	<item name="material_detail" type="id"></item>
+	<item name="material" type="id"/>
+	<item name="cTetMsg2" type="id"></item>
+	<item name="search" type="id"/>
+</resources>

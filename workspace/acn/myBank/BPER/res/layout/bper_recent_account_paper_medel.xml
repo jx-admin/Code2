@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/bper_payment_account_medel" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:paddingTop="@dimen/margin_small" 
+            android:background="@drawable/level_background_1">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/data_operation"
+                android:textSize="@dimen/text_small"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_smaller"
+                android:text="@string/description_h"
+                android:textSize="@dimen/text_small"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_smaller"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_smaller"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="@string/amount_h"
+                android:textSize="@dimen/text_small"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_payment_details"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/upper_shading" />
+    </LinearLayout>
+
+</LinearLayout>

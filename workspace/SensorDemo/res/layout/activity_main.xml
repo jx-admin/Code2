@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" 
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <ToggleButton
+        android:id="@+id/toggle_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="66dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="ToggleButton" />
+
+    <TextView
+        android:id="@+id/sensor_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton1"
+        android:layout_alignBottom="@+id/toggleButton1"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/toggleButton1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/bettery_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_marginTop="44dp"
+        android:text="TextView" />
+
+    <ToggleButton
+        android:id="@+id/toggle_bettery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/toggleButton1"
+        android:layout_alignTop="@+id/textView3"
+        android:text="ToggleButton" />
+
+</LinearLayout>

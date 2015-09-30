@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_large"
+    android:layout_weight="1" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/blue_dark_yellow_selector"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:paddingLeft="@dimen/margin_xlarge"
+        android:paddingRight="@dimen/margin_xlarge"
+        android:paddingTop="@dimen/margin_xsmall"
+        android:text="@string/see_detail" />
+
+</LinearLayout>

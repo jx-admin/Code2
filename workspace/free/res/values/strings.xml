@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">黄金价格</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="main_home">首页</string>
+    <string name="main_comment">白银价格</string>
+    <string name="main_message">黄金价格</string>
+    <string name="main_edit">编写</string>
+    <string name="main_reload">刷新</string>
+    <string name="more">更多</string>
+    <string name="backword">返回</string>
+    <string name="blank">___________________</string>
+    <string name="gold">黄金</string>
+    <string name="silver">白银</string>
+    <string name="platium">铂金</string>
+    <string name="pladium">钯金</string>
+    <string name="KXian">K线</string>
+    <string name="Guzhi">股指</string>
+</resources>

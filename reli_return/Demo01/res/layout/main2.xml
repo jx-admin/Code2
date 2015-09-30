@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:id="@+id/main"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/author_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/games_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/games"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:background="@drawable/games" />
+
+            <ImageView
+                android:id="@+id/backto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/qiyijia"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/qiyijia" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/opus_ll"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/opus_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/opus"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/zuopin" />
+
+            <ImageView
+                android:id="@+id/calabash"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/hulu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/opus_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/flow"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@drawable/liucheng" />
+
+            <ImageView
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shezhi" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

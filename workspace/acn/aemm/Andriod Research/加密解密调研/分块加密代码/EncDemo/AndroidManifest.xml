@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.mog.EncDemo"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".EncDemo"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ContentEnc"
+              android:label="@string/maintitle"/>
+        <activity android:name=".FileEnc"
+              android:label="@string/maintitle"/>
+        <activity android:name=".SetPassword"
+              android:label="@string/maintitle"/>
+		<activity android:name=".SelectFile"
+              android:label="@string/maintitle"/>
+        <activity android:name=".DecFile"
+              android:label="@string/maintitle"/>
+        <activity android:name=".GetInputPass"
+              android:label="@string/maintitle"/>
+        <activity android:name=".DispDecContent"
+              android:label="@string/maintitle"/>
+        <activity android:name=".EncResult"
+              android:label="@string/maintitle"/>
+    </application>
+</manifest> 

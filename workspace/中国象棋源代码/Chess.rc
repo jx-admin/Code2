@@ -1,0 +1,448 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Chess.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 135, 109
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CHESS"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,10,20,20
+    LTEXT           "象棋 ver 0.5",IDC_STATIC,40,10,60,8,SS_NOPREFIX
+    LTEXT           "1318软件,2000年5月",IDC_STATIC,40,25,87,11
+    CONTROL         "确定",IDOK,"Button",BS_OWNERDRAW | WS_GROUP | 
+                    WS_TABSTOP,42,82,50,19
+    CONTROL         "http://thecct.go.163.com",IDC_BUTTONWEB,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,7,42,121,19
+    CONTROL         "mailto:thecct@netease.com",IDC_BUTTONEMAIL,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,7,62,121,19
+END
+
+IDD_BAI DIALOGEX 0, 0, 205, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "摆局-象棋"
+MENU IDR_MENUBAIMAIN
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    CONTROL         "确定",IDC_BAIOK,"Button",BS_OWNERDRAW,155,7,43,14
+    CONTROL         "取消",IDCANCEL,"Button",BS_OWNERDRAW,155,24,43,14
+    CONTROL         "红",IDC_RADIO_GOSIDE_RED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,168,128,24,10
+    CONTROL         "黑",IDC_RADIO_GOSIDE_BLACK,"Button",BS_AUTORADIOBUTTON,
+                    168,143,24,10
+    GROUPBOX        "谁先走?",IDC_STATIC,155,115,43,48,WS_GROUP
+    CONTROL         "标准",IDC_BT_NORMAL,"Button",BS_OWNERDRAW,155,58,43,14
+    CONTROL         "清除",IDC_BT_CLEAR,"Button",BS_OWNERDRAW,155,41,43,14
+    CONTROL         "打开",IDC_BT_OPEN,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    155,75,43,14
+    CONTROL         "保存",IDC_BT_SAVE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    155,92,43,14
+END
+
+IDD_OPTION DIALOG DISCARDABLE  0, 0, 128, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置-象棋"
+FONT 10, "System"
+BEGIN
+    CONTROL         "确定",IDOK,"Button",BS_OWNERDRAW,7,115,40,14
+    CONTROL         "取消",IDCANCEL,"Button",BS_OWNERDRAW,85,115,36,14
+    GROUPBOX        "棋手1",IDC_STATIC1,7,7,47,48,WS_GROUP
+    CONTROL         "人",IDC_RADIOMAN1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,19,23,10
+    CONTROL         "电脑",IDC_RADIOCOM1,"Button",BS_AUTORADIOBUTTON,15,33,
+                    30,10
+    GROUPBOX        "棋手2",IDC_STATIC2,7,59,47,48,WS_GROUP
+    CONTROL         "人",IDC_RADIOMAN2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,71,23,10
+    CONTROL         "电脑",IDC_RADIOCOM2,"Button",BS_AUTORADIOBUTTON,15,85,
+                    33,10
+    GROUPBOX        "轮换方式",IDC_STATIC,60,48,61,59,WS_GROUP
+    CONTROL         "轮流",IDC_RADIOMODE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,65,60,47,10
+    CONTROL         "棋手1执红",IDC_RADIOMODE2,"Button",BS_AUTORADIOBUTTON,
+                    65,73,47,10
+    CONTROL         "棋手2执红",IDC_RADIOMODE3,"Button",BS_AUTORADIOBUTTON,
+                    65,86,47,10
+    LTEXT           "棋手1等级:",IDC_STATIC,65,5,50,12
+    EDITTEXT        IDC_EDITLEVEL1,75,20,28,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,110,15,8,
+                    18
+    CONTROL         "设为默认",IDC_RESET,"Button",BS_OWNERDRAW,48,115,36,14
+END
+
+IDD_CHESS_DIALOG DIALOGEX 0, 0, 306, 245
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "象棋"
+MENU IDR_MAINFRAME
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "悔棋",IDC_CHESS_UNDO,"Button",BS_OWNERDRAW,225,108,66,
+                    24
+    CONTROL         "电脑",IDC_CHESS_HELP,"Button",BS_OWNERDRAW,225,156,66,
+                    24
+    CONTROL         "还原",IDC_CHESS_REDO,"Button",BS_OWNERDRAW,225,132,66,
+                    24
+    LISTBOX         IDC_STEPLIST,225,15,66,92,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,225,204,66,19
+    CONTROL         "停止",IDC_CHESS_CUT,"Button",BS_OWNERDRAW,225,180,66,24
+END
+
+IDD_THINKOPTION DIALOG DISCARDABLE  0, 0, 196, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置参数"
+FONT 10, "System"
+BEGIN
+    CONTROL         "OK",ID_MYOK,"Button",BS_OWNERDRAW | WS_TABSTOP,140,111,
+                    47,14
+    CONTROL         "Cancel",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,140,
+                    128,47,14
+    EDITTEXT        IDC_EDITS1,17,19,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,33,19,8,14
+    GROUPBOX        "参数1",IDC_STATIC,9,6,47,111
+    EDITTEXT        IDC_EDITX1,17,35,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,33,36,8,14
+    EDITTEXT        IDC_EDITM1,17,51,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,33,54,8,14
+    EDITTEXT        IDC_EDITJ1,17,67,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,33,71,8,14
+    EDITTEXT        IDC_EDITP1,17,83,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN5,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,33,90,8,
+                    14
+    EDITTEXT        IDC_EDITB1,17,99,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN6,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,33,101,8,14
+    LTEXT           "士",IDC_STATIC,65,21,12,11
+    LTEXT           "象",IDC_STATIC,65,37,12,11
+    LTEXT           "马",IDC_STATIC,65,53,12,11
+    LTEXT           "车",IDC_STATIC,65,69,12,11
+    LTEXT           "兵",IDC_STATIC,65,102,12,11
+    LTEXT           "炮",IDC_STATIC,65,86,12,11
+    EDITTEXT        IDC_EDITS2,90,19,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN7,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,18,8,14
+    GROUPBOX        "参数2",IDC_STATIC,82,6,47,111
+    EDITTEXT        IDC_EDITX2,90,35,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN8,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,35,8,14
+    EDITTEXT        IDC_EDITM2,90,51,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN9,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,53,8,14
+    EDITTEXT        IDC_EDITJ2,90,67,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN10,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,70,8,14
+    EDITTEXT        IDC_EDITP2,90,83,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN11,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,89,8,14
+    EDITTEXT        IDC_EDITB2,90,99,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN12,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,109,99,8,14
+    EDITTEXT        IDC_EDIT30,148,20,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN13,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,167,19,8,14
+    GROUPBOX        "过河兵",IDC_STATIC,140,6,47,100
+    EDITTEXT        IDC_EDIT31,148,36,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN14,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,167,36,8,14
+    EDITTEXT        IDC_EDIT32,148,52,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN15,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,167,54,8,14
+    EDITTEXT        IDC_EDIT33,148,68,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN16,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,167,71,8,14
+    EDITTEXT        IDC_EDIT34,148,84,31,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN17,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY,168,86,8,14
+    LTEXT           "注意:改动这些数据可能有不良后果\n要恢复默认数据请看帮助。",
+                    IDC_STATIC,7,123,133,19
+END
+
+IDD_OPEN DIALOGEX 0, 0, 201, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "打开棋谱"
+FONT 10, "System"
+BEGIN
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | WS_TABSTOP,125,128,33,
+                    13
+    CONTROL         "Cancel",IDCANCEL,"Button",BS_OWNERDRAW | WS_TABSTOP,161,
+                    128,33,13
+    CONTROL         "D:\\temp",IDC_DIR,"Button",BS_OWNERDRAW | WS_TABSTOP,7,
+                    7,187,18
+    LISTBOX         IDC_FILELIST,125,27,69,96,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_BAI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_CHESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_THINKOPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 12
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_OPEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Chess.ico"
+IDI_B_B                 ICON    DISCARDABLE     "res\\BLACK_B.ico"
+IDI_B_J                 ICON    DISCARDABLE     "res\\BLACK_J.ico"
+IDI_B_K                 ICON    DISCARDABLE     "res\\BLACK_K.ico"
+IDI_B_M                 ICON    DISCARDABLE     "res\\BLACK_M.ico"
+IDI_B_P                 ICON    DISCARDABLE     "res\\BLACK_P.ico"
+IDI_B_S                 ICON    DISCARDABLE     "res\\BLACK_S.ico"
+IDI_B_X                 ICON    DISCARDABLE     "res\\BLACK_X.ico"
+IDI_HELP                ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_R_B                 ICON    DISCARDABLE     "res\\RED_B.ico"
+IDI_R_J                 ICON    DISCARDABLE     "res\\RED_J.ico"
+IDI_R_K                 ICON    DISCARDABLE     "res\\RED_K.ico"
+IDI_R_M                 ICON    DISCARDABLE     "res\\RED_M.ico"
+IDI_R_P                 ICON    DISCARDABLE     "res\\RED_P.ico"
+IDI_R_S                 ICON    DISCARDABLE     "res\\RED_S.ico"
+IDI_R_X                 ICON    DISCARDABLE     "res\\RED_X.ico"
+IDI_REDO                ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_UNDO                ICON    DISCARDABLE     "res\\icon3.ico"
+IDI_CUT                 ICON    DISCARDABLE     "res\\cut.ico"
+IDI_DIR                 ICON    DISCARDABLE     "res\\dir.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新棋局(&N)",                  ID_FILE_NEW
+        MENUITEM "打  开(&O)",                  ID_FILE_OPEN
+        MENUITEM "保  存(&S)",                  ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "摆  局(&B)",                  ID_FILE_BAI
+        MENUITEM SEPARATOR
+        MENUITEM "设  置(&T)",                  ID_FILE_OPTION
+        MENUITEM "参  数(&C)",                  ID_FILE_THINKOPTION
+        MENUITEM SEPARATOR
+        MENUITEM "退  出(&X)",                  IDOK
+    END
+    POPUP "控制(&E)"
+    BEGIN
+        MENUITEM "悔棋(&U)",                    ID_CHESS_UNDO
+        MENUITEM "还原(&R)",                    ID_CHESS_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "电脑(&H)",                    ID_CHESS_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "停止(&S)",                    ID_CHESS_CUT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "使用帮助  (&H)",              ID_HELP_USE
+        MENUITEM SEPARATOR
+        MENUITEM "E_mail    (&E)...",           ID_HELP_EMAIL
+        MENUITEM "作者主页  (&W)...",           ID_HELP_WEB
+        MENUITEM SEPARATOR
+        MENUITEM "关于""象棋""(&A)...",         ID_ABOUTBOX
+    END
+END
+
+IDR_MENUBAI MENU DISCARDABLE 
+BEGIN
+    POPUP "右键菜单"
+    BEGIN
+        POPUP "红方棋子(&R)"
+        BEGIN
+            MENUITEM "兵(&B)",                      ID_RED_B
+            MENUITEM "炮(&P)",                      ID_RED_P
+            MENUITEM "车(&J)",                      ID_RED_J
+            MENUITEM "马(&M)",                      ID_RED_M
+            MENUITEM "相(&X)",                      ID_RED_X
+            MENUITEM "仕(&S)",                      ID_RED_S
+            MENUITEM "帅(&K)",                      ID_RED_K
+        END
+        POPUP "黑方棋子(&B)"
+        BEGIN
+            MENUITEM "卒(&B)",                      ID_BLACK_B
+            MENUITEM "炮(&P)",                      ID_BLACK_P
+            MENUITEM "车(&J)",                      ID_BLACK_J
+            MENUITEM "马(&M)",                      ID_BLACK_M
+            MENUITEM "象(&X)",                      ID_BLACK_X
+            MENUITEM "士(&S)",                      ID_BLACK_S
+            MENUITEM "将(&K)",                      ID_BLACK_K
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "删除(&D)",                    ID_BAI_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "取消",                        ID_BAI_CANCEL
+    END
+END
+
+IDR_MENUBAIMAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "清除(&N)",                    IDC_BT_CLEAR
+        MENUITEM "标准(&B)",                    IDC_BT_NORMAL
+        MENUITEM "打开(&O)",                    IDC_BT_OPEN
+        MENUITEM "保存(&S)",                    IDC_BT_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "确定(&O)",                    IDC_BAIOK
+        MENUITEM SEPARATOR
+        MENUITEM "取消(&C)",                    IDCANCEL
+    END
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Chess.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

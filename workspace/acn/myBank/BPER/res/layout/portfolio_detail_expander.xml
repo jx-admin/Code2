@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.PortFolioDetailExpandContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/portfolio_detail_item" />
+	
+    <LinearLayout
+        android:id="@+id/protfolio_detail_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</com.accenture.mbank.view.PortFolioDetailExpandContainer>

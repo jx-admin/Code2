@@ -1,0 +1,7 @@
+config.xml
+
+<SessionId>   用于判断session是否过期
+<UserName>  存储用户名信息
+<Password>    存储密码信息
+<checkcycle>  检查更新周期
+

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="30" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lighter_gray"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/business_summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/recent_deposits" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/effects_account_info_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/account_info_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_details"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/effetti_radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_small_mini"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="5" >
+
+            <RadioButton
+                android:id="@+id/all"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_left_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/pending"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/pending"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/not_payed"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/not_payed"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/payed"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/payed"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/other"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/distinte_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_small_mini"
+                android:gravity="center_vertical"
+                android:weightSum="5" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="left|center_vertical"
+                    android:lines="2"
+                    android:paddingLeft="@dimen/padding_small_mini"
+                    android:text="@string/expiration_2" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/type_1" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/state_1" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/amount_1" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/arrow_payment_details"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:src="@drawable/account_line" >
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+         <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/recent_deposit_item" />
+    -->
+
+</LinearLayout>

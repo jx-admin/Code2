@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/sys_background">
+	<include layout="@layout/sys_head" />
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TableLayout android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:paddingTop="2dip" android:paddingLeft="5dip">
+				<TableRow android:layout_height="wrap_content"
+					android:layout_width="fill_parent">
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_state" />
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content"
+						android:id="@+id/sys_location_state"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/sys_location_positioning" />
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_satelliteNum" />
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content"
+						android:id="@+id/sys_location_satelliteNum"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0" />
+				</TableRow>
+				<TableRow android:layout_height="wrap_content"
+					android:layout_width="fill_parent">
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content" android:gravity="right"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_longitude" />
+					<TextView android:singleLine="true"
+						android:gravity="left" android:layout_width="wrap_content"
+						android:id="@+id/sys_location_longitude"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0.0000" />
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content" android:gravity="right"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_latitude" />
+					<TextView android:singleLine="true"
+						android:gravity="left" android:layout_width="wrap_content"
+						android:id="@+id/sys_location_latitude"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0.0000" />
+				</TableRow>
+				<TableRow android:layout_height="wrap_content"
+					android:layout_width="fill_parent">
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content" android:gravity="right"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_altitude" />
+					<TextView android:singleLine="true"
+						android:gravity="left" 
+						android:id="@+id/sys_location_altitude"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0.000" />
+					<TextView android:singleLine="true"
+						android:gravity="right" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_accuracy" />
+					<TextView android:singleLine="true"
+						android:gravity="left" android:layout_width="wrap_content"
+						android:id="@+id/sys_location_accuracy"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0.000" />
+				</TableRow>
+				<TableRow android:layout_height="wrap_content"
+					android:layout_width="fill_parent">
+					<TextView android:singleLine="true"
+						android:gravity="right" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_time" />
+					<TextView android:singleLine="true"
+						android:gravity="left" android:layout_width="wrap_content"
+						android:id="@+id/sys_location_time"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="00:00:00" />
+					<TextView android:singleLine="true"
+						android:layout_width="wrap_content" android:gravity="right"
+						android:layout_height="wrap_content"
+						android:text="@string/sys_location_speed" />
+					<TextView android:singleLine="true"
+						android:gravity="left" android:layout_width="wrap_content"
+						android:id="@+id/sys_location_speed"
+						android:layout_weight="1"
+						android:layout_height="wrap_content" android:text="0.000" />
+				</TableRow>
+			</TableLayout>
+		</TableRow>
+		<TableRow android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+			<LinearLayout android:layout_gravity="top|center"
+				android:id="@+id/skyview" android:background="@drawable/sys_earth"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<AbsoluteLayout android:layout_gravity="top|center"
+					android:id="@+id/compassview"
+					android:background="@drawable/sys_compass"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</LinearLayout>
+		</TableRow>
+		<TableRow android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+			<ImageView android:layout_width="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_height="wrap_content"
+				android:src="@drawable/sys_signalstress" />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/new_payee_top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xLarge"
+            android:layout_marginRight="@dimen/margin_xLarge"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/holders_name_tv"
+                style="@style/new_payee_lable"
+                android:text="@string/holders_name" />
+
+            <EditText
+                android:id="@+id/holders_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/address_1st_line_tv"
+                style="@style/new_payee_lable"
+                android:text="@string/address_1st_line" />
+
+            <EditText
+                android:id="@+id/address_1st_line_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/city_tv"
+                style="@style/new_payee_lable"
+                android:text="@string/city" />
+
+            <EditText
+                android:id="@+id/city_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/zip_code_tv"
+                        style="@style/new_payee_lable"
+                        android:text="@string/zip_code" />
+
+                    <EditText
+                        android:id="@+id/zip_code_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/margin_medium" >
+
+                    <TextView
+                        android:id="@+id/state_tv"
+                        style="@style/new_payee_lable"
+                        android:text="@string/state_1" />
+
+                    <EditText
+                        android:id="@+id/state_ev"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/np_proceed_lin" />
+
+</LinearLayout>

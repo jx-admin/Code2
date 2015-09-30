@@ -1,0 +1,612 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Pente.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Pente.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RECORD1 DIALOG DISCARDABLE  20, 40, 167, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "五子棋 - 喜登英雄榜"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,36,50,38,13
+    PUSHBUTTON      "取消",IDCANCEL,93,49,38,13
+    EDITTEXT        IDC_EDIT1,93,26,66,12,ES_AUTOHSCROLL | ES_NOHIDESEL
+    LTEXT           "输入您的姓名:",IDC_STATIC,8,27,82,8
+    EDITTEXT        IDC_EDIT2,94,8,66,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    CTEXT           "级别:",IDC_STATIC,9,9,83,8
+END
+
+IDD_BEST1 DIALOG DISCARDABLE  20, 40, 227, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "五子棋 - 英雄榜"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,136,64,39,14
+    LTEXT           "初级优胜者 :",IDC_STATIC,13,11,60,8
+    LTEXT           "中级优胜者 :",IDC_STATIC,13,26,60,8
+    LTEXT           "专家级优胜者 :",IDC_STATIC,13,41,60,8
+    EDITTEXT        IDC_EDIT1,74,10,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT2,74,25,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT3,74,40,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "成绩 :",IDC_STATIC,149,11,25,8
+    EDITTEXT        IDC_EDIT4,179,11,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "成绩 :",IDC_STATIC,149,26,25,8
+    EDITTEXT        IDC_EDIT5,179,26,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "成绩 :",IDC_STATIC,149,42,25,8
+    EDITTEXT        IDC_EDIT6,179,42,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "重置[&R]",IDC_RESTARTCOUNT,52,64,39,14
+    LTEXT           "子",IDC_STATIC,200,11,14,8
+    LTEXT           "子",IDC_STATIC,200,26,14,8
+    LTEXT           "子",IDC_STATIC,200,42,14,8
+END
+
+IDD_PENTE_DIALOG DIALOGEX 0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Pente"
+MENU IDR_MENU_ENGLISH
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_RECORD DIALOG DISCARDABLE  20, 40, 167, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pente - Record Your Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,36,50,38,13
+    PUSHBUTTON      "&Cancel",IDCANCEL,93,49,38,13
+    EDITTEXT        IDC_EDIT1,93,26,66,12,ES_AUTOHSCROLL | ES_NOHIDESEL
+    LTEXT           "Please Type Your Name:",IDC_STATIC,8,27,82,8
+    EDITTEXT        IDC_EDIT2,94,8,66,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    CTEXT           "Skill:",IDC_STATIC,7,9,83,8
+END
+
+IDD_BEST DIALOG DISCARDABLE  20, 40, 227, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pente - Best Winner"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,139,64,39,14
+    LTEXT           "Beginner Winner:",IDC_STATIC,10,11,58,8
+    LTEXT           "Intermediate Winner:",IDC_STATIC,10,26,69,8
+    LTEXT           "Expert Winner:",IDC_STATIC,10,41,50,8
+    EDITTEXT        IDC_EDIT1,80,10,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT2,80,25,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT3,80,40,67,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "Score:",IDC_STATIC,154,11,20,8
+    EDITTEXT        IDC_EDIT4,177,11,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Score:",IDC_STATIC,154,26,20,8
+    EDITTEXT        IDC_EDIT5,177,26,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Score:",IDC_STATIC,154,42,20,8
+    EDITTEXT        IDC_EDIT6,177,42,18,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "&Reset",IDC_RESTARTCOUNT,49,64,39,14
+    LTEXT           "Stones",IDC_STATIC,198,11,24,8
+    LTEXT           "Stones",IDC_STATIC,198,26,24,8
+    LTEXT           "Stones",IDC_STATIC,198,42,24,8
+END
+
+IDD_ABOUTDLG DIALOGEX 50, 50, 242, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Pente"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,185,13,42,14
+    LTEXT           "Pente  Version 2.0",IDC_STATIC,48,10,128,8
+    LTEXT           "Programed by Zhou Zhangfa",IDC_STATIC,48,28,127,8
+    RTEXT           "Free Physical Memory:",IDC_STATIC,17,84,130,10,NOT 
+                    WS_GROUP
+    LTEXT           "(Avail mem)",IDC_AVAIL_MEM,153,84,70,10,NOT WS_GROUP
+    RTEXT           "Total Space of OS Start Disk:",IDC_STATIC,17,144,130,10,
+                    NOT WS_GROUP
+    LTEXT           "(Disk space)",IDC_TOTAL_SPACE,153,144,70,10,NOT 
+                    WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,27,61,200,2,
+                    WS_EX_STATICEDGE
+    LTEXT           "Copyright(C) 1995-1998  All rights reserved.",
+                    IDC_STATIC,48,44,172,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,8,8,21,20
+    RTEXT           "Physical Memory:",IDC_STATIC,17,72,130,10,NOT WS_GROUP
+    LTEXT           "(Physical mem)",IDC_PHYSICAL_MEM,153,72,70,10,NOT 
+                    WS_GROUP
+    RTEXT           "Free Virtual Memory:",IDC_STATIC,17,96,130,10,NOT 
+                    WS_GROUP
+    LTEXT           "(Avail virtual mem)",IDC_AVAIL_VIRTUAL_MEM,153,96,70,10,
+                    NOT WS_GROUP
+    RTEXT           "CPU Type:",IDC_STATIC,17,108,130,10,NOT WS_GROUP
+    LTEXT           "(CPU)",IDC_CPU,153,108,70,10,NOT WS_GROUP
+    RTEXT           "Operating System:",IDC_STATIC,17,120,130,10,NOT 
+                    WS_GROUP
+    LTEXT           "(OS)",IDC_OS,153,120,70,10,NOT WS_GROUP
+    RTEXT           "Windows Version:",IDC_STATIC,17,132,130,10,NOT WS_GROUP
+    LTEXT           "(Version)",IDC_VERSION,153,132,70,10,NOT WS_GROUP
+    RTEXT           "Free Space of OS Start Disk:",IDC_STATIC,17,156,130,10,
+                    NOT WS_GROUP
+    LTEXT           "(Free space)",IDC_FREE_SPACE,153,156,70,10,NOT WS_GROUP
+END
+
+IDD_SETUPDLG DIALOG DISCARDABLE  0, 0, 174, 148
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pente"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,31,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,93,127,50,14
+    GROUPBOX        "How to play",IDC_STATIC,7,13,160,48,WS_GROUP
+    CONTROL         "&Play with computer",IDC_RADIO_WITHCOMPUTER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,28,144,12
+    CONTROL         "&Two players play on one computer",IDC_RADIO_2PLAYER,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,17,41,144,12
+    GROUPBOX        "The first player",IDC_STATIC,7,69,160,28,WS_GROUP
+    CONTROL         "&You",IDC_RADIO_YOU_FIRST,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,17,81,65,11
+    CONTROL         "&Computer",IDC_RADIO_COMPUTER_FIRST,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,97,80,68,13
+    CONTROL         "&Game with sound effect",IDC_CHECK_SOUND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,106,160,12
+END
+
+IDD_SETUPDLG1 DIALOG DISCARDABLE  0, 0, 174, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "五子棋"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,31,144,50,14
+    PUSHBUTTON      "退出",IDCANCEL,93,144,50,14
+    GROUPBOX        "对弈方式",IDC_STATIC,7,14,160,50,WS_GROUP
+    CONTROL         "与计算机对奕[&P]",IDC_RADIO_WITHCOMPUTER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,29,144,12
+    CONTROL         "两人在同一计算机上对弈[&T]",IDC_RADIO_2PLAYER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,42,144,12
+    GROUPBOX        "先手",IDC_STATIC,7,72,160,45,WS_GROUP
+    CONTROL         "你执黑先下[&Y]",IDC_RADIO_YOU_FIRST,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,85,141,11
+    CONTROL         "计算机执黑先下[&C]",IDC_RADIO_COMPUTER_FIRST,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,99,140,13
+    CONTROL         "声音效果[&G]",IDC_CHECK_SOUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,124,160,12
+END
+
+IDD_ABOUTDLG1 DIALOGEX 50, 50, 242, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于五子棋"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,185,13,42,14
+    LTEXT           "五子棋       2.0 版",IDC_STATIC,48,10,128,8
+    LTEXT           "周长发       编制",IDC_STATIC,48,28,127,8
+    RTEXT           "可用物理内存:",IDC_STATIC,29,84,107,10,NOT WS_GROUP
+    LTEXT           "(Avail mem)",IDC_AVAIL_MEM,142,84,70,10,NOT WS_GROUP
+    RTEXT           "操作系统启动盘总空间:",IDC_STATIC,29,144,107,10,NOT 
+                    WS_GROUP
+    LTEXT           "(Disk space)",IDC_TOTAL_SPACE,142,144,70,10,NOT 
+                    WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,27,61,187,2,
+                    WS_EX_STATICEDGE
+    LTEXT           "版权所有(C) 1995-1998  保留所有权利。",IDC_STATIC,48,44,
+                    172,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,8,8,20,20
+    RTEXT           "物理内存:",IDC_STATIC,29,72,107,10,NOT WS_GROUP
+    LTEXT           "(Physical mem)",IDC_PHYSICAL_MEM,142,72,70,10,NOT 
+                    WS_GROUP
+    RTEXT           "可用虚拟内存:",IDC_STATIC,29,96,107,10,NOT WS_GROUP
+    LTEXT           "(Avail virtual mem)",IDC_AVAIL_VIRTUAL_MEM,142,96,70,10,
+                    NOT WS_GROUP
+    RTEXT           "CPU 类型:",IDC_STATIC,29,108,107,10,NOT WS_GROUP
+    LTEXT           "(CPU)",IDC_CPU,142,108,70,10,NOT WS_GROUP
+    RTEXT           "操作系统:",IDC_STATIC,29,120,107,10,NOT WS_GROUP
+    LTEXT           "(OS)",IDC_OS,142,120,70,10,NOT WS_GROUP
+    RTEXT           "Windows 版本:",IDC_STATIC,29,132,107,10,NOT WS_GROUP
+    LTEXT           "(Version)",IDC_VERSION,142,132,70,10,NOT WS_GROUP
+    RTEXT           "操作系统启动盘空闲空间:",IDC_STATIC,29,156,107,10,NOT 
+                    WS_GROUP
+    LTEXT           "(Free space)",IDC_FREE_SPACE,142,156,70,10,NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PENTE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_SETUPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_SETUPDLG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_WHITE_HAND          CURSOR  DISCARDABLE     "RES\\HANDWHITE.CUR"
+IDC_BLACK_HAND          CURSOR  DISCARDABLE     "RES\\HANDBLACK.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DIB
+//
+
+IDDIB_WHITE             DIB     PRELOAD MOVEABLE PURE "RES\\WHITE.BMP"
+IDDIB_MASK              DIB     PRELOAD MOVEABLE PURE "RES\\MASK.BMP"
+IDDIB_BOARD             DIB     PRELOAD MOVEABLE PURE "RES\\BOARD.BMP"
+IDDIB_BLACK             DIB     PRELOAD MOVEABLE PURE "RES\\BLACK.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_ENGLISH MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "&New Game",                   IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Beginner",                   IDM_GRADE1, CHECKED
+        MENUITEM "&Intermediate",               IDM_GRADE2
+        MENUITEM "&Expert",                     IDM_GRADE3
+        MENUITEM SEPARATOR
+        MENUITEM "&Best Winner...",             IDM_BEST
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               IDM_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Undo",                       IDM_UNDO, GRAYED
+        MENUITEM "&Hint",                       IDM_HINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Sound",                      IDM_SOUND, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Chinese",                    IDM_LANGUAGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Pente...",             IDM_ABOUT
+    END
+END
+
+IDR_MENU_CHINESE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "游戏[&G]"
+    BEGIN
+        MENUITEM "新局[&N]",                    IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "初级[&1]",                    IDM_GRADE1, CHECKED
+        MENUITEM "中级[&2]",                    IDM_GRADE2
+        MENUITEM "专家[&3]",                    IDM_GRADE3
+        MENUITEM SEPARATOR
+        MENUITEM "英雄榜[&B]...",               IDM_BEST
+        MENUITEM SEPARATOR
+        MENUITEM "退出[&X]\tAlt+F4",            IDM_EXIT
+    END
+    POPUP "选项[&O]"
+    BEGIN
+        MENUITEM "悔棋[&U]",                    IDM_UNDO, GRAYED
+        MENUITEM "提示[&H]",                    IDM_HINT
+        MENUITEM SEPARATOR
+        MENUITEM "声音效果[&S]",                IDM_SOUND, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "英文[&E]",                    IDM_LANGUAGE
+    END
+    POPUP "帮助[&H]"
+    BEGIN
+        MENUITEM "关于五子棋[&A]...",           IDM_ABOUT
+    END
+END
+
+IDR_MENU_CONTEXT_ENGLISH MENU DISCARDABLE 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&New Game",                   IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       IDM_UNDO, GRAYED
+        MENUITEM "&Hint",                       IDM_HINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Beginner",                   IDM_GRADE1, CHECKED
+        MENUITEM "&Intermediate",               IDM_GRADE2
+        MENUITEM "&Expert",                     IDM_GRADE3
+        MENUITEM SEPARATOR
+        MENUITEM "&Sound",                      IDM_SOUND, CHECKED
+        MENUITEM "&Chinese",                    IDM_LANGUAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Best Winner...",             IDM_BEST
+        MENUITEM "&About Pente...",             IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               IDM_EXIT
+    END
+END
+
+IDR_MENU_CONTEXT_CHINESE MENU DISCARDABLE 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "新局[&N]",                    IDM_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "悔棋[&U]",                    IDM_UNDO, GRAYED
+        MENUITEM "提示[&H]",                    IDM_HINT
+        MENUITEM SEPARATOR
+        MENUITEM "初级[&1]",                    IDM_GRADE1, CHECKED
+        MENUITEM "中级[&2]",                    IDM_GRADE2
+        MENUITEM "专家[&3]",                    IDM_GRADE3
+        MENUITEM SEPARATOR
+        MENUITEM "声音效果[&S]",                IDM_SOUND, CHECKED
+        MENUITEM "英文[&E]",                    IDM_LANGUAGE
+        MENUITEM SEPARATOR
+        MENUITEM "英雄榜[&B]...",               IDM_BEST
+        MENUITEM "关于五子棋[&A]...",           IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "退出[&X]\tAlt+F4",            IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDSOUND_WHITEWIN        WAVE    MOVEABLE PURE   "res\\whitewin.wav"
+IDSOUND_WHITED3         WAVE    MOVEABLE PURE   "res\\whited3.wav"
+IDSOUND_WHITE4          WAVE    MOVEABLE PURE   "res\\white4.wav"
+IDSOUND_WELCOME         WAVE    MOVEABLE PURE   "res\\welcome.wav"
+IDSOUND_UNDO            WAVE    MOVEABLE PURE   "res\\undo.wav"
+IDSOUND_PUTSTONE        WAVE    MOVEABLE PURE   "res\\putstone.wav"
+IDSOUND_NEWGAME         WAVE    MOVEABLE PURE   "res\\newgame.wav"
+IDSOUND_GOODBYE         WAVE    MOVEABLE PURE   "res\\goodbye.wav"
+IDSOUND_ERROR           WAVE    MOVEABLE PURE   "res\\error.wav"
+IDSOUND_BLACKWIN        WAVE    MOVEABLE PURE   "res\\blackwin.wav"
+IDSOUND_BLACKD3         WAVE    MOVEABLE PURE   "res\\blackd3.wav"
+IDSOUND_BLACK4          WAVE    MOVEABLE PURE   "res\\black4.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_SINGLE_COMPUTER_CHINESE "五子棋 -> 与计算机对弈, 计算机执黑先下"
+    IDS_SINGLE_USER_CHINESE "五子棋 -> 与计算机对弈, 你执黑先下"
+    IDS_DOUBLE_CHINESE      "五子棋 -> 双人同机对弈"
+    IDS_SINGLE_COMPUTER_ENGLISH 
+                            "Pente -> Computer play first with black stone"
+    IDS_SINGLE_USER_ENGLISH "Pente -> You play first with black stone"
+    IDS_DOUBLE_ENGLISH      "Pente -> Two players play in the same computer"
+    IDS_NOSOUND_CHINESE     "不能播放声音。\n请检查声音卡。"
+    IDS_NOSOUND_ENGLISH     "Can not play sound. \nPlease check your Sound Galaxy card."
+    IDS_TITLE_CHINESE       "五子棋"
+    IDS_TITLE_ENGLISH       "Pente"
+    IDS_BLACKWIN_ENGLISH    "Black wins"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BLACKWIN_CHINESE    "本局黑棋赢"
+    IDS_WHITEWIN_ENGLISH    "White wins"
+    IDS_WHITEWIN_CHINESE    "本局白棋赢"
+    IDS_TOTAL_CHINESE       "，共下 %d 手。\n"
+    IDS_TOTAL_ENGLISH       ", total %d stones.\n"
+    IDS_UNDO_CHINESE        "黑棋悔棋 %d 次，白棋悔棋 %d 次。"
+    IDS_UNDO_ENGLISH        "Black undo %d times, white undo %d times."
+    IDS_CANNOT_UNDO_CHINESE "本局已结束，已没有悔棋的机会。请从新开局！"
+    IDS_CANNOT_UNDO_ENGLISH "Game is over, you can not undo now. Please begin a new game!"
+    IDS_CANNOT_HINT_CHINESE "本局已结束，提示也已来不及了，请从新开局！"
+    IDS_CANNOT_HINT_ENGLISH "Game is over, any hint is no use. Please get it in a new game!"
+    IDS_CANNOT_UNDO_CHINESE1 "此时不能悔棋！"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CANNOT_UNDO_ENGLISH1 "You can not undo now!"
+    IDS_BEGINNER_CHINESE    "初级"
+    IDS_BEGINNER_ENGLISH    "Beginner"
+    IDS_INTERMEDIATE_CHINESE "中级"
+    IDS_EXPERT_CHINESE      "专家级"
+    IDS_INTERMEDIATE_ENGLISH "Intermediate"
+    IDS_EXPERT_ENGLISH      "Expert"
+    IDS_MORE_CHINESE        "\n\n哈哈, 你输了, 去多学几招吧!"
+    IDS_MORE_ENGLISH        "\n\nHa, ha, you can not win me, go and learn more knowledge!"
+    IDS_BAD_CHINESE         "\n\n哎, 你也实在太差了, 难道你不知道该好好学习吗?"
+    IDS_BAD_ENGLISH         "\n\nHey, it's so bad, why don't you study more hard?"
+    IDS_DRAW_CHINESE        "\n\n哈哈，平局！你我势均力敌，半斤八两，难兄难弟 ......"
+    IDS_DRAW_ENGLISH        "\n\nHa, Ha,  it's a draw,  I can not win you, but you are not better than I."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COLOR_LESS_CHINESE  "你的Windows系统显示颜色少于256种，程序的显示可能不正确。继续吗?"
+    IDS_COLOR_LESS_ENGLISH  "Your Windows display colors is less than 256, the program may not display correctly. Continue anyway?"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Pente MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Pente\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Pente.EXE\0"
+            VALUE "ProductName", "Pente Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Pente.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

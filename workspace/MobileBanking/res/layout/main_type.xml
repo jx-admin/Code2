@@ -1,0 +1,46 @@
+<com.accenture.mbank.view.BankingTypeSelector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bankingTypeSelector"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8.5" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.5" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="4" >
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pagertitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5" />
+
+    <TextView
+        android:id="@+id/type_description"
+        style="@style/type_description"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5" />
+
+</com.accenture.mbank.view.BankingTypeSelector>

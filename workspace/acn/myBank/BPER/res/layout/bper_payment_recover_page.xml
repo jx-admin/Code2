@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bper_payment_step_layout" />
+
+        <TextView
+            android:id="@+id/page_title"
+            style="@style/bper_payment_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recent_detail_title" />
+
+        <include
+            android:id="@+id/account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/account_info_title" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:divider="@drawable/separation_line"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:shrinkColumns="1"
+            android:stretchColumns="*" >
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/currency_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="€" />
+
+            <EditText
+                android:id="@+id/amount_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="0123456789.,"
+                android:hint="@string/amount_field_hint"
+                android:inputType="numberDecimal"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/description_of_payment_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:gravity="top|left"
+            android:hint="@string/description_of_payment_hint"
+            android:minLines="5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/des_length_alerter_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_small" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/data_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/data_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_text" />
+
+            <EditText
+                android:id="@+id/data_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="@string/data_hint"
+                android:inputType="date"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/data_ibtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/button_date_small_click_selector" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:background="@drawable/continue_button_click_selector" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:weightSum="8" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            layout="@layout/main_title" >
+        </include>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/main_title_shadow" />
+
+        <ListView
+            android:id="@+id/help_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7.2"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/line"
+            android:dividerHeight="2dip"
+            android:listSelector="#00000000"
+            android:scrollbars="none" >
+        </ListView>
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/menu"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_layout" />
+
+</FrameLayout>

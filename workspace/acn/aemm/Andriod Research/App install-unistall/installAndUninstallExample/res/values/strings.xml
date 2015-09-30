@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, main!</string>
+    <string name="app_name">installAndUninstall</string>
+    <string name="install_unsetting_notify">please setting all install not market apk</string>
+    <string name="install_apk">install apk</string>
+    <string name="uninstall_apk">Uninstall Apk</string>
+    <string name="disable_install_apk">DisableInstall</string>
+    <string name="enable_install_apk">EnableInstall</string>
+</resources>

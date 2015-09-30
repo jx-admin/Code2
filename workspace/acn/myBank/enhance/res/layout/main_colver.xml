@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <view
+        xmlns:coverflow="http://schemas.android.com/apk/res/com.act.mbanking"
+        android:id="@+id/coverflow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        class="com.act.mbanking.manager.view.CoverFlow"
+        coverflow:imageHeight="150dip"
+        coverflow:imageWidth="100dip" >
+    </view>
+
+    <com.act.mbanking.manager.view.CoverFlow
+        xmlns:coverflow="http://schemas.android.com/apk/res/com.act.mbanking"
+        android:id="@+id/coverflowReflect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        coverflow:imageHeight="150dip"
+        coverflow:imageReflectionRatio="0.2"
+        coverflow:imageWidth="100dip"
+        coverflow:reflectionGap="2dip"
+        coverflow:withReflection="true" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="STATUS" >
+    </TextView>
+
+</LinearLayout>

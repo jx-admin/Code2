@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>312</x>
+      <y>488</y>
+      <w>248</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>_ActivityManagerNative_
+--
++ static IActivityManager getDefault()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>472</x>
+      <y>424</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;IActivityManager&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>424</y>
+      <w>152</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;implement&gt;&gt;</panel_attributes>
+    <additional_attributes>136;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>616</x>
+      <y>488</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>_ActivityManagerProxy_
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>544</x>
+      <y>424</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;implement&gt;&gt;</panel_attributes>
+    <additional_attributes>24;24;152;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>344</x>
+      <y>600</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>_ActivityManagerService_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>368</x>
+      <y>512</y>
+      <w>126</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;56;64;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>232</y>
+      <w>296</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ActivityManager
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>600</x>
+      <y>80</y>
+      <w>432</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>1. The class ActivityManager call ActivityManagerNative.getDefault() 
+to get an IActivityManager instance, then use it 
+to do the actual things.
+The implementation of ActivityManagerNative.getDefault 
+is like following:
+--some code may be ignored or replaced in convenient 
+of explaination:
+
+  IBinder b = ServiceManager.getService("activity");
+  gDefault = new ActivityManagerProxy(b);
+  return gDefault;
+
+The returned Object of ServiceManager.getService("activity")
+is acualy an instance of AcivityManagerService(this will be
+explained in the next section), but, instead of returning the
+ActivityManagerService instance directly, the following two line
+returns an ActivityManagerProxy Object. This policy hides the 
+real ActivityManagerService from the client.
+
+2. In the ServerThread, when first running, in the run() method,
+it will call ActivityManagerService.setSystemProcess(), and 
+inside this function, the single instance of 
+ActivityManagerService will be added into ServiceManager's pocket,
+and tag "activity" assigned.
+So, ServiceManager.getService("activity") will actually return the
+ActivityManagerService Instance. Some articles says this method return
+an ActivityManagerNative Instance, they are wrong.
+
+
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>160</y>
+      <w>150</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;explaination&gt;&gt;</panel_attributes>
+    <additional_attributes>32;80;120;24</additional_attributes>
+  </element>
+</diagram>

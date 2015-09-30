@@ -1,0 +1,131 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/navigation_bar" />
+
+        <com.act.mbanking.manager.view.MainLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:id="@+id/aggregated_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/investment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/cards"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/accounts"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" />
+
+            <include
+                android:id="@+id/loans"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/loans_layout" />
+
+            <include
+                android:id="@+id/new_payments"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/np_layout" />
+
+            <include
+                android:id="@+id/recent_payment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/recent_payment" />
+
+            <include
+                android:id="@+id/user_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/user_info" />
+
+            <include
+                android:id="@+id/level3_circle"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/level3_circle_layout" />
+
+            <include
+                android:id="@+id/contacts"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/contacts" />
+
+            <include
+                android:id="@+id/guide"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/guide" />
+
+            <include
+                android:id="@+id/guidedetail"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/guidedetail" />
+
+            <include
+                android:id="@+id/investment_details_include"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/investment_details_layout" />
+
+            <include
+                android:id="@+id/loans_details_include"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/loan_detail" />
+
+            <include
+                android:id="@+id/card_details_include"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/card_details_layout" />
+
+            <include
+                android:id="@+id/account_details_include"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/account_details_layout" />
+        </com.act.mbanking.manager.view.MainLayout>
+
+        <LinearLayout
+            android:id="@+id/chart_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

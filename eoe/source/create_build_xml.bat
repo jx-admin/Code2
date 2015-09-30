@@ -1,0 +1,1 @@
+android update project -p . -n mobilebanking_build

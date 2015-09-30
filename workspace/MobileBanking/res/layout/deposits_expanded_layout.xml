@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.DepositsExpandedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/portfolio" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/protfolio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.0(0,00%)" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/shares" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.0(0,00%)" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/bonds" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/bonds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.0(0,00%)" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/funds" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/funds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.0(0,00%)" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/more" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.0(0,00%)" >
+        </TextView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/portfolio_expander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_expander" />
+
+</com.accenture.mbank.view.DepositsExpandedContainer>

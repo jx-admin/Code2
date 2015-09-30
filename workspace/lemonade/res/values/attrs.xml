@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Orientation of a widget. -->
+    <attr name="direction">
+        <!-- Vertical widget. -->
+        <enum name="vertical" value="0" />
+        <!-- Horizontal widget. -->
+        <enum name="horizontal" value="1" />
+    </attr>
+
+    <skip />
+
+    <!-- Workspace specific attributes. These attributes are used to customize
+         the workspace in XML files. -->
+    <declare-styleable name="Workspace">
+        <!-- The first screen the workspace should display. -->
+        <attr name="defaultScreen" format="integer"  />
+    </declare-styleable>
+    
+    <!-- CellLayout specific attributes. These attributes are used to customize
+         a CellLayout view in XML files. -->
+    <declare-styleable name="CellLayout">
+        <!-- The width of a single cell -->
+        <attr name="cellWidth" format="dimension"  />
+        <!-- The height of a single cell -->
+        <attr name="cellHeight" format="dimension"  />
+        <!-- Padding to apply at the start of the long axis -->
+        <attr name="longAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the long axis -->
+        <attr name="longAxisEndPadding" format="dimension"  />
+        <!-- Padding to apply at the start of the short axis -->
+        <attr name="shortAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the short axis -->
+        <attr name="shortAxisEndPadding" format="dimension"  />
+        <!-- Number of cells on the short axis of the CellLayout -->
+        <attr name="shortAxisCells" format="integer" />
+        <!-- Number of cells on the long axis of the CellLayout -->
+        <attr name="longAxisCells" format="integer" />
+    </declare-styleable>
+
+    <!-- DeleteZone specific attributes. These attributes are used to customize
+         a DeleteZone view in XML files. -->
+    <declare-styleable name="DeleteZone">
+        <!-- Orientation of the delete zone. -->
+        <attr name="direction" />
+    </declare-styleable>
+
+    <!-- HandleView specific attributes. These attributes are used to customize
+         a HandleView view in XML files. -->
+    <declare-styleable name="HandleView">
+        <!-- Orientation of the handle. -->
+        <attr name="direction" />
+    </declare-styleable>
+
+    <!-- XML attributes used by default_workspace.xml -->
+    <declare-styleable name="Favorite">
+        <attr name="className" format="string" />
+        <attr name="packageName" format="string" />
+        <attr name="screen" format="string" />
+        <attr name="x" format="string" />
+        <attr name="y" format="string" />
+        <attr name="spanX" format="string" />
+        <attr name="spanY" format="string" />
+        <attr name="icon" format="reference" />  
+        <attr name="title" format="reference" />
+        <attr name="uri" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ClippedImageView">
+        <attr name="ignoreZone" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="Gallery">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+</resources>

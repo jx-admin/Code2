@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<array name="emytyok">
+		<item>@string/backtopro</item>
+	</array>
+	<array name="enctype">
+		<item>@string/fileenc</item>
+		<item>@string/inputenc</item>
+	</array>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/upper_shading"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:stretchColumns="*" >
+
+
+            
+    </TableLayout>
+
+    <Button
+        android:id="@+id/confirmation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:background="@drawable/continue_button_click_selector" 
+        android:layout_below="@id/table"/>
+    <include layout="@layout/bper_askpin_input"
+        android:id="@+id/bper_askpin_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

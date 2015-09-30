@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk" >
+
+    <include
+        android:id="@+id/title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_content" />
+
+    <RelativeLayout
+        android:id="@+id/info_content"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/title_content"
+        android:layout_marginLeft="@dimen/margin_mid"
+        android:layout_marginRight="@dimen/margin_mid"
+        android:orientation="vertical" >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_content"
+        android:layout_toLeftOf="@id/info_content">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="@null"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/menu_height" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal" >
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="10dp"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/vs_yellow_dark" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/horizontalScrollView"
+            android:background="@color/white" >
+        </android.support.v4.view.ViewPager>
+
+        <ImageButton
+            android:id="@+id/recommend_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@null"
+            android:src="@drawable/recommend_1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/recommend_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="#666666"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:layout_marginBottom="@dimen/margin_normal"
+            layout="@layout/product_phone_list_model" />
+
+        <include layout="@layout/product_phone_list_model" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CoverFlow">
+
+        <!-- y坐标上的文字大小 -->
+        <attr name="isTranslateModeZ" format="boolean" />
+        <attr name="isTranslateModeY" format="boolean" />
+        <attr name="isTranslateModeX" format="boolean" />
+        <attr name="isRotationModeY" format="boolean" />
+        <attr name="mMaxRotationAngleY" format="dimension" />
+        <attr name="mMaxTranslateValueZ" format="dimension" />
+        <attr name="mMaxTranslateValueY" format="dimension" />
+        <attr name="mMaxTranslateValueX" format="dimension" />
+    </declare-styleable>
+    <!-- for CoverFlowImage -->
+    <declare-styleable name="CoverFlowImage">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="withReflection" format="boolean" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="imageReflectionRatio" format="float" />
+    </declare-styleable>
+
+</resources>

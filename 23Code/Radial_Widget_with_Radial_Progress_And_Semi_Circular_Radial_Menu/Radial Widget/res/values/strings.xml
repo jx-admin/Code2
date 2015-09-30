@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Radial Menu Demo</string>
+	<string name="radial_demo">Radial Menu</string>
+	<string name="about">About</string>
+	<string name="main_menu">Home</string>
+	<string name="contact">Contact</string>
+	<string name="about_body">Radial Menu Demo Version 1 by Arindam Nath.</string>
+	<string name="contact_body">Contact Details Here!</string>
+	<string name="main_body">Long press any part of the screen to bring up radial menu.</string>
+	<string name="open_menu">Open Menu</string>
+	<string name="normal">Normal</string>
+	<string name="expandable">Expandable</string>
+	<string name="close">Close</string>
+	<string-array name="main_menu">
+	    <item>Radial Menu V1</item>
+	    <item>Radial Menu V2</item>
+	    <item>Radial Progress</item>
+	    <item>Semi Circular Radial Menu</item>
+	</string-array>
+</resources>

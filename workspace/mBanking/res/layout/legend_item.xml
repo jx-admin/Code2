@@ -1,0 +1,37 @@
+<com.act.mbanking.manager.view.LegendItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/legend_title_tv"
+        style="@style/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+         android:text="Accounts" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/legend_cycle_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/legend_title_tv"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/accounts_legend_closed" />
+
+    <TextView
+        android:id="@+id/legend_opened_tv"
+        style="@style/legend_money"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/legend_cycle_img"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:singleLine="true"
+        android:text="40.000$" />
+
+</com.act.mbanking.manager.view.LegendItem>

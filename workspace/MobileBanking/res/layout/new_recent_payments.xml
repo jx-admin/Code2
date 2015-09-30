@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:weightSum="8" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            layout="@layout/main_title" />
+
+        <com.custom.view.CoverFlow
+            xmlns:coverflow="http://schemas.android.com/apk/res/com.accenture.mbank"
+            android:id="@+id/recent_payment_account_folders"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.5"
+            android:gravity="center_vertical"
+            coverflow:imageHeight="110dip"
+            coverflow:imageWidth="100dip" />
+
+        <ListView
+            android:id="@+id/recent_payment_item_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="4.7"
+            android:cacheColorHint="#00000000"
+            android:orientation="vertical" >
+        </ListView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_layout" />
+
+</FrameLayout>

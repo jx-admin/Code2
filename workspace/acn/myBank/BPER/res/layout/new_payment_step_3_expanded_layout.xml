@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.DateExpandedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium" >
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_box_selector"
+        android:gravity="center"
+        android:text="" />
+
+</com.accenture.mbank.view.DateExpandedLayout>

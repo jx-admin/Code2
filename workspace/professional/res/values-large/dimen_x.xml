@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="title_l_margin">20dip</dimen>
+<dimen name="title_t_margin">15dip</dimen>
+<dimen name="title_d_margin">20dip</dimen>
+<dimen name="icons_lr_margin">90dip</dimen>
+<dimen name="index_size">6dip</dimen>
+<dimen name="index_td_margin">15dip</dimen>
+<dimen name="line_h">2dip</dimen>
+<dimen name="button_t_margin">6dip</dimen>
+<dimen name="button_r_margin">20dip</dimen>
+<dimen name="button_d_margin">6dip</dimen>
+<dimen name="update_l_margin">5dip</dimen>
+<dimen name="logo_l_margin">10dip</dimen>
+<dimen name="message_l_margin">20dip</dimen>
+<dimen name="app_icon_size">72dip</dimen>
+
+<string name="scalMarginw">1.5</string>
+<string name="scalMarginh">1.1</string>
+
+<!-- icon -->
+<dimen name="edit_half">3dip</dimen>
+<dimen name="app_item_download_progressbar_h">10dip</dimen>
+<dimen name="download_pb_lr_margin">10dip</dimen>
+<dimen name="download_pb_d_margin">12dip</dimen>
+<dimen name="icon_name_t_margin">1dip</dimen>
+<dimen name="apk_descrip_l_margin">10dip</dimen>
+<item type="integer" name="icon_name_length">5</item>
+</resources>

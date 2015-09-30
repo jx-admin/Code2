@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map_content"
+        >
+    </FrameLayout>
+    
+    <LinearLayout android:id="@+id/ll_calc_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:padding="8dip"
+        android:orientation="horizontal">
+         <Button android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/calc_btn"
+        android:text="发起算路"/>   
+     <Button android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/simulate_btn"
+        android:text="模拟导航"/>   
+     <Button android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/real_btn"
+        android:text="真实导航"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/ll_node"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ll_calc_btn"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText android:id="@+id/et_start_x"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="2253951"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入起点纬度"/>
+        <EditText android:id="@+id/et_start_y"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="11397348"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入起点经度"/>
+        <EditText android:id="@+id/et_end_x"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="2248876"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入终点纬度"/>
+        <EditText android:id="@+id/et_end_y"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="11392576"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入终点经度"/>
+    </LinearLayout>
+    <Button android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_below="@id/ll_node"
+        android:layout_height="60dp"
+        android:padding="8dp"
+        android:id="@+id/track_btn"
+        android:text="轨迹导航"/>   
+</RelativeLayout>

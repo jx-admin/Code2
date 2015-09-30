@@ -1,0 +1,44 @@
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 19
+
+        versionName '2.1.1-SNAPSHOT'
+        versionCode 2001001
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    lintOptions {
+        abortOnError = false
+    }
+
+    aaptOptions {
+		useAaptPngCruncher = true
+	}
+}
+
+holoeverywhere {
+    include 'no'
+
+    library {
+        apklibExternalCreation = true
+    }
+
+    publish {
+        github 'Prototik', 'HoloEverywhere'
+        repository { holoeverywhere {} }
+        license { mit {} }
+    }
+
+    signing.key 'holoeverywhere'
+}

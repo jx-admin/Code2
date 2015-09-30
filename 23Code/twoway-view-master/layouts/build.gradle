@@ -1,0 +1,17 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 'android-L'
+    buildToolsVersion '20.0.0'
+}
+
+dependencies {
+    compile project(':core')
+    compile 'com.android.support:recyclerview-v7:+'
+}
+
+//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

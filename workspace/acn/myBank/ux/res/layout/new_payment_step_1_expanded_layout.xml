@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.TypeOfPayMentExpandedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/type_of_payment_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_medium" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/bank_transfer1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/transfer_entry1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/card_top_up1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/phone_top_up1" />
+    </RadioGroup>
+
+</com.accenture.mbank.view.TypeOfPayMentExpandedLayout>

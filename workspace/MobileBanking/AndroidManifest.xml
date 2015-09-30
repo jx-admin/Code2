@@ -1,0 +1,151 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.accenture.mbank"
+    android:versionCode="1"
+    android:versionName="3.0.35" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:name=".MobileBankApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MsgDialgActivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+        <activity
+            android:name=".WellComeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RecentPaymentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".HelpListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".HelpDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DirectionDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Ad_InfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DashBoardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SecurityInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".NewPayments"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".NewPayee"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name=".ContactSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.accenture.mbank.capture.CaptureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.accenture.mbank.capture.PreferencesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- DeviceAdmin -->
+        <receiver
+            android:name="com.accenture.mbank.receiver.DeviceAdminMyBankingReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.accenture.mbank" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.accenture.mbank.GCMIntentService" />
+    </application>
+
+    <uses-permission android:name="com.google.android.maps" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    
+    <permission android:name="com.accenture.mbank.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.accenture.mbank.permission.C2D_MESSAGE" />
+    <!-- App receives GCM messages. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 打开关闭sdcard的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+</manifest>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- login -->
+    <dimen name="login_text_margin_top">8dip</dimen>
+    <dimen name="login_text_margin_bottom">2dip</dimen>
+    <dimen name="login_margin_LR">5dip</dimen>
+    <color name="login_text_color">#fff</color>
+    <color name="login_message_color">#f00</color>
+
+    <!-- hall -->
+    <dimen name="hall_margin_LR">10dip</dimen>
+    <dimen name="hall_intall_margin_top">50dip</dimen>
+    <dimen name="botem_info_h">40dip</dimen>
+    
+      <!-- icon item-->
+    <dimen name="app_item_w">80dip</dimen>
+    <!--<dimen name="app_item_h">100dip</dimen>-->
+    <dimen name="app_item_margin_L_R">20dip</dimen>
+    <dimen name="app_item_margin_T_D">10dip</dimen>
+    <!-- apk Item -->
+    <dimen name="apk_margin_LR">65dip</dimen>
+    
+    <!-- icon edit image -->
+    <dimen name="app_icon_edit_w">20dip</dimen>
+    <dimen name="app_icon_edit_h">20dip</dimen>
+    <dimen name="app_icon_edit_margin">0dip</dimen>
+    
+    <!-- icon image -->
+    <dimen name="app_icon_w">60dip</dimen>
+    <dimen name="app_icon_h">53dip</dimen>
+    <dimen name="app_icon_margin">3dip</dimen>
+    
+    <!-- icon download progressbar -->
+    <dimen name="app_item_download_progressbar_h">8dip</dimen>
+    <dimen name="app_name_size">14sp</dimen>
+    
+    <!-- apk descrip -->
+    <dimen name="apk_descrip_w">150dip</dimen>
+    <dimen name="apk_descrip_h">50dip</dimen>
+    <dimen name="apk_descrip_margin_left">20dip</dimen>
+    <dimen name="apk_descrip_margin_top">5dip</dimen>
+    
+    <!-- index -->
+    <dimen name="index_margin_bottom">20dip</dimen>
+    <dimen name="index_margin_top">0dip</dimen>
+    <dimen name="index_margin_left_right">6dip</dimen>
+    <dimen name="index_size">6dip</dimen>
+    
+    <!-- message -->
+    <dimen name="updata_btn_margin_d">5dip</dimen>
+    <color  name = "transparent" >#0000</color >
+</resources>

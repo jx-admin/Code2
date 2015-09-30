@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_gravity="center_vertical" >
+
+        <RadioButton
+            android:id="@+id/rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:button="@drawable/payment_radio_button_selector"
+            android:clickable="false"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_left_padding"
+            android:paddingTop="@dimen/radio_button_top_padding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_toRightOf="@id/rbtn"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_big" />
+
+                <ImageView
+                    android:id="@+id/isPreferredStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/icona_conto_riepilogo_stella"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <com.custom.view.ReSizeSingleTextView
+                    xmlns:customView="http://schemas.android.com/apk/res/it.gruppobper.ams.android.bper"
+                    android:id="@+id/iban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/available_balance"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_small"
+                    android:layout_gravity="bottom"
+                    customView:reTextSize="true" 
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/avilable_banlence_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:textSize="@dimen/text_small"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/divider"
+        layout="@layout/separation_line_divider" />
+
+</LinearLayout>

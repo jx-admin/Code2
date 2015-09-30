@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/date_desc_item_height"
+        android:layout_marginRight="@dimen/padding_small_mini"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <TextView
+            android:id="@+id/insertionDate"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/padding_small_mini"
+            android:text="19.03.09" />
+
+        <TextView
+            android:id="@+id/creditType"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/padding_small"
+            android:text="@string/type_1" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/state_1" />
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:gravity="right|center_vertical"
+            android:text="@string/amount_1" />
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:src="@drawable/arrow_payment_details" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/linea_di_separazione" />
+
+</LinearLayout>

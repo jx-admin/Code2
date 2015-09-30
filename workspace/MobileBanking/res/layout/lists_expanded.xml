@@ -1,0 +1,195 @@
+<com.accenture.mbank.view.ListsExpandedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_list_for" />
+
+    <RadioGroup
+        android:id="@+id/date_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/order_date_desc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/date_desc" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/order_amount_desc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/amount_desc" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/order_date_asc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/date_asc"
+            android:visibility="gone" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/order_amount_asc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/amount_asc"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/amount_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/show_transaction_by" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/show_tran_last_20"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/last_20" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/show_tran_last_2_months"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/last_2_months" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/recent_payments_displayed" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recent_payment_display_10"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="10" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recent_payment_display_20"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="20" />
+
+        <RadioButton
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recent_payment_display_30"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="30" />
+    </RadioGroup>
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/list_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:paddingTop="@dimen/padding_small"
+        android:src="@drawable/btn_save_selector" >
+    </com.accenture.mbank.view.BankImageButton>
+
+</com.accenture.mbank.view.ListsExpandedContainer>

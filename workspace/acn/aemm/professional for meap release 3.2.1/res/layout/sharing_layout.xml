@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scroll="http://www.test.scrolllayout.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sharing_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dip"
+        android:background="@drawable/window_title_bg" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sharing"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="53dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/sharing_update" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/menu_sv"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/menu_bg"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/menu_lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+        </LinearLayout>
+    </HorizontalScrollView>
+    
+	<GridView android:id="@+id/content_gv"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center"
+	    android:horizontalSpacing="10dp"
+	    android:columnWidth="100dip"
+	    android:numColumns="auto_fit"
+	    android:verticalSpacing="10dp"
+	    />
+
+    <!-- 此处需要给出全路径 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>"
+
+</LinearLayout>

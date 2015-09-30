@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  	<PreferenceCategory
+  		android:title="@string/settings_cat_homescreen">
+		<CheckBoxPreference 
+			android:key="EndlessHomescreenLoop" 
+			android:title="@string/settings_endless_desktop_loop"
+			android:defaultValue="true"/>
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/settings_cat_drawer">
+		<ListPreference
+			android:key="CurrentDrawerSortOrder"
+			android:title="@string/settings_drawer_sorting" 
+			android:defaultValue="1"
+			android:entries="@array/settings_sorting_names" 
+			android:entryValues="@array/settings_sorting_values" />
+	</PreferenceCategory>
+	
+	
+	<org.accenture.product.lemonade.settings.LauncherActionPreference
+		android:key="SwipeUpAction"
+		android:title="@string/settings_swipe_up_action" />
+	<org.accenture.product.lemonade.settings.LauncherActionPreference
+		android:key="SwipeDownAction"
+		android:title="@string/settings_swipe_down_action" />
+</PreferenceScreen>

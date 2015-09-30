@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">四川电信移动受理销售系统</string>
+    <string name="null_">无</string>
+    <string name="ok">确定</string>
+    
+    <!-- login -->
+    <string name="work_number">工号</string>
+    <string name="pass_word">密码</string>
+    <string name="work_number_hint">请输入您的员工号</string>
+    <string name="pass_word_hint">请输入您的密码</string>
+    <string name="login">登录</string>
+    <!-- title -->
+    <string name="refresh">刷新</string>
+    <string name="shopping_car">购物车</string>
+    <string name="customer">客户信息</string>
+    
+    <!-- update -->
+    <string name="update">更新</string>
+    <string name="updating">正在更新</string>
+    <string name="back">返回</string>
+
+    <!-- home -->
+    <string name="hight_video">高清影视</string>
+    <string name="fttx_lan">光纤宽带</string>
+    <string name="smartphone">智能手机</string>
+    <string name="itv_intro">功能介绍</string>
+    <string name="itv_operation">操作模拟</string>
+    <string name="itv_install">无忧安装</string>
+    <string name="itv_setmeal">优惠套餐</string>
+    <string name="press_again_exit">再按一次退出程序！</string>
+
+    <!-- phone color -->
+    <string name="select_color">选择颜色</string>
+    <string name="old_number">老用户手机号</string>
+    <string name="old_number_hit">请输入您已有的手机号码</string>
+    <string name="select_setmeal_pls">选择合约 </string>
+    <string name="click_select_setmeal">点击选择资费套餐</string>
+    <string name="select_setmeal_contract_phone_pls">选择套餐 </string>
+    <string name="click_select_contract_phone_setmeal">点击选择优惠合约</string>
+    <string name="add_to_shoping_cart">加入购物车</string>
+    <string name="_add_to_shoping_cart">+加入购物车</string>
+    <string name="baseinfo">基本信息</string>
+    <string name="introduce">详情介绍</string>
+    <string name="parameter">设备参数</string>
+    <string name="setmeal">优惠套餐</string>
+    
+    <!-- phone compare -->
+    <string name="brand">品牌</string>
+
+    <!-- phone parameter -->
+    <string name="entertainment_function">娱乐功能</string>
+    <string name="transfer_function">传输功能</string>
+    <string name="personal_assistant">个人助理</string>
+    <string name="main_body">主体</string>
+    <string name="display">显示</string>
+    <string name="dv">摄像功能</string>
+    <string name="other">其他</string>
+    <string name="network">网络</string>
+    <string name="see_detail">查看详情</string>
+
+    <!-- contract phone setmeal -->
+    <string name="memory">内存</string>
+    <string name="online_time">在网时长</string>
+    <string name="privilege">优惠</string>
+    <string name="contract_phone_month_rent">月消费</string>
+    <string name="contract_phone_phone_price">手机款</string>
+    <string name="contract_phone_total_free_rent">总赠送话费</string>
+    <string name="contract_phone_free_once_month">入网当月返还</string>
+    <string name="contract_phone_free_affter_month">次月起24月返还</string>
+
+    <!-- setmeal -->
+    <string name="select">选择</string>
+    <string name="selected">已选择</string>
+    <string name="added">已添加</string>
+    <string name="month_base_rent">月基本费（元）</string>
+    <string name="domestic_traffic">国内流量</string>
+    <string name="select_title_free_inland_call">国内通话（分钟）</string>
+    <string name="all">全部</string>
+    <string name="less_than">%d以下</string>
+    <string name="more_than">%d以上</string>
+    <string name="setmeal_category">套餐分类</string>
+    <string name="month_rent">月费</string>
+    <string name="freeinlandcall">国内语音</string>
+    <string name="wifi_time">WIFI时长</string>
+    <string name="sms_count">短信条数</string>
+    <string name="mms_count">彩信条数</string>
+    <string name="exceed_call">超出语音</string>
+    <string name="exceed_traffic">超出流量</string>
+    <string name="free_answer_area">免费接听范围</string>
+    <string name="free_service">赠送业务</string>
+    <string name="setmeal_recommend">套餐推荐</string>
+    <string name="vs_month_earnings_vertical">月\n费\n收\n益</string>
+    <string name="vs_setmeal_dis_vertical">资\n费\n优\n势</string>
+    <string name="vs_save_per_month">每月为您节省</string>
+    <string name="vs_save_ttraffic_per_month">每月同价位多出</string>
+    <string name="vs_save_per_year">每年为您节省</string>
+    <string name="vs_save_ttraffic_per_year">每年同价位多出</string>
+    <string name="month_ren_range">月费范围</string>
+    <string name="more">不限</string>
+    <string name="setmeal_special">套餐特点</string>
+    <string name="more_traffic">上网多</string>
+    <string name="more_call">通话多</string>
+    <string name="setmeal_product_result_fomate">-共%d个商品   |  </string>
+    <string name="setmeal_page_index_fomate">%1$d/%2$d-</string>
+
+    <!-- phone product item -->
+    <string name="favourable_price_">优惠价：</string>
+    <string name="_contrast_price">+比价</string>
+    <string name="contrast_price">比价</string>
+    <string name="full">满</string>
+    <string name="hide">隐藏</string>
+    <string name="hided">已隐藏</string>
+
+</resources>

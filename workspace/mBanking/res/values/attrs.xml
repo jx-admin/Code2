@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SimpleImageButton">
+        <attr name="autoAddFocusImg" format="boolean" />
+        <attr name="focusMode" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CoverFlow">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="withReflection" format="boolean" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="imageReflectionRatio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="BaseChartView">
+
+        <!-- y坐标上的文字大小 -->
+        <attr name="y_axis_value_text_size" format="dimension" />
+        <attr name="x_axis_value_text_size" format="dimension" />
+        <attr name="x_axis_paint_width" format="dimension" />
+        <attr name="y_axis_paint_width" format="dimension" />
+    </declare-styleable>
+
+</resources>

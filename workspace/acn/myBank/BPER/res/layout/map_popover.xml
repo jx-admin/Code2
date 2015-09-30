@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.PopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_get_directions"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+
+    <TextView
+        android:id="@+id/popover_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" 
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/popover_address"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/popover_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" 
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/business_hours"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/pop_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="#ffffffff" 
+        android:textSize="12sp"/>
+    <ImageButton
+        android:id="@+id/getdirections"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_get_directions" />
+</com.accenture.mbank.view.PopView>

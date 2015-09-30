@@ -1,0 +1,27 @@
+<com.accenture.mbank.view.InvestmentAccountContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+     	android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/investment_alias" />
+
+        <TextView
+            android:id="@+id/investment_alias"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</com.accenture.mbank.view.InvestmentAccountContainer>

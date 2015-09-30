@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/item_bg" >
+
+    <RadioGroup
+        android:id="@+id/footer_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/menu_book"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/menu_xiadan_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            android:text="下单"
+            android:textColor="@drawable/menu_text_color" />
+
+        <RadioButton
+            android:id="@+id/menu_book_manager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/menu_dingdan_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            android:text="订单管理"
+            android:textColor="@drawable/menu_text_color" />
+
+        <RadioButton
+            android:id="@+id/menu_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/menu_youhui_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            android:text="优惠活动"
+            android:textColor="@drawable/menu_text_color" />
+
+        <RadioButton
+            android:id="@+id/menu_user_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/menu_wode_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            android:text="我的"
+            android:textColor="@drawable/menu_text_color" />
+    </RadioGroup>
+
+</FrameLayout>

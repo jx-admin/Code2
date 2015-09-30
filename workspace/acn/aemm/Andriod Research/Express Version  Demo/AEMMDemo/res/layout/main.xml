@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ScrollView android:id="@+id/scrollView1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="fill_parent"
+		android:orientation="vertical">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/hello" />
+	<Button android:text="@string/enable_admin" android:id="@+id/enable_admin"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="@string/disable_admin" android:id="@+id/disable_admin"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/new_word" />
+		<EditText android:text="123456" android:id="@+id/new_word_1"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/reword" />
+		<EditText android:text="123456" android:id="@+id/new_word_2"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+	</LinearLayout>
+	<Button android:text="@string/change_word" android:id="@+id/change_word"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="@string/clear_word" android:id="@+id/clear_word"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="@string/auto_clear_word" android:id="@+id/auto_clear_word"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="@string/force_lock" android:id="@+id/force_lock"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<Button android:text="@string/time_out" android:id="@+id/time_out"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		<EditText android:text="1" android:id="@+id/et_time_out"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+	</LinearLayout>
+	<Button android:text="@string/reset" android:id="@+id/reset"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

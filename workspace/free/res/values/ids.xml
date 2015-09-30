@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="main_radio">false</item>
+    <item type="id" name="radio_button0">false</item>
+    <item type="id" name="radio_button1">false</item>
+    <item type="id" name="radio_button2">false</item>
+    <item type="id" name="radio_button3">false</item>
+    <item type="id" name="ButtonBackward">false</item>
+    <item type="id" name="text">false</item>
+    <item type="id" name="ButtonRefresh">false</item>
+    <item type="id" name="adView">false</item>
+    <item type="id" name="webViewApp">false</item>
+    <item type="id" name="ButtonGold">false</item>
+    <item type="id" name="ButtonPlatium">false</item>
+    <item type="id" name="ButtonSilver">false</item>
+    <item type="id" name="ButtonPladium">false</item>
+    <item type="id" name="EditText1">false</item>
+    <item type="id" name="Button01">false</item>
+    <item type="id" name="icon">false</item>
+    <item type="id" name="myRadioGroup">false</item>
+    <item type="id" name="myRadioNian">false</item>
+    <item type="id" name="myRadioYue">false</item>
+    <item type="id" name="myRadioRi">false</item>
+    <item type="id" name="TextView01">false</item>
+    <item type="id" name="myDate">false</item>
+    <item type="id" name="TextView02">false</item>
+    <item type="id" name="ButtonChakan">false</item>
+    <item type="id" name="webViewGold">false</item>
+    <item type="id" name="menu_settings">false</item>
+</resources>

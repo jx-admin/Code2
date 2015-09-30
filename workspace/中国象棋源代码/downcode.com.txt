@@ -1,0 +1,14 @@
+╭══════════════════════════════════════════╮
+║                              源易网--中国源码下载站                                ║
+║                                                                                    ║
+║              源码下载:www.downcode.com  源码论坛:www.downcode.net                  ║
+║                                                                                    ║
+║                       如有转载请勿删除以上信息，谢谢合作                           ║
+╰══════════════════════════════════════════╯
+╭══════════════════════════════════════════╮
+║ 　　　　　　　　　　　　　　　　程序相关使用说明　　　　　　　　　　  　　　　　　 ║
+╰══════════════════════════════════════════╯
+
+
+
+C++中国象棋游戏源代码

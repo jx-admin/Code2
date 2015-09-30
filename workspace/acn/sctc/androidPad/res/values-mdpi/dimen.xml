@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="phone_color_selector_padding_top">5dip</dimen>
+    <dimen name="phone_color_selector_size_h">39dip</dimen>
+    <dimen name="phone_color_selector_size_w">130dip</dimen>
+    
+</resources>

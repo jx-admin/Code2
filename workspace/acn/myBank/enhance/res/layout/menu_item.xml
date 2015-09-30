@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_tab2_selector" >
+
+    <com.act.mbanking.view.BankTextView
+        android:id="@+id/menu_item_tv"
+        style="@style/menu_button_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="@string/aggregated_view" >
+    </com.act.mbanking.view.BankTextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:src="@drawable/menu_arrow" />
+
+</RelativeLayout>

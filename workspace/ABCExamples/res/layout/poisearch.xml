@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/poisearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="POISearch:"></Button>
+	<com.autonavi.mapapi.MapView android:id="@+id/poisearchview"
+		android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:clickable="true"
+		android:apiKey="C1516326A5F961F22E3DC5A0F31686B9B74508FDB6D220EFF39354D2EEDB1F6007AC124066507C89" />
+</LinearLayout>

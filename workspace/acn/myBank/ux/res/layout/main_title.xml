@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_title_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_small_mini"
+        android:paddingTop="@dimen/padding_small_mini"
+        android:weightSum="3" >
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="3"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/back_selector" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="3"
+            android:background="@drawable/back_btn_selector"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_small_mini"
+        android:paddingTop="@dimen/padding_small_mini"
+        android:weightSum="3" >
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/help_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="3"
+            android:background="@null"
+            android:scaleType="fitEnd"
+            android:src="@drawable/help_selector" >
+        </com.accenture.mbank.view.BankImageButton>
+    </LinearLayout>
+
+</RelativeLayout>

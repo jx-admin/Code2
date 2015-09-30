@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="horizontal" android:gravity="center_vertical">
+	<TextView android:id="@+id/login$userSel$tv_userName" android:paddingTop="13sp"  android:paddingBottom="13dip"
+		android:textSize="14sp" android:textColor="#000000" android:layout_weight="1" android:paddingLeft="8dip"
+		android:layout_gravity="left" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<ImageView android:src="@drawable/sys_delete" android:paddingRight="10sp"
+		android:id="@+id/login$userSel$iv_delUser" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" />
+</LinearLayout>

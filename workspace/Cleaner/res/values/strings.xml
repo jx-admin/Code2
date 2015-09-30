@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cleaner</string>
+    <string name="start_when_boot_completed_title">开机启动</string>
+    <string name="start_when_boot_completed_summary">是否需要开机时启动本程序</string>
+    <string name="clear_cache_title">清除缓存</string>
+    <string name="clear_cache_summary">点击浮动图标时清除缓存</string>
+    <string name="kill_bgprocess_title">杀死进程</string>
+    <string name="kill_bgprocess_summary">点击浮动图标时杀死后台进程</string>
+    <string name="double_click_close_title">双击关闭</string>
+    <string name="double_click_close_summary">双击浮动图标关闭悬浮窗口</string>
+    <string name="about_title">作者博客</string>
+    <string name="about_summary">http://www.cnblogs.com/lefter</string>
+
+    <string-array name="clear_set">
+        <item>未选择任何操作,可用内存为%3$s</item>
+        <item>杀死了%1$d个进程,可用内存为%3$s</item>
+        <item>清除了%2$s缓存,可用内存为%3$s</item>
+        <item>杀死了%1$d个进程,清除了%2$s缓存,可用内存为%3$s</item>
+        <item>关闭悬浮图标.</item>
+    </string-array>
+
+</resources>

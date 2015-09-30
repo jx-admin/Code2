@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+        
+        <LinearLayout 
+        android:id="@+id/menu_content"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginLeft="@dimen/margin_xsmall"
+            android:layout_weight="4"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_price_ratio_btnlin"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginLeft="@dimen/margin_xsmall"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/menu_item_price_ratio_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/phone_product_menu_bk_price_ratio_left_disable"
+                android:gravity="center"
+                android:padding="@dimen/margin_mid"
+                android:text="@string/contrast_price"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/menu_item_price_ratio_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/phone_product_menu_bk_price_ratio_right_disable"
+                android:gravity="center"
+                android:padding="@dimen/margin_mid"
+                android:text="0"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_mid"
+        android:layout_weight="1" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/page_index_tow_string" />
+
+</LinearLayout>

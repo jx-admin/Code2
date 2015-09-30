@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_small_mini" 
+    android:paddingBottom="@dimen/padding_small_mini" >
+
+    <TextView
+        android:id="@+id/top_title_tv"
+        style="@style/update_on_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Last update on" 
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/total_money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Total investments" />
+
+    <TextView
+        android:id="@+id/sub_title_tv"
+        style="@style/update_on_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Last update on" />
+
+</LinearLayout>

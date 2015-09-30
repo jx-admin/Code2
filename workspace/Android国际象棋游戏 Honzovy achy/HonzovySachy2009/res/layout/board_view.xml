@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cz.honzovysachy.FlexibleLayout android:id="@+id/board_layout"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.android.apis"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <cz.honzovysachy.BoardControl android:id="@+id/chess_board"
+    	android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     />
+     <LinearLayout android:id="@+id/normal_panel"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+     <TextView android:id="@+id/move"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text=""/>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/board_setting_panel"
+    	android:visibility = "gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+    	android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+     <Button android:id="@+id/board_setting_ok"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="OK"/>
+    <Button android:id="@+id/board_setting_cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cancel"/>
+    <CheckBox android:id="@+id/board_setting_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="White"/>
+    </LinearLayout>
+    <TextView android:id="@+id/setup_board_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Move on the board and press 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y"/>
+    </LinearLayout>
+</cz.honzovysachy.FlexibleLayout>

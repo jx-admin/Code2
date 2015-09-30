@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horizontalScrollView"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_weight="12"
+    android:background="@color/dark_light"
+    android:fadingEdge="@null"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:divider="@drawable/menu_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="10dp"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#33b5e5" />
+    </RelativeLayout>
+
+</HorizontalScrollView>

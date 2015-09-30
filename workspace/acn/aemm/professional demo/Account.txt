@@ -1,0 +1,15 @@
+Add account:
+        AccountManager am = AccountManager.get(hello.this);
+        Account account = new Account("hh", "com.android.accenture.aemm.account");
+        am.addAccountExplicitly(account, "123456", null);
+
+Check and uncheck sync:
+        AccountManager am = AccountManager.get(hello.this);
+        Account account = new Account("hh", "com.android.accenture.aemm.account");
+	ContentResolver.setSyncAutomatically(account, ContactsContract.AUTHORITY, true);
+
+Sync:
+        AccountManager am = AccountManager.get(hello.this);
+        Account account = new Account("hh", "com.android.accenture.aemm.account");
+	ContentResolver.requestSync(account, ContactsContract.AUTHORITY, new Bundle());
+

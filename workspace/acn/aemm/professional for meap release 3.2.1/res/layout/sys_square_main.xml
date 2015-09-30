@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical"
+	android:background="@drawable/sys_background" xmlns:android="http://schemas.android.com/apk/res/android">
+	<include layout="@layout/sys_head" />
+	<include android:id="@+id/square_gird" layout="@layout/sys_square" />
+</LinearLayout>

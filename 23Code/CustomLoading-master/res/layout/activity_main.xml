@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/frame_loading" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_360"
+            android:indeterminateDuration="1800" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/rotate_loading_github"
+            android:indeterminateDuration="1800" />
+    </LinearLayout>
+
+    <com.storm.ui.CustomClipLoading
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="start" />
+
+        <com.storm.ui.ProgressWheel
+            xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_bar_two"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            ProgressWheel:barColor="#339BB9"
+            ProgressWheel:barWidth="4dp"
+            ProgressWheel:rimColor="#44000000"
+            ProgressWheel:rimWidth="4dp"
+            ProgressWheel:spinSpeed="3dp"
+            ProgressWheel:text="click"
+            ProgressWheel:textColor="#222222"
+            ProgressWheel:textSize="14sp" />
+
+        <com.storm.ui.ProgressWheel
+            xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_bar_one"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            ProgressWheel:barColor="#222"
+            ProgressWheel:barLength="30dp"
+            ProgressWheel:barWidth="6dp"
+            ProgressWheel:delayMillis="75"
+            ProgressWheel:rimColor="#4000"
+            ProgressWheel:rimWidth="2dp"
+            ProgressWheel:spinSpeed="20dp"
+            ProgressWheel:textColor="#222222"
+            ProgressWheel:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_start2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="start" />
+
+        <!-- default style -->
+
+        <com.storm.ui.PieProgress
+            xmlns:PieProgress="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pie_progress1"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <!-- custom style -->
+
+        <com.storm.ui.PieProgress
+            xmlns:PieProgress="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pie_progress2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            PieProgress:foregroundColor="#339BB9"
+            PieProgress:backgroundColor="#FF4444" />
+    </LinearLayout>
+
+</LinearLayout>

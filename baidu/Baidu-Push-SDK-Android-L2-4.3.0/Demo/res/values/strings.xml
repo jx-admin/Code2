@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PushDemo</string>
+    <string name="login">登录</string>
+    <string name="text_btn_init">百度账号绑定</string>
+    <string name="text_btn_init1">更换百度账号</string>
+    <string name="text_btn_on_push">打开Push</string>
+    <string name="text_btn_off_push">关闭Push</string>
+    <string name="log_tip">日志：</string>
+    <string name="clear_log">清除日志</string>
+    <string name="text_btn_rich">富媒体消息</string>
+    <string name="text_btn_initAK">无账号绑定</string>
+    <string name="text_btn_setTags">设置标签</string>
+    <string name="text_btn_delTags">删除标签</string>
+    <string name="text_btn_senior">高级功能</string>
+    <string name="text_btn_set">设置</string>
+    <string name="text_media_title">富媒体消息列表</string>
+    <string name="media">Rich Media</string>
+    <string name="custom_text_hint">用户自定义行为打开的Activity</string>
+    <string name="tags_hint">请输入多个标签，以英文逗号隔开</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.mbanking.view.DoubleShadowTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/tabhost_selector"
+    android:gravity="center"
+    android:paddingTop="@dimen/padding_small_mini"
+    android:paddingBottom="@dimen/padding_small_mini"
+    android:textSize="@dimen/text_small_size"
+    android:textColor="@drawable/tabhost_title_text_color" />

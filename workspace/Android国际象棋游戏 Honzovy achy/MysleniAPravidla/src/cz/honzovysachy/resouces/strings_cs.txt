@@ -1,0 +1,55 @@
+HONZOVY_SACHY Honzovy \u0161achy
+FLIP_BOARD Oto\u010D \u0161achovnici
+MOVE T\u00E1hni
+NEW_GAME Nov\u00E1 partie
+UNDO Zp\u011Bt
+REDO Znovu
+THINKING P\u0159em\u00FD\u0161l\u00EDm...
+SAVE_GAME Ulo\u017E partii
+HUMAN_OPONENT \u010Clov\u011Bk-\u010Dlov\u011Bk
+SAVED_AS Ulo\u017Eeno jako 
+SAVE_ERROR Chyba p\u0159i ulo\u017Een\u00ED
+KNIGHT Jezdec
+BISHOP St\u0159elec
+ROOK V\u011B\u017E
+QUEEN D\u00E1ma
+SAVE_PGN Ulo\u017E PGN
+FILE_NAME soubor
+GAME partie
+SAVE ulo\u017E
+WHITE b\u00EDl\u00FD
+BLACK \u010Dern\u00FD
+RESULT v\u00FDsledek
+EVENT ud\u00E1lost
+SITE m\u00EDsto
+PRAGUE Praha
+DATE datum
+ROUND kolo
+WHITE_ELO elo b\u00EDl\u00E9ho
+BLACK_ELO elo \u010Dern\u00E9ho
+PAWN_PROMOTION Prom\u011Bna p\u011B\u0161ce
+WHITE_WINS B\u00EDl\u00FD vyhr\u00E1l
+BLACK_WINS \u010Cern\u00FD vyhr\u00E1l
+DRAW Rem\u00EDza
+COMMA_BLACK_CHECKMATED , \u010Dern\u00FD dostal mat
+COMMA_WHITE_CHECKMATED , b\u00EDl\u00FD dostal mat
+COMMA_STALEMATE , pat
+COMMA_MATERIAL , materi\u00E1l
+COMMA_50_MOVES_RULE , 50 tah\u016F
+COMMA_3_TIMES_REPETITION , opakovan\u00E1 pozice
+SETTINGS Nastaven\u00ed
+ABOUT O programu
+OK Budi\u017E
+CZECH \u010desky
+ENGLISH anglicky
+DEFAULT v\u00fdchoz\u00ed
+LOCALE N\u00e1rodn\u00ed prost\u0159ed\u00ed
+SETUP_BOARD Nastav pozici
+CANCEL Zru\u0161it
+SETUP_TEXT Pohybuj se po \u0161achovnici a ma\u010Dkej 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD nep\u0159\u00edpustn\u00e1 pozice
+TIME_PER_MOVE \u010cas na tah
+LEVEL \u00darove\u0148
+MOVE_NOW Hraj te\u010f
+SPANISH \u0160pan\u011blsky
+CATALAN Katal\u00e1nsky

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:orientation="vertical">
+	<EditText android:id="@+id/edittext"
+		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:text="@string/edittext"/>
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:scrollbars="vertical" android:fadingEdge="vertical">
+		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:stretchColumns="0, 1">
+			<TableRow>
+		    	<Button android:id="@+id/button1" android:text="@string/EnableCamera" android:layout_height="wrap_content" android:layout_width="match_parent"></Button>
+		    	<Button android:id="@+id/button2" android:text="@string/DisableCamera" android:layout_height="wrap_content" android:layout_width="match_parent"></Button>
+		    </TableRow>
+			<TableRow>
+		    	<Button android:layout_height="wrap_content" android:id="@+id/button3" android:text="@string/EnableDial2" android:layout_width="match_parent"></Button>
+		    	<Button android:layout_height="wrap_content" android:id="@+id/button4" android:layout_width="match_parent" android:text="@string/DisableDial"></Button>
+		    </TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button5"
+					android:layout_width="match_parent"
+					android:text="@string/AddComponent">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button6"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteComponent">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_install"
+					android:layout_width="match_parent"
+					android:text="@string/EnableInstall">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_install"
+					android:layout_width="match_parent"
+					android:text="@string/DisableInstall">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_mms"
+					android:layout_width="match_parent"
+					android:text="@string/EnableMMS">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_mms"
+					android:layout_width="match_parent"
+					android:text="@string/DisableMMS">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_sms"
+					android:layout_width="match_parent"
+					android:text="@string/EnableSMS">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_sms"
+					android:layout_width="match_parent"
+					android:text="@string/DisableSMS">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_add_wifi"
+					android:layout_width="match_parent"
+					android:text="@string/AddWifi">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_delete_wifi"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteWifi">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_audio"
+					android:layout_width="match_parent"
+					android:text="@string/EnableAudio">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_audio"
+					android:layout_width="match_parent"
+					android:text="@string/DisableAudio">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_video"
+					android:layout_width="match_parent"
+					android:text="@string/EnableVideo">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_video"
+					android:layout_width="match_parent"
+					android:text="@string/DisableVideo">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_enable_application"
+					android:layout_width="match_parent"
+					android:text="@string/AddApplication">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_disable_application"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteApplication">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_add_apn"
+					android:layout_width="match_parent"
+					android:text="@string/AddAPN">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_delete_apn"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteAPN">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_add_vpn"
+					android:layout_width="match_parent"
+					android:text="@string/AddVPN">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_delete_vpn"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteVPN">
+				</Button>
+			</TableRow>
+			<TableRow>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_add_email"
+					android:layout_width="match_parent"
+					android:text="@string/AddEmail">
+				</Button>
+				<Button android:layout_height="wrap_content"
+					android:id="@+id/button_delete_email"
+					android:layout_width="match_parent"
+					android:text="@string/DeleteEmail">
+				</Button>
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

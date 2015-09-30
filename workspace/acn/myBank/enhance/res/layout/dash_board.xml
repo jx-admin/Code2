@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/wellcome_tv"
+        style="@style/title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wellcome_bg"
+        android:gravity="center"
+        android:text="Welcome Francesco Bianchi!!" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg"
+        android:paddingBottom="@dimen/padding_small_mini" >
+
+        <LinearLayout
+            android:id="@+id/total_maney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/total"
+                style="@style/total_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/total_assets" />
+
+            <TextView
+                android:id="@+id/money"
+                style="@style/total_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="center"
+                android:text="100.000$" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_maney"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/last_update"
+                style="@style/update_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/last_update_on2" />
+
+            <TextView
+                android:id="@+id/update_time"
+                style="@style/update_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="center"
+                android:text="05/09/2012" />
+        </LinearLayout>
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/update_on" -->
+        <!-- style="@style/update_on_text" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_below="@+id/total_maney" -->
+        <!-- android:layout_centerHorizontal="true" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="Last update on 05/09/2012" /> -->
+    </RelativeLayout>
+
+    <!-- legend -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/legend" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <com.custom.view.WheelButton
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/proportionbar_layout" />
+
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        layout="@layout/time_selector" />
+
+</LinearLayout>

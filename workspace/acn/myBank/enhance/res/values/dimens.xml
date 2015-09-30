@@ -1,0 +1,24 @@
+<resources>
+
+    <dimen name="toggle_button_width">20dip</dimen>
+    <dimen name="toggle_button_height">10dip</dimen>
+    <dimen name="payment_account_card_size">100dip</dimen>
+    
+    <dimen name="userinfo_btn_width">120dip</dimen>
+    <!-- contact us radio button -->
+    <dimen name="radio_button_text_padding">40dip</dimen>
+    <dimen name="radio_button_top_padding">5dip</dimen>
+    <dimen name="radio_button_bottom_padding">5dip</dimen>
+    <dimen name="radio_button_left_padding">40dip</dimen>
+    <dimen name="radio_button_left_padding_2">80dip</dimen>
+    <dimen name="radio_button_right_padding">40dip</dimen>
+    
+    <!--  -->
+    <dimen name="text_small_size">10sp</dimen>
+    <dimen name="text_big_size">18sp</dimen>
+    <dimen name="text_nomal_size">12sp</dimen>
+    <dimen name="text_midlle_size">16sp</dimen>
+	<dimen name="v5dp">5dp</dimen>
+	<dimen name="v3dp">3dp</dimen>
+
+</resources>

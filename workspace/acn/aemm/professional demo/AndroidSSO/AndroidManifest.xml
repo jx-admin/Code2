@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.aess.androidsso"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name="com.aess.androidsso.LoginActivity"
+                  android:theme="@android:style/Theme.Dialog"
+                  android:label="@string/app_name" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.AEMMMAIN" />
+                <category android:name="android.intent.category.AEMMLAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.aess.androidsso.SSOService">
+            <intent-filter>
+                <action android:name="com.aess.androidsso.SSOService" />
+                <!--action android:name="android.service.package.addpackage"/>
+                <action android:name="android.service.package.deletepackage"/>
+                <category android:name="android.intent.category.packageservices" /-->
+            </intent-filter>
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

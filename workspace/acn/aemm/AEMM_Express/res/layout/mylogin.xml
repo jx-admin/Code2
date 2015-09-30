@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+		<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" 
+		android:layout_height="match_parent">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="280dip" 
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical" 
+			android:layout_marginTop="@dimen/login_text_margin_top"
+			android:paddingLeft="@dimen/login_margin_LR"
+			android:layout_marginRight="@dimen/login_margin_LR">
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:id="@+id/tv_account"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textColor="@color/login_text_color" android:text="@string/name_str"
+					android:layout_toRightOf="@+id/img_pic" android:layout_marginTop="@dimen/login_text_margin_top"
+					android:layout_marginBottom="@dimen/login_text_margin_bottom"
+					android:textStyle="bold" />
+				<AutoCompleteTextView android:id="@+id/et_account"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true" android:nextFocusDown="@id/et_password"
+					android:hint="@string/inputname_hint" android:layout_toRightOf="@+id/tv_account"
+					android:background="@drawable/shapeedite" android:textSize="19sp">
+				</AutoCompleteTextView>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:id="@+id/tv_account"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textColor="@color/login_text_color" android:text="@string/password_str"
+					android:layout_toRightOf="@+id/img_pic" android:layout_marginTop="@dimen/login_text_margin_top"
+					android:layout_marginBottom="@dimen/login_text_margin_bottom"
+					android:textStyle="bold" />
+				<EditText android:id="@+id/et_password"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true"
+					android:password="true" android:hint="@string/inputpassword_hint"
+					android:layout_toRightOf="@+id/tv_account"
+					android:background="@drawable/shapeedite">
+				</EditText>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:id="@+id/tv_imei"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textColor="@color/login_text_color" android:text="@string/imei_str"
+					android:layout_toRightOf="@+id/img_pic" android:layout_marginTop="@dimen/login_text_margin_top"
+					android:layout_marginBottom="@dimen/login_text_margin_bottom"
+					android:textStyle="bold" />
+				<EditText android:id="@+id/et_imei"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true" android:hint="@string/inputimei_hint"
+					android:layout_toRightOf="@+id/tv_account"
+					android:background="@drawable/shapeedite">
+				</EditText>
+			</LinearLayout>
+			<TextView android:id="@+id/tv_message" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:textColor="@color/login_message_color"
+				android:layout_toRightOf="@+id/img_pic"
+				android:layout_marginTop="@dimen/login_text_margin_top"
+				android:layout_marginBottom="@dimen/login_text_margin_bottom"
+				android:textStyle="bold" />
+
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginBottom="2dip"
+			android:layout_marginLeft="2dip"
+				android:layout_marginRight="2dip"
+				android:background="@drawable/login_dialog_bk_bottom">
+			<Button android:id="@+id/login_sure_btn" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/login_str"
+				android:layout_margin="@dimen/login_margin_LR"
+				android:background="@drawable/shapebutton"
+				android:layout_weight="1" />
+			<Button android:id="@+id/login_cancel_btn"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/cancel_str" 
+				android:layout_margin="@dimen/login_margin_LR"
+				android:background="@drawable/shapebutton"
+				android:layout_weight="1" />
+		</LinearLayout>
+	</LinearLayout>
+		</ScrollView>
+</LinearLayout>

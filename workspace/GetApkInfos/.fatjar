@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Aug 12 13:29:21 CST 2011
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=GetApkInfos_fat.jar
+manifest.mergeall=true
+manifest.mainclass=com.apk.infos.IndexShowUI
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

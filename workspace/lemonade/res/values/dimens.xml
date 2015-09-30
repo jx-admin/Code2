@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+
+<resources>
+    <dimen name="title_texture_width">120px</dimen>
+
+    <!-- height of the bottom row of controls -->
+    <dimen name="button_bar_height">56dip</dimen>
+
+    <!-- so we have access to this dimension in landscape mode even though
+         button_bar_height changes -->
+    <dimen name="button_bar_height_portrait">56dip</dimen>
+
+    <!-- roughly a status bar (for vertically centering the all apps
+         home icon in landscape) -->
+    <dimen name="status_bar_height">25dip</dimen>
+
+    <!-- roughly half a status bar (for vertically centering the right-hand
+         button cluster in landscape) -->
+    <dimen name="half_status_bar_height">12dip</dimen>
+
+    <!-- height & width of the drop rectangle for the trash icon -->
+    <dimen name="delete_zone_size">70dip</dimen>
+    
+    <!-- delete_zone_size_full - button_bar_height_portrait -->
+    <dimen name="delete_zone_padding">14dip</dimen>
+
+    <!-- the area at the edge of the screen that makes the workspace go left
+         or right while you're dragging. -->
+    <dimen name="scroll_zone">20dp</dimen>
+</resources>

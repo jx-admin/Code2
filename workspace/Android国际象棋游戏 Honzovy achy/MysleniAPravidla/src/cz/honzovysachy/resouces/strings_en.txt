@@ -1,0 +1,55 @@
+HONZOVY_SACHY Honza's Chess
+FLIP_BOARD Flip board
+MOVE Move
+NEW_GAME New game
+UNDO Undo
+REDO Redo
+THINKING thinking...
+SAVE_GAME Save game
+HUMAN_OPONENT Human-human
+SAVED_AS Saved as 
+SAVE_ERROR Save error
+KNIGHT Knight
+BISHOP Bishop
+ROOK Rook
+QUEEN Queen
+SAVE_PGN Save PGN
+FILE_NAME file name
+GAME game
+SAVE save
+WHITE white
+BLACK black
+RESULT result
+EVENT event
+SITE site
+PRAGUE Prague
+DATE date
+ROUND round
+WHITE_ELO white elo
+BLACK_ELO black elo
+PAWN_PROMOTION Pawn promotion
+WHITE_WINS White wins
+BLACK_WINS Black wins
+DRAW Draw
+COMMA_BLACK_CHECKMATED , black checkmated
+COMMA_WHITE_CHECKMATED , white checkmated
+COMMA_STALEMATE , stalemate
+COMMA_MATERIAL , material
+COMMA_50_MOVES_RULE , 50 moves rule
+COMMA_3_TIMES_REPETITION , 3 times repetition
+SETTINGS Settings
+ABOUT About
+OK OK
+CZECH Czech
+ENGLISH English
+DEFAULT default
+LOCALE Locale
+SETUP_BOARD Setup board
+CANCEL Cancel
+SETUP_TEXT Move on the board and press 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD Incorrect board
+TIME_PER_MOVE Time per move
+LEVEL Level
+MOVE_NOW Move now
+SPANISH Spanish
+CATALAN Catalan

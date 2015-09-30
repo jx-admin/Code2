@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    />
+<Button android:text="张兴挺_code" android:id="@+id/zhangxingting" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="高振强_code" android:id="@+id/gaozhenqiang" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="剧惠哲_code" android:id="@+id/juhuizhe" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="朱少虎_code" android:id="@+id/zhushaohu" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

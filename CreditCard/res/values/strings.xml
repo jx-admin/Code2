@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CreditCard</string>
+    <string name="hello_world">Hello world!</string>
+	<!-- card info -->
+    <string name="nickname">别名</string>
+    <string name="card_num">卡号</string>
+    <string name="type">类型</string>
+    <string name="category">卡种</string>
+    <string name="currency">币种</string>
+    <string name="card_money">余额</string>
+    <string name="statement_date">账单日</string>
+    <string name="payment_due_date">付款日</string>
+    <string name="remark">备注</string>
+    <string name="charge">服务费</string>
+    
+    <!-- page -->
+    <string name="add">添加</string>
+    <string name="check">查询</string>
+    
+	
+
+</resources>

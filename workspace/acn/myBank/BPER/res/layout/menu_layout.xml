@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <SlidingDrawer
+        android:id="@+id/slid_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:content="@+id/all_items"
+        android:handle="@+id/menu"
+        android:orientation="vertical" >
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:src="@drawable/menu" />
+
+        <RelativeLayout
+            android:id="@+id/all_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF000000" >
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_above="@+id/menu_scroll" >
+            </TextView>
+
+            <ScrollView
+                android:id="@+id/menu_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_synthesis"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_synthesis_selector" />
+
+                    <RelativeLayout 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <com.accenture.mbank.view.ReHeightImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/products" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                        	android:layout_height="wrap_content"
+                        	android:text="@string/products"
+                        	android:textColor="@color/white"
+                        	android:layout_marginLeft="25dp"
+                            />
+                    </RelativeLayout>
+                    
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_accounts"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_accounts_selector" />
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_investments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_investments_selector" />
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_cards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_cards_selector" />
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_loans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_loans_selector" />
+
+                    <RelativeLayout 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <com.accenture.mbank.view.ReHeightImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/services" />
+                        <TextView 
+                            android:layout_width="wrap_content"
+                       		android:layout_height="wrap_content"
+                       		android:text="@string/services"
+                       		android:textColor="@color/white"
+                       		android:layout_marginLeft="25dp"
+                        />
+                    </RelativeLayout>
+                 
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_payments_selector" />
+
+                    <RelativeLayout 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <com.accenture.mbank.view.ReHeightImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/utilities" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                        	android:layout_height="wrap_content"
+                        	android:text="@string/utilities"
+                        	android:textColor="@color/white"
+                        	android:layout_marginLeft="25dp"
+                        	/>
+                    </RelativeLayout>
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_contacts_selector" />
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_guide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_guide_selector" />
+
+                    <com.accenture.mbank.view.ReHeightImageButton
+                        android:id="@+id/menu_user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/btn_user_info_selector" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/menu_scroll"
+                android:layout_centerHorizontal="true" >
+
+                <com.accenture.mbank.view.ReHeightImageButton
+                    android:id="@+id/menu_log_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/btn_log_out_selector" />
+            </LinearLayout>
+        </RelativeLayout>
+    </SlidingDrawer>
+
+</LinearLayout>

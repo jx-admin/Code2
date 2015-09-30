@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/margin_smid"
+    android:paddingBottom="@dimen/margin_normal"
+     >
+
+    <ImageView
+        android:id="@+id/home_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginLeft="@dimen/margin_large"
+        android:src="@drawable/home_page_logo" />
+
+    <ImageButton
+        android:id="@+id/customer_info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        
+        android:background="@drawable/customer_info_selector"
+        android:layout_marginLeft="@dimen/margin_xxxlarge"
+        android:layout_marginRight="@dimen/margin_mid"
+        android:text="@string/customer" 
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:singleLine="true"/>
+
+    <ImageButton
+        android:id="@+id/shopping_car_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_toLeftOf="@id/customer_info_btn"
+        android:background="@drawable/shopping_cart_selector"
+        android:layout_marginLeft="@dimen/margin_xxxlarge"
+        android:text="@string/shopping_car"
+        android:textColor="@android:color/white"
+        android:gravity="center" />
+
+    <ImageButton
+        android:id="@+id/refresh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/shopping_car_btn"
+        android:background="@drawable/refresh_selector"
+        android:gravity="center"
+        android:text="@string/refresh"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+    
+    <ImageButton
+        android:id="@+id/setting_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/refresh_btn"
+        android:background="@drawable/refresh_selector"
+        android:gravity="center"
+        android:text="@string/refresh"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

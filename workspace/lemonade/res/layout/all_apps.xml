@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+
+<!-- switch to all_apps_3d on devices that support RenderScript -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/all_apps_2d" />
+</merge>

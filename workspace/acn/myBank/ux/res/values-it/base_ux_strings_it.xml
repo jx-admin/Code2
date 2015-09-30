@@ -1,0 +1,417 @@
+<resources>
+    <string name="sa_executed">ESEGUITO</string>
+    <string name="sa_pending">IN ATTESA</string>
+    <string name="loading">caricamento</string>
+    <string name="ss_date">Data</string>
+
+    <!-- new string -->
+    <string name="horizontal_chart_total">Totale:%s</string>
+    <string name="welcome1">Benvenuto!</string>
+    <string name="welcome2">Per favore inserisci le tue credenziali</string>
+    <string name="payment_version">versione pagamento</string>
+
+    <!-- Strings -->
+    <string name="app_name">myBank</string>
+    <string name="bank_info_location">Bank INFO $ LOCATION</string>
+    <string name="watch_demo">GUARDA LA DEMO</string>
+    <string name="login">LOGIN</string>
+    <string name="waitting">Attendere</string>
+    <string name="user_id">Utente</string>
+    <string name="password">Password</string>
+    <string name="remember_user_id">ricorda username</string>
+    <string name="balance">SALDO</string>
+    <string name="transfer">TRASFERIMENTI</string>
+    <string name="cards">CARTE</string>
+    <string name="mortgages_loans">MUTUI PRESTITI</string>
+    <string name="tranding">TRADING</string>
+    <string name="search">ricerca</string>
+    <string name="help">aiuto</string>
+    <string name="advertising_info">My Bank</string>
+    <string name="user_info">informazioni utente</string>
+    <string name="not_able">n/a</string>
+    <string name="remember">ricorda il mio account</string>
+    <!-- new payment -->
+    <string name="beneficiaries">Beneficiari</string>
+    <string name="type_of_payment">TIPO DI PAGAMENTO</string>
+    <string name="type_of_payment1">tipo di pagamento</string>
+    <string name="bank_transfer">BONIFICO</string>
+    <string name="bank_transfer1">bonifico</string>
+    <string name="transfer_entry">GIROCONTO</string>
+    <string name="transfer_entry1">giroconto</string>
+    <string name="card_top_up">RICARICA TELEFONICA</string>
+    <string name="card_top_up1">ricarica telefonica</string>
+    <string name="phone_top_up">RICARICA CARTA</string>
+    <string name="phone_top_up1">ricarica carta</string>
+    <string name="account">CONTO</string>
+    <string name="account1">conto</string>
+    <string name="frank_account">CONTO DI FRANK\'</string>
+    <string name="income_house">INCOME HOUSE</string>
+    <string name="date">DATA</string>
+    <string name="date1">data</string>
+    <string name="payee">BENEFICIARIO</string>
+    <string name="payee1">beneficiario</string>
+    <string name="insert_name_and_surname">inserisci nome e cognome</string>
+    <string name="enter_iban_code">inserisci l\'iban</string>
+    <string name="enter_bic_code">inserisci il bic</string>
+    <string name="ad_to_beneficiaries">Aggiungi alla lista beneficiari</string>
+    <string name="first_name_and_last_name">Inserisci il nome del beneficiario</string>
+    <string name="iban">iban</string>
+    <string name="enter_phone_number">Inserisci il numero di telefono</string>
+    <string name="phone_number1">Numero di telefono:</string>
+    <string name="provider">Operatore:</string>
+    <string name="cards_number">Inserisci il numero di carta</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancella</string>
+    <string name="yes">conferma</string>
+    <string name="no">cancella</string>
+    <string name="operator">Scegli l\'operatore</string>
+    <string name="enter_value">Inserisci il valore</string>
+    <string name="bic">bic</string>
+    <string name="amount">IMPORTO</string>
+    <string name="amount1">importo</string>
+    <string name="reason">causale</string>
+    <string name="fees">commissioni</string>
+    <string name="beneficiary1">beneficiario</string>
+    <string name="tap_to_set">TAP PER CONFIGURARE</string>
+    <string name="tap_to_set1">tap per configurare</string>
+    <string name="insert_amount">Inserisci l\'importo(es. 4321,12)</string>
+    <string name="yuan"></string>
+    <string name="description">DESCRIZIONE</string>
+    <string name="description1">descrizione</string>
+    <string name="description_2">Descrizione:</string>
+    <string name="description_1">Descrizione</string>
+    <string name="enter_description">inserisci la descrizione - max 250 caratteri</string>
+    <string name="confirm_transfer">conferma transazione</string>
+    <string name="require_pin">richiedi pin</string>
+    <string name="pin">pin</string>
+    <string name="business_hours">orario lavorativo:</string>
+    <!-- new payments -->
+    <string name="new_payments_step1">Pagamento</string>
+    <string name="new_payments_step2">Verifica</string>
+    <string name="new_payments_step3">Conferma</string>
+    <string name="proceed">Procedi</string>
+    <string name="verify_data">Verifica dati</string>
+    <string name="verify_card">Verifica carta</string>
+    <string name="verify_the_data_card">verifica dati carta</string>
+    <string name="vertify_data">Vertifica dati</string>
+    <string name="pin_">PIN</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="ask_pin">Richiedi PIN</string>
+    <string name="downloading">Attendere</string>
+    <string name="payment_executed_successfully">Pagamento eseguito con successo</string>
+    <string name="payment_transaction_failed">Transazione fallita</string>
+    <string name="description_">descrizione</string>
+    <string name="pls_select_payments_type">Seleziona il tipo di pagamento</string>
+    <string name="missing_amount">Importo mancante</string>
+    <string name="pls_select_payee">Seleziona un beneficiario</string>
+    <string name="pls_select_payer">Seleziona il conto</string>
+    <string name="missing_account_number">Numero di conto mancante</string>
+    <string name="missing_date">data mancante</string>
+    <string name="missing_pin">pin mancante</string>
+    <string name="pls_input_right_amount">Attenzione! L\'importo è maggiore del saldo disponibile.</string>
+    <string name="missing_description">descrizione mancante</string>
+    <string name="payee_exist">Beneficiario già presente</string>
+    <string name="card_verified">Carta verificata</string>
+    <string name="no_card_found">Carta non trovata</string>
+    <string name="new_payee_done">Fatto</string>
+    <string name="new_payee_title">Nuovo beneficiario</string>
+    <string name="enter_beneficiary_name">Inserisci nome beneficiario</string>
+    <string name="enter_the_card_number">Inserisci numero di telefono</string>
+    <string name="recover">Recupera</string>
+    <string name="select_account_remind">Scorri e clicca per selezionare un conto</string>
+    <string name="bill_holder">Intestatario bolletta</string>
+    <string name="bill_payment_remind">scansiona QR code o riempi i campi manualmente</string>
+    <string name="capture_code">Scansione codice</string>
+    <string name="account_number">Numero di conto</string>
+    <string name="amount_doller">Importo-$</string>
+    <string name="payable_to">Da pagare a</string>
+    <string name="bill_number">Numero bolletta</string>
+    <string name="type">Tipo</string>
+    <string name="_674">674</string>
+    <string name="_896">896</string>
+    <!-- description from description_1 -->
+    <string name="_123">123</string>
+    <string name="_451">451</string>
+    <string name="due_to">Scadenza</string>
+    <string name="mav">MAV</string>
+    <string name="rav">RAV</string>
+    <string name="bill_holder1">intestatario bolletta</string>
+    <string name="account_number1">numero di conto</string>
+    <string name="bank_free1">commissione bancaria</string>
+    <string name="postal_free1">commissione postale</string>
+    <string name="payer_list_info">Scorri e clicca per selezionare un conto</string>
+    <string name="payee_list_info">Scorri e clicca per selezionare un beneficiario</string>
+     <string-array name="new_payments_types">
+        <item>--Tipo di pagamento--</item>
+        <item>bonifico</item>
+        <item>giroconto</item>
+        <item>ricarica carta</item>
+        <item>ricarica telefonica</item>
+        <item>Bollettino premarcato</item>
+        <item>Bollettino bianco</item>
+        <item>MAV/RAV</item>
+    </string-array>
+     <string-array name="new_payments_types1">
+        <item>--Tipo di pagamento--</item>
+        <item>bonifico</item>
+        <item>ricarica carta</item>
+        <item>ricarica telefonica</item>
+        <item>Bollettino premarcato</item>
+        <item>Bollettino bianco</item>
+        <item>MAV/RAV</item>
+    </string-array>
+    <!-- new payee -->
+    <string name="missing_name">Nome mancante</string>
+    <string name="missing_iban">IBAN mancante</string>
+    <string name="missing_operator">Operatore mancante</string>
+    <string name="missing_number">Numero mancante</string>
+    <string name="missing_beneficiary_name">Nome beneficiario mancante</string>
+    <string name="missing_card_number">Numero di carta mancante</string>
+    <string name="verify_proceed">Verifica &amp; Procedi</string>
+    <string name="new__payee">Nuovo\nBeneficiario</string>
+    <string name="new_payee__by_phone">"Nuovo beneficiario\nda telefono"</string>
+    <string name="new_payee_by_phone_info">Usa il Trasferimento da numero di telefono inserendo il numero del beneficiario.</string>
+    <string name="phone_number">Numero di telefono</string>
+    <string name="not_valid_phone_number">Numero di telefono non valido</string>
+    <string name="holders_name">nome intestatario</string>
+    <string name="address_1st_line">Indirizzo</string>
+    <string name="city">Città</string>
+    <string name="zip_code">CAP</string>
+    <string name="missing_bill_number">numero bolletta mancante</string>
+    <!-- state state_1 -->
+    <string name="new_bill_holder">Nuovo intestatario</string>
+    <string name="_phone_number">Numero di telefono</string>
+    <!-- user info begin -->
+    <string name="saved_settings">salvato con successo</string>
+    <string name="saved_fail">salvataggio impostazioni fallito</string>
+    <string name="synthesis">sintesi</string>
+    <string name="lists">liste</string>
+    <string name="dashboard_accounts">dashboard conti</string>
+    <string name="interval">intervallo</string>
+    <string name="dashboard_cards">dashboard carte</string>
+    <string name="save">salva</string>
+    <string name="order_list_for">ordina per:</string>
+    <string name="date_1">Data</string>
+    <string name="date_asc">Data ASC</string>
+    <string name="date_desc">data</string>
+    <string name="amount_1">Importo</string>
+    <string name="amount_asc">Importo ASC</string>
+    <string name="amount_desc">importo</string>
+    <string name="amount_2">IMPORTO</string>
+    <string name="amount_3">Importo:</string>
+    <string name="show_transaction_by">mostra transazioni per:</string>
+    <string name="last_20">ultime 20</string>
+    <string name="last_2_months">ultimi 2 mesi</string>
+    <string name="recent_payments_displayed">pagamenti recenti visualizzati:</string>
+    <string name="pin_management">gestione pin</string>
+    <string name="select_recelve_pin">seleziona il canale di ricezione del pin</string>
+    <string name="mail">MAIL</string>
+    <string name="sms">SMS</string>
+    <string name="account_alias">alias:</string>
+    <string name="account_name">numero intestatario: </string>
+    <string name="account_code">conto:</string>
+    <string name="account_iban">iban:</string>
+    <string name="card_holder">intestatario carta: </string>
+    <string name="card_alias">alias carta:</string>
+    <string name="card_number">numero carta:</string>
+    <string name="loan_alias">alias:</string>
+    <string name="residual_capital">capitale residuo:</string>
+    <string name="investment_alias">alias:</string>
+    <!-- user info end -->
+
+
+    <!-- colors -->
+    <color name="black_background">#ff7f7f7f</color>
+    <color name="blue_background">#ff087f9f</color>
+    <!-- recent payment -->
+    <string name="recent_operator">Provider:</string>
+    <string name="recent_transfer_state">Stato transazione:</string>
+    <string name="recent_beneficiary">Beneficiario:</string>
+    <string name="recent_iban">IBAN:</string>
+    <string name="recent_bic">BIC:</string>
+    <string name="recent_description">Descrizione:</string>
+    <string name="recent_card_number">Numero carta:</string>
+    <string name="not_available">Non disponibile</string>
+    <!-- investments -->
+    <string name="portfolio">portfolio</string>
+    <string name="shares">shares</string>
+    <string name="bonds">bonds</string>
+    <string name="funds">funds</string>
+    <string name="more">more</string>
+    <string name="total_amount">Totale Asset Management</string>
+    <string name="portfolio_1">Totale Importo</string>
+    <string name="asset_management">Asset Management</string>
+    <string name="invest_update">investimenti ultimo aggiornamento</string>
+    <!-- accounts -->
+    <string name="balance_account">Saldo contabile</string>
+    <string name="available_account">Saldo disponibile</string>
+    <string name="all">Tutti</string>
+    <string name="deposits">Depositi</string>
+    <string name="withdrawals">Uscite</string>
+    <string name="payments">Pagamenti</string>
+    <string name="back">Indietro</string>
+    <string name="update_to">aggiornato a</string>
+    <string name="opt_date">Data operazione:</string>
+    <string name="opt_date_1">Data operazione</string>
+    <string name="opt_date_2">Data</string>
+    <string name="currency_date">Data valuta:</string>
+    <string name="account_balance_to">Saldo aggiornato al </string>
+    <!-- cards -->
+    <string name="available_balance_name">Saldo disponibile: </string>
+    <string name="alias">Alias:</string>
+    <string name="dollar">$</string>
+    <string name="state">Stato:</string>
+    <string name="number_Card">Numero carta:</string>
+    <string name="expiration">Scadenza:</string>
+    <string name="plafond">Plafond:</string>
+    <string name="card_update_to">Carte aggiornate al  </string>
+    <!-- loans -->
+    <string name="remaining_installments">Rate residue: </string>
+    <string name="account_1">Conti: </string>
+    <string name="rate_over">Spread: </string>
+    <string name="benchmark_applied">Benchmark applicato: </string>
+    <string name="type_1">Tipo: </string>
+    <string name="expiration_1">Scadenza</string>
+    <string name="state_1">Stato</string>
+    <string name="loans_update_to">Finanziamenti aggiornati al </string>
+    <!-- contact us -->
+    <string name="request_send">Inviato</string>
+    <string name="object_accounts">Conti</string>
+    <string name="object_credit_cards">Carte di credito</string>
+    <string name="object_prepaid_cards">Carte prepagate</string>
+    <string name="object_payments">Pagamenti</string>
+    <string name="object_mortagage">Mutui</string>
+    <string name="object_loans">Prestiti</string>
+    <string name="object_investments">Investmenti</string>
+    <string name="object_security">Sicurezza</string>
+    <string name="object_other">Altro</string>
+    <string name="channel_email">Email</string>
+    <string name="channel_phone">Telefono</string>
+    <string name="channel_branch">Filiale</string>
+    <string name="details_email">Mail:</string>
+    <string name="details_email_hint">Inserisci e-mail</string>
+    <string name="details_phone">Telefono:</string>
+    <string name="details_phone_hours">Ore:</string>
+    <string name="details_branch_email">Mail:</string>
+    <string name="details_branch_email_hint">Inserisci e-mail</string>
+    <string name="details_branch_phone">Telefono:</string>
+    <string name="details_branch_date">Data:</string>
+    <string name="details_branch_hours">Ore:</string>
+    <string name="description_hint">Nuove informazioni</string>
+    <string name="version">Versione:</string>
+    <string name="request_successfully">La tua ruchiesta di contatto è stata inviata.</string>
+    <string name="crash_toast_text">Eccezione, scrittura log..</string>
+    <string name="enter_distance">Inserire la massima \ndistanza di ricerca(m):</string>
+    <string name="time_out">Rete non disponibile.Verificare la connessione.</string>
+    <string name="server_refused">Server refused!</string>
+    <string name="msg_material_number">您可以直接扫描物料编码。如果扫描不成功，可以通过点击按钮，进行手动输入。</string>
+    <string name="menu_settings">设置</string>
+    <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="button_ok">确定</string>
+    <string name="auto_login">auto login</string>
+    <string name="preferences_login">login</string>
+    <string name="btn_input">hand input</string>
+    <!-- Device Admin -->
+    <string name="sample_device_admin">mBanking . Amm. Dispositivo</string>
+    <string name="sample_device_admin_description">mBanking - Gestione impostazioni di sicurezza …</string>
+    <!-- notifictions -->
+    <string name="is_receive_notifictions">Vuoi riceve le notifiche su questo telefono?</string>
+    <string name="notifictions_confirmation">Hai scelto di ricevere le notifiche, se vuoi modificare le impostazioni val al menu</string>
+    <!-- network -->
+    <string name="connection_error">errore di connessione</string>
+    <string name="unknown_connection_error">errore di connessione</string>
+    <!-- En -->
+    <string name="waiting">Attendere</string>
+    <!-- new string -->
+    <string name="none_payer">nessun conto !</string>
+    <string name="recent_beneficiary2">beneficiario:%s</string>
+    <string name="recent_number">numero:%s</string>
+    <string name="recent_description2">descrizione:%s</string>
+    <string name="recent_state">stato:%s</string>
+    <string name="pin_success_by_email">pin inviato, per favore controlla le email</string>
+    <string name="pin_success_by_sms">pin inviato, per favore controlla gli sms</string>
+    <!-- new str -->
+    <string name="asset">patrimoniale</string>
+    <string name="card_details">dati della carta di</string>
+    <string name="other_movements">altri movimenti</string>
+    <string name="confirm">confermare</string>
+    <string name="confirm_transaction">confermare la transazione</string>
+    <string name="contacts">contatti</string>
+    <string name="userinfo">informazioni utente</string>
+    <string name="details">dettagli</string>
+    <string name="investments">investimenti</string>
+    <string name="loans">prestiti</string>
+    <string name="logout">logout</string>
+    <string name="get_directions">ottenere indicazioni stradali</string>
+    <string name="guide">guida</string>
+    <string name="sa__installments">RATE</string>
+    <string name="my_cards">le mie carte</string>
+    <string name="older_operations">operazioni meno recenti</string>
+    <string name="require_a_pin">richiedi PIN</string>
+    <string name="transactions">transazioni</string>
+    <string name="validate">validare</string>
+    <string name="warrants">warrants</string>
+    <string name="credit_cards">carte di credito</string>
+    <string name="menu">Menu</string>
+    <string name="sa__off">SPENTO</string>
+    <string name="sa__on">SU</string>
+    <string name="prepaid_cards">carte prepagate</string>
+    <string name="products">prodotti</string>
+    <string name="services">servizi</string>
+    <string name="_asset_management">asset management</string>
+    <string name="show">mostra</string>
+    <string name="utilites">programmi di utilità</string>
+    <string name="newest_disc">ultimo piano greendays soldi di pensione MyBank.</string>
+    <string name="savings_disc">risparmi a partire dal 25 $ per month.read più…</string>
+    <string name="click_disc">Clicca qui per trovare il vostro consulente programma di pensionamento più vicino</string>
+    <string name="contact_us">contattaci</string>
+    <string name="search_branch">cerca filiale</string>
+    <string name="locate_a_branch">localizza filiale</string>
+    <string name="safety">sicurezza</string>
+    <string name="push_notifications">notifiche push</string>
+    <string name="pin_manager">Gestione pin</string>
+    <string name="recent_payments">pagamenti recenti</string>
+    <string name="show_items">visualizza elementi</string>
+    <string name="watch_the_demo">guarda la demo</string>
+    <string name="months">mesi</string>
+    <string name="ss_today">oggi</string>
+    <string name="available_balance">Saldo Disponibile</string>
+    <string name="account_rotate_title_l">DIFFERENZA DEPOSITI /PRELIEVI</string>
+     <string-array name="investment_rote_names">
+        <item>azioni</item>
+        <item> obbligazioni</item>
+        <item> fondi</item>
+        <item> più</item>
+    </string-array>
+
+    <string name="assets">beni</string>
+    <string name="ss_invesments">Investimenti</string>
+    <string name="sa_loan">PRESTITO</string>
+    <string name="card_rotate_average_str">Spesa media per la carta:</string>
+    <string name="sa_withdrawals">RITIRI</string>
+    <string name="card_number_str">Scheda XXXX XXXX XXXX </string>
+    
+    
+   
+    <string name="email">email</string>
+    <string name="phone">telefono</string>
+    <string name="branch">ramo</string>
+    <string name="channel">chanale</string>
+    <string name="object">oggetto</string>
+    <string name="date_cannot_empty">Data cann\'t essere vuoto</string>
+    <string name="phone_cannot_empty">Telefono cann\'t essere vuoto</string>
+    <string name="email_cannot_empty">Email cann\'t essere vuoto</string>
+    <string name="object_cannot_empty">Oggetto cann\'t essere vuoto</string>
+    
+    <string name="customer_service">servizio clienti</string>
+    <string name="theft_and_loss">furto o smarrimento</string>
+    <string name="new_request">Nuova richiesta</string>
+	<string name="us">US</string>
+	<string name="business_hours2">orario lavorativo</string>
+	<string name="e_mail">e-mail</string>
+	<string name="website">website</string>
+	<string name="block_debit_and">blocco bancomat o carta di credito</string>
+	<string name="other_country">altre nazioni</string>
+	<string name="block_credit_cards">blocca carta di credito</string>
+</resources>

@@ -1,0 +1,39 @@
+<resources>
+
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="radio_button_text_padding">40dip</dimen>
+    <dimen name="radio_button_top_padding">5dip</dimen>
+    <dimen name="radio_button_bottom_padding">5dip</dimen>
+    <dimen name="radio_button_left_padding">40dip</dimen>
+    <dimen name="radio_button_left_padding_2">80dip</dimen>
+    <dimen name="radio_button_right_padding">40dip</dimen>
+    <dimen name="toggle_button_width">20dip</dimen>
+    <dimen name="toggle_button_height">10dip</dimen>
+    <dimen name="payment_account_card_size">100dip</dimen>
+    <dimen name="payment_new_payee_plus_icon_size">30dip</dimen>
+    <dimen name="v5dp">5dp</dimen>
+    <dimen name="v3dp">3dp</dimen>
+    <dimen name="round_rect_radis">6dp</dimen>
+    <dimen name="userinfo_btn_width">120dip</dimen>
+    <dimen name="text_big">14sp</dimen>
+    <dimen name="text_nomal_size">12sp</dimen>
+    <dimen name="text_small">10sp</dimen>
+    <dimen name="text_small_x">8sp</dimen>
+    <dimen name="text_chart_bar">14sp</dimen>
+    <dimen name="text_chart_popup">16sp</dimen>
+    <dimen name="three_row_item">70dip</dimen>
+    <dimen name="two_row_item">50dip</dimen>
+    <dimen name="one_row_item">30dip</dimen>
+	<dimen name="date_desc_item_height">40dip</dimen>
+	<dimen name="space">4dip</dimen>
+	<dimen name="space_view">30dip</dimen>
+	<dimen name="arrow_height">11dip</dimen>
+	<dimen name="adv_image_height">34dip</dimen>
+	<dimen name="iban_padding_left">50dip</dimen>
+</resources>

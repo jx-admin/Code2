@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bper_payment_step_layout" />
+
+    <TextView
+        android:id="@+id/page_title"
+        style="@style/bper_payment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/transfer_entry_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="5" >
+
+        <ImageView
+            android:id="@+id/result_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/payment_v" />
+
+        <TextView
+            android:id="@+id/error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small_mini"
+            android:text="@string/insertransfer_error_title"
+            android:textColor="#AC2526"
+            android:textSize="@dimen/text_nomal_size" />
+
+        <TextView
+            android:id="@+id/error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small_mini"
+            android:text="@string/insertransfer_error_msg"
+            android:textColor="#6C6C6C"
+            android:textSize="@dimen/text_nomal_size" />
+
+        <TextView
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small_mini"
+            android:gravity="center"
+            android:text="@string/payment_success"
+            android:textSize="@dimen/text_nomal_size" />
+
+        <Button
+            android:id="@+id/paymet_detail_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/payment_detail_selector_on" />
+
+        <Button
+            android:id="@+id/new_payment_button_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/padding_large"
+            android:background="@drawable/new_payment_button_btn" />
+
+        <Button
+            android:id="@+id/button_go_syntesis_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/padding_small_mini"
+            android:background="@drawable/button_go_syntesis_btn" />
+    </LinearLayout>
+
+</LinearLayout>

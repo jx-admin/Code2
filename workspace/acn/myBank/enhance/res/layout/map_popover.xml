@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.mbanking.view.PopView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_get_directions"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small"
+    android:weightSum="7" >
+
+    <TextView
+        android:id="@+id/popover_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/popover_address"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/popover_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/business_hours"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/pop_monday_to_friday"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/pop_saturday"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/pop_sunday"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffffff" />
+
+    <ImageButton
+        android:id="@+id/getdirections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dip"
+        android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_get_directions" />
+
+</com.act.mbanking.view.PopView>

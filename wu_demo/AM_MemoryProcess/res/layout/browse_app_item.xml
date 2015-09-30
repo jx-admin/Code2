@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="50dip">
+
+	<ImageView android:id="@+id/imgApp" android:layout_width="wrap_content"
+		android:layout_height="fill_parent" ></ImageView>
+	<RelativeLayout android:layout_width="fill_parent"  android:layout_marginLeft="10dip"
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/tvLabel" android:layout_width="wrap_content"
+			android:layout_height="35dip" android:text="AppLable : "></TextView>
+		<TextView android:id="@+id/tvAppLabel" android:layout_width="wrap_content"
+			android:layout_toRightOf="@id/tvLabel" android:layout_height="35dip"
+			android:layout_marginLeft="3dip" android:text="Label" android:textColor="#FFD700"></TextView>
+		<TextView android:id="@+id/tvName" android:layout_width="wrap_content"
+			android:layout_height="35dip" android:layout_below="@id/tvLabel" 
+			android:text="包名:"></TextView>
+		<TextView android:id="@+id/tvPkgName" android:layout_width="wrap_content"
+		    android:layout_height="35dip" android:layout_below="@id/tvAppLabel"
+		    android:layout_alignLeft="@id/tvAppLabel" android:textColor="#FFD700"></TextView>
+		    
+		<TextView android:id="@+id/tvPId" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:layout_below="@id/tvName" android:textColor="#FF0000" 
+			android:text="所在进程ID:"></TextView>
+		<TextView android:id="@+id/tvProcessId" android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" android:layout_below="@id/tvPkgName"
+		    android:layout_alignLeft="@id/tvPkgName" android:textColor="#FF0000"></TextView>
+		    
+		<TextView android:id="@+id/tvPName" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:layout_below="@id/tvPId" android:textColor="#FF0000" 
+			android:text="所在进程名:"></TextView>
+		<TextView android:id="@+id/tvProcessName" android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" android:layout_below="@id/tvProcessId"
+		    android:layout_alignLeft="@id/tvProcessId" android:textColor="#FF0000"></TextView>
+		    
+	</RelativeLayout>    
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <TextView android:text="Name" android:id="@+id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <EditText android:text="vivian.yun.feng" android:id="@+id/address" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:text="Password" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  	<EditText android:text="TenYears0617" android:id="@+id/password" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	<TextView android:text="Domain" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  	<EditText android:text="accenture.com" android:id="@+id/domain" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	<TextView android:text="server" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  	<EditText android:text="apa.email.accenture.com" android:id="@+id/server" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+  	<CheckBox android:text="ssl" android:id="@+id/checkbox_ssl" android:checked = "true" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+	<Button android:text="Next" android:id="@+id/next" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<TextView android:text="" android:id="@+id/status" android:layout_width="fill_parent" android:layout_height="wrap_content"></TextView>
+  
+</LinearLayout>

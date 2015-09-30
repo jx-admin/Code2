@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="280dip"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/login_margin_LR"
+                android:layout_marginTop="@dimen/login_text_margin_top"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/login_margin_LR" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/login_text_margin_bottom"
+                        android:layout_marginTop="@dimen/login_text_margin_top"
+                        android:text="@string/name_str"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_account"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imsiselect"
+                        android:background="@drawable/shapeedit"
+                        android:hint="@string/inputname_hint"
+                        android:nextFocusDown="@+id/et_password"
+                        android:singleLine="true"
+                        android:textSize="19sp" >
+
+                    </EditText>
+
+                    <CheckBox
+                        android:id="@+id/imsiselect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tv_account"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:text="@string/selectimsi" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/login_text_margin_bottom"
+                        android:layout_marginTop="@dimen/login_text_margin_top"
+                        android:text="@string/password_str"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shapeedit"
+                        android:hint="@string/inputpassword_hint"
+                        android:inputType="textPassword"
+                        android:singleLine="true" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_imei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/login_text_margin_bottom"
+                        android:layout_marginTop="@dimen/login_text_margin_top"
+                        android:text="@string/imei_str"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/et_imei"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shapeedit"
+                        android:hint="@string/inputimei_hint"
+                        android:singleLine="true"
+                        android:visibility="visible" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_text_margin_bottom"
+                    android:layout_marginTop="@dimen/login_text_margin_top"
+                    android:textColor="@color/login_message_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:background="@drawable/login_dialog_bk_bottom" >
+
+                <Button
+                    android:id="@+id/login_sure_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/login_margin_LR"
+                    android:layout_weight="1"
+                    android:background="@drawable/shapebutton"
+                    android:text="@string/login_str" />
+
+                <Button
+                    android:id="@+id/login_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/login_margin_LR"
+                    android:layout_weight="1"
+                    android:background="@drawable/shapebutton"
+                    android:text="@string/cancel_str" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

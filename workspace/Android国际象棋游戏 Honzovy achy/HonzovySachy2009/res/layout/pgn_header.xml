@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<TableRow>
+<TextView android:id="@+id/filenamestatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="file name:"/>
+<EditText android:id="@+id/filename"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="/sdcard/game.pgn"/>
+</TableRow>
+<TableRow>
+<Button android:id="@+id/save"
+   android:text="save"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"/>
+</TableRow> 
+<TableRow>
+<TextView android:id="@+id/whitestatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="white:"/>
+<EditText android:id="@+id/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="white"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/blackstatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="black:"/>
+    
+<EditText android:id="@+id/black"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="black"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/resultstatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="result:"/>
+<Spinner android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+        />
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/eventstatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="event:"/>
+<EditText android:id="@+id/event"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="event"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/sitestatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="site:"/>
+<EditText android:id="@+id/site"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Prague"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/datestatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="date:"/>
+<Button android:id="@+id/date"
+   android:text="2009-10-1"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/roundstatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="round:"/>
+<EditText android:id="@+id/round"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="1"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/whiteelostatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="white elo:"/>
+<EditText android:id="@+id/whiteelo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="2000"/>
+</TableRow>
+<TableRow>
+<TextView android:id="@+id/blackelostatic"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="black elo:"/>
+<EditText android:id="@+id/blackelo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="2000"/>
+</TableRow>
+</TableLayout>
+</ScrollView>

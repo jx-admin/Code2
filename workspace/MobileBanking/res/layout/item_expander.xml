@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.ItemExpander xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/expander_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:id="@+id/expand_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/expand_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toLeftOf="@+id/expand_btn"
+            android:layout_toRightOf="@+id/expand_title"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/tap_to_set1" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/expand_btn"
+            android:layout_width="@dimen/toggle_button_width"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/payment_expand_selector"
+            android:textOff=""
+            android:textOn="" >
+        </ToggleButton>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expanded_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+</com.accenture.mbank.view.ItemExpander>

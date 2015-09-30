@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:background="@drawable/account_data_closed"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small" >
+
+                <TextView
+                    android:id="@+id/payment_account_type_tv"
+                    style="@style/payment_black_shadow_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/payment_account_info_tv"
+                    style="@style/payment_black_shadow_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_small_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payment_amount_tv"
+                style="@style/payment_white_shadow_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@drawable/amountbar"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/account_data_closed"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:padding="@dimen/padding_small" >
+
+                <TextView
+                    android:id="@+id/payee_account_type_tv"
+                    style="@style/payment_black_shadow_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/payee_account_info_tv"
+                    style="@style/payment_black_shadow_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="TextView"
+                    android:textSize="@dimen/text_small_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pin_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pin" />
+
+                <EditText
+                    android:id="@+id/pin_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

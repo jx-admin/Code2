@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyImageIndicator</string>
+    
+    <!-- 头部 -->
+    <string name="news_top_left_text1">博客</string>
+    <string name="news_top_left_text2">新闻</string>
+    <string name="title_news_category_tops">头条</string>
+    <string name="title_news_category_info">资讯</string>
+    <string name="title_news_category_blog">博客</string>
+    <string name="title_news_category_magazine">杂志</string>
+    <string name="title_news_category_domain">业界</string>
+    <string name="title_news_category_more">更多</string>
+    <string name="img_duoyun_desc">天气预报</string>
+    
+    <!-- 滑动区域文字及链接 -->
+    <string name="title1">苹果在中国市场：Google的劣势反而是苹果的优势</string>
+    <string name="title2">吞噬大数据存储领域新机制——NoSQL模式解析</string>
+    <string name="title3">神舟九号：宇航员会携带什么移动应用上天？</string>
+    <string name="title4">2012苹果全球开发者大会（WWDC）12日开幕</string>
+    <string name="title5">Win8说：请把PC丢出窗外！</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">蓝魔的逆袭</string>
+    <string name="more_game_msg">安装地瓜游戏，访问http://a.d.cn,下载更多游戏。</string>
+    <string name="btn_web">访问网站</string>
+    <string name="btn_apk">安装地瓜</string>
+    <string name="btn_cancel">取消</string>
+    <string name="process_msg">安装 初始化...</string>
+    <string name="btn_ok">确定</string>
+    <string name="install_error_msg">抱歉!安装 初始化初始化失败,请检查SD卡连接。</string>
+</resources>

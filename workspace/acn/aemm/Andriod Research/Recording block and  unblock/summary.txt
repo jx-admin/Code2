@@ -1,0 +1,40 @@
+启动
+ AudioFlinger是Android音频系统的两大服务之一，另一个服务是AudioPolicyService，这两大服务都在系统启动时有MediaSever加载，加载的代码位于：frameworks\base\media\mediaserver\main_mediaserver.cpp。
+
+录音调用关系
+packages/apps/SpeechRecorder
+MicrophoneInputStream.java ->native AudioRecordNew(),AudioRecordStart()
+其中jni文件位于
+srec_jnj -> external/srec/srec_jni
+从jni可以看出实际调用的是AudioRecord.cpp。
+
+AudioRecord.cpp位于frameworks/base/media/
+在AudioRecord.cpp的start方法中调用openRecord()
+实际调用的是BpAudioFlinger（位于IAudioFlinger.cpp  frameworks/base/media）
+的openRecord()   
+其中有remote()->transact(OPEN_RECORD, data, &reply);
+在BN端，调用BnAudioFlinger的onTransact，
+当是CREATE_TRACK会调用AudioFlinger.cpp 中的openRecord() 
+
+AudioFlinger.cpp 中有一个static bool recordingAllowed(),如果在此增加判断，应该可以阻止
+录音
+
+service
+通过如下代码可以找到audioflinger 这个service
+IBinder binder = ServiceManager.checkService("media.audio_flinger");
+    if (binder.isBinderAlive())
+    {
+    	Log.i("TestAudioService","is alive");
+    }
+
+但是并没有发现可以停止 service的api.
+
+电话通话
+不能从Audio system禁掉电话通话，可以通过禁止拨号的办法来禁止通话。对应的API是RIL.java文件里的dial函数。文件路径为frameworks/base/telephony/java/com/android/internal/telephony/RIL.java
+
+
+
+
+
+
+

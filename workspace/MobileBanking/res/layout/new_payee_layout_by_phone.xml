@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/new_payee_top_bar" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/padding_xlarge"
+        android:layout_marginRight="@dimen/padding_xlarge"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/new_payee_by_phone_info" />
+
+    <LinearLayout
+        android:id="@+id/payment_type_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wellcome_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="6" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/padding_xlarge"
+        android:layout_marginRight="@dimen/padding_xlarge"
+        android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/phone_number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large">
+
+            <EditText
+                android:id="@+id/phone_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="phone"
+                android:ems="10" />
+
+            <ImageButton
+                android:id="@+id/pick_phone_ibtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@android:drawable/sym_action_call" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/proceed_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/np_proceed_lin" />
+
+</LinearLayout>

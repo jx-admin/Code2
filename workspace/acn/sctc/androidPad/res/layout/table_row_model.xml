@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/a07_ls_rlo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TableRow>
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="13"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="7"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:gravity="center" />
+
+        <View style="@style/table_bolder_view2" />
+    </TableRow>
+
+    <View
+        style="@style/table_bolder_view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+</TableLayout>

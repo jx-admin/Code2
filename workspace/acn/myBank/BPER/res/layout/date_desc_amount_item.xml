@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.DateDescriptionAmountItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/linea_di_separazione" />
+
+    <LinearLayout
+        android:id="@+id/expander_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/date_desc_item_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:weightSum="4" >
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="18.15.62" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/expand_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="Bank transfer" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/expand_result"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:text="+$1000" >
+        </TextView>
+
+        <ToggleButton
+            android:id="@+id/expand_btn"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_weight="0.2"
+            android:background="@drawable/cards_expand_selector"
+            android:textOff=""
+            android:textOn="" >
+        </ToggleButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expanded_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/linea_di_separazione" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/account_operation_date"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="@string/transaction_date" />
+
+            <TextView
+                android:id="@+id/account_operation_date_value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currency_date_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/currency_date"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="@string/currency_date" />
+
+            <TextView
+                android:id="@+id/currency_date_value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/account_description"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="@string/description_2" />
+
+            <TextView
+                android:id="@+id/account_description_value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/account_amount"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="@string/amount_3" />
+
+            <TextView
+                android:id="@+id/account_amount_value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.accenture.mbank.view.DateDescriptionAmountItem> <!-- com.accenture.mbank.view.RecentPaymentItem -->

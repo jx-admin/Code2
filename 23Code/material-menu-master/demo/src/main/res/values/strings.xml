@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Material menu</string>
+    <string name="action_random">Just a random icon</string>
+    <string name="action_switch_custom">Use CustomView</string>
+    <string name="action_switch_home_icon">Use Home icon</string>
+    <string name="duration">DURATION</string>
+    <string name="animate_menu">ANIM MENU</string>
+    <string name="animate_arrow">ANIM ARROW</string>
+    <string name="animate_check">ANIM CHECK</string>
+    <string name="animate_x">ANIM X</string>
+    <string name="set_menu">SET MENU</string>
+    <string name="set_arrow">SET ARROW</string>
+    <string name="set_x">SET X</string>
+    <string name="set_check">SET CHECK</string>
+    <string name="title_activity_custom_view">Material menu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

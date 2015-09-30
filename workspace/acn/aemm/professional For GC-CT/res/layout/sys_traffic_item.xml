@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="horizontal"
+  android:paddingTop="20dip"
+  android:paddingBottom="20dip"
+  >
+
+    <TextView 
+             android:id="@+id/null_type" 
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:gravity="center"          
+             android:textSize="18sp"
+             android:textColor="#aadddd"
+             android:textStyle="bold"
+             
+           >
+             </TextView>
+             
+             
+    <TextView  android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:id="@+id/today"
+              android:textSize="18sp"
+             android:textColor="#dddfff"
+             android:textStyle="bold"
+      />
+      <TextView  android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:id="@+id/week"
+              android:textSize="18sp"
+             android:textColor="#dddfff"
+             android:textStyle="bold"
+      />
+       <TextView  android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:id="@+id/month"
+              android:textSize="18sp"
+             android:textColor="#dddfff"
+             android:textStyle="bold"
+      />
+</LinearLayout>

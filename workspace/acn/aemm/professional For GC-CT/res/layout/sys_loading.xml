@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<ProgressBar android:id="@+id/widget43"
+		android:paddingLeft="45dip" android:paddingTop="33dip"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		style="?android:attr/progressBarStyleSmall"
+		android:layout_gravity="center_vertical">
+	</ProgressBar>
+	<TextView android:id="@+id/dialog_loading" android:text="正在处理中,请稍候..."
+		android:gravity="center_horizontal" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:textColor="#ffffff" 
+		android:paddingLeft="65dip" android:paddingTop="32dip">
+	</TextView>
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_back"
+    android:paddingBottom="3dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="3dp"
+     android:id="@+id/settingitem" >
+
+    <TextView
+        android:id="@+id/pushname"
+        style="@style/userinfo_text_black_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:text="dfdfasdfsdfsdf"/>
+
+    <com.act.mbanking.view.SlipButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="100dip"
+            android:layout_height="40dip" />
+        <!-- <ToggleButton -->
+        <!-- android:id="@+id/toggleButton1" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:checked="true" -->
+        <!-- android:textOn="Open" -->
+        <!-- android:textOff="Close" -->
+        <!-- /> -->
+
+</LinearLayout>

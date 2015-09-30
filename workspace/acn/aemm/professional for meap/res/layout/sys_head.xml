@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<RelativeLayout android:orientation="vertical"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/sys_title_bg">
+		<Button android:id="@+id/sys$btn_return"
+		android:layout_alignParentLeft="true" android:background="@drawable/sys_back"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_centerInParent="true"
+			android:id="@+id/sys$tv_title" android:text=""
+			android:textColor="#FFFFFF" android:textStyle="bold"
+			android:textSize="15dip" />	
+		<Button android:id="@+id/sys_search"
+			android:layout_alignParentRight="true" android:background="@drawable/sys_search"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignBaseline="@id/sys$btn_return" android:visibility="invisible"/>
+	</RelativeLayout>
+	
+

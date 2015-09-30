@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aess.aemm.view.popu.OLItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/oliImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/userinfo"
+        android:paddingLeft="5dip"
+        android:src="@drawable/alarms" />
+
+    <TextView
+        android:id="@+id/oliTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:paddingLeft="3dip"
+        android:text="@string/userinfo"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/oliCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:paddingRight="5dip"
+        android:visibility="invisible" />
+
+</com.aess.aemm.view.popu.OLItem>

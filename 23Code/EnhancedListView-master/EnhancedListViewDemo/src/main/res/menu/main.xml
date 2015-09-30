@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_done"
+        android:title="@string/action_done"
+        android:icon="@drawable/ic_action_done"
+        appcompat:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_action_settings"
+        appcompat:showAsAction="ifRoom"/>
+</menu>

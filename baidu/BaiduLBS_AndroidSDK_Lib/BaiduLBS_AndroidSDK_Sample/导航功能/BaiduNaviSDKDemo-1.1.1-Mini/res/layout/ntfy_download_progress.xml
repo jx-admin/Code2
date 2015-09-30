@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_notification"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:duplicateParentState="true" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/download_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/download_icon"
+            android:duplicateParentState="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="下载中..."
+            android:textColor="#3b3b3b"
+            android:textSize="13.3sp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/progress_text"
+            android:layout_toRightOf="@id/download_icon"
+            android:max="100"
+            android:progress="50"
+            />
+        <!-- android:progressDrawable="@drawable/progressbar_normal"  -->
+        
+        <TextView
+            android:id="@id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/title"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dp"
+            android:duplicateParentState="true"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxWidth="72sp"
+            android:singleLine="true"
+            android:text="50%"
+            android:textColor="@android:color/black"
+            android:textSize="13.3sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

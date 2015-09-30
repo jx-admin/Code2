@@ -1,0 +1,18 @@
+apply plugin: 'holoeverywhere-library'
+
+holoeverywhere {
+    apply 'android_default.gradle'
+    publish.artifactId = 'library'
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.2.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+}
+
+javadoc {
+    include "**/org/holoeverywhere/**"
+    title "HoloEverywhere ${project.version} JavaDoc"
+}
+
+apply plugin: 'holoeverywhere-publish'

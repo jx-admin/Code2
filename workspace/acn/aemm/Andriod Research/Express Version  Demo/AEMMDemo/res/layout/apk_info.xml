@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:paddingBottom="4dip"
+	android:layout_width="fill_parent">
+	<LinearLayout android:id="@+id/icon_layout"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<FrameLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<ImageView android:layout_height="wrap_content" android:id="@+id/icon_iv"
+				android:layout_width="wrap_content" android:layout_centerHorizontal="true"
+				android:src="@drawable/icon">
+			</ImageView>
+			<ImageView android:layout_width="32dip"
+				android:visibility="gone" 
+				android:layout_height="32dip" android:id="@+id/edit_iv" android:src="@drawable/del">
+			</ImageView>
+		</FrameLayout>
+	</LinearLayout>
+
+	<LinearLayout android:layout_below="@+id/icon_layout"
+		android:layout_centerHorizontal="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<ProgressBar android:layout_width="fill_parent"
+			style="?android:attr/progressBarStyleHorizontal" android:id="@+id/load_pb"
+			android:visibility="gone" android:layout_height="8dip"></ProgressBar>
+		<TextView android:layout_width="wrap_content" android:gravity="center_horizontal"
+			android:layout_height="wrap_content" android:text="TextView01"
+			android:layout_gravity="center_horizontal" android:id="@+id/name_tv">
+		</TextView>
+	</LinearLayout>
+</RelativeLayout> 

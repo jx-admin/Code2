@@ -1,0 +1,16 @@
+de.java_chess.javaChess
+de.java_chess.javaChess.action
+de.java_chess.javaChess.bitboard
+de.java_chess.javaChess.board
+de.java_chess.javaChess.engine
+de.java_chess.javaChess.engine.hashtable
+de.java_chess.javaChess.engine.test
+de.java_chess.javaChess.game
+de.java_chess.javaChess.notation
+de.java_chess.javaChess.pgn
+de.java_chess.javaChess.piece
+de.java_chess.javaChess.ply
+de.java_chess.javaChess.position
+de.java_chess.javaChess.renderer
+de.java_chess.javaChess.renderer2d
+de.java_chess.javaChess.test

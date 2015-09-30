@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+	<table name="MOP_CL_INTERFACE">
+		<sql version="1">drop table MOP_CL_INTERFACE;</sql>
+		<sql version="1">
+			create table MOP_CL_INTERFACE (interfaceCode TEXT NOT NULL primary key,protocol TEXT NOT NULL,parameterTmp TEXT,timeOut integer);
+		</sql>
+		<sql version="1" desc="登录验证">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('login','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>login</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><service><loginName>{{loginName}}</loginName><password>{{password}}</password><imsi>{{imsi}}</imsi><phoneNum>{{phoneNum}}</phoneNum><clientType>{{clientType}}</clientType></service></Body></Root>',10);]]>
+		</sql>
+		<sql version="1" desc="接口配置">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('interfaceItem','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>interfaceItem</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><service><clientType>{{clientType}}</clientType><lastUpdateTime>{{lastUpdateTime}}</lastUpdateTime></service></Body></Root>',10);]]>
+		</sql>
+		<sql version="1" desc="升级条目">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('versionItem','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>versionItem</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><service><clientType>{{clientType}}</clientType><lastUpdateTime>{{lastUpdateTime}}</lastUpdateTime></service></Body></Root>',10);]]>
+		</sql>
+		<sql version="1" desc="回调条目">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('callbackItem','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>callbackItem</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><service><clientType>{{clientType}}</clientType><lastUpdateTime>{{lastUpdateTime}}</lastUpdateTime></service></Body></Root>',10);]]>
+		</sql>
+		<sql version="1" desc="异常报告">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('reportError','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>reportError</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><threadId>{{threadId}}</threadId><logTime>{{logTime}}</logTime><logType>{{logType}}</logType><isException>{{isException}}</isException>
+			<logMsg>{{logMsg}}</logMsg><exception>{{exception}}</exception><phoneModle>{{phoneModle}}</phoneModle><sysVersion>{{sysVersion}}</sysVersion>
+			<loginName>{{loginName}}</loginName><userName>{{userName}}</userName><clientType>{{clientType}}</clientType></Body></Root>',10);]]>
+		</sql>
+		<sql version="1" desc="经纬度上传">
+			<![CDATA[insert into MOP_CL_INTERFACE(interfaceCode,protocol,parameterTmp,timeOut)values('location','1','<?xml version="1.0" encoding="UTF-8"?>
+			<Root><Header><Time>{{Time}}</Time><ServCode>location</ServCode><AuthCode>{{AuthCode}}</AuthCode><Operator>{{Operator}}</Operator></Header>
+			<Body><loginName>{{loginName}}</loginName><locationinfo>{{locationinfo}}</locationinfo><data>{{data}}</data>',10);]]>
+		</sql>		
+	</table>
+	<table name="MOP_CL_VERSION_ITEM">
+		<sql version="1">drop table MOP_CL_VERSION_ITEM;</sql>
+		<sql version="1">
+			create table MOP_CL_VERSION_ITEM(itemId TEXT NOT NULL primary key,itemCode TEXT NOT NULL,itemName TEXT NOT NULL,
+			isSystem TEXT,isPrivate TEXT NOT NULL, className TEXT NOT NULL);
+		</sql>
+		<sql version="1">
+			create index i_version_item_itemCode on MOP_CL_VERSION_ITEM(itemCode);
+		</sql>
+		<sql version="1" desc="接口配置信息">
+			<![CDATA[insert into MOP_CL_VERSION_ITEM(itemId,itemCode,itemName,isSystem,isPrivate,className)
+			values('C08BB9F8835C6602174787CBABABCEC0','interfaceItem','接口配置信息','1','0','com.ccssoft.framework.iface.bo.InterfaceBO');]]>
+		</sql>
+		<sql version="1" desc="数据类型信息">
+			<![CDATA[insert into MOP_CL_VERSION_ITEM(itemId,itemCode,itemName,isSystem,isPrivate,className)
+			values('8B1CD053BCCA8791F52F5DADC7F5291F','versionItem','数据类型配置','1','0','com.ccssoft.framework.version.bo.VersionItemBO');]]>
+		</sql>
+		<sql version="1" desc="扩展回调信息">
+			<![CDATA[insert into MOP_CL_VERSION_ITEM(itemId,itemCode,itemName,isSystem,isPrivate,className)
+			values('9C07E5906628E173CD5A0CEAA7166219','callbackItem','扩展回调信息','1','0','com.ccssoft.framework.callback.bo.CallbackBO');]]>
+		</sql>
+	</table>
+	<table name="MOP_CL_CALLBACK" desc="扩展回调">
+		<sql version="1">drop table MOP_CL_CALLBACK;</sql>
+		<sql version="1">
+			create table MOP_CL_CALLBACK (recordId TEXT NOT NULL primary key,targetId TEXT NOT NULL,targetType TEXT NOT NULL,className TEXT NOT NULL);
+		</sql>
+		<sql version="1">
+			create index i_callbak_objectId on MOP_CL_CALLBACK(targetId);
+		</sql>
+	</table>
+	<table name="MOP_CL_VERSION" desc="数据版本">
+		<sql version="1">drop table MOP_CL_VERSION;</sql>
+		<sql version="1">
+			create table MOP_CL_VERSION (recordId TEXT NOT NULL primary key,itemId TEXT NOT NULL,version integer NOT NULL,
+			updateTime TEXT,userId TEXT NOT NULL);
+		</sql>
+	</table>
+	<table name="MOP_CL_USER" desc="用户信息">
+		<sql version="1">drop table MOP_CL_USER;</sql>
+		<sql version="1">
+			create table MOP_CL_USER(userId TEXT NOT NULL primary key,userName TEXT NOT NULL,loginName TEXT NOT NULL,password TEXT,
+			postId TEXT,postName TEXT, nativeNetId TEXT,unitId TEXT,unitName TEXT,lastLoginTime TEXT,lastLoginOutTime TEXT,mobilePhone TEXT,
+			userRDN TEXT, imis TEXT);
+		</sql>
+	</table>
+	<table name="MOP_CL_PARAMETER" desc="系统参数">
+		<sql version="1">drop table MOP_CL_PARAMETER;</sql>
+		<sql version="1">
+			create table MOP_CL_PARAMETER (parameter TEXT NOT NULL primary key,ownerId TEXT NOT NULL,value TEXT NOT NULL);
+		</sql>
+	</table>
+	<table name="MOP_CL_PERSONALIZED" desc="个性化定义">
+		<sql version="1">drop table MOP_CL_PERSONALIZED;</sql>
+		<sql version="1">
+			create table MOP_CL_PERSONALIZED (personalizedId TEXT NOT NULL primary key,userId TEXT NOT NULL,configCode TEXT NOT NULL,
+			configValue TEXT NOT NULL);
+		</sql>
+	</table>
+	<table name="MOP_CL_MENU" desc="菜单信息">
+		<sql version="2">drop table MOP_CL_MENU;</sql>
+		<sql version="2">
+			create table MOP_CL_MENU (menuPK TEXT NOT NULL primary key,menuId TEXT NOT NULL,menuCode TEXT NOT NULL,menuName TEXT NOT NULL,
+			parentId TEXT,iconName TEXT, linkUri TEXT,parameter TEXT,onlineMode TEXT NOT NULL,isShow TEXT NOT NULL,linkOut TEXT,sortOrder integer,
+			isLeaf TEXT NOT NULL,treeCode TEXT NOT NULL,userId TEXT NOT NULL,linkTarget TEXT);
+		</sql>
+	</table>
+	<table name="MOP_CL_ATTACHMENT" desc="附件信息">
+		<sql version="1">drop table MOP_CL_ATTACHMENT;</sql>
+		<sql version="1">
+			create table MOP_CL_ATTACHMENT (attachId TEXT NOT NULL primary key,attachName TEXT NOT NULL,
+			businessDataId TEXT NOT NULL,uploadTime TEXT,businessType TEXT,localPath TEXT);
+		</sql>
+	</table>
+	<table name="MOP_CL_DIC_ITEM" desc="字典条目">
+		<sql version="1">drop table MOP_CL_DIC_ITEM;</sql>
+		<sql version="1">
+			create table MOP_CL_DIC_ITEM (itemId TEXT NOT NULL primary key, dictionaryCode TEXT NOT NULL, itemCode TEXT NOT NULL,
+			itemValue TEXT NOT NULL, parentId TEXT,sortOrder integer, internalCode TEXT, isLeaf TEXT);
+		</sql>
+	</table>
+	<table name="MOP_CL_OUTSYSTEM" desc="外系统配置">
+		<sql version="1">drop table MOP_CL_OUTSYSTEM;</sql>
+		<sql version="1">
+			create table MOP_CL_OUTSYSTEM (systemCode TEXT NOT NULL primary key, systemName TEXT NOT NULL, parameter TEXT,uri TEXT NOT NULL,downloadUrl TEXT);
+		</sql>
+		<sql version="1">
+			insert into MOP_CL_OUTSYSTEM (systemCode, systemName, parameter,uri,downloadUrl)values('zxing','扫描器','','com.google.zxing.client.android.SCAN','http://jsoss.telecomjs.com/mop/download?attachId=4201DA368A7D0E42ED5469B94236544C');
+		</sql>		
+	</table>
+	<table name="MOP_CL_NETTRAFFIC" desc="流量统计">
+		<sql version="1">drop table MOP_CL_NETTRAFFIC;</sql>
+		<sql version="1">
+			create table MOP_CL_NETTRAFFIC (recordId TEXT NOT NULL primary key, recordDate TEXT NOT NULL, totle INTEGER, type TEXT);
+		</sql>
+	</table>	
+	<table name="MOP_CL_TREE" desc="树形结构定义">
+		<sql version="1">drop table MOP_CL_TREE;</sql>
+		<sql version="1">
+			create table MOP_CL_TREE (treeId TEXT NOT NULL primary key, sql TEXT NOT NULL, paramter TEXT, idFile TEXT NOT NULL,
+			nameFile TEXT NOT NULL,parentIdFile TEXT NOT NULL,typeFile TEXT,isLeafFile TEXT,image TEXT,fileList TEXT);
+		</sql>
+		<sql version="1" desc="字典树">
+			insert into MOP_CL_TREE (treeId, sql, paramter, idFile,nameFile,typeFile,parentIdFile,isLeafFile,image,fileList)
+			values('dictionaryTree','select itemId,itemCode,itemValue,isLeaf,parentId from MOP_CL_DIC_ITEM where dictionaryCode=?','dictionaryCode','itemId','itemValue','isLeaf','parentId','isLeaf','','itemCode');		
+		</sql>	
+	</table>		
+</tables>

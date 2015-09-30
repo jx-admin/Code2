@@ -1,0 +1,37 @@
+--------------------Configuration: Pente - Win32 Release--------------------
+Begining build with project "C:\MultimediaGuide\Pente\Pente.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/Pente.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x804 /fo"Release/Pente.res" /d "NDEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o"Release/Pente.bsc" "
+			"COFF Linker for 80x86" with flags "version.lib winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Pente.pdb" /machine:I386 /out:"Release/Pente.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP121.tmp" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/Pente.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\MultimediaGuide\Pente\PenteDlg.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP121.tmp" 
+Creating temp file "C:\TEMP\RSP122.tmp" with contents <version.lib winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Pente.pdb" /machine:I386 /out:"Release/Pente.exe" 
+.\Release\AboutDlg.obj
+.\Release\BestDlg.obj
+.\Release\Dib.obj
+.\Release\HelperAPI.obj
+.\Release\Pente.obj
+.\Release\PenteDlg.obj
+.\Release\RecordDlg.obj
+.\Release\SetupDlg.obj
+.\Release\StdAfx.obj
+.\Release\Pente.res>
+Creating command line "link.exe @C:\TEMP\RSP122.tmp" 
+Compiling...
+PenteDlg.cpp
+C:\MultimediaGuide\Pente\PenteDlg.cpp(62) : warning C4101: 'szVer' : unreferenced local variable
+Linking...
+
+
+
+Pente.exe - 0 error(s), 1 warning(s)

@@ -1,0 +1,13 @@
+<com.accenture.mbank.view.BasePushContainer xmlns:android="http://schemas.android.com/apk/res/android" >     
+     
+     <Button
+        android:id="@+id/buttonsave"
+        android:layout_width="@dimen/userinfo_btn_width"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_recover_focus"
+        android:textColor="@color/white"
+        android:layout_marginTop="6dp"
+        />
+</com.accenture.mbank.view.BasePushContainer>

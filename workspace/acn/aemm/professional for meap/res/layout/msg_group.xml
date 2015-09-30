@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aess.aemm.view.msg.MsgGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/msggtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:paddingLeft="40dip"
+        android:text="@string/moreitem"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/msggsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingRight="4dip"
+        android:visibility="invisible" />
+
+</com.aess.aemm.view.msg.MsgGroup>

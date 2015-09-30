@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customView="http://schemas.android.com/apk/res/it.gruppobper.ams.android.bper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/root_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bper_payment_step_layout" />
+
+        <LinearLayout
+            android:id="@+id/payment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/page_title"
+                style="@style/bper_payment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/transfer_phone_top_up_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/account_include"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bper_payment_account_medel" />
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        </TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:orientation="vertical" >
+
+                                <TableLayout
+                                    android:id="@+id/recent_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_small"
+                                    android:orientation="vertical"
+                                    android:shrinkColumns="0,1,2,3"
+                                    android:stretchColumns="0,1,2,3" >
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/padding_small"
+                                android:layout_marginRight="@dimen/padding_small"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <LinearLayout
+                                        android:layout_width="0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical" >
+
+                                        <com.custom.view.ReSizeSingleAutoCompleteTextView
+                                            android:id="@+id/name_et"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/beneficiary_name_hit"
+                                            android:imeOptions="actionNext"
+                                            android:singleLine="true"
+                                            customView:reTextSize="true" />
+
+                                        <com.custom.view.ReSizeSingleEditText
+                                            android:id="@+id/phone_et"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="@string/phone_number_hin"
+                                            android:imeOptions="actionDone"
+                                            android:singleLine="true"
+                                            customView:reTextSize="true"
+                                            android:maxLength="10"
+                                             />
+                                    </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/phonebook_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/button_big_phonebook_btn" />
+                                </LinearLayout>
+
+                                <HorizontalScrollView
+                                    android:id="@+id/horizontalScrollView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="none" >
+
+                                    <LinearLayout
+                                        android:id="@+id/provider_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal" >
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+
+                                <com.accenture.mbank.view.ReHGridView
+                                    android:id="@+id/amount_gv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:numColumns="5" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <TextView
+                                        android:id="@+id/add_phonebook_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/add_phonebook" />
+
+                                    <com.custom.view.SwitchButton
+                                        android:id="@+id/add_phonebook_sbtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true" />
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/confirmation_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/padding_medium"
+                                    android:layout_marginRight="@dimen/padding_medium"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:background="@drawable/continue_button_click_selector" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

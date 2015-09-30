@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/page_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DBDBDB"
+            android:gravity="center"
+            android:padding="@dimen/margin_large"
+            android:text="@string/payment_type_title"
+            android:textColor="@color/green_text"
+            android:textStyle="bold" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/bank_transfer_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/type_payment_single_bank_btn" 
+            android:background="@null" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/transfer_entry_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/type_payment_bank_accounts_btn"
+            android:background="@null" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/phone_top_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/type_payment_phone_recharge_btn" 
+            android:background="@null" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/card_top_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/type_payment_prepaid_recharge_btn" 
+            android:background="@null" />
+    </LinearLayout>
+
+</ScrollView>

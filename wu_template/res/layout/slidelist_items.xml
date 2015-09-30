@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/show_item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:animateLayoutChanges="true" >
+
+        <TextView
+            android:id="@+id/linkman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="联系人"
+            android:textColor="@android:color/black"
+            android:textSize="40.0sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="电话"
+            android:textColor="@android:color/black"
+            android:textSize="40.0sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/hide_item"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/show_item"
+        android:animateLayoutChanges="true"
+        android:background="#cfcfcf" >
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="删除" />
+    </RelativeLayout>
+
+</RelativeLayout>

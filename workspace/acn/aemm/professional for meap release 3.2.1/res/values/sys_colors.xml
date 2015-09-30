@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="trans">#00000000</color>
+<color name="mainBg">#DEE3DEFF</color>
+<color name="viewBillBg">#95C2E9</color>
+<color name="view_title">#000000</color>
+<color name="view_value">#2971DE</color>
+<color name="white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="2" android:versionName="1.1" package="com.zrh.goldfree"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/main" android:allowBackup="true">
+        <activity android:label="@string/app_name" android:name="com.zrh.goldfree.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity android:name=".MoreView" />
+        <activity android:name=".SilverTableView" />
+        <activity android:name=".GoldTableView" />
+        <activity android:name=".HomeView" />
+        <activity android:name=".DetailView" />
+        <activity android:name=".GoldStageView" />
+        <activity android:name=".GoldTechView" />
+        <activity android:name=".GoldZoushi" />
+        <activity android:name=".CGoldLeaseView" />
+        <activity android:name=".CZHJTable" />
+        <activity android:name=".GoldGBView" />
+        <activity android:name=".GoldSHView" />
+        <activity android:name=".GoldSHQHView" />
+        <activity android:name=".YinZoushi" />
+        <activity android:name=".GoldZoushiView" />
+        <activity android:name=".YinZoushiView" />
+        <activity android:name=".PlatinumStageView" />
+        <activity android:name=".PlatinumGBView" />
+        <activity android:name=".PlatinumTechView" />
+        <activity android:name=".PlatinumLeaseView" />
+        <activity android:name=".SilverStageView" />
+        <activity android:name=".SilverTechView" />
+        <activity android:name=".CSilverLeaseView" />
+        <activity android:name=".SilverGBView" />
+        <activity android:name=".PalladiumStageView" />
+        <activity android:name=".PalladiumTechView" />
+        <activity android:name=".PalladiumGBView" />
+        <activity android:name=".PalladiumLeaseView" />
+        <activity android:name=".BaseMetalView" />
+        <activity android:name=".JiJinView" />
+        <activity android:name=".YuanYouView" />
+        <activity android:name=".Daohang" />
+        <activity android:name=".GuZhiView" />
+        <activity android:name=".KXianView" />
+    </application>
+</manifest>

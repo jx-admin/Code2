@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/apk_item_lin"
+		android:paddingRight="@dimen/apk_margin_LR"
+		android:paddingLeft="@dimen/apk_margin_LR"
+		android:gravity="center_vertical">
+
+		<!-- apk item -->
+		<LinearLayout android:layout_height="wrap_content"
+			android:layout_width="@dimen/app_item_w" android:orientation="vertical"
+			android:gravity="center_horizontal">
+			<!-- icon -->
+			<include layout="@layout/icon_item" />
+
+		</LinearLayout>
+
+		<TextView android:id="@+id/apk_descrip_tv"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:layout_marginLeft="@dimen/apk_descrip_margin_left"
+			android:layout_marginTop="@dimen/apk_descrip_margin_top"
+			android:textColor="#fff"
+			android:textSize="@dimen/app_name_size"
+			android:lines="4"
+			android:text="Descreiption TextView01 第三方的会计法斯科拉的房间上的机房接受对方即可舒服点地方就爱上了第三方">
+		</TextView>
+
+	</LinearLayout>
+</LinearLayout> 

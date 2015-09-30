@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.sctc.ui.SetmealContractPhoneItemUtils xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/setmeal_item_border"
+    android:orientation="vertical"
+    android:padding="2dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_smid"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/titel_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="乐享3G上网版"
+            android:textColor="@color/setmeal_title_blue"
+            android:textSize="@dimen/text_normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/add_car_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_add_to_shoping_cart"
+            android:textColor="@color/setmeal_title_yellow"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+       
+        <TableLayout
+            android:id="@+id/info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:stretchColumns="*"
+            android:shrinkColumns="*" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_t1"
+                    style="@style/set_meal_title_text_style"
+                    android:background="#C9F0FF"
+                    android:text="@string/month_rent" />
+
+                <TextView
+                    android:id="@+id/tv_t2"
+                    style="@style/set_meal_title_text_style"
+                    android:layout_marginLeft="1px"
+                    android:background="#C9F0FF"
+                    android:text="@string/domestic_traffic" />
+
+                <TextView
+                    android:id="@+id/tv_t3"
+                    style="@style/set_meal_title_text_style"
+                    android:layout_marginLeft="1px"
+                    android:background="#C9F0FF"
+                    android:text="@string/wifi_time" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/content_1_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:background="#E9F8FF"
+                    android:text="@string/month_rent" 
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/content_2_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1px"
+                    android:background="#E9F8FF"
+                    android:text="@string/domestic_traffic"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    />
+
+                <TextView
+                    android:id="@+id/content_3_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1px"
+                    android:background="#E9F8FF"
+                    android:text="@string/wifi_time"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_marginTop="1px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_t4"
+                    style="@style/set_meal_title_text_style"
+                    android:background="#C9F0FF"
+                    android:text="@string/freeinlandcall" />
+
+                <TextView
+                    android:id="@+id/tv_t5"
+                    style="@style/set_meal_title_text_style"
+                    android:layout_marginLeft="1px"
+                    android:background="#C9F0FF"
+                    android:text="@string/sms_count" />
+
+                <TextView
+                    android:id="@+id/tv_t6"
+                    style="@style/set_meal_title_text_style"
+                    android:layout_marginLeft="1px"
+                    android:background="#C9F0FF"
+                    android:text="@string/mms_count" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/content_4_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:background="#E9F8FF"
+                    android:text="@string/month_rent"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    />
+
+                <TextView
+                    android:id="@+id/content_5_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1px"
+                    android:background="#E9F8FF"
+                    android:text="@string/domestic_traffic"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    />
+
+                <TextView
+                    android:id="@+id/content_6_1"
+                    style="@style/set_meal_content_text_style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1px"
+                    android:background="#E9F8FF"
+                    android:text="@string/wifi_time"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    />
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</com.act.sctc.ui.SetmealContractPhoneItemUtils>

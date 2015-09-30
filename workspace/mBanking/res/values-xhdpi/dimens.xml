@@ -1,0 +1,27 @@
+<resources>
+
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_small_mini">8dp</dimen>
+    <dimen name="padding_small_mini_mini">4dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="margin_small_mini">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_xLarge">32dp</dimen>
+    
+    <dimen name="text_small_size">10sp</dimen>
+    <dimen name="text_big_size">18sp</dimen>
+    <dimen name="text_nomal_size">12sp</dimen>
+    
+    
+    
+    <dimen name="margin_small_back">-6dp</dimen>
+    <dimen name="payment_new_payee_plus_icon_size">30dip</dimen>
+    
+    
+    
+
+</resources>

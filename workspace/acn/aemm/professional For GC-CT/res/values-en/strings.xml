@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="app_name">Enterprise App Room</string>
+    <string name="description">Enterprise Mobile Solution</string>
+    <string name="installed">Installed</string>
+    <string name="uninstalled">Not Installed</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="ignore">Ignore</string>
+    <string name="open">Open</string>
+    <string name="alert">Remind</string>
+    <string name="update">Renew</string>
+    <string name="update2">Update</string>
+    <string name="app_disable">Application has been forbidden</string>
+    <string name="install_disable">Application cannot be installed</string>
+    <string name="new_app_load">New App</string>
+    <string name="hall_updata_title">Enterprise app room needs to be updated</string>
+    <string name="hall_updata_content">Renew?</string>
+    <string name="app_unexsit">Program does not exist, move it to not installed area?</string>
+    <string name="updata_executing">In process</string>
+    <string name="network_erro">Network error</string>
+    <string name="update_over">Update complete</string>
+    <string name="update_failed">Update failed</string>
+    <string name="updata_app_push">You can create %d new apps </string>
+    <string name="passpolicy">Password policies</string>
+    <string name="rootcertificate">CA Certificate</string>
+    <string name="pkcscertificate">PSK Certificate</string>
+    <string name="restrictions">Restriction</string>
+    <string name="name_str">Username</string>
+    <string name="password_str">Password</string>
+    <string name="imei_str">Device ID</string>
+    <string name="login_str">Login</string>
+    <string name="cancel_str">Cancel</string>
+    <string name="inputname_hint">Please enter Username</string>
+    <string name="inputpassword_hint">Please enter password</string>
+    <string name="inputimei_hint">Please enter device ID</string>
+    <string name="inputimsi_hint">Please insert a SIM card</string>
+    <string name="selectimsi">IMSI Login</string>
+    <string name="askinputuser">Can’t get IMSI, please enter Username to login</string>
+    <string name="server_limit_hint">Login rejected: Online users have exceeds threshold</string>
+    <string name="server_address_error">Geography navigation failed</string>
+    <string name="domainerr">Invalid domain name</string>
+    <string name="login_error_notlogin">Device is not login yet</string>
+    <string name="login_error_limit">Exceeds traffic threshold</string>
+    <string name="logout_fail">Log out failed</string>
+    <string name="service_fail">Server communication error</string>
+    <string name="newapp">New apps!</string>
+    <string name="newapp_client">New!</string>
+    <string name="lock_client">Device locked, please contact administrator to unlock</string>
+    <string name="aemm_device_admin">Enterprise App Room</string>
+    <string name="aemm_device_admin_description">Enterprise app room is the administration system of enterprise apps on mobile device </string>
+    <string name="device_showToast_onEnabled">Device management available</string>
+    <string name="device_showToast_onDisabled">Device management not available</string>
+    <string name="label">AEMM Account</string>
+    <string name="third_party_label">Escrow Account</string>
+    <string name="ui_activity_authenticating">Logging in \u2026</string>
+    <string name="login_activity_loginfail_text_both">Login failed, please check if the Username and password is correct or network has been connected!</string>
+    <string name="login_activity_loginfail_text_pwmissing">Enter password</string>
+    <string name="login_activity_loginfail_text_pwonly">Please enter password again</string>
+    <string name="login_error_user_already_exist">Username existed</string>
+    <string name="login_error_invalid_username_password">Invalid username or password</string>
+    <string name="login_error_user_doesnot_exist">User does not exist</string>
+    <string name="login_error_device_doesnot_exist">Device does not exist</string>
+    <string name="login_activity_newaccount_text">Please enter AEMM account.</string>
+    <string name="login_error_cancel_active">Device is not yet activated, registration not allowed, please contact administrator</string>
+    <string name="login_error_device_isregistered">Device has been registered, please contact administrator </string>
+    <string name="audio_disabled">Recorder disabled</string>
+    <string name="camera_disabled">Camera disabled</string>
+    <string name="sms_disabled">SMS disabled</string>
+    <string name="mms_disabled">MMS disabled</string>
+    <string name="install_apk_disabled">App installation forbidden</string>
+    <string name="dial_disabled">Call banned</string>
+    <string name="moreinfo">Operation</string>
+    <string name="msg">Message Management</string>
+    <string name="update3">Update configuration</string>
+    <string name="userinfo">User information</string>
+    <string name="psword">Change password</string>
+    <string name="derma">Change skin</string>
+    <string name="moreitem">More</string>
+    <string name="title_activity_msg">Message management</string>
+    <string name="back">Back</string>
+    <string name="del">Delete</string>
+    <string name="zero">No information</string>
+    <string name="title_activity_msg_detail">Detail</string>
+    <string name="msgdtitle">Title:</string>
+    <string name="mdpublisher">Publisher:</string>
+    <string name="mdbusiness">Business Type:</string>
+    <string name="mdlevel">Level:</string>
+    <string name="mdtrange">Start Time:</string>
+    <string name="mdtrange1">End Time:</string>
+    <string name="mdtype">Type:</string>
+    <string name="mdstate">Status:</string>
+    <string name="mddate">Date:</string>
+    <string name="msgnum">You got %d new message</string>
+    <string name="mtinform">Note</string>
+    <string name="mtpost">Announcement</string>
+    <string name="mtplan">Work Plan</string>
+    <string name="mtenvent">To-do list alarm</string>
+    <string name="mtother">Custom Message</string>
+    <string name="mtunknow">Unknown</string>
+    <string name="mtenvents0">To be Start</string>
+    <string name="mtenvents1">In Process</string>
+    <string name="mtenvents2">Finished</string>
+    <string name="mtenvents3">Delayed</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="msgretime">Scheduled Time</string>
+
+    <string-array name="msgPlanState">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+    <string-array name="msgEventLevel">
+        <item>To be start</item>
+        <item>In process</item>
+        <item>Finished</item>
+        <item>Delayed</item>
+    </string-array>
+    <string-array name="msgSendType">
+        <item>Network</item>
+        <item>SMS</item>
+        <item>Email</item>
+    </string-array>
+    <string-array name="msgNoDate">
+        <item>No statistics</item>
+    </string-array>
+
+    <string name="msgSendHint">Channel</string>
+    <string name="mtlev1">High</string>
+    <string name="mtlev2">Medium</string>
+    <string name="mtlev3">Low</string>
+
+    <string-array name="msgBusType">
+        <item>Universal</item>
+        <item>Install &amp; Maintenance</item>
+        <item>Resource</item>
+    </string-array>
+
+    <string name="btNor">Universal</string>
+    <string name="btOpe">Install &amp; Maintenance</string>
+    <string name="btRes">Resource</string>
+    <string name="msgNew">New Message</string>
+    <string name="msgContent">Content:</string>
+    <string name="msgSend">Receiver:</string>
+    <string name="msgAgree">Approver:</string>
+    <string name="msgValid">Validity Date:</string>
+    <string name="msgBegTime">Start Time:</string>
+    <string name="msgEndTime">End Time:</string>
+    <string name="msgFormatFail">Fail to get message format</string>
+    <string name="msgStartHint">App Tag</string>
+    <string name="msgSendErrorHint">Cannot be empty</string>
+    <string name="msgSendErrorHint2">Message cannot be sent without choosing message format</string>
+    <string name="trafficlimitover">Exceed traffic threshold</string>
+    <string name="accountlimitover">Calendar account does not exist</string>
+    <string name="inputpwd">Enter password</string>
+    <string name="userinfomation">User Information</string>
+    <string name="userNameSTR">Username</string>
+    <string name="emailSTR">Email</string>
+    <string name="IMSTR">IM</string>
+    <string name="addressSTR">Address</string>
+    <string name="userNameSTR_hint">Username</string>
+    <string name="emailSTR_hint">username@email.com</string>
+    <string name="repairSTR">Edit</string>
+    <string name="finishSTR">OK</string>
+    <string name="security_code">Verification Code</string>
+    <string name="anser_quanstion">Please answer question below</string>
+    <string name="what_is_capital">Where is China’s capital?</string>
+    <string name="beijing">Beijing</string>
+    <string name="input_security_code">Please enter the answer</string>
+    <string name="nextpice">Picture blurry, change a new one.</string>
+    <string name="verify_error">Wrong verification code</string>
+    <string name="repairwordSTR">Change password</string>
+    <string name="submitSTR">Submit</string>
+    <string name="oldwordSTR">Old Password</string>
+    <string name="newwordSTR">New Password</string>
+    <string name="reinputSTR">Please enter the new password again</string>
+    <string name="pwd_cannot_null">Please enter password</string>
+    <string name="double_pwd_unsame">Passwords conflict</string>
+    <string name="change_derma_str">Change Skin</string>
+    <string name="default_derma_str">Default Skin</string>
+    <string name="new_derma_str">New Skin</string>
+    <string name="operator_str">Operation</string>
+    <string name="edit">Edit</string>
+    <string name="app_manager">App Management</string>
+    <string name="msg_manager">Message Management</string>
+
+    <string-array name="menu_list">
+        <item>Check for updates</item>
+        <item>Personal Information</item>
+        <item>Change Password</item>
+        <item>Message Management</item>
+        <item>Send Message</item>
+        <item>Change Skin</item>
+        <item>Check in</item>
+        <item>Daily Work Arrangement</item>
+        <item>App Management</item>
+        <item>User Logoff</item>
+    </string-array>
+
+    <string name="app_snapshot">App Snapshot</string>
+    <string name="conment_title">Comment Title</string>
+    <string name="conment">Comment Content</string>
+    <string name="app_coment">App Comment</string>
+    <string name="downloading">In process</string>
+    <string name="getsnapshot_fail">Fail to get snapshot~_~</string>
+    <string name="conment_no_respond">Submit failed: No response from server </string>
+    <string name="conment_xmlbuild_error">Submit failed: Invalid file format</string>
+    <string name="title_null">Submit failed: Empty tile </string>
+    <string name="conment_null">Submit failed: Empty content</string>
+    <string name="conment_check_net">Submit failed: Please check your network connection </string>
+    <string name="conment_submit">Submitted</string>
+    <string name="gps_photo">GPS &amp; Camera</string>
+    <string name="userquit">User data is being erased </string>
+    <string name="quiteHint">Are you sure to remove user configuration and log out?</string>
+    <string name="title_activity_send_msg">SendMsgActivity</string>
+    <string name="msgValidHint">Please enter the validity date</string>
+    <string name="time">Time:</string>
+    <string name="date">Date:</string>
+    <string name="sendMessageHint">Get message format form server</string>
+    <string name="msgRetry">Retry:</string>
+    <string name="msgDoSend">Sending now</string>
+    <string name="msgTimeError">Invalid time</string>
+    <string name="msgSendFail">Failed to send the message</string>
+    <string name="msgSendTitle">Send message</string>
+    <string name="better">More than</string>
+    <string name="less">Less than</string>
+    <string name="repair_successful">Successfully edited</string>
+    <string name="n500">Server erro</string>
+    <string name="n401">Client username does not meet the policies</string>
+    <string name="n402">New password does not meet password policies</string>
+    <string name="n403">Old password is incorrect </string>
+    <string name="close">Close</string>
+    <string name="sys_msg">System message</string>
+    <string name="no_photo">No picture can be uploaded</string>
+    <string name="photo_uploading">Upload in process...</string>
+    <string name="photo_upload_successful">Successfully uploaded</string>
+    <string name="photo_upload_fail">Fail to upload</string>
+
+</resources>

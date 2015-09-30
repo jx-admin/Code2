@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/tab_header_control" />
+
+    <com.accenture.mbank.view.InnerScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/user_info_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.accenture.mbank.view.UserInfoLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/user_info_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:drawableLeft="@drawable/user_info_icon"
+                android:text="@string/user_info"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <!-- show items -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/show_items_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_show_items" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/show_items_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_details"
+                    android:orientation="vertical" >
+
+                    <include
+                        android:id="@+id/synthesis"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/item_expander" />
+
+                    <include
+                        android:id="@+id/lists"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/item_expander" />
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/show_items_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <!-- pin -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/pin_manager_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_pin_manager" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/pin_manager_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include
+                        android:id="@+id/select_receive_pin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/item_expander" />
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/pin_manager_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <!-- accounts -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/accounts_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_accounts" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/account_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/account_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/accounts_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <!-- cards -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/cards_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_cards" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/cards_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/cards_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/cards_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <!-- loans -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/loans_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_loans" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/loans_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/loans_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/loans_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <!-- investments -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/investments_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_investments" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/investments_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/investments_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/investments_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+             <!-- notifications -->
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/notification_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_notification" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <com.accenture.mbank.view.InnerScrollView
+                android:id="@+id/notification_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_details"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/notification_content_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </com.accenture.mbank.view.InnerScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/notification_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="25dip" />
+        </com.accenture.mbank.view.UserInfoLayout>
+    </com.accenture.mbank.view.InnerScrollView>
+
+</LinearLayout>

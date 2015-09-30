@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/bper_payment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RIEPILOGO PAGAMENTI" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <cn.oneMin.demo.slideListView.QuickReturnListView
+            android:id="@+id/recent_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/separation_line"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:scrollbars="none" />
+
+        <include
+            android:id="@+id/account_include"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bper_recent_account_paper_medel" />
+    </FrameLayout>
+
+</LinearLayout>

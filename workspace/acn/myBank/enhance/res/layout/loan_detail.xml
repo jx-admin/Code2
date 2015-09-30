@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_layout" />
+
+    <com.custom.view.DividerLinearLayout
+        android:id="@+id/info_linearview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loan_details"/>
+
+    <ListView
+        android:id="@+id/recent_expandablelv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+android出正式版本须知：
+
+1.LogManager.java里的LogType=SHOW_LOG代表打印log。LogType=HIDE_LOG代表关闭log，可以根据需要出相应的版本
+2.确保BaseActivity里的isOffline=false，它表示进行联网,如果为true，是不会联网的，但可以查看ui界面
+3.确保BaseActivity里的initValue=false，如果为ture,则很多输入框有初始值
+4.确保AndroidManifest.xml里的 <uses-library android:name="com.google.android.maps" />不是注释状态，如果被注释请把它打开，这是代表对google地图的支持
+5.确保MapLayout.java里的debugChinaDevice为false，这个是为了让中国的真机模拟意大利的地理位置
+6.版本号的修改：AndroidManifest.xml里的versionName。
+7.请确保服务器地址为：http://192.168.83.179:8080  位置在：Contants.java里的URL_PREFIX_ROME静态变量,默认值有三个：
+
+    URL_PREFIX_ROME1，URL_PREFIX_ROME2，URL_PREFIX_ROME3;
+8.PopView.java 里的 chinaPerforms=false;
+    
+
+9.如果是4.0以上的device，把AndroidManifest.xml里的MainActivity这样配置
+    <activity
+            android:name=".MainActivity"
+            
+          android:configChanges="orientation|screenSize" 
+           >
+        </activity>
+  如果是4.0以下的版本(2.3.x)
+  
+        <activity
+            android:name=".MainActivity"
+            
+          android:configChanges="orientation|keyboardHidden" 
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+
+  
+   

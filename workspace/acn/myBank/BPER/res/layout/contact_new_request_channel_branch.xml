@@ -1,0 +1,94 @@
+<com.accenture.mbank.view.ContactNewRequestChannelBranch xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/channel_branch_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/request_details_branch_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/radio_button_selector"
+                android:checked="true"
+                android:paddingBottom="@dimen/radio_button_top_padding"
+                android:paddingLeft="@dimen/radio_button_left_padding_2"
+                android:paddingTop="@dimen/radio_button_top_padding"
+                android:text="@string/details_branch_email" />
+
+            <EditText
+                android:id="@+id/request_details_branch_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/details_branch_email_hint"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/request_details_branch_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/radio_button_selector"
+                android:paddingBottom="@dimen/radio_button_top_padding"
+                android:paddingLeft="@dimen/radio_button_left_padding_2"
+                android:paddingTop="@dimen/radio_button_top_padding"
+                android:text="@string/details_branch_phone" />
+
+            <EditText
+                android:id="@+id/request_details_branch_phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details_branch_date" />
+
+        <TextView
+            android:id="@+id/request_details_branch_date_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details_branch_hours" />
+
+        <Button
+            android:id="@+id/request_details_branch_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</com.accenture.mbank.view.ContactNewRequestChannelBranch>

@@ -1,0 +1,53 @@
+
+package com.accenture.mbank.view.table;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
+/**
+ * 所有报表的基类
+ * 
+ * @version 2.0.x,2013-1-25
+ * @author seekting.x.zhang
+ */
+public class BankTableView extends View {
+
+    public BankTableView(Context context) {
+        super(context);
+        init(context);
+    }
+
+    public BankTableView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
+    }
+
+    public BankTableView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init(context);
+    }
+
+    /**
+     * 初始化
+     */
+    protected void init(Context context) {
+    }
+
+    /**
+     * 通知更新ui
+     */
+    public void notifyRefresh() {
+
+        refresh();
+    }
+
+    /**
+     * 此方法是收到notifyRefresh通知后会根据mTableViewData更新ui<br>
+     * 具体怎么更新，这些细节，交给它的子类去实现
+     */
+    protected void refresh() {
+
+    }
+
+}

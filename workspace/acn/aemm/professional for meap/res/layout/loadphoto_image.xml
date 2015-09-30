@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+  android:background="@drawable/gpscamera_bg">
+    <!--  
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageButton 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/load_cancelphoto"
+        android:background="@drawable/obd_delete"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+    -->
+    <TextView 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:drawableLeft="@drawable/index_listitem_lefticon"
+        />
+    <ImageView 
+        android:layout_margin="30dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Load_bigimage"
+        android:background="@drawable/gpscamera_bg"/>
+    
+
+</LinearLayout>

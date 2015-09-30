@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.android.test.wifi" android:versionCode="1"
+	android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".Main" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+	</application>
+	  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"></uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+	<uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+	<uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="adnroid.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="adnroid.permission.ACCESS_CHECKIN_PROPERTTES"></uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"></uses-permission>
+	<uses-permission android:name="android.permission.FACTORY_TEST"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFIMULTICAST_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"></uses-permission>
+	
+</manifest>

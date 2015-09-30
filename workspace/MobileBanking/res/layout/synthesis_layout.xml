@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <View -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="200dip" /> -->
+    <!-- </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/splash_accounts"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:scaleType="fitStart"
+            android:src="@drawable/splash_btn_accounts_selector" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/splash_cards"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:scaleType="fitStart"
+            android:src="@drawable/splash_btn_cards_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+          android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/splash_investments"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:scaleType="fitStart"
+            android:src="@drawable/splash_btn_investments_selector" />
+
+        <com.accenture.mbank.view.ReHeightImageButton
+            android:id="@+id/splash_loans"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:scaleType="fitStart"
+            android:src="@drawable/splash_btn_loans_selector" />
+    </LinearLayout>
+
+
+</LinearLayout>

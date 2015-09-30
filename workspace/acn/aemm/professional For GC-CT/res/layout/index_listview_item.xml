@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	android:id="@+id/TreeItem" 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_height="wrap_content" 
+	android:layout_width="fill_parent" 
+	android:paddingBottom="8dip" 
+	android:paddingTop="8dip" 
+     android:background="@drawable/index_listitem_bg"
+	    android:descendantFocusability="blocksDescendants" 
+	    >
+	     
+	<TextView 
+	    
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentLeft="true" 
+		android:drawableLeft="@drawable/index_listitem_lefticon"
+	    android:id="@+id/index_lefticon"
+		android:layout_centerVertical="true" 
+		 android:focusable="false"/>
+    
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+	    android:id="@+id/index_ListItem_Icon"
+	    android:focusable="false"
+	    android:layout_toRightOf="@+id/index_lefticon"
+	    android:layout_marginLeft="10dip"
+	    />
+	<TextView 
+	    android:text="TextView" 
+	    android:layout_height="wrap_content" 
+	    android:textSize="23sp" 
+	    android:layout_width="fill_parent" 
+	    android:id="@+id/index_ListItem_Title"
+        android:layout_toRightOf="@+id/index_ListItem_Icon" 
+        android:layout_centerVertical="true"
+        
+       android:textColor="#333344"
+         android:focusable="false"
+	    />
+	<TextView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true" 
+		android:drawableLeft="@drawable/index_listview_go"
+	    android:id="@+id/index_ListItem_go"
+		android:layout_centerVertical="true" 
+		 android:focusable="false"/>
+	<TextView
+	    android:id="@+id/index_pendingnum"
+	    android:gravity="center"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignRight="@+id/index_ListItem_Title"
+	    android:layout_alignTop="@+id/index_ListItem_Icon"
+	    android:layout_marginRight="20dp"
+	
+	    android:focusable="false"
+	    android:text="8" />
+		
+</RelativeLayout>

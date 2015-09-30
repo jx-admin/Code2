@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.mbanking.manager.view.BankMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <include
+                android:id="@+id/menu_item_aggregated_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item"
+                android:paddingTop="1dip" />
+
+            <include
+                android:id="@+id/menu_title_product"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_title" />
+
+            <include
+                android:id="@+id/menu_item_accounts"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_investments"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_cards"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_loans"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_title_payment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_title" />
+
+            <include
+                android:id="@+id/menu_item_new_payment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_recent_payments"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_title_utilites"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_title" />
+
+            <include
+                android:id="@+id/menu_item_contacts"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_guide"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <include
+                android:id="@+id/menu_item_user_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/menu_item" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_tab_close_btn"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/close_sesssion_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/close_btn_selector"
+                    android:text="Close session"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/white" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.act.mbanking.manager.view.BankMenu>

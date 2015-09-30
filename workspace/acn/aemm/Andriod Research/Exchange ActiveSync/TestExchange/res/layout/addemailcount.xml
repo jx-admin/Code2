@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical">
+    <TextView android:text="EmailAddress" android:id="@+id/TextEmailAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <EditText android:text="Vivian.yun.feng@gmail.com" android:id="@+id/emailAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    <TextView android:text="Password" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+  	<EditText android:text="v12345678" android:id="@+id/emailPassword" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+	<TextView android:text="InComing Server" android:id="@+id/TextIncoming" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+  	<EditText android:text="imap.gmail.com" android:id="@+id/incomingServer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+	<TextView android:text="Outgoing Server" android:id="@+id/TextOutgoing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+  	<EditText android:text="smtp.gmail.com" android:id="@+id/outgoingServer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+	<EditText android:text="993"  android:inputType="number" android:hint="incomingServerPort"
+	android:id="@+id/incomingServerPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+	<EditText android:text="465"  android:inputType="number" android:hint="outgoingServerPort"
+	android:id="@+id/outgoingServerPort" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+	
+	<Button android:text="Button" android:id="@+id/EmailNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></Button>
+	  
+	<RadioGroup android:id="@+id/emailType" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+	<RadioButton android:text="POP3" android:gravity="center_horizontal" android:layout_height="wrap_content" android:checked="false" android:id="@+id/pop3" android:layout_width="wrap_content" android:layout_weight="1"></RadioButton>
+	<RadioButton android:text="IMAP" android:layout_height="wrap_content" android:gravity="center_horizontal" android:checked="true" android:layout_width="wrap_content" android:id="@+id/imap" android:layout_weight="1"></RadioButton>
+	
+	</RadioGroup>
+	  
+</LinearLayout>

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/header" >
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/bank_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/padding_small_mini"
+        android:background="@null"
+        android:scaleType="fitStart"
+        android:src="@drawable/back_selector" />
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/help_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/padding_small_mini"
+        android:background="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/help_selector" >
+    </com.accenture.mbank.view.BankImageButton>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" >
+    </TextView>
+
+</RelativeLayout>

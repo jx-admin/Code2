@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_640_832"
+    android:orientation="vertical"
+    android:weightSum="8" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/prelogin_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="159dp"
+            android:layout_height="31dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/gruppo_bper_logo" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome1" 
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome3" 
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="6"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_05640"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_05640_selector" />
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_01015"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_01015_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3" >
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_05387"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_05387_selector" />
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_landing_logo"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/banca_landing_logo" />
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_05256"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_05256_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_05392"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_05392_selector" />
+
+            <com.accenture.mbank.view.ReHeightImageButton
+                android:id="@+id/banca_05676"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:scaleType="fitStart"
+                android:src="@drawable/banca_05676_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

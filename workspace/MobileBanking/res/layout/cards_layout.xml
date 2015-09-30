@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <com.accenture.mbank.view.InnerScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cards_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.accenture.mbank.view.CardsLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cards_content_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+			
+            <!-- credit_cards -->
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/credit_cards_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_credit_cards" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <LinearLayout
+                android:id="@+id/credit_cards_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/cards_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_details"
+                    android:orientation="vertical" >
+					
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/credit_cards_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_cards_show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+            
+            <!--prepaid_cards-->
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/prepaid_cards_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_prepaid_cards" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <LinearLayout
+                android:id="@+id/prepaid_cards_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/cards_content_details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_details"
+                    android:orientation="vertical" >
+					
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/prepaid_cards_show_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_cards_show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+			
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dip" />
+        </com.accenture.mbank.view.CardsLayout>
+    </com.accenture.mbank.view.InnerScrollView>
+
+</LinearLayout>

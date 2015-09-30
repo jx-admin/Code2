@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/itv_feature5_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dip"
+        android:layout_marginTop="0dip"
+        android:src="@drawable/tv_bk" />
+
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="686dip"
+        android:layout_height="407dip"
+        android:layout_marginLeft="87dip"
+        android:layout_marginTop="60dip" >
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <include
+            android:id="@+id/include_mediaplay_controler"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/video_view"
+            layout="@layout/custom_mediaplay_controler" />
+    </RelativeLayout>
+
+</RelativeLayout>

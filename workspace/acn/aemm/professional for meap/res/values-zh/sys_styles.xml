@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 公共部分 -->
+	<style name="dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">#00000000</item>
+		<item name="android:windowBackground">@drawable/dialog_loading</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<style name="confirm_dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">#00000000</item>
+		<item name="android:windowBackground">@color/trans</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	<!-- end -->
+	
+	<style name="StyleCommonEditText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">#FFF00000</item>
+        <item name="android:gravity">fill_vertical</item>
+    
+        <item name="android:layout_height">50.0dip</item>
+        </style>
+</resources> 

@@ -1,0 +1,35 @@
+/frameworks/base/services/java/com/android/server/PackageManagerService.java
+
+line 4568
+
+		Log.i(TAG, "by wh PackageManagerService Got Here 11" ) ; 
+			if( !packageURI.toString().contains("aemm")) // by wh 
+			{	
+				Log.i(TAG, "Package Is not For AEMM Parts.");
+				final boolean succeded = false ; 
+				if( observer != null){
+					try {
+                        observer.packageInstalled(installerPackageName , -110); // INSTALL_FAILED_INTERNAL_ERROR 在 PackageManager.java 中定义。
+                    } catch (RemoteException e) {
+                        Log.i(TAG, "Observer no longer exists.");
+                    } //end catch
+				}
+				return ; 
+			}
+			
+PS：
+
+    由于函数：
+	
+	public void installPackage(
+            final Uri packageURI, final IPackageInstallObserver observer, final int flags,
+            final String installerPackageName)
+		installerPackageName为空，而且，下层的调用是以packageURI为参数的，所以，条件判断是写在了URI里面。
+		
+		比如说：file:///data/local/tmp/config_demo.apk 
+		        file:///data/local/tmp/aemmEncDemo.apk 
+				
+			第一个没有关键字，不会被认为是企业应用，直接返回内部错误(INSTALL_FAILED_INTERNAL_ERROR)
+			第二个进行关键字"aemm"匹配成功，所以会进行正常的安装。
+		
+		

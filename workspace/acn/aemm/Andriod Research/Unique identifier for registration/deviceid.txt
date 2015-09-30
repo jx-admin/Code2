@@ -1,0 +1,40 @@
+
+1) 下面是一篇网上的文章，描述了各种获取id的方法和局限：
+
+来获取Android设备的唯一id，但是这样做并不可靠：
+
+    有些设备没有手机模块；
+    设备被刷机或恢复出厂设置的时候TelephonyManager.getDeviceId()得到的数据并不会改变；
+    TelephonyManager.getDeviceId()方法需要用户的READ_PHONE_STATE 权限，如果你的程序中没电话功能，这样对用户来说和别扭；
+    通过测试发现一些厂商的设备中获取的device id是零获取他信息。
+
+Mac地址：
+
+    利用设备的WIFI或蓝牙的Mac地址作唯一标识也不好，因为并不是所有的设备都有WIFI，而且如果WIFI没有开启，也不能获取Mac地址。
+
+序列号：
+
+    在Android2.3之后，android.os.Build.SERIAL可以作为唯一标识，但对Android版本要求较高，所以统计出来的数据不完整。
+
+ANDROID_ID：
+
+相比之下ANDROID_ID倒是可以作为唯一标识，但还是有些缺陷：
+
+    在Android2.2之前不是100%的稳定可靠；
+    有些设备厂商的设备有相同的ANDROID_ID。
+
+结论：
+
+如果只想获取安装唯一标识，统计安装量利用UUID或其他办法就行。如果非要获取设备的物理唯一标识，那就利用ANDROID_ID做标识。
+
+2) 下面分析一下账户和同步这个程序是如何获得用户ID的
+   对应的代码分别在这两个文件里：
+   packages/apps/Email/src/com/android/exchange/SyncManager.java
+   packages/apps/Email/src/com/android/email/Utility.java
+
+   函数的流程如下：
+   读写方式打开一个叫deviceName的文件
+   如果文件存在就读取一行内容为id，不对其做任何判断。
+   如果文件不存在，就通过TelephonyManager的getDeviceId获得device id, 如果该device id不为空，就对其做sha-1 hash并把hash结果作为id.
+   如果不能通过上一步获得id，就直接把当前时间的微秒数作为id.
+   如果是新得到的id就要把这个id写入deviceName文件备用。

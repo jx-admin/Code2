@@ -1,0 +1,138 @@
+ABOUT
+
+DroidReader is a PDF reader targeted at the Android Platform.
+It is heavily based on the MuPDF software/library.
+
+
+LICENSE
+
+Copyright (C) 2010 Hans-Werner Hilse <hilse@web.de>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+
+PREREQUISITES
+
+In order to build DroidReader, you need:
+
+- the sources of DroidReader, but you managed that already...
+
+- source code of the MuPDF software/library
+
+- source code of libjpeg
+
+- source code of freetype2
+
+- source code of jbig2dec
+
+- source code of openjpeg
+
+- the Android Native Development Kit (NDK)
+
+- and of course the Android SDK.
+
+Optionally, you might want to use Eclipse and the Android plugin
+for development. The sources are structured to easily have them
+imported as a new project.
+
+When you have done this, do the following:
+
+- copy or symlink the libjpeg sources to the
+
+  jni/jpeg/
+
+  folder.
+  Within that folder, make a copy of "jconfig.txt" with the
+  name "jconfig.h". The NDK-based build run will otherwise
+  complain on the missing "jconfig.h".
+
+- copy or symlink the freetype2 sources into the
+
+  jni/freetype/
+
+  folder.
+
+- copy or symlink the jbig2dec sources into the
+
+  jni/jbig2dec/
+
+  folder.
+
+- copy or symlink the openjpeg sources into the
+
+  jni/openjpeg/
+
+  folder.
+
+- copy or symlink the MuPDF sources into the
+
+  jni/mupdf/
+
+  folder.
+
+- make a symlink to the project root directory (containing
+  this file) into the Android NDK's
+
+  app/
+
+  folder.
+
+Your project tree is now ready.
+
+
+COMPILING
+
+The first step is to compile the native JNI library. In order to
+do that, change your current working dir to the JNI root directory
+and start the make run:
+
+  $ make APP=droidreader
+
+(this is for the case you named the symlink "droidreader")
+
+Until now, the author only used the Eclipse IDE with the Android
+plugin to build the application. So just open the project and have
+Eclipse build it.
+
+
+DOWNLOAD
+
+The latest sources of this application should always be available
+at the following web site:
+
+http://code.google.com/p/droidreader
+
+
+INSTALLING
+
+You can use the Android SDK's "adb install" command to install
+the readily built .apk package.
+
+
+REPORTING BUGS AND PROBLEMS
+
+Until an issue tracker is made available, please report bugs, problems
+or other comments on this software on our discussion mailing list:
+
+  droidreader-developer-list@googlegroups.com
+
+You can subscribe to or access it and the archives via the Web
+frontend here:
+
+  http://groups.google.com/group/droidreader-developer-list

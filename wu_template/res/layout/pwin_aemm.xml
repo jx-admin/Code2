@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#666600" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/btn_plus"
+            android:padding="4dip"
+            android:text="update"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/pmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_launcher"
+            android:padding="4dip"
+            android:text="msg"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/btn_star"
+            android:padding="4dip"
+            android:text="userinfo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/ppsword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/arrow_up_float"
+            android:padding="4dip"
+            android:paddingRight="3dip"
+            android:text="psword"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pderma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/btn_plus"
+            android:padding="4dip"
+            android:text="derma"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/pmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@android:drawable/btn_plus"
+            android:padding="4dip"
+            android:paddingRight="3dip"
+            android:text="moreitem"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

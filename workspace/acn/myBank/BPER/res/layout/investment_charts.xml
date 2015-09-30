@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:background="@color/chart_bg_1"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/btn_shares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/btn_shares_selector"
+                    android:button="@null"
+                    android:scaleType="fitStart" />
+
+                <RadioButton
+                    android:id="@+id/btn_bonds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/btn_bonds_selector"
+                    android:button="@null"
+                    android:scaleType="fitStart" />
+
+                <RadioButton
+                    android:id="@+id/btn_funds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/btn_funds_selector"
+                    android:button="@null"
+                    android:scaleType="fitStart" />
+
+                <RadioButton
+                    android:id="@+id/btn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/btn_more_selector"
+                    android:button="@null"
+                    android:scaleType="fitStart" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical" >
+
+            <com.accenture.mbank.view.table.ChartView
+                android:id="@+id/chartView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

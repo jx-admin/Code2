@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/submenu_zoom" android:title="@string/menu_zoom">
+	<menu>
+		<item android:id="@+id/zoom_in" android:title="@string/menu_zoom_in"/>
+		<item android:id="@+id/zoom_out" android:title="@string/menu_zoom_out"/>
+		<item android:id="@+id/zoom_fit" android:title="@string/menu_zoom_fit"/>
+		<item android:id="@+id/zoom_fitw" android:title="@string/menu_zoom_fitw"/>
+		<item android:id="@+id/zoom_fith" android:title="@string/menu_zoom_fith"/>
+		<item android:id="@+id/zoom_orig" android:title="@string/menu_zoom_orig"/>
+	</menu>
+</item>
+<item android:id="@+id/submenu_rotation" android:title="@string/menu_rotation">
+	<menu>
+		<item android:id="@+id/rotation_left" android:title="@string/menu_rotation_left"/>
+		<item android:id="@+id/rotation_right" android:title="@string/menu_rotation_right"/>
+	</menu>
+</item>
+<item android:id="@+id/submenu_goto" android:title="@string/menu_goto">
+	<menu>
+		<item android:id="@+id/goto_first" android:title="@string/menu_goto_first"/>
+		<item android:id="@+id/goto_ask" android:title="@string/menu_goto_ask"/>
+		<item android:id="@+id/goto_last" android:title="@string/menu_goto_last"/>
+	</menu>
+</item>
+<item android:id="@+id/submenu_file" android:title="@string/menu_file">
+	<menu>
+		<item android:id="@+id/open_file" android:title="@string/menu_file_open"/>
+		<item android:id="@+id/options" android:title="@string/menu_file_options"></item><item android:id="@+id/about" android:title="@string/menu_file_about"/>
+		<item android:id="@+id/quit" android:title="@string/menu_file_quit"/>
+	
+</menu>
+</item>
+</menu>

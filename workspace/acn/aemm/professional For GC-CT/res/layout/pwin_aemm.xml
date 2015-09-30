@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popubackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/update"
+            android:padding="4dip"
+            android:text="@string/update3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/pmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/message"
+            android:padding="4dip"
+            android:text="@string/msg"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/userinfo"
+            android:padding="4dip"
+            android:text="@string/userinfo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/ppsword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/psword"
+            android:padding="4dip"
+            android:paddingRight="3dip"
+            android:text="@string/psword"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip" >
+
+        <TextView
+            android:id="@+id/pderma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/userinfo"
+            android:padding="4dip"
+            android:text="@string/derma"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/pmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/forward"
+            android:padding="4dip"
+            android:paddingRight="3dip"
+            android:text="@string/moreitem"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

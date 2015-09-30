@@ -1,0 +1,56 @@
+<com.accenture.mbank.view.SelectReceivePinExpandedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/select_recelve_pin" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RadioButton
+            android:id="@+id/select_receive_pin_mail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/mail" />
+
+        <RadioButton
+            android:id="@+id/select_receive_pin_sms"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:button="@drawable/radio_button_selector"
+            android:paddingBottom="@dimen/radio_button_top_padding"
+            android:paddingLeft="@dimen/radio_button_text_padding"
+            android:paddingTop="@dimen/radio_button_top_padding"
+            android:text="@string/sms" />
+    </RadioGroup>
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/select_receive_pin_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:paddingTop="@dimen/padding_small"
+        android:src="@drawable/btn_save_selector" >
+    </com.accenture.mbank.view.BankImageButton>
+
+</com.accenture.mbank.view.SelectReceivePinExpandedContainer>

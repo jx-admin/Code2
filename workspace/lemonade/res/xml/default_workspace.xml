@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/org.accenture.product.lemonade">
+    <!--  Far-left screen [0] -->
+        
+    <!--  Middle screen [2] -->
+    <search
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="0" />
+
+
+    <!--  Far-right screen [4] -->
+
+</favorites>

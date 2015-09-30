@@ -1,0 +1,161 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="login_2_button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="login_input">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffff8800</item>
+    </style>
+
+    <style name="main_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff7777bb</item>
+    </style>
+
+    <style name="type_description">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="type_selected">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#ff7777bb</item>
+    </style>
+
+    <style name="type_un_selected">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ff7777bb</item>
+    </style>
+
+    <style name="require_pin_dialog_text_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="normal_size">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="login_welcome" parent="white_shadow_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="menu_button_text_style" parent="normal_size">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="legend_money" parent="normal_size">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">@dimen/padding_small_mini_mini</item>
+        <item name="android:paddingBottom">@dimen/padding_small_mini_mini</item>
+    </style>
+
+    <style name="white_shadow_style">
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="title_text" parent="white_shadow_style">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/gray_text_color_selector</item>
+    </style>
+
+    <style name="title_text_mini" parent="white_shadow_style">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/gray_text_color_selector</item>
+    </style>
+
+    <style name="time_num_text" parent="white_shadow_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/gray_text_color_selector</item>
+    </style>
+
+    <style name="total_money_text" parent="white_shadow_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="payment_white_shadow_style" parent="white_shadow_style">
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/payment_name_text_color</item>
+        <item name="android:shadowColor">@android:color/white</item>
+    </style>
+
+    <style name="payment_black_shadow_style" parent="white_shadow_style">
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/payment_name_text_color</item>
+        <item name="android:shadowColor">@android:color/black</item>
+    </style>
+
+    <style name="gray_text_white_shadow_style" parent="white_shadow_style">
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:shadowColor">@android:color/white</item>
+    </style>
+
+    <style name="payment_radio_style" parent="white_shadow_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:clickable">false</item>
+        <item name="android:textSize">@dimen/text_nomal_size</item>
+        <item name="android:textColor">@drawable/payment_step_text_color</item>
+    </style>
+
+    <style name="update_on_text" parent="white_shadow_style">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="new_payee_lable" parent="gray_text_white_shadow_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+    </style>
+
+    <style name="selectorDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+ <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+ <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+ <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+ <!-- 无标题 -->
+        <item name="android:windowBackground">@drawable/account_data_closed</item>
+ <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+ <!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="translucent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+
+</resources>

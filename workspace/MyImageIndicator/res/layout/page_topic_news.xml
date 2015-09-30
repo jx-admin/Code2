@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <com.image.indicator.control.ScrollViewExtend
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        
+	    <LinearLayout 
+	        android:id="@+id/linearlayout_news_main"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+	        <LinearLayout 
+		        android:id="@+id/linearlayout_images_slide"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+	        
+	        <RelativeLayout
+		       android:id="@+id/relativelayout_image_slide"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:orientation="vertical"
+		       android:focusable="true" >
+	       
+		       <android.support.v4.view.ViewPager
+			       android:id="@+id/image_slide_page"
+			       android:layout_width="fill_parent"
+			       android:layout_height="180dip"
+			       android:focusable="true" />
+	
+		       <RelativeLayout
+		           android:id="@+id/layout_title_text"
+		           android:layout_width="match_parent"
+		           android:layout_height="30dp"
+		           android:layout_alignParentBottom="true"
+		           android:layout_alignParentLeft="true"
+		           android:background="#55000000"
+		           style="@style/Transparent" >
+
+		           <RelativeLayout
+		               android:id="@+id/layout_bar_image"
+		               android:layout_width="match_parent"
+		               android:layout_height="1dip"
+		               android:layout_alignParentLeft="true"
+		               android:layout_alignParentTop="true"
+		               android:background="@drawable/image_page_bg" >
+		           </RelativeLayout>
+
+		           <LinearLayout
+		               android:layout_width="wrap_content"
+		               android:layout_height="match_parent"
+		               android:layout_alignParentLeft="true"
+		               android:layout_alignParentTop="true"
+		               android:orientation="vertical" >
+		               
+		               <TextView 
+		                   android:id="@+id/tvSlideTitle"
+		                   android:layout_height="match_parent"
+		                   android:layout_width="wrap_content"
+		                   android:gravity="center_vertical"
+		                   android:layout_marginLeft="10dp"
+		                   android:text="@string/title1"
+		                   android:textColor="@android:color/white"
+		                   android:textSize="13dip"
+		                   />
+		               
+		           </LinearLayout>
+	           
+	           </RelativeLayout>
+	    	
+	    	</RelativeLayout>
+	    	
+	    	</LinearLayout>
+	    	
+	        <LinearLayout 
+	            android:layout_height="match_parent"
+	            android:layout_width="fill_parent"
+	            android:orientation="vertical">
+	            
+	            <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="35dp"
+			        android:orientation="vertical"
+			        android:background="@android:color/white">
+		       
+	                <LinearLayout
+	                    android:id="@+id/layout_circle_images"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="15dp"
+	                    android:layout_marginTop="10dp"
+	                    android:layout_marginRight="30dp"
+	                    android:layout_marginLeft="15dp"
+	                    android:gravity="right">
+	                    
+	                </LinearLayout>
+	        	
+	            	<LinearLayout
+				        android:id="@+id/linearLayout_divider"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:orientation="vertical"
+				        android:background="@drawable/divider_horizontal_line" >
+			    	</LinearLayout>
+			    	
+	        	</LinearLayout>
+	        	
+	            <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="fill_parent"
+			        android:orientation="vertical"
+			        android:background="@android:color/white">
+	            						<ImageView
+				        android:id="@+id/imageView1"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:src="@drawable/item_topic" />
+	                
+	            </LinearLayout>
+	        	
+	        </LinearLayout>
+	    
+	    </LinearLayout>
+	    
+    </com.image.indicator.control.ScrollViewExtend>
+    
+</RelativeLayout>

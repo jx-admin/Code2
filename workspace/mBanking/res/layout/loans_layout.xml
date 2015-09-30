@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg"
+        android:paddingBottom="@dimen/padding_small_mini" >
+
+        <LinearLayout
+            android:id="@+id/total_maney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/total"
+                style="@style/total_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total investments" />
+
+            <TextView
+                android:id="@+id/money"
+                style="@style/total_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="center"
+                android:text="100.000$" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_maney"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/last_update"
+                style="@style/update_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Last update on" />
+
+            <TextView
+                android:id="@+id/update_time"
+                style="@style/update_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="center"
+                android:text="05/09/2012" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- legend -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/legend" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/loans_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:src="@drawable/timescale_btn_off"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/time_selector" />
+
+</LinearLayout>

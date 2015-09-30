@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.DepositsExpandedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/sharesExpander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/investment_deposit_item" />
+
+    <include
+        android:id="@+id/bondsExpander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/investment_deposit_item" />
+
+    <include
+        android:id="@+id/fundsExpander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/investment_deposit_item" />
+
+    <include
+        android:id="@+id/otherSecuritiesExpander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/investment_deposit_item" />
+
+</com.accenture.mbank.view.DepositsExpandedContainer>

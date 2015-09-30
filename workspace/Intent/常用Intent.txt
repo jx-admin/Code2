@@ -1,0 +1,103 @@
+下面直接给我学习的实例片段。 
+
+
+
+1，掉web浏览器 
+
+Uri myBlogUri = Uri.parse("http://kuikui.javaeye.com"); 
+
+returnIt = new Intent(Intent.ACTION_VIEW, myBlogUri); 
+
+2，地图 
+
+Uri mapUri = Uri.parse("geo:38.899533,-77.036476"); 
+
+returnIt = new Intent(Intent.ACTION_VIEW, mapUri); 
+
+3，调拨打电话界面 
+
+Uri telUri = Uri.parse("tel:100861"); 
+
+returnIt = new Intent(Intent.ACTION_DIAL, telUri); 
+
+4，直接拨打电话 
+
+Uri callUri = Uri.parse("tel:100861"); 
+
+returnIt = new Intent(Intent.ACTION_CALL, callUri); 
+
+5，卸载 
+
+Uri uninstallUri = Uri.fromParts("package", "xxx", null); 
+
+returnIt = new Intent(Intent.ACTION_DELETE, uninstallUri); 
+
+6，安装 
+
+Uri installUri = Uri.fromParts("package", "xxx", null); 
+
+returnIt = new Intent(Intent.ACTION_PACKAGE_ADDED, installUri); 
+
+7，播放 
+
+Uri playUri = Uri.parse("file:///sdcard/download/everything.mp3"); 
+
+returnIt = new Intent(Intent.ACTION_VIEW, playUri); 
+
+8，掉用发邮件 
+
+Uri emailUri = Uri.parse("mailto:shenrenkui@gmail.com"); 
+
+returnIt = new Intent(Intent.ACTION_SENDTO, emailUri); 
+
+9，发邮件 
+
+returnIt = new Intent(Intent.ACTION_SEND); 
+
+String[] tos = { "shenrenkui@gmail.com" }; 
+
+String[] ccs = { "shenrenkui@gmail.com" }; 
+
+returnIt.putExtra(Intent.EXTRA_EMAIL, tos); 
+
+returnIt.putExtra(Intent.EXTRA_CC, ccs); 
+
+returnIt.putExtra(Intent.EXTRA_TEXT, "body"); 
+
+returnIt.putExtra(Intent.EXTRA_SUBJECT, "subject"); 
+
+returnIt.setType("message/rfc882"); 
+
+Intent.createChooser(returnIt, "Choose Email Client"); 
+
+10，发短信 
+
+Uri smsUri = Uri.parse("tel:100861"); 
+
+returnIt = new Intent(Intent.ACTION_VIEW, smsUri); 
+
+returnIt.putExtra("sms_body", "shenrenkui"); 
+
+returnIt.setType("vnd.android-dir/mms-sms"); 
+
+11，直接发邮件 
+
+Uri smsToUri = Uri.parse("smsto://100861"); 
+
+returnIt = new Intent(Intent.ACTION_SENDTO, smsToUri); 
+
+returnIt.putExtra("sms_body", "shenrenkui"); 
+
+12，发彩信 
+
+Uri mmsUri = Uri.parse("content://media/external/images/media/23"); 
+
+returnIt = new Intent(Intent.ACTION_SEND); 
+
+returnIt.putExtra("sms_body", "shenrenkui"); 
+
+returnIt.putExtra(Intent.EXTRA_STREAM, mmsUri); 
+
+returnIt.setType("image/png"); 
+
+用获取到的Intent直接调用startActivity(returnIt)就ok了。

@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/require_pin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/require_pin_type_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="type of payment:bank transfer" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_account_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="account:Frank" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_date_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_beneficiary_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_iban_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_bic_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_amount_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_reason_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/require_pin_fees_text"
+        style="@style/require_pin_dialog_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" >
+    </TextView>
+
+    <Button
+        android:id="@+id/require_pin_ask_pin_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/btn_dialog_selector"
+        android:text="require pin"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/require_pin_cancel_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/btn_dialog_selector"
+        android:text="cancel"
+        android:textStyle="bold" />
+
+</LinearLayout>

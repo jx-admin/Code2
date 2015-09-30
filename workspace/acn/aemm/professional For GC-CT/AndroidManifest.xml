@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aess.aemm"
+    android:versionCode="102"
+    android:versionName="3.1.102 Express+For GD-CT" android:sharedUserId="android.uid.system">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:allowClearUserData="false"
+        android:description="@string/description"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" android:name="com.ccssoft.framework.system.Session">
+
+        <!-- activity -->
+        <activity
+            android:name=".view.MainView"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.DOWNAPK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+		</activity>
+        <service android:name="com.aess.aemm.authenticator.AuthenticatorService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <activity
+            android:name="com.aess.aemm.authenticator.AuthenticatorActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.CustomDialog" >
+
+            <!--
+                No intent-filter here! This activity is only ever launched by
+                someone who explicitly knows the class name
+            -->
+        </activity>
+
+        <service android:name="com.aess.aemm.thirdpartyauthenticator.AuthenticatorService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/thirdpartyauthenticator" />
+        </service>
+
+        <activity
+            android:name="com.aess.aemm.thirdpartyauthenticator.AuthenticatorActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.CustomDialog" >
+
+            <!--
+                No intent-filter here! This activity is only ever launched by
+                someone who explicitly knows the class name
+            -->
+        </activity>
+        <activity
+            android:name=".view.ServiceDia"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent" >
+        </activity>
+        <activity
+            android:name="com.aess.aemm.view.evaluate.EnvaluateEditView"
+            android:configChanges="orientation|keyboardHidden" 
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".view.InfoMainView"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <service android:name=".appmanager.ApkInstallService" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.appmanager.AppUpdate" />
+                <action android:name="com.aess.aemm.appmanager.DeletePackage" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".update.UpdateService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service android:name=".push.PushService" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.push.START" />
+                <action android:name="com.aess.aemm.push.NEWDOMAIN" />
+            </intent-filter>
+        </service>
+
+        <!-- receiver -->
+        <receiver android:name=".receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.GPS" />
+                <action android:name="com.aess.aemm.UPDATE" />
+                <action android:name="com.aess.aemm.APK" />
+                <action android:name="com.aess.aemm.TIME" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.AemmPhoneStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.aess.aemm.appmanager.AppStateReceiver" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.appmanager.AppStateReceiver.Start" />
+                <action android:name="com.aess.aemm.appmanager.AppStateReceiver.Stop" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" >
+                </data>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.AemmDeviceAdminReceiver"
+            android:description="@string/aemm_device_admin_description"
+            android:label="@string/aemm_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/aemm_device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="com.aess.aemm.PSWORD" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".db.AemmProvider"
+            android:authorities="com.accenture.aemm.db" />
+
+        <service android:name="com.aess.aemm.function.ProfessionalFunctionService" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.function.ProfessionalFunctionService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.aess.aemm.installservice.PackageService" >
+            <intent-filter>
+                <action android:name="com.aess.aemm.installservice.PackageService" />
+                <action android:name="android.service.package.addpackage" />
+                <action android:name="android.service.package.deletepackage" />
+
+                <category android:name="android.intent.category.packageservices" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.aess.aemm.view.msg.MsgActivity"
+            android:label="@string/title_activity_msg" >
+            <intent-filter>
+                <action android:name="android.intent.action.AEMMMSG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.msg.SendMsgActivity"
+            android:label="@string/title_activity_msg" >
+            <intent-filter>
+                <action android:name="android.intent.action.AEMMSEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.aess.aemm.view.msg.MsgDetailActivity"
+            android:label="@string/title_activity_msg_detail" >
+            <intent-filter>
+                <action android:name="android.intent.action.AEMMMSGDETIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:pathPattern="*/com.accenture.aemm.db/*"
+                    android:scheme="content" >
+                </data>
+            </intent-filter>
+        </activity>
+        
+
+
+        <!-- ssccoft start -->
+        <activity
+            android:name="com.ccssoft.gpscamera.GpsCameraActivity"
+            android:label="@string/app_name"
+            android:process="com.ccssoft.gpscamera.aemm"/>
+- 
+        <activity
+            android:name="com.ccssoft.framework.Index"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm">
+- 
+            <intent-filter>
+                <action android:name="" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ccssoft.framework.system.DataUpdate"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:process="com.ccssoft.gpscamera.aemm" />
+        <activity
+            android:name="com.ccssoft.framework.system.desktop.DesktopActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:process="com.ccssoft.gpscamera.aemm" />
+        <activity
+            android:name="com.ccssoft.framework.system.SystemManage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.system.SysPreference"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.system.SysPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:process="com.ccssoft.gpscamera.aemm" />
+        <activity
+            android:name="com.ccssoft.framework.system.CameraActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.log.ErrorReport"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.log.LogUpload"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.location.LocationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.traffic.activity.TrafficActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.sign.SignActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.framework.tree.treeview.TestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.gd.demo.CameraGps"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.gd.demo.WebkitActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.gd.demo.ScanActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <activity
+            android:name="com.ccssoft.gd.MainPageListView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+- 
+<!-- 	  <service android:enabled="true" android:name="com.ccssoft.framework.log.LogService" />  -->
+        <service
+            android:name="com.ccssoft.framework.base.DataUpdateService"
+            android:enabled="true" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+        <service
+            android:name="com.ccssoft.framework.location.LocationService"
+            android:enabled="true" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+- 
+        <service
+            android:name="com.ccssoft.framework.pushnotification.bo.PushNotificationService"
+            android:enabled="true" 
+            android:process="com.ccssoft.gpscamera.aemm">
+- 
+            <intent-filter>
+                <action android:name="com.ccssoft.action.push.PushNotificationService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ccssoft.framework.system.NotificationService"
+            android:enabled="true" 
+            android:process="com.ccssoft.gpscamera.aemm"/>
+- 
+        <receiver android:name="com.ccssoft.framework.recevier.MesReceiver" 
+            android:process="com.ccssoft.gpscamera.aemm">
+- 
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+- 
+        <receiver
+            android:name="com.ccssoft.framework.location.LocationTimer"
+            android:enabled="true" 
+            android:process="com.ccssoft.gpscamera.aemm">
+- 
+            <intent-filter>
+                <action android:name="com.ccssoft.location.collect" />
+            </intent-filter>
+- 
+            <intent-filter>
+                <action android:name="com.ccssoft.location.upload" />
+            </intent-filter>
+        </receiver>
+- 
+        <receiver android:name="com.ccssoft.framework.pushnotification.bo.PushNotificationReceiver" 
+            android:process="com.ccssoft.gpscamera.aemm">
+- 
+            <intent-filter>
+                <action android:name="com.ccssoft.action.push.awarkService" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="tests for my apps"
+        android:targetPackage="com.ccssoft" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- ssccoft end -->
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <uses-permission android:name="android.permission.FACTORY_TEST" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFIMULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_AEMM" />
+
+    <original-package android:name="com.android.packageinstaller" />
+
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+</manifest>

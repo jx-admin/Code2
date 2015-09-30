@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">eStore</string>
+    <string name="description">Enterprise Mobile Solution</string>
+    <string name="installed">installed</string>
+    <string name="uninstalled">uninstalled</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="ignore">Ignore</string>
+    <string name="open">Open</string>
+    <string name="alert">Prompt</string>
+    <string name="update">Update</string>
+    <string name="update2">Update</string>
+    <string name="app_disable">You can not run this application</string>
+    <string name="install_disable">You cannot install applications on this device</string>
+    <string name="new_app_load">You have received new applications</string>
+    <string name="hall_updata_title">the Enterprise Hall needs to be updated</string>
+    <string name="hall_updata_content">Update or not?</string>
+    <string name="app_unexsit">This program does not exist or is uninstalled, move it to the uninstalled area or not?</string>
+
+    <!-- updata -->
+    <string name="updata_executing">Updating</string>
+    <string name="network_erro">Network Anomaly</string>
+    <string name="update_over">Update finish</string>
+    <string name="update_failed">Update fail</string>
+    <string name="updata_app_push">You have %d new applications to install</string>
+    <string name="passpolicy">Password policy</string>
+    <string name="rootcertificate">CA certificate</string>
+    <string name="pkcscertificate">PSK certificate</string>
+    <string name="restrictions">Restrictions</string>
+
+    <!-- login -->
+    <string name="name_str">User name</string>
+    <string name="password_str">Password</string>
+    <string name="imei_str">DeviceId</string>
+    <string name="login_str">Login</string>
+    <string name="cancel_str">Cancel</string>
+    <string name="inputname_hint">Please input user name</string>
+    <string name="inputpassword_hint">Please input password</string>
+    <string name="inputimei_hint">Please input DeviceId</string>
+    <string name="selectimsi">IMSI登录</string>
+    <string name="askinputuser">无法取得IMSI，请输入用户名登录</string>
+    <string name="inputimsi_hint">请插入SIM卡</string>
+    <string name="server_limit_hint">登录被拒绝：在线用户已到达阈值。</string>
+    <string name="server_address_error">地址导航失败</string>
+    <string name="logout_fail">退出失败!</string>
+    <string name="service_fail">服务器通信异常!</string>
+
+    <!-- message -->
+    <string name="newapp">New Applications Update</string>
+    <string name="newapp_client">You have new data</string>
+    <string name="aemm_device_admin">Enterprise Application Store</string>
+    <string name="aemm_device_admin_description">Enterprise Application Hall is the Management Control Program of enterprise applications in the mobile device.</string>
+    <string name="lock_client">Device was locked，Please get password from administrator</string>
+    <string name="device_showToast_onEnabled">Device Management:Enabled</string>
+    <string name="device_showToast_onDisabled">Device Management:Disabled</string>
+    <string name="device_showToast_onDisableRequested">This is an optional message,warning about disabling users request</string>
+    <string name="label">AEMM account</string>
+    <string name="third_party_label">The third party account</string>
+    <string name="ui_activity_authenticating">Authenticating\u2026</string>
+    <string name="login_activity_loginfail_text_both">The username or password isn\'t valid or the networkd is broken. An AEMM account is
+        required. Please try again. </string>
+    <string name="login_activity_loginfail_text_pwmissing">Type the password for this account.</string>
+    <string name="login_activity_loginfail_text_pwonly">You entered the wrong password or your account has changed.
+        Please re-enter your password.</string>
+    <string name="login_error_user_already_exist">User already exists.</string>
+    <string name="login_error_invalid_username_password">Invalid user name or password.</string>
+    <string name="login_error_user_doesnot_exist">User does not exist.</string>
+    <string name="login_error_device_doesnot_exist">Device ID does not exist.</string>
+    <string name="login_activity_newaccount_text">Type your AEMM account. </string>
+    <string name="login_error_cancel_active">Device is inactive, Not register, Contact the administrator.</string>
+    <string name="login_error_device_isregistered">Device is registered, Contact the administrator.</string>
+    <string name="audio_disabled">Recording is disabled.</string>
+    <string name="camera_disabled">Camera is disabled.</string>
+    <string name="sms_disabled">SMS is disabled.</string>
+    <string name="mms_disabled">MMS is disabled.</string>
+    <string name="install_apk_disabled">Application installation is disabled</string>
+    <string name="dial_disabled">Calling is disabled.</string>
+    <string name="domainerr">Domain input error</string>
+    <string name="login_error_notlogin">Device didn\'t login</string>
+    <string name="login_error_limit">超过流量限制</string>
+    <string name="moreinfo">更多</string>
+    <string name="msg">消息管理</string>
+    <string name="update3">更新配置</string>
+    <string name="userinfo">用户信息</string>
+    <string name="psword">修改密码</string>
+    <string name="derma">更换皮肤</string>
+    <string name="system">系统升级</string>
+    <string name="moreitem">更多内容</string>
+    <string name="title_activity_msg">消息管理</string>
+    <string name="back">返回</string>
+    <string name="del">删除</string>
+    <string name="zero">没有消息</string>
+    <string name="title_activity_msg_detail">消息详情</string>
+    <string name="msgdtitle">标题：</string>
+    <string name="mdpublisher">发布机构：</string>
+    <string name="mdbusiness">业务类型：</string>
+    <string name="mdlevel">级别：</string>
+    <string name="mdtrange">开始时间：</string>
+    <string name="mdtrange1">结束时间：</string>
+    <string name="mdtype">类型：</string>
+    <string name="mdstate">状态：</string>
+    <string name="mddate">日期：</string>
+    <string name="msgnum">你有%d条消息</string>
+    <string name="mtinform">通知</string>
+    <string name="mtpost">公告</string>
+    <string name="mtplan">工作计划</string>
+    <string name="mtenvent">待办信息提醒</string>
+    <string name="mtother">自定义消息</string>
+    <string name="mtunknow">未知</string>
+    <string name="mtenvents0">未开始</string>
+    <string name="mtenvents1">进行中</string>
+    <string name="mtenvents2">已完成</string>
+    <string name="mtenvents3">已推迟</string>
+    <string name="oldpassword">旧密码:</string>
+	<string name="msgretime">接收时间段</string>
+    <string-array name="msgPlanState">
+        <item>高</item>
+        <item>普通</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="msgEventLevel">
+        <item>未开始</item>
+        <item>进行中</item>
+        <item>已完成</item>
+        <item>已推迟</item>
+    </string-array>
+    <string-array name="msgSendType">
+        <item>网络</item>
+        <item>短信</item>
+        <item>电子邮件</item>
+    </string-array>
+    <string-array name="msgNoDate">
+        <item>没有数据</item>
+    </string-array>
+
+    <string name="msgSendHint">消息推送方式</string>
+    <string name="mtlev1">高</string>
+    <string name="mtlev2">普通</string>
+    <string name="mtlev3">低</string>
+
+    <string-array name="msgBusType">
+        <item>通用</item>
+        <item>装维类</item>
+        <item>资源类</item>
+    </string-array>
+
+    <string name="btNor">通用</string>
+    <string name="btOpe">装维类</string>
+    <string name="btRes">资源类</string>
+    <string name="msgNew">新建消息</string>
+    <string name="msgContent">内容:</string>
+    <string name="msgSend">接收人:</string>
+    <string name="msgAgree">审批人:</string>
+    <string name="msgValid">有效期:</string>
+    <string name="msgBegTime">开始接收时段:</string>
+    <string name="msgEndTime">结束接收时段:</string>
+    <string name="msgFormatFail">没有获得消息格式</string>
+    <string name="msgStartHint">应用标识</string>
+    <string name="msgSendErrorHint">不能为空</string>
+    <string name="msgSendErrorHint2">没有信息格式，不能发送</string>
+
+    <!-- flow -->
+    <string name="trafficlimitover">超出流量限制</string>
+    <string name="accountlimitover">系统没有日历账户</string>
+
+    <!-- userInformation -->
+    <string name="inputpwd">输入密码</string>
+    <string name="userinfomation">个人信息</string>
+    <string name="userNameSTR">用户名</string>
+    <string name="emailSTR">邮箱</string>
+    <string name="IMSTR">IM</string>
+    <string name="addressSTR">通讯地址</string>
+    <string name="userNameSTR_hint">用户名</string>
+    <string name="emailSTR_hint">用户名@email.com</string>
+    <string name="IMSTR_hint">文字文字文字</string>
+    <string name="addressSTR_hint">文字文字文字文字文字文字</string>
+
+    <!-- repairUserinformation extends userInformation -->
+    <string name="repairSTR">修改</string>
+    <string name="finishSTR">完成</string>
+
+    <!-- Auth-code -->
+    <string name="security_code">验证码</string>
+    <string name="anser_quanstion">请回答下面问题:</string>
+    <string name="what_is_capital">中国的首都是哪里？</string>
+    <string name="beijing">北京</string>
+    <string name="input_security_code">请输入下面的答案：</string>
+    <string name="nextpice">看不清,换下一张</string>
+    <string name="verify_error">验证码不正确</string>
+
+    <!-- passwordRepair -->
+    <string name="repairwordSTR">修改密码</string>
+    <string name="submitSTR">提交</string>
+    <string name="oldwordSTR">原密码</string>
+    <string name="newwordSTR">新密码</string>
+    <string name="reinputSTR">再次输入新密码</string>
+    <string name="pwd_cannot_null">请输入密码</string>
+    <string name="double_pwd_unsame">两次新密码不一致</string>
+
+    <!-- change derma -->
+    <string name="change_derma_str">修改皮肤</string>
+    <string name="default_derma_str">默认皮肤</string>
+    <string name="new_derma_str">新皮肤</string>
+
+    <!-- menu -->
+    <string name="operator_str">操作</string>
+    <string name="edit">编辑</string>
+    <string name="app_manager">应用管理</string>
+    <string name="msg_manager">消息管理</string>
+
+    <string-array name="menu_list">
+        <item>检查更新</item>
+        <item>个人信息</item>
+        <item>修改密码</item>
+        <item>消息管理</item>
+        <item>发送消息</item>
+        <item>更换皮肤</item>
+        <item>签到</item>
+        <item>日常工作安排</item>
+        <item>应用管理</item>
+        <item>注销用户</item>
+    </string-array>
+
+    <!-- Coment -->
+    <string name="app_snapshot">App snapshot</string>
+    <string name="conment_title">评论标题</string>
+    <string name="conment">评论内容</string>
+    <string name="downloading">正在下载。。。</string>
+    <string name="getsnapshot_fail">快照获取失败~_~</string>
+    <string name="conment_no_respond">提交失败：没有取到server答复</string>
+    <string name="conment_xmlbuild_error">提交失败：上传格式出错</string>
+    <string name="title_null">提交失败：标题为空</string>
+    <string name="conment_null">提交失败：内容为空</string>
+    <string name="conment_check_net">提交失败:请检查网络</string>
+    <string name="conment_submit">已提交</string>
+    <string name="userquit">正在擦除用户数据"</string>
+    <string name="quiteHint">是否要删除用户配置,退出用户？</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_send_msg">SendMsgActivity</string>
+    <string name="msgValidHint">请输入有效期是几天</string>
+    <string name="time">时间:</string>
+    <string name="date">日期:</string>
+    <string name="sendMessageHint">从服务获取消息格式</string>
+    <string name="msgRetry">重试</string>
+    <string name="msgDoSend">正在发送</string>
+    <string name="msgSendFail">消息发送失败</string>
+    <string name="msgSendTitle">消息发送</string>
+    <string name="more">大于：</string>
+    <string name="less">小于</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_title1_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_xsmall"
+    android:background="@drawable/setmeal_menu_bk_left"
+    android:gravity="center"
+    android:paddingLeft="@dimen/margin_mid"
+    android:paddingRight="@dimen/margin_mid"
+    android:text="@string/month_ren_range"
+    android:textColor="@android:color/white" />

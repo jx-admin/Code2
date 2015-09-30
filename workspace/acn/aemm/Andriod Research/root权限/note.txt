@@ -1,0 +1,54 @@
+android21\build\tools\signapk目录下：android.mk
+
+
+一、Android Apk签名 
+	Apk签名首先要有一个keystore的签名用的文件。 
+		keystore是由jdk自带的工具keytool生成的。 
+	具体生成方式参考： 
+		开始->运行->cmd->cd到你安装的jdk的目录里，我的是C:\Program Files\Java\jdk1.6.0_10\bin 
+		然后输入： 
+		keytool -genkey -alias asaiAndroid.keystore -keyalg RSA -validity 20000 -keystore asaiAndroid.keystore 
+			-alias 后面跟的是别名这里是 asaiAndroid.store 
+			-keyalg 是加密方式这里是RSA 
+			-validity 是有效期 这里是20000 
+			-keystore 就是要生成的keystore的名称 这里是asiAndroid.keystore 
+		然后按回车键 
+	按回车后首先会提示你输入的密码：这个在签名时要用的，要记住 
+	然后会再确认你的密码。 
+	之后会依次叫你输入姓名、组织单位、组织名称、城市区域、省份名称、国家代码（CN）等。 
+
+	开始签名。 
+	在 C:\Program Files\Java\jdk1.6.0_10\bin 还提供一个工具 jarsigner.exe 
+	运行命令给APK签名： 
+		jarsigner -verbose -keystore asaiAndroid.keystore -signedjar Lotteryonline_signed.apk LotteryOnline.apk asaiAndroid.keystore 
+			-keystore: keystore的名称 
+			LotteryOnline_signed.apk: 签名后的APK 
+			LotteryOnline.apk: 签名前的APK 
+	然后按回车：会要求输入刚才设置的密码，输入后按回车就开始签名了。 
+
+
+二、eclipse源码编译，无需用make来编译（android源码目录<D:\myandroid_mx27>）： 
+1、首先，AndroidManifest.xml中manifest节点中加入android:sharedUserId="android.uid.system"这个属性 
+
+2、用eclipse编译出apk(ClockSetting.apk)文件，但这个文件不能用，删掉META-INF目录下的CERT.SF和CERT.RSA两个文件 
+
+3、使用当前android系统（android系统可能不同）的platform密钥来重新给apk文件签名（可能还未用用户米要签名）。 
+首先,找到密钥文件，在我的Android源码目录中的位置是"build\target\product\security",下面的platform.pk8和platform.x509.pem两个文件。 
+然后，用Android提供的SignApk工具来签名，signapk的源代码是在"build\tools\signapk"下，这时得为下面的编译工作做些准备： 
+<1>、编译jar 
+命令行cd到signapk.java代码目录下， 
+javac signapk.java 
+获取SignApk$SignatureOutputStream.class和SignApk.class 
+
+建立目录s\com\android\signapk,将两个class文件放入目录下 
+jar cvfm signapk.jar SignApk.mf -C s\ . 
+注意："s\"后面的"."前面有空格 
+生成signapk.jar文件，得到了Android提供的签名程序signapk.jar 
+<2>、用目标系统的platform密钥签名 
+将platform.pk8和platform.x509.pem文件复制到"D:\myandroid_mx27\build\tools\signapk"目录下，即signapk.jar和SignApk.mf所在的目录。 
+java -jar signapk.jar platform.x509.pem platform.pk8 D:\ClockSetting.apk D:\ClockSettingSigned.apk 
+我的未签名（ClockSetting.apk）和已签名(ClockSettingSigned.apk)apk文件都放在D盘,这样就得到了用Android源码编译的文件。 
+
+<3>、打开真机，安装： 
+adb connect IP:Port (IP为真机IP地址，Port为端口) 
+adb install D:/ClockSettingSigned.apk

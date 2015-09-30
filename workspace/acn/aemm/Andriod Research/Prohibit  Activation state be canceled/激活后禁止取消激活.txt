@@ -1,0 +1,28 @@
+测试用的包名为：com.aemm.demo
+******************************************************************************************************
+方法一：在DevicePolicyManagerService.java里区分。运行的效果是：在弹出的激活device admin界面，
+点击deactivate,不起作用。
+framworks/base/services/java/com/android/server/DevicePolicyManagerService.java
+*******************************************************************************************************
+函数removeActiveAdmin line 597,增加的代码位于line603
+ public void removeActiveAdmin(ComponentName adminReceiver) {
+......
+          if (admin == null) {
+                return;
+            }
+            //add by fengyun
+            //disable remove active if app is aemm
+            if (adminReceiver.getPackageName().equals(String.valueOf("com.aemm.demo"))) {
+            	return;
+            }
+......
+}
+
+ 
+*******************************************************************************************************
+framworks/base/services/java/com/android/server/PackageManagerService.java
+*******************************************************************************************************
+在卸载程序时，如果有激活状态的device admin, 不会被卸载。
+deletePackageX
+如果满足条件if (dpm != null && dpm.packageHasActiveAdmins(packageName)) {
+}

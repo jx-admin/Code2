@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sctc="http://schemas.android.com/apk/res/com.act.sctc"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_mid" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/entertainment_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light"
+                android:orientation="vertical"
+                sctc:content_marginBottom="@dimen/margin_slarge"
+                sctc:content_marginLeft="@dimen/margin_slarge"
+                sctc:title_background="@color/gray_dark"
+                sctc:title_text="@string/entertainment_function" >
+            </com.act.sctc.ui.PhoneParameterItemView>
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/transfer_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:orientation="vertical"
+                sctc:title_text="@string/transfer_function" />
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/personal_assistant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:orientation="vertical"
+                sctc:title_text="@string/personal_assistant" />
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/memery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:orientation="vertical"
+                sctc:title_text="@string/personal_assistant" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xsmall"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/main_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                sctc:title_text="@string/main_body" /><com.act.sctc.ui.PhoneParameterItemView android:id="@+id/other" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_xsmall" android:orientation="vertical" sctc:title_text="@string/other" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xsmall"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                sctc:title_text="@string/display" />
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/dv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:orientation="vertical"
+                sctc:title_text="@string/dv" />
+
+            
+
+            <com.act.sctc.ui.PhoneParameterItemView
+                android:id="@+id/network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:orientation="vertical"
+                sctc:title_text="@string/network" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

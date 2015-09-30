@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.mbanking.manager.view.TimeSelector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_selector"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:weightSum="1" >
+
+            <ImageView
+                android:id="@+id/timescale_img_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/timescalebar_horizontal_left" />
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/timescale_bar_horizontal_center" />
+
+            <ImageView
+                android:id="@+id/timescale_img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/timescalebar_horizontal_right" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/time_item_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</com.act.mbanking.manager.view.TimeSelector>

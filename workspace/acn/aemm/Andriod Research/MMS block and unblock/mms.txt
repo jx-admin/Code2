@@ -1,0 +1,159 @@
+下面是一篇网上的文章。里面描述了mms是如何发送的。其中第二步和第三步是可以禁止调用的点。
+
+
+MMS的收发操作借助于手机的短信机制，实际收发过程需要网络的APN支持，使用特定的APN接入点实现MMS数据的真实发送和接收；
+源码流程
+
+1）Telephpony.java getOrCreateThreadId()函数：
+
+目录：\frameworks\base\core\java\android\provider\
+
+说明：这个函数根据接收者列表和未保存的消息返回一个线程ID，如果这个消息开始一个新的线程，那么函数分配一个线程ID，否则返回一个适当的已经存在的线程ID；
+
+2）MmsMessageSender.java sendMessage()函数：
+
+目录：\packages\apps\mmsrc\com\android\mms\transaction\
+
+说明：对Mms进行封包
+
+3）再一次调用第一步函数
+
+4）ConnectivityService.java startUsingNetworkFeature()函数：
+
+目录：\framework\baseervices\java\com\androiderver\
+
+说明：该函数为实现Mms网络连接的关键函数，下面我们详细分析：
+
+A、enforceChangePermission()：判断调用的进程是否具有操作权限，如果不具有，抛出一个SecurityException异常，并强制准许权限
+
+B、ConnectivityManager.isNetworkTypeValid(networkType)来判断networkType是否合法，如果不合法返回一个APN_REQUEST_FAILED，
+
+在这里用到了最重要的ConnectivityManager类：
+
+public class ConnectivityManager定义在\frameworks\base\core\java\android\net的ConnectivityManager.java里，其主要作用为：
+
+1、监视网络连接，如WIFI、GPRS、UMTS等
+
+2、当网路连接出现变化的时候，发送广播intents
+
+3、当一个网络连接丢失之后，尝试连接另一个网络
+
+4、为App提供粗粒度、细粒度的有效网络状态查询
+
+C、FeatureUser f = new FeatureUser(networkType feature binder);
+
+新建一个FeatureUser类变量，该类实现：当调用进程died时发送一个Notice，这样就可以自我老化
+
+D、int usedNetworkType = networkType;
+
+if(networkType == ConnectivityManager.TYPE_MOBILE) {
+
+if (TextUtils.equals(feature Phone.FEATURE_ENABLE_MMS)) {
+
+usedNetworkType = ConnectivityManager.TYPE_MOBILE_MMS;
+
+} else if (TextUtils.equals(feature Phone.FEATURE_ENABLE_SUPL)) {
+
+usedNetworkType = ConnectivityManager.TYPE_MOBILE_SUPL;
+
+} else if (TextUtils.equals(feature Phone.FEATURE_ENABLE_DUN)) {
+
+usedNetworkType = ConnectivityManager.TYPE_MOBILE_DUN;
+
+} else if (TextUtils.equals(feature Phone.FEATURE_ENABLE_HIPRI)) {
+
+usedNetworkType = ConnectivityManager.TYPE_MOBILE_HIPRI;
+
+}
+
+}
+
+这段代码获取使用的网络类型；
+
+E、NetworkStateTracker network = mNetTrackers[usedNetworkType];
+
+NetworkStateTracker类在NetworkStateTracker.java里：每个子类保持跟踪一个网络接口的连接状态，一个网络的状态信息由一个Tracker类保持，基类管理network-type-independent网络状态
+
+F、mFeatureUsers.add(f);
+
+列表操作，将f添加到列表的end
+
+G、if (!mNetRequestersPids[usedNetworkType].contains(currentPid)) {
+
+// this gets used for per-pid dns when connected
+
+mNetRequestersPids[usedNetworkType].add(currentPid);
+
+}
+
+判断网络操作需要的Pid是否包含当前Pid，如果不包含就添加进去
+
+H、mHandler.sendMessageDelayed(mHandler.obtainMessage(
+
+NetworkStateTracker.EVENT_RESTORE_DEFAULT_NETWORK
+
+f) getRestoreDefaultNetworkDelay());
+
+消息发送，问题：消息的Handle函数也在该文件本地，？
+
+I、 if ((ni.isConnectedOrConnecting() == true) &&
+
+!network.isTeardownRequested()) {
+
+if (ni.isConnected() == true) {
+
+// add the pid-specific dns
+
+Log.d(TAG "fanyl test ++++ before handleDnsConfigurationchange");
+
+handleDnsConfigurationchange();
+
+if (DBG) Log.d(TAG "special network already active");
+
+return Phone.APN_ALREADY_ACTIVE;
+
+}
+
+if (DBG) Log.d(TAG "special network already connecting");
+
+return Phone.APN_REQUEST_STARTED;
+
+}
+
+这里判断网络是正在连接还是已经连接完成，如果是已经连接完成，就去设置Dns，并返回already状态
+
+J、network.reconnect()
+
+如果网络不是已经连接完成的状态的话，这里触发一个重新连接，直到网络状态变成isConnected；
+
+5）接下来的操作存在于DataConnectionTracker.java里：
+
+public synchronized int enableApnType(String type)：
+
+该函数确保用指定的类型连接APN，成功返回APN_ALREADY_ACTIVE或者APN_REQUEST_STARTED
+
+private void setEnabled(int id boolean enable)：
+
+发送EVENT_ENABLE_NEW_APN事件
+
+protected synchronized void onEnableApn(int apnId int enabled)
+
+该实例主要功能是判断目前是enable还是disable APN，如果是enable的话，调用onEnableNewApn();实现enable APN，如果是disable的话，根据enabledCount，onCleanUpConnection关闭APN或者改为默认连接
+
+6）public void handleMessage(Message msg)，ConnectivityService.java里
+
+进入到对事件EVENT_STATE_CHANGED的处理，state= CONNECTED old= CONNECTING reason= apnChanged apnTypeList= mms，应该是最后调用了handleConnect(info);发送一个广播事件
+
+7）MobileDataStateTracker.java：MobileDataStateReceiver类的public void onReceive(Context context Intent intent)函数里处理case CONNECTED处理；调用setDetailedState（NetworkStateTracker类实例）发送了EVENT_STATE_CHANGED事件
+
+8）然后又跳回ConnectivityService.java里的handleMessage函数EVENT_STATE_CHANGED事件的CONNECTED状态处理
+
+9）handleConnect里最后调用updateNetworkSettings（实现在NetworkStateTracker类里），并发送sendConnectedBroadcast(info);广播事件
+
+10） ConnectivityService.java handleDnsConfigurationchange配置DNS信息，并在handleConnect函数调用addPrivateDnsRoutes添加路由信息
+
+11） 接下来调用了GpsLocationProvider.java里的updateNetworkState和runLocked，原因不明？
+
+12） 接下来返回去调用startUsingNetworkFeature（ConnectivityService.java），又一次add dns？，然后返回APN_ALREADY_ACTIVE状态
+
+13） ensureRouteToHost()(/packages/apps/Mms/src/com/android/mms/transaction/Transaction.java)调用了ConnectivityManager类里的requestRouteToHost

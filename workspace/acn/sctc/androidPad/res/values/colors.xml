@@ -1,0 +1,48 @@
+<resources>
+
+    <color name="halp_transparent">#a000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="product_info_price_color">#ff3093EB</color>
+    <color name="table_bolder_color">#ff797979</color>
+    <color name="red">#ffff2222</color>
+    <!-- phone_info -->
+    <color name="tab1">#b23b98e6</color>
+    <color name="tab2">#b22d85cf</color>
+    <color name="tab3">#b20669bc</color>
+    <color name="tab4">#b200579f</color>
+    <color name="tab5">#b2024a87</color>
+    <color name="tab6">#b2012c79</color>
+    
+    <color name="menu_l">#57ADF6</color>
+    <color name="menu_1">#3B98E6</color>
+    <color name="menu_2">#2D85CF</color>
+    <color name="menu_r">#0769BC</color>
+    <color name="gray_dark">#BCC7C9</color>
+    <color name="gray_light">#D6E1E3</color>
+
+    <!-- set meal color -->
+    <color name="set_meal_title">#ff00CCCC</color>
+    <color name="setmeal_seleted_color">#ff00CCCC</color>
+    <color name="transparency_color">#00000000</color>
+    <color name="setmeal_list_item_dark">#EDF6FB</color>
+    <color name="setmeal_list_item_text_color">#4A4A4A</color>
+    <color name="setmeal_title_blue">#2d85cf</color>
+    <color name="setmeal_title_yellow">#ff8a00</color>
+    <color name="vs_yellow">#ffb053</color>
+    <color name="vs_title_yellow">#FFCF49</color>
+    <color name="vs_title_text_color">#ffffff</color>
+    <color name="vs_yellow_dark">#FF8A00</color>
+    <color name="dark_light">#dcdcdc</color>
+    <color name="dark">#E3E3E3</color>
+    <color name="blue_dark">#0669BC</color>
+    <color name="blue_light">#16C0FF</color>
+    <color name="yellow">#F69B0C</color>
+    <color name="white">#fefefe</color>
+    <color name="blue">#06B0EE</color>
+
+    <!-- phone product item -->
+    <color name="phone_product_item_name">#4a4a4a</color>
+    <color name="phone_product_item_blue">#2d85cf</color>
+    <color name="phone_product_item_original_price">#767676</color>
+
+</resources>

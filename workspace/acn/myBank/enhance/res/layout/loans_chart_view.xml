@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.mbanking.view.LoansChartView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bank="http://schemas.android.com/apk/res/com.act.mbanking"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    bank:x_axis_paint_width="1px"
+    bank:x_axis_value_text_size="12sp"
+    bank:y_axis_paint_width="1px"
+    bank:y_axis_value_text_size="12sp" />
+

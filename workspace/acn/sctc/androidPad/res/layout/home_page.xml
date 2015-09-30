@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/title_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_mid"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_weight="622"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="424"
+            android:gravity="center_horizontal" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_circle_frame" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/page_index_circle_height"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="@null"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal" >
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/page_circle_index_focus" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="166"
+            android:baselineAligned="false" >
+
+            <LinearLayout
+                android:id="@+id/hight_video_lin"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/home_small_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#ff0000"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_small_video" />
+
+                        <TextView
+                            android:id="@+id/home_small_video_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#01c756"
+                            android:paddingLeft="@dimen/margin_xlarge"
+                            android:text="@string/hight_video"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_large" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_circle_frame_little" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fttx_lan_lin"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/home_small_fttx_lan"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#ff0000"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_small_fttx_lan" />
+
+                        <TextView
+                            android:id="@+id/home_small_fttx_lan_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ff8a00"
+                            android:paddingLeft="@dimen/margin_xlarge"
+                            android:text="@string/fttx_lan"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_large" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_circle_frame_little" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smartphone_lin"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/home_small_smartphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#ff0000"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/home_small_smartphone" />
+
+                        <TextView
+                            android:id="@+id/home_small_smartphone_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#2d85cf"
+                            android:paddingLeft="@dimen/margin_xlarge"
+                            android:text="@string/smartphone"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_large" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_circle_frame_little" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

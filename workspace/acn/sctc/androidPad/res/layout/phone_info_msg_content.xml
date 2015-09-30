@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="三星 GALAXY NOTE3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/text_xmiddle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:lines="3"
+            android:text="新一代机皇降临！真正超值赠品大礼包等你拿新老用户购买合约机即可享受存200元得500元话费"
+            android:textColor="#ff8a00"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="@string/select_color" />
+
+        <GridView
+            android:id="@+id/colors_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:numColumns="3"
+            android:orientation="vertical" >
+        </GridView>
+
+        <TextView
+            android:id="@+id/textSetMeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/select_setmeal_contract_phone_pls" />
+
+        <Button
+            android:id="@+id/select_setmeal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_dark_yellow_radius_selector"
+            android:text="@string/click_select_setmeal"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/select_setmeal_contract_phone_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/select_setmeal_pls" />
+
+        <Button
+            android:id="@+id/select_setmeal_contract_phone_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_dark_yellow_radius_selector"
+            android:text="@string/click_select_contract_phone_setmeal"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/if_select_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用合约" />
+
+            <Switch
+                android:id="@+id/if_select_contract_sth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/if_select_contract_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_to_shopping_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:background="@drawable/add_to_shopping_car_selector"
+        android:text="@string/add_to_shoping_cart"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/select_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/blue_dark_yellow_selector"
+        android:paddingBottom="@dimen/margin_xsmall"
+        android:paddingLeft="@dimen/margin_xlarge"
+        android:paddingRight="@dimen/margin_xlarge"
+        android:paddingTop="@dimen/margin_xsmall"
+        android:text="@string/ok"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

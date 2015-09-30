@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_normal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/info_tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="Dual Camera 双镜头拍摄"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/info_tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="Sound 和 Shot 留声拍摄"
+                android:textColor="#444444"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/info_tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="Cinema Photo 动态图片"
+                android:textColor="#888888"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/info_tv_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="Air View 浮窗预览"
+                android:textColor="#bbbbbb"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/phone_img1"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_weight="4" >
+
+        <ImageView
+            android:id="@+id/phone_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/phone_img3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/phone_img4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/color_menulayout"
+        android:layout_width="fill_parent"
+        android:layout_height="39dip"
+        android:fadingEdge="@null"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/menu_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="130dip"
+                android:layout_height="39dip"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/color_select_bk" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

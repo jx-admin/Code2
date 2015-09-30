@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <stroke
+                android:width="1px"
+                android:color="#C7D9F1" />
+
+            <corners android:radius="5.0dip" />
+        </shape>
+    </item>
+    <item
+        android:left="1px"
+        android:right="1px"
+        android:top="1px">
+
+        <!-- 在实际使用中我发现1dp达不到显示效果，而2dp正好可以显示边框 -->
+        <shape android:shape="rectangle" >
+            <solid android:color="#B4C4D4" />
+
+            <corners android:radius="5.0dip" />
+        </shape>
+    </item>
+
+</layer-list>

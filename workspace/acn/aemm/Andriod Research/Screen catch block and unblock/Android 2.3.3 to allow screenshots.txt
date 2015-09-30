@@ -1,0 +1,7 @@
+Android 2.3.3 to allow screenshots without rooting
+By Jerry Hildenbrand   28 Feb 2011 8:40 pm 
+
+Changes in the Android 2.3.3 Gingerbread source will allow applications to take screenshots without rooting your phone.  We've always been able to take screenshots using the SDK and the ddms utility (which you can see above), and some third-party manufacturer skins have enabled it -- both accidentally and on purpose. But with Android 2.3.3 it appears that applications will be able to do it without rooting on stock Android.  This is because of some changes in the way the SurfaceFlinger service handles what it captures from the framebuffer.  For more info, have a look here.  It's something that many users have been requesting, and security issues aside, something long available on most other smartphone platforms. (Wave to your screenshot-less Windows Phone friends, everybody!)
+
+Of course we have to wait for 2.3.3 to filter down to everyone before we see apps take advantage of this for most phones.  But if you've rooted and are already rocking Gingerbread, it shouldn't be long before your favorite developer integrates this and any other small tweaks that come with the latest version.  Then again, you can use any of the methods on the Market to capture your screen if you're already rooted.  So goes Android's circle of life, I guess.  Hopefully, manufacturers get 2.3.3 pushed out soon and we all can enjoy. 
+

@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.+'
+    }
+}
+
+ext {
+    compileSdkVersion = 19
+    buildToolsVersion = "20.0.0"
+}
+
+def isReleaseBuild() {
+    return version.contains("SNAPSHOT") == false
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}

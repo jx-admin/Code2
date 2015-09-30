@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- app item -->
+<LinearLayout android:id="@+id/app_item_lin"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="wrap_content"
+	android:orientation="vertical" android:gravity="center">
+
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+		<FrameLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<ImageView android:src="@drawable/icon"
+					android:layout_width="@dimen/app_icon_size"
+					android:layout_height="@dimen/app_icon_size" android:id="@+id/icon_iv"
+					android:layout_marginLeft="@dimen/edit_half"
+					android:layout_marginRight="@dimen/edit_half"
+					android:layout_marginTop="@dimen/edit_half" android:scaleType="centerInside">
+				</ImageView>
+			</LinearLayout>
+			<ImageView android:id="@+id/edit_iv" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/del"
+				android:layout_gravity="right" android:visibility="gone"></ImageView>
+			<ProgressBar android:layout_width="@android:dimen/app_icon_size"
+				android:layout_height="@dimen/app_item_download_progressbar_h"
+				style="?android:attr/progressBarStyleHorizontal" android:id="@+id/load_pb"
+				android:paddingRight="@dimen/download_pb_lr_margin"
+				android:paddingLeft="@dimen/download_pb_lr_margin"
+				android:layout_marginBottom="@dimen/download_pb_d_margin"
+				android:layout_gravity="center_horizontal|bottom"
+				android:visibility="gone" />
+		</FrameLayout>
+	</LinearLayout>
+	<TextView android:id="@+id/name_tv" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/icon_name_t_margin" android:gravity="center"
+		android:singleLine="true" android:text="应用图标应用图标">
+	</TextView>
+</LinearLayout>

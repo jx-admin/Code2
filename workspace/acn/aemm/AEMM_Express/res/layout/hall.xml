@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+	<FrameLayout android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout android:id="@+id/hall_linear"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:background="@drawable/bg" android:orientation="vertical">
+			<RelativeLayout android:layout_width="match_parent"
+				android:layout_height="@dimen/area_install_h" android:layout_weight="1"
+				>
+				<LinearLayout android:id="@+id/linear_sl"
+					android:layout_width="match_parent" android:layout_height="match_parent"
+					android:orientation="vertical">
+					<com.android.accenture.aemm.express.app.ScrollLayout
+						android:id="@+id/installed_sl" android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:visibility="gone">
+					</com.android.accenture.aemm.express.app.ScrollLayout>
+				</LinearLayout>
+				<Gallery android:id="@+id/installed_gl" 
+					android:layout_width="match_parent" android:layout_height="match_parent"
+					android:gravity="center_horizontal"></Gallery>
+				<LinearLayout android:id="@+id/installed_index_linear"
+					android:layout_width="wrap_content"	android:layout_height="@dimen/index_size"
+					android:layout_marginBottom="@dimen/index_margin_bottom"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentBottom="true" android:gravity="center_vertical" />
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="match_parent"
+				android:layout_height="@dimen/area_uninstall_h"
+				android:layout_weight="1" android:orientation="vertical"
+				>
+				<LinearLayout android:id="@+id/uninstalled_index_linear" android:layout_width="wrap_content"
+					android:layout_height="@dimen/index_size"
+					android:layout_alignParentBottom="true"
+					android:layout_marginBottom="@dimen/index_margin_bottom"
+					android:layout_centerHorizontal="true" android:gravity="center_vertical"
+					/>
+					<LinearLayout
+					android:layout_width="match_parent" android:layout_height="match_parent"
+					android:orientation="vertical">
+					<com.android.accenture.aemm.express.app.ScrollLayout
+						android:id="@+id/uninstalled_sl" android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:visibility="gone">
+					</com.android.accenture.aemm.express.app.ScrollLayout>
+				</LinearLayout>
+				<Gallery android:id="@+id/uninstalled_gl"
+					android:layout_width="match_parent" android:layout_height="match_parent" 
+					/>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				>
+				<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<com.android.accenture.aemm.express.HallMessageManager
+					android:id="@+id/message_flipper" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:flipInterval="2000"
+					android:layout_marginTop="@dimen/message_margin_t"
+					android:layout_marginBottom="@dimen/message_margin_d"
+					android:layout_marginLeft="@dimen/message_margin_l"
+					android:layout_marginRight="@dimen/message_margin_r">
+				</com.android.accenture.aemm.express.HallMessageManager>
+				</LinearLayout>
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_marginTop="@dimen/updata_btn_margin_t"
+					android:layout_marginBottom="@dimen/updata_btn_margin_d"
+					android:layout_marginRight="@dimen/updata_btn_margin_r">
+					<FrameLayout android:layout_gravity="center|center"
+						android:id="@+id/locateLayout" android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+						<ImageButton android:layout_gravity="center"
+							android:id="@+id/updata_btn" android:background="@drawable/updata_btn_bk"
+							android:layout_width="wrap_content" android:layout_height="wrap_content" />
+						<LinearLayout android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+							<LinearLayout android:layout_width="wrap_content"
+							android:layout_height="wrap_content" >
+							<ImageView android:id="@+id/dup"
+								android:background="@drawable/updata_dstop" android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="8dip"
+								android:layout_marginTop="7dip"
+								android:visibility="gone"/>
+							<ImageView android:layout_gravity="center" android:id="@+id/dpress"
+								android:background="@drawable/updata_dpress" android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:layout_marginLeft="8dip"
+								android:layout_marginTop="5dip"
+								android:visibility="gone"/>
+							<ImageView android:layout_gravity="center" android:id="@+id/drun"
+								android:background="@drawable/updata_drunning" android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:layout_marginLeft="8dip"
+								android:layout_marginTop="5dip"
+								android:visibility="gone" />
+							</LinearLayout>
+							<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+							android:gravity="center" 
+								android:layout_marginTop="7dip" android:textColor="#000" android:textSize="12sp" android:text="@string/updata_by_hand" android:layout_weight="1"/>
+						</LinearLayout>
+					</FrameLayout>
+				</LinearLayout>
+			</RelativeLayout>
+		</LinearLayout>
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="match_parent" android:layout_weight="1">
+				<Button android:id="@+id/add_app_btn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="添加app" android:visibility="gone"></Button>
+				<Button android:id="@+id/del_app_btn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="删除app" android:visibility="gone"></Button>
+					<Button android:id="@+id/unable_app_btn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="XX" android:visibility="gone"/>
+			</LinearLayout>
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="match_parent" android:layout_weight="1">
+				<Button android:id="@+id/add_apk_btn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="添加apk" android:visibility="gone"></Button>
+				<Button android:id="@+id/del_apk_btn" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="删除apk" android:visibility="gone"></Button>
+			</LinearLayout>
+		</LinearLayout>
+
+	</FrameLayout>
+</LinearLayout>

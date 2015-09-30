@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhan_dui.animetaste"
+    android:versionCode="18"
+    android:versionName="1.5.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+    
+    <application
+		android:name="com.activeandroid.app.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/at_icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/ab_icon"
+        android:theme="@style/AppTheme" >
+	    <meta-data android:name="AA_DB_NAME" android:value="Anime.db"></meta-data>
+	    <meta-data android:name="AA_DB_VERSION" android:value="2"></meta-data>
+
+
+
+        <!-- ShareSDK开始 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="Adapter"
+                android:value="cn.sharesdk.demo.MyAdapter" />
+        </activity>
+        <!-- ShareSDK结束 -->
+
+
+        <!-- 友盟开始 -->
+
+	    <service
+			    android:name="com.umeng.common.net.DownloadingService"
+			    android:process=":DownloadingService" >
+	    </service>
+	    <activity
+			    android:name="com.umeng.update.UpdateDialogActivity"
+			    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+	    </activity>
+
+
+	    <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5219d70e56240bd6ed00fa68" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="XiaoMi" />
+        <!-- 友盟结束 -->
+        <activity
+            android:name="com.zhan_dui.animetaste.StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+         <activity
+            android:name=".FavoriteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.zhan_dui.animetaste.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.zhan_dui.animetaste.LoadActivity"
+            android:theme="@style/LoadActivityTheme"
+            android:screenOrientation="portrait" >
+
+	        <!-- 豌豆荚 -->
+	        <intent-filter>
+		        <action android:name="android.intent.action.VIEW"></action>
+		        <category android:name="android.intent.category.DEFAULT"></category>
+		        <category android:name="android.intent.category.BROWSABLE"></category>
+		        <data android:scheme="animetaste" android:host="play"/>
+	        </intent-filter>
+	        <!-- 豌豆荚 -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhan_dui.animetaste.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhan_dui.animetaste.DownloadActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zhan_dui.animetaste.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+	    <activity
+			android:name="com.zhan_dui.animetaste.AdvertiseActivity"
+			android:uiOptions="splitActionBarWhenNarrow"
+			android:screenOrientation="portrait">
+		    <meta-data android:name="android.support.UI_OPTIONS"
+		               android:value="splitActionBarWhenNarrow" />
+	    </activity>
+        <activity android:name=".BrowserPlayerActivity"></activity>
+
+        <service android:name="com.zhan_dui.services.DownloadService" android:exported="false"></service>
+        <receiver android:name="com.zhan_dui.download.alfred.defaults.MissionActionReceiver"></receiver>
+    </application>
+
+</manifest>

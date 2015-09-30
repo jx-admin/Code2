@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.act.mbanking.view.HorizontalChartView -->
+<com.act.mbanking.view.HorizontalChartView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.act.mbanking"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="6" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/title_bg_horizontal" >
+
+        <RadioGroup
+            android:id="@+id/left_right_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/left_radio"
+                style="@style/radio_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_filter_left_selector"
+                android:button="@null"
+                android:paddingLeft="@dimen/padding_small_mini"
+                android:paddingRight="@dimen/padding_small_mini"
+                android:text="All assets" />
+
+            <RadioButton
+                android:id="@+id/right_radio"
+                style="@style/radio_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1px"
+                android:background="@drawable/radio_filter_right_selector"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="@dimen/padding_small_mini"
+                android:paddingRight="@dimen/padding_small_mini"
+                android:text="Accounts" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/horizontal_title_big"
+            style="@style/total_money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Total account 100.000$" />
+
+        <TextView
+            android:id="@+id/horizontal_title_small"
+            style="@style/update_on_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/horizontal_title_big"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@+id/horizontal_title_big"
+            android:text="Updated on 11/11/11" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/chart_and_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="4"
+        android:background="@drawable/graph_bg_horizontal"
+        android:weightSum="5" >
+
+        <com.act.mbanking.view.ChartView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:bank="http://schemas.android.com/apk/res/com.act.mbanking"
+            android:id="@+id/chart_layout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_margin="@dimen/padding_small"
+            bank:x_axis_paint_width="1px"
+            bank:x_axis_value_text_size="12sp"
+            bank:y_axis_paint_width="1px"
+            bank:y_axis_value_text_size="12sp" />
+
+        <LinearLayout
+            android:id="@+id/list_layout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dip"
+                android:listSelector="@drawable/list_item_style">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_selector_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/timescale_bg_horizontal"
+        android:weightSum="4.5" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/time_selector"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            layout="@layout/time_selector" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</com.act.mbanking.view.HorizontalChartView>

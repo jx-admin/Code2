@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="SpinnerAppTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/apptheme_spinner_background_holo_dark</item>
+        <item name="android:dropDownSelector">@drawable/apptheme_list_selector_holo_dark</item>
+    </style>
+
+    <style name="SpinnerDropDownItemAppTheme" parent="android:Widget.DropDownItem.Spinner">
+        <item name="android:checkMark">@drawable/apptheme_btn_radio_holo_dark</item>
+    </style>
+
+    <style name="TranslucentActionBar" parent="@style/Widget.AppCompat.Base.ActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:icon">@drawable/ic_launcher</item>
+        <item name="titleTextStyle">@style/titleStyle</item>
+    </style>
+
+    <style name="titleStyle" parent="@style/TextAppearance.AppCompat.Widget.Base.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<resources>
+	
+	    <string name="app_name">企业应用大厅</string>
+	    <string name="description">企业移动解决方案</string>
+	    <string name="installed">已安装</string>
+	    <string name="uninstalled">未安装</string>
+	    <string name="sure">确定</string>
+	    <string name="cancel">取消</string>
+	    <string name="ignore">忽略</string>
+	    <string name="open">打开</string>
+	    <string name="alert">提示</string>
+	    <string name="update">更新</string>
+	    <string name="update2">升级</string>
+	    <string name="app_disable">该应用已禁止启动</string>
+	    <string name="install_disable">该设备禁止安装程序</string>
+	    <string name="new_app_load">新应用下发</string>
+	    <string name="hall_updata_title">企业大厅需要更新</string>
+	    <string name="hall_updata_content">是否更新？</string>
+	    <string name="app_unexsit">该程序不存在或被卸载,是否移到未安装区？</string>
+	
+	    <!-- updata -->
+	    <string name="updata_executing">正在检查更新</string>
+	    <string name="network_erro">网络异常</string>
+	    <string name="update_over">更新结束</string>
+	    <string name="update_failed">更新失败！</string>
+	    <string name="updata_app_push">您有%d个新增应用可以安装</string>
+	    <string name="passpolicy">密码策略</string>
+	    <string name="rootcertificate">CA 证书</string>
+	    <string name="pkcscertificate">PSK 证书</string>
+	    <string name="restrictions">限制</string>
+	
+	    <!-- login -->
+	    <string name="name_str">用户名</string>
+	    <string name="password_str">密码</string>
+	    <string name="imei_str">设备标识</string>
+	    <string name="login_str">登录</string>
+	    <string name="cancel_str">取消</string>
+	    <string name="inputname_hint">请输入用户名</string>
+	    <string name="inputpassword_hint">请输入密码</string>
+	    <string name="inputimei_hint">请输入设备标识</string>
+	    <string name="inputimsi_hint">请插入SIM卡</string>
+	    <string name="selectimsi">IMSI登录</string>
+	    <string name="askinputuser">无法取得IMSI，请输入用户名登录</string>
+	    <string name="server_limit_hint">登录被拒绝：在线用户已到达阈值。</string>
+	    <string name="server_address_error">地址导航失败</string>
+	    <string name="domainerr">域名输入错误。</string>
+	    <string name="login_error_notlogin">设备没有登录。</string>
+	    <string name="login_error_limit">超过流量限制</string>
+	    <string name="logout_fail">退出失败!</string>
+	    <string name="service_fail">服务器通信异常!</string>
+	
+	    <!-- message -->
+	    <string name="newapp">有新应用更新</string>
+	    <string name="newapp_client">你有更新</string>
+	    <string name="lock_client">设备已锁定，解锁密码请联系管理员</string>
+	    <string name="aemm_device_admin">企业应用大厅</string>
+	    <string name="aemm_device_admin_description">企业应用大厅是移动设备上企业应用的管理控制程序。</string>
+	    <string name="device_showToast_onEnabled">设备管理：可用</string>
+	    <string name="device_showToast_onDisabled">设备管理：不可用</string>
+	    <string name="label">AEMM 账户</string>
+	    <string name="third_party_label">第三方账户</string>
+	    <string name="ui_activity_authenticating">正在登录\u2026</string>
+	    <string name="login_activity_loginfail_text_both">登录失败，请检查用户名和密码是否有效，或者网络是否畅通!</string>
+	    <string name="login_activity_loginfail_text_pwmissing">输入密码.</string>
+	    <string name="login_activity_loginfail_text_pwonly">请重新输入密码.</string>
+	    <string name="login_error_user_already_exist">用户已存在.</string>
+	    <string name="login_error_invalid_username_password">无效用户名或密码.</string>
+	    <string name="login_error_user_doesnot_exist">用户不存在.</string>
+	    <string name="login_error_device_doesnot_exist">设备不存在.</string>
+	    <string name="login_activity_newaccount_text">输入AEMM账户.</string>
+	    <string name="login_error_cancel_active">设备未激活，不能注册,请联系管理员</string>
+	    <string name="login_error_device_isregistered">设备为已注册状态，请联系设备管理员</string>
+	    <string name="audio_disabled">录音被禁用。</string>
+	    <string name="camera_disabled">相机被禁用。</string>
+	    <string name="sms_disabled">短信发送被禁用。</string>
+	    <string name="mms_disabled">彩信发送被禁用。</string>
+	    <string name="install_apk_disabled">安装应用程序被禁用。</string>
+	    <string name="dial_disabled">通话被禁用。</string>
+	    <string name="moreinfo">操作</string>
+	    <string name="msg">消息管理</string>
+	    <string name="update3">更新配置</string>
+	    <string name="userinfo">用户信息</string>
+	    <string name="psword">修改密码</string>
+	    <string name="derma">更换皮肤</string>
+	    <string name="moreitem">更多内容</string>
+	    <string name="title_activity_msg">消息管理</string>
+	    <string name="back">返回</string>
+	    <string name="del">删除</string>
+	    <string name="zero">没有消息</string>
+	    <string name="title_activity_msg_detail">消息详情</string>
+	    <string name="msgdtitle">标题：</string>
+	    <string name="mdpublisher">发布机构：</string>
+	    <string name="mdbusiness">业务类型：</string>
+	    <string name="mdlevel">级别：</string>
+	    <string name="mdtrange">开始时间：</string>
+	    <string name="mdtrange1">结束时间：</string>
+	    <string name="mdtype">类型：</string>
+	    <string name="mdstate">状态：</string>
+	    <string name="mddate">日期：</string>
+	    <string name="msgnum">你有%d条消息</string>
+	    <string name="mtinform">通知</string>
+	    <string name="mtpost">公告</string>
+	    <string name="mtplan">工作计划</string>
+	    <string name="mtenvent">待办信息提醒</string>
+	    <string name="mtother">自定义消息</string>
+	    <string name="mtunknow">未知</string>
+	    <string name="mtenvents0">未开始</string>
+	    <string name="mtenvents1">进行中</string>
+	    <string name="mtenvents2">已完成</string>
+	    <string name="mtenvents3">已推迟</string>
+	    <string name="oldpassword">旧密码:</string>
+	    <string name="msgretime">接收时间段</string>
+	    <string-array name="msgPlanState">
+	        <item>高</item>
+	        <item>普通</item>
+	        <item>低</item>
+	    </string-array>
+	    <string-array name="msgEventLevel">
+	        <item>未开始</item>
+	        <item>进行中</item>
+	        <item>已完成</item>
+	        <item>已推迟</item>
+	    </string-array>
+	    <string-array name="msgSendType">
+	        <item>网络</item>
+	        <item>短信</item>
+	        <item>电子邮件</item>
+	    </string-array>
+	        <string-array name="msgNoDate">
+	        <item>没有数据</item>
+	    </string-array>
+	    <string name="msgSendHint">消息推送方式</string>
+	    <string name="mtlev1">高</string>
+	    <string name="mtlev2">普通</string>
+	    <string name="mtlev3">低</string>
+	    <string-array name="msgBusType">
+	        <item>通用</item>
+	        <item>装维类</item>
+	        <item>资源类</item>
+	    </string-array>
+	    <string name="btNor">通用</string>
+	    <string name="btOpe">装维类</string>
+	    <string name="btRes">资源类</string>
+	    <string name="msgNew">新建消息</string>
+	    <string name="msgContent">内容:</string>
+	    <string name="msgSend">接收人:</string>
+	    <string name="msgAgree">审批人:</string>
+	    <string name="msgValid">有效期:</string>
+	    <string name="msgBegTime">开始接收时段:</string>
+	    <string name="msgEndTime">结束接收时段:</string>
+	    <string name="msgFormatFail">没有获得消息格式</string>
+	    <string name="msgStartHint">应用标识</string>
+	    <string name="msgSendErrorHint">不能为空</string>
+	    <string name="msgSendErrorHint2">没有信息格式，不能发送</string>
+	
+	    <!-- flow -->
+	    <string name="trafficlimitover">超出流量限制</string>
+	    <string name="accountlimitover">系统没有日历账户</string>
+	
+	    <!-- userInformation -->
+	    <string name="inputpwd">输入密码</string>
+	    <string name="userinfomation">个人信息</string>
+	    <string name="userNameSTR">用户名</string>
+	    <string name="emailSTR">邮箱</string>
+	    <string name="IMSTR">IM</string>
+	    <string name="addressSTR">通讯地址</string>
+	    <string name="userNameSTR_hint">用户名</string>
+	    <string name="emailSTR_hint">用户名@email.com</string>
+	    <string name="IMSTR_hint">文字文字文字</string>
+	    <string name="addressSTR_hint">文字文字文字文字文字文字</string>
+	
+	    <!-- repairUserinformation extends userInformation -->
+	    <string name="repairSTR">修改</string>
+	    <string name="finishSTR">完成</string>
+	
+	    <!-- Auth-code -->
+	    <string name="security_code">验证码</string>
+	    <string name="anser_quanstion">请回答下面问题:</string>
+	    <string name="what_is_capital">中国的首都是哪里？</string>
+	    <string name="beijing">北京</string>
+	    <string name="input_security_code">请输入下面的答案：</string>
+	    <string name="nextpice">看不清,换下一张</string>
+	    <string name="verify_error">验证码不正确</string>
+	
+	    <!-- passwordRepair -->
+	    <string name="repairwordSTR">修改密码</string>
+	    <string name="submitSTR">提交</string>
+	    <string name="oldwordSTR">原密码</string>
+	    <string name="newwordSTR">新密码</string>
+	    <string name="reinputSTR">再次输入新密码</string>
+	    <string name="pwd_cannot_null">请输入密码</string>
+	    <string name="double_pwd_unsame">两次新密码不一致</string>
+	
+	    <!-- change derma -->
+	    <string name="change_derma_str">修改皮肤</string>
+	    <string name="default_derma_str">默认皮肤</string>
+	    <string name="new_derma_str">新皮肤</string>
+	
+	    <!-- menu -->
+	    <string name="operator_str">操作</string>
+	    <string name="edit">编辑</string>
+	    <string name="app_manager">应用管理</string>
+	    <string name="msg_manager">消息管理</string>
+	
+	    <string-array name="menu_list">
+	        <item>检查更新</item>
+	        <item>个人信息</item>
+	        <item>修改密码</item>
+	        <item>消息管理</item>
+	        <item>发送消息</item>
+	        <item>更换皮肤</item>
+	        <item>签到</item>
+	        <item>日常工作安排</item>
+	        <item>应用管理</item>
+	        <item>注销用户</item>
+	    </string-array>
+	
+	    <!-- Coment -->
+	    <string name="app_snapshot">应用快照</string>
+	    <string name="conment_title">评论标题</string>
+	    <string name="conment">评论内容</string>
+	    <string name="app_coment">应用评论</string>
+	    <string name="downloading">正在下载。。。</string>
+	    <string name="getsnapshot_fail">快照获取失败~_~</string>
+	    <string name="conment_no_respond">提交失败：没有取到server答复</string>
+	    <string name="conment_xmlbuild_error">提交失败：上传格式出错</string>
+	    <string name="title_null">提交失败：标题为空</string>
+	    <string name="conment_null">提交失败：内容为空</string>
+	    <string name="conment_check_net">提交失败:请检查网络</string>
+	    <string name="conment_submit">已提交</string>
+		
+	    <!-- gps & photo -->
+	    <string name="gps_photo">GPS和拍照</string>
+	    
+	    <string name="userquit">正在擦除用户数据"</string>
+	    <string name="quiteHint">是否要删除用户配置,退出用户？</string>
+	    <string name="title_activity_send_msg">SendMsgActivity</string>
+	    <string name="msgValidHint">请输入有效期是几天</string>
+	    <string name="time">时间:</string>
+	    <string name="date">日期:</string>
+	    <string name="sendMessageHint">从服务获取消息格式</string>
+	    <string name="msgRetry">重试</string>
+	    <string name="msgDoSend">正在发送</string>
+	    <string name="msgTimeError">时间不对</string>
+	    <string name="msgSendFail">消息发送失败</string>
+	    <string name="msgSendTitle">消息发送</string>
+	    <string name="better">大于</string>
+	    <string name="less">小于</string>
+	    
+	    <!-- user -->
+	    <string name="repair_successful">修改成功</string>
+	    <string name="n500">服务器错误</string>
+		<string name="n401">客户端用户名不符合策略</string>
+		<string name="n402">新密码不符合密码策略</string>
+		<string name="n403">原密码不正确</string>
+		
+		<!--gpsCamera  -->
+		<string name="close">关闭</string>
+		<string name="sys_msg">系统消息</string>
+		<string name="no_photo">当前没有可上传的相片</string>
+		<string name="photo_uploading">相片正在上传中...</string>
+		<string name="photo_upload_successful">相片上传成功</string>
+		<string name="photo_upload_fail">相片上传失败</string>
+	</resources>

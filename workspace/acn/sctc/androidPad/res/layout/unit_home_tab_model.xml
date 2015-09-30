@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_xsmall"
+    android:paddingBottom="@dimen/margin_xsmall"  >
+
+    <TextView
+        android:id="@+id/itv_feature1_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dip"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/itv_feature1_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itv_feature1_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dip"
+        android:paddingBottom="14dip"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="158dip"
+        android:layout_height="94dip"
+        android:orientation="vertical" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tab_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

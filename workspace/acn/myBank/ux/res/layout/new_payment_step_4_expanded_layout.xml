@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- com.accenture.mbank.view.PayeeExpandedLayout -->
+<com.accenture.mbank.view.PayeeExpandedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium"
+    android:paddingTop="@dimen/padding_small" >
+
+    <Button
+        android:id="@+id/payees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/beneficiaries" >
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/payees_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bank_transfer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/bank_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/insert_name_and_surname"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/iban_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/enter_iban_code"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/bic_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/enter_bic_code"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/transfer_entry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/transfer_entry_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_medium" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/radio_button_selector"
+                android:paddingBottom="@dimen/radio_button_top_padding"
+                android:paddingLeft="@dimen/radio_button_text_padding"
+                android:paddingTop="@dimen/radio_button_top_padding"
+                android:text="@string/frank_account" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/radio_button_selector"
+                android:paddingBottom="@dimen/radio_button_top_padding"
+                android:paddingLeft="@dimen/radio_button_text_padding"
+                android:paddingTop="@dimen/radio_button_top_padding"
+                android:text="@string/income_house" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sim_top_up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/first_name_and_last_name"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/text_box_selector"
+            android:gravity="center"
+            android:hint="@string/operator"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prepaid_card_reloadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/my_card_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_my_card_selector" />
+
+        <EditText
+            android:id="@+id/beneficiary_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/first_name_and_last_name"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/text_box_selector"
+            android:hint="@string/cards_number"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/ad_to_beneficiaries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ad_to_beneficiaries" />
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/vertify_card_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_vertify_card_selector"
+        android:visibility="gone" />
+
+</com.accenture.mbank.view.PayeeExpandedLayout>

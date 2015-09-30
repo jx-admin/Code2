@@ -1,0 +1,32 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "19.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+        versionCode 4
+        versionName "0.2.0"
+    }
+
+}
+
+// If user has set EnhancedListView.signing in her gradle.properties
+// file and the path + ".gradle" exists, this script will be included.
+// Used to import signing config.
+if(project.hasProperty('EnhancedListView.signing')
+		&& new File(project.property('EnhancedListView.signing') + ".gradle").exists()) {
+	apply from: project.property('EnhancedListView.signing') + ".gradle";
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.+'
+    compile 'com.android.support:appcompat-v7:19.0.+'
+    compile project(':EnhancedListView')
+}

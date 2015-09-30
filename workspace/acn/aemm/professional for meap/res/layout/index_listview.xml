@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" android:background="@drawable/index_new_bg">
+	<TextView 
+	   android:id="@+id/index_title$tv"
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content" 
+       android:background="@drawable/index_top_title"
+       android:textSize="23sp"
+       android:gravity="center"
+       android:textColor="@color/white"
+       android:padding="10dip"
+       
+       >
+       </TextView>
+       <!--  android:background="@drawable/index_top_title" -->
+       
+	<ListView 
+	   android:id="@+id/index_mainpage$ls"
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content"
+       android:paddingLeft="5dip"
+       android:paddingRight="5dip"
+       android:focusable="true"
+       android:divider="@drawable/index_ls_dividerline"
+       android:cacheColorHint="#00000000" 
+      android:background="@drawable/index_list_bg"
+       android:layout_marginTop="0dip">
+	</ListView>
+		
+</LinearLayout>

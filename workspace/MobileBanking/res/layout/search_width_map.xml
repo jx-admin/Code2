@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.MapLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7" >
+
+    <EditText
+        android:id="@+id/search_input"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="3" >
+
+            <ImageButton
+                android:id="@+id/map_layer"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_branch_1" />
+
+            <ImageButton
+                android:id="@+id/my_location"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_branch_2" />
+
+            <ImageButton
+                android:id="@+id/show_items"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_branch_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enter_distance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_distance" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/distance_input"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/map_view_enable"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:background="#ffffff"
+        android:visibility="gone" >
+    </View>
+
+    <com.google.android.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:apiKey="0j6o_JEV9NhH5ECh04az9H2Mp_x7V6rllAglZqQ"
+        android:clickable="true"
+        android:enabled="true" />
+
+</com.accenture.mbank.view.MapLayout>

@@ -1,0 +1,264 @@
+Android资源文件
+
+资源是您在代码中使用到的并且在编译时被打包进您的应用程序的附加文件。Android支持多种不同的文件，包括XML、PNG和JPEG文件。XML文件的格式决定于其描述的内容。这些文件将描述文件支持的类型、语法或格式。
+
+处于加载效率的考虑，资源被从代码中分离出来，而且XML文件被编译进二进制代码中。字符串，类似的会被压缩存储为更经济的格式。处于这样或那样的原因，Android平台中会存在很多不同的资源和资源定义文件。
+
+
+
+?国际化（l18N）
+配合资源引用文档，Android提供了一套经济的资源处理技术。他转化了大量的资源信息，使Android在运行时无需了解文档的内容，仅仅在您需要的时候指导他在哪儿就可以了。
+
+资源这一节包含了与资源有关联的术语表和一系列使用资源的代码事例。更完整的Android资源指南请参看“资源”一章。
+
+Android资源系统保存所有与代码无关资源的存根。您可以使用Resources类访问您应用程序的资源；与应用程序相关联的资源实例可以通过Context.getResources()得到。
+
+一个应用程序的资源可以被构建系统在构建时编译进二进制的应用程序里。为了使用资源，您需要正确的初始化您应用程序中的资源树并且构建您的应用程序。在构建过程的部分，每个资源的标识被产生，您可以在代码中使用他们。这些标识允许编译器校验您应用程序中的代码和资源定义是否匹配。
+有关本章的其他细节请参见教程如何使用资源的部分。
+创建资源Android支持字符串，位图和许多其他类型的资源。每一种资源定义文件的语法和格式及保存的位置取决于其依赖的对象。通常，您可以通过三种文件创建资源：XML文件（除位图和原生文件外），位图文件（作为图片）和原生文件（所有其他的类型，比如声音文件）。事实上，这里有两种不同类型的XML文件，一种是作为资源被编译近应用程序，另一种怎是资源的描述，被aapt使用。下面的表格详细说明了这些XML文件的类型和结构。
+
+您可以在您项目res/目录下的适当子目录下创建和存储资源文件。Android使用资源编译器访问资源所在的子目录和格式化的文件。下面的表格列出了每一种资源的文件类型。参见“资源引用”一节可以了解关于对象、语法和格式方面的内容。
+
+
+
+ 资源类型
+ 
+res/anim
+ XML文件编译为桢序列动画或者自动动画对象。
+ 
+res/drawable
+ .png，9.png，.jpg文件被编译为Drawable资源子类型：
+
+使用Resources.getDrawable(id)可以获得资源类型
+
+?位图文件?9-patchs（可变位图文件） 
+res/layout
+ 资源编译为屏幕布局器。参见“布局器”一章
+ 
+res/values
+ XML 文件可以被编译为多种资源
+
+注意：不像其他res下的目录，这个目录可以包含多个资源描述文件。XML文件元素类型控制着这些资源被R类放置在何处。
+
+这些文件可以自定义名称。这里有一些约定俗成的文件。
+?arrays.xml 定义数组。?colors.xml 定义可绘制对象的颜色和字符串的颜色。使用Resources.getDrawable()和Resources.getColor()都可以获得这些资源。?dimens.xml 定义尺度。使用Resources.getDimension()可以获得这些资源?strings.xml 定义字符串（使用Resources.getString()或者更适合的Resources.getText()方法获得这些资源。Resources.getText()方法将保留所有用于描述用户界面样式的描述符，保持复杂文本的原貌。?styles.xml 定义样式对象 
+res/xml
+ 自定义的XML文件。这些文件将在运行时编译近应用程序，并且使用Resources.getXML()方法可以在运行时获取。
+ 
+res/raw
+ 自定义的原生资源，将被直接拷贝入设备。这些文件将不被压缩近您的应用程序。使用带有ID参数的Resources.getRawResource()方法可以获得这些资源，比如R.raw.somefilename。
+ 
+
+资源被最终编译近APK文件。Android创建包装类R，您可以用他找回资源。R包含一些与资源所在目录同名的子类。
+
+全局资源?很多资源都允许您定义颜色。Android接受web风格的颜色定义-一组十六进制的颜色值，按照以下序列排列：#RGB，#ARGB，#RRGGBB，#AARRGGBB。
+?所有的颜色都支持ALPHA通道，头两位十六进制数字指定透明度。0在ALPHA通道中表示全透明，默认值是不透明。
+使用资源      这一节讲述如何使用您所创建的资源，包括：
+·         在代码中使用资源 如何在代码中使用资源。
+·         如何引用其他资源中的资源 您可以从其他资源中引用资源。您可以重新使用资源内部的通用资源。
+·         支持资源更替 您可以在加载时依据语言、显示配置和主机硬件的不同指定不同的资源。
+在编译时，Android生成名为R的类。R包含您应用程序所用到的所有的类。这个类包含一些与res下子目录同名的子类。这些子类包含每一个您在资源文件中定义的资源的标识。这些资源标识可以在您的代码中引用。这里有一段简单的资源文件，包含一些文字，布局器和图片资源。
+
+注意：R类是自动生成的，并且它不能被手动修改。当资源发生变动时，它会自动修改。
+
+package com.android.samples;
+public final class R {
+    public static final class string {
+        public static final int greeting=0x0204000e;
+        public static final int start_button_text=0x02040001;
+        public static final int submit_button_text=0x02040008;
+        public static final int main_screen_title=0x0204000a;
+    };
+    public static final class layout {
+        public static final int start_screen=0x02070000;
+        public static final int new_user_pane=0x02070001;
+        public static final int select_user_list=0x02070002;
+
+    };
+    public static final class drawable {
+        public static final int company_logo=0x02020005;
+        public static final int smiling_cat=0x02020006;
+        public static final int yellow_fade_background=0x02020007;
+        public static final int stretch_button_1=0x02020008;
+
+    };
+};
+在代码中使用资源在代码中使用资源需要知道完整的资源ID和您的资源对象类型。下面是资源引用语法：
+
+R.resource_type.resource_name 或者 android.R.resource_type.resource_name
+
+resource_type是R类中保存制定类型资源的子类。resource_name是定义在XML文件中的资源名或者被其他文件类型所定义的资源文件名（无扩展名）每一类型的资源都依据其类型，被添加入某一指定的R子类；学习R子类的类型关系请参考资源引用一节。您的应用程序引用已被编译的资源时可以不带包名（比如R.resource_type.resource_name）。Android包含一个标准资源的序号，比如屏幕的样式和按钮的背景。引用这些资源，您必须使用带android的语法，比如android.R.drawable.button_background。
+下面是一些好的和不好的代码例子：
+// Load a background for the current screen from a drawable resource.this.getWindow().setBackgroundDrawableResource(R.drawable.my_background_image);// WRONG Sending a string resource reference into a // method that expects a string.this.getWindow().setTitle(R.string.main_title);// RIGHT Need to get the title from the Resources wrapper.this.getWindow().setTitle(Resources.getText(R.string.main_title));// Load a custom layout for the current screen.setContentView(R.layout.main_screen);// Set a slide in animation for a ViewFlipper object.mFlipper.setInAnimation(AnimationUtils.loadAnimation(this,         R.anim.hyperspace_in));// Set the text on a TextView object.TextView msgTextView = (TextView)findViewByID(R.id.msg);msgTextView.setText(R.string.hello_message); 引用资源
+一个属性值（或资源）同样可以引用资源。这种用法常在资源布局器文件中用于文字和图片（定义在其他文件中）。这种方法可以引用任何资源，包括颜色和整数。
+比如，如果我们有一个颜色资源，我们可以写一个布局器文件，在其中指定文本颜色和尺寸。
+<?xml version="1.0" encoding="utf-8"?><EditText id="text"    xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="fill_parent" android:layout_height="fill_parent"    android:textColor="@color/opaque_red"    android:text="Hello, World!" />注意，“@”前缀声明这是一个资源引用—随后的文本是以@[package:]type/name形式提供的资源名。在这个例子中我们不需要指明特定的包，因为我们在我们自己的包中引用。引用一个系统文件时，我们需要这样写：
+<?xml version="1.0" encoding="utf-8"?><EditText id="text"    xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="fill_parent" android:layout_height="fill_parent"    android:textColor="@android:color/opaque_red"    android:text="Hello, World!" />在其他的例子中您会经常看到使用资源引用实现本地化。
+<?xml version="1.0" encoding="utf-8"?>
+
+<EditText id="text"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+
+    android:textColor="@android:color/opaque_red"
+
+    android:text="@string/hello_world" />
+
+这种简便的方法可以在资源之间引用。比如，我们可以创建一个新的可绘制对象，一个真实存在的图片的别名：
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <drawable id="my_background">@android:drawable/theme2_background</drawable>
+
+</resources>
+
+引用主题属性
+其他种类的资源可以引用当前主题的属性值。这些属性只能是样式资源或XML属性。利用这种方法，您可以定制您的UI界面，使其与当前主题保持风格上的统一。
+下面的例子展示了如何使用系统主题设置布局器中的文本颜色：
+<?xml version="1.0" encoding="utf-8"?>
+
+<EditText id="text"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+
+    android:textColor="?android:textDisabledColor"
+
+    android:text="@string/hello_world" />
+
+注意：引用主题属性的方法和引用资源的方法很相似，仅仅是用“？”替代了“@”。当您使用这个标记，你所提供的资源名必须能够在主题属性中找到，因为资源工具认为这个资源属性是被期望得到的，您不需要明确的支出他的类型（?android:attr/android:textDisabledColor）。
+使用系统资源
+许多包含于系统之中的资源是能被应用程序所访问的。所有的资源被定义在android.R类中。比如，您可以使用一下代码在屏幕上显示标准应用程序的ICON：
+
+public class MyActivity extends Activity
+{
+    public void onStart() 
+    {
+        requestScreenFeatures(FEATURE_BADGE_IMAGE);
+
+        super.onStart();
+
+        setBadgeResource(android.R.drawable.sym_def_app_icon);
+    }
+}
+类似的，下面的代码会更改您的系统主题：
+
+public class MyActivity extends Activity
+{
+    public void onStart() 
+    {
+        super.onStart();
+
+        setTheme(android.R.style.Theme_Black);
+    }
+}
+为语言和配置提供可更换的资源
+您可以为您的应用程序选择不同的UI语言和硬件配置。注意，尽管您可以使用不同的字符串，布局管理器和其他的很多资源，SDK不会暴露方法支持您显示的指定何种资源需要被加载。Android识别整套资源的硬件和本地化属性，而后适当的加载他们。用户可以在设备的设置面板中更换语言设置。
+
+为了包含可更换资源，创建平行的资源目录，以限定的方式命名这些目录，配置文件也同样适用（语言、屏幕等）。下面的例子给出同时支持英语和法语的方法：
+
+MyApp/
+
+    res/
+
+        values-en/
+
+            strings.xml
+
+        values-fr/
+
+            strings.xml
+
+Android支持多种命名限定和多样的值风格。添加这些信息到资源目录末尾，使用连接号分离。您可以为单个目录添加多段限定。但是他们需要保持一定顺序以方便阅读和理解。下面的例子就是一个带有限定的可绘制对象资源目录的全名：
+
+MyApp/
+
+    res/
+
+        drawable-en-rUS-port-160dpi-finger-keysexposed-qwerty-dpad-480x320/
+
+更具代表性的，您可能需要指定一些资源配置参数。您也许需要除去完整列表中的一些值，但是还有很多很多值被保留在列表中：
+
+MyApp/
+
+    res/
+
+        drawable-en-rUS-finger/
+
+        drawable-port/
+
+        drawable-port-160dpi/
+
+        drawable-qwerty/
+
+ 
+
+
+限定词
+ 值 
+ 
+语言
+ 两字节ISO 639-1 低位的语言编码，比如：en, fr, es 
+ 
+区域
+ 两字节ISO 3166-1-alpha-2 带有小写"r"前缀的大写地区编码。如： rUS, rFR, rES
+ 
+屏幕方向
+ port, land, square 
+ 
+屏幕像素密度
+ 92dpi, 108dpi, etc. 
+ 
+触摸屏类型
+ notouch, stylus, finger
+ 
+用户是否可以使用键盘
+ keysexposed, keyshidden
+ 
+默认的文字输入方法
+ nokeys, qwerty, 12key
+ 
+默认的非触摸导航方法
+ notouch, dpad, trackball, wheel
+ 
+屏幕尺寸
+ 320x240, 640x480, etc. 较大的尺寸必须首先声明。
+ 
+
+次列表不包括设备定制的参数，比如信号、商标等。所有应用程序应该知道的信息都需要按照上面的列表信息编码。
+这里有一些命名的通用原则：
+·         值之间用连接号连接
+·         值是大小写敏感的，比如
+o    一个指定的drawable目录必须命名为drawable-port，而不是drawable-PORT。
+·         每种限定词只能有一种选择，您不能命名目录为drawable-rEN-rFR/。
+·         您可以添加多种限定词，但是每个限定词必须在在上面列表中。比如drawable-en-rUS-land表明其用于直板的美式英语设别上。
+·        带有限定词的目录不能被嵌套，比如，res/drawable/drawable-en是不允许的。
+·        资源引用在语法中表示为未加修饰的表达式，比如 MyApp/res/drawable-port-92dp/myimage.png，在XML中表示为：@drawable/myimage，在代码中表示为：R.drawable.myimage。
+Android如何找到最匹配的目录
+Android将根据配置文件挑选资源，挑选过程为：
+1．          排除所有和配置文件中指定的当前设备参数不匹配的资源。比如，如果屏幕像素密度为108dpi，下面所列出的目录中，只有MyApp/res/drawable-port-92dpi/会被排除。
+MyApp/res/drawable/myimage.png
+
+MyApp/res/drawable-en/myimage.png
+
+MyApp/res/drawable-port/myimage.png
+
+MyApp/res/drawable-port-92dpi/myimage.png
+ 
+
+2．接下来系统将根据限定字的多少来筛选。例如，如果您的本地系统识别为en-GB编码的便携设备，随后我们还剩两个目录可以匹配。
+MyApp/res/drawable/myimage.png
+MyApp/res/drawable-en/myimage.png
+
+MyApp/res/drawable-port/myimage.png
+
+ 
+
+3．              选择机制将根据配置文件中定义的优先级，优先级定义于上面的列表顺序中。
+4．    MyApp/res/drawable-en/myimage.png
+
+5．    MyApp/res/drawable-port/myimage.png

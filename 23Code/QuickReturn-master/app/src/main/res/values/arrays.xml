@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="twitter_timestamps">
+        <item>7m</item>
+        <item>8m</item>
+        <item>22m</item>
+        <item>28m</item>
+        <item>31m</item>
+        <item>35m</item>
+        <item>1h</item>
+        <item>1h</item>
+        <item>2h</item>
+        <item>2h</item>
+        <item>2h</item>
+        <item>4h</item>
+        <item>6h</item>
+        <item>7h</item>
+        <item>7h</item>
+        <item>9h</item>
+        <item>2d</item>
+        <item>3d</item>
+        <item>3d</item>
+        <item>3d</item>
+        <item>4d</item>
+        <item>4d</item>
+        <item>5d</item>
+    </array>
+
+    <array name="google_plus_timestamps">
+        <item>Public - 5 mins ago</item>
+        <item>Public - 39 mins ago</item>
+        <item>Public - 57 mins ago</item>
+        <item>Public - 1 hour ago</item>
+        <item>Public - 1 hour ago</item>
+        <item>Public - 3 hours ago</item>
+        <item>Public - 4 hours ago</item>
+        <item>Public - 4 hours ago</item>
+        <item>Public - 5 hours ago</item>
+        <item>Public - 7 hours ago</item>
+        <item>Public - 8 hours ago</item>
+        <item>Public - 13 hours ago</item>
+        <item>Public - 16 hours ago</item>
+        <item>Public - 21 hours ago</item>
+        <item>Public - Yesterday</item>
+        <item>Public - Yesterday</item>
+        <item>Public - Yesterday</item>
+        <item>Public - Yesterday</item>
+        <item>Public - 2 days ago</item>
+        <item>Public - 2 days ago</item>
+        <item>Public - 2 days ago</item>
+        <item>Public - 3 days ago</item>
+        <item>Public - 5 days ago</item>
+    </array>
+
+    <array name="facebook_timestamps">
+        <item>5 minutes ago</item>
+        <item>39 minutes ago</item>
+        <item>57 minutes ago</item>
+        <item>1 hour ago</item>
+        <item>1 hour ago</item>
+        <item>3 hours ago</item>
+        <item>4 hours ago</item>
+        <item>4 hours ago</item>
+        <item>5 hours ago</item>
+        <item>7 hours ago</item>
+        <item>8 hours ago</item>
+        <item>13 hours ago</item>
+        <item>16 hours ago</item>
+        <item>21 hours ago</item>
+        <item>Yesterday at 3:01 PM</item>
+        <item>Yesterday at 12:42 PM</item>
+        <item>Yesterday at 10:26 AM</item>
+        <item>Yesterday at 7:18 AM</item>
+        <item>Sat at 8:17 PM</item>
+        <item>Sat at 5:01 PM</item>
+        <item>Sat at 4:35 PM</item>
+        <item>Fri at 11:53 PM</item>
+        <item>Wed at 10:04 AM</item>
+    </array>
+
+    <array name="retweets">
+        <item>2</item>
+        <item>21</item>
+        <item>5</item>
+        <item>14</item>
+        <item>102</item>
+        <item>53</item>
+        <item>62</item>
+        <item>14</item>
+        <item>41</item>
+        <item>38</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>29</item>
+        <item>55</item>
+        <item>26</item>
+        <item>71</item>
+        <item>30</item>
+        <item>4</item>
+        <item>84</item>
+        <item>28</item>
+        <item>5</item>
+    </array>
+
+    <array name="stars">
+        <item>102</item>
+        <item>2</item>
+        <item>29</item>
+        <item>38</item>
+        <item>55</item>
+        <item>62</item>
+        <item>26</item>
+        <item>21</item>
+        <item>4</item>
+        <item>28</item>
+        <item>5</item>
+        <item>14</item>
+        <item>53</item>
+        <item>14</item>
+        <item>41</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>71</item>
+        <item>30</item>
+        <item>84</item>
+        <item>33</item>
+    </array>
+
+    <array name="display_names">
+        <item>Megan Fox</item>
+        <item>Olivia Wilde</item>
+        <item>Jennifer Lawrence</item>
+        <item>Jessica Alba</item>
+        <item>Leighton Meester</item>
+        <item>Hayden Panettiere</item>
+        <item>Ashley Tisdale</item>
+        <item>Aida Yespica</item>
+        <item>Adriana Lima</item>
+        <item>Alessandra Ambrosio</item>
+        <item>Candice Swanepoel</item>
+        <item>Jessica Gomes</item>
+        <item>Genevieve Morton</item>
+        <item>Petra Nemcova</item>
+        <item>Lily Aldridge</item>
+        <item>Kate Upton</item>
+        <item>Gigi Hadid</item>
+        <item>Michelle Keegan</item>
+        <item>Katherine Webb</item>
+        <item>Scarlett Johansson</item>
+        <item>Katharine McPhee</item>
+        <item>Lucy Pinder</item>
+        <item>Miranda Kerr</item>
+    </array>
+
+    <array name="usernames">
+        <item>\@meganfox</item>
+        <item>\@oliviawilde</item>
+        <item>\@Jennifer_Lawrence</item>
+        <item>\@jessicaalba</item>
+        <item>\@itsmeleighton</item>
+        <item>\@haydenpanettier</item>
+        <item>\@ashleytisdale</item>
+        <item>\@AidaYespica</item>
+        <item>\@AdrianaLima</item>
+        <item>\@AngelAlessandra</item>
+        <item>\@angelcandice</item>
+        <item>\@iamjessicagomes</item>
+        <item>\@genevievemorton</item>
+        <item>\@pnemcova</item>
+        <item>\@LilyAldridge</item>
+        <item>\@KateUpton</item>
+        <item>\@GiGiHadid</item>
+        <item>\@michkeegan</item>
+        <item>\@_KatherineWebb</item>
+        <item>\@ScarlettJ</item>
+        <item>\@katharinemcphee</item>
+        <item>\@LucyPinder</item>
+        <item>\@MirandaKerr</item>
+    </array>
+
+    <array name="avatar_urls">
+        <item>http://thunderbird37.com/wp-content/uploads/2014/03/megan-fox-pictures.jpg</item>
+        <item>http://itsybitsysteps.com/wp-content/uploads/2013/10/olivia-wilde.jpg</item>
+        <item>http://img4.wikia.nocookie.net/__cb20120224061953/xmenmovies/images/c/cf/Jennifer-Lawrence.jpg</item>
+        <item>http://thunderbird37.com/wp-content/uploads/2014/03/Jessica-Alba-Picture1.jpg</item>
+        <item>http://2.bp.blogspot.com/-KKccgaeEuzo/U72z9iDdJTI/AAAAAAAAAJ0/ikXRojD29nA/s1600/leighton-meester.png</item>
+        <item>http://www.moonworlds.com/wp-content/uploads/2013/10/hayden-panettiere-23-wide.jpg</item>
+        <item>http://wallerz.net/wp-content/uploads/2014/06/2931_ashley_tisdale.jpg</item>
+        <item>http://www.lanostratv.it/gossip/wp-content/gallery/aida-yespica-sposa-a-sorpresa-leonardo-gonzales/aida-yespica-primo-piano.jpg</item>
+        <item>http://www.picturesnew.com/media/images/adriana-lima-wallpaper.jpg</item>
+        <item>http://www.imgth.com/images/2012/06/12/alessandra-ambrosio_zn8prvm3kyu.jpg</item>
+        <item>http://www.thefashioncentral.com/wp-content/uploads/2014/05/Candice-Swanepoel1.jpg</item>
+        <item>http://www3.pictures.zimbio.com/bg/Jessica+Gomes+JEHStjT_sgtm.jpg</item>
+        <item>http://www.celebzz.com/wp-content/uploads/2014/01/genevieve-morton-at-2013-sports-illustrated-swimsuit-launch-party-_1.jpg</item>
+        <item>http://www.theplace2.ru/archive/petra_nemcova/img/petra-nemcova-1920x1200-27155.jpg</item>
+        <item>http://i.perezhilton.com/wp-content/uploads/2014/03/lily-aldridge.gif</item>
+        <item>http://i.huffpost.com/gen/1245823/thumbs/o-KATE-UPTON-facebook.jpg</item>
+        <item>http://www.disneydreaming.com/wp-content/uploads/2014/05/Gigi-Hadid-Reality-TV-Star.jpg</item>
+        <item>http://i1.cdnds.net/13/25/300x450/showbiz-michelle-keegan.jpg</item>
+        <item>http://www.rantsports.com/clubhouse/files/2014/03/10-instagram.jpg</item>
+        <item>http://si.wsj.net/public/resources/images/BN-BY925_mag041_OZ_20140318165119.jpg</item>
+        <item>http://img2.timeinc.net/people/i/2008/database/katherinemcphee/katmcphee300.jpg</item>
+        <item>http://thefinereport.com/wp-content/uploads/2012/05/459090-lucy_pinder_nuts_magazine_18_03_2011_in_nuts_office_with_nutsmanreg_3_3063.jpg</item>
+        <item>http://greenorganics.com.au/organic-natural-skin-care-products/wp-content/images/miranda-kerr-skin-care-secrets.jpg</item>
+    </array>
+
+    <array name="google_plus_post_image_urls">
+        <item>https://lh6.googleusercontent.com/SCYsVilvN_XKjZRXl1PasUsr21X7v5_l7srOsWILKkJe=w1280-h1268-no</item>
+        <item>https://lh5.googleusercontent.com/-R8mLbZxcCQSel6FfSsfeSQ5X2th5LUY8O3CGkok1BrY=s1034-no</item>
+        <item>https://lh5.googleusercontent.com/4L-B0BoCQuhTIdRTD-cc5d1KOmtq8AWysEN5vBy9c3VV=w1192-h1186-no</item>
+        <item>https://lh4.googleusercontent.com/z-QyYoIY_AUOpp11hpFsPaSB9U8TyJy93u0PQijFBoai=w1210-h1194-no</item>
+        <item>https://lh3.googleusercontent.com/Gya2SMVZJS-MRGQX__emSkawO6EcF5515gSPo0a6wRFq=w854-h1280-no</item>
+        <item>https://lh5.googleusercontent.com/KKsHC5PUsyEJyKmSa8xDhfABnTzWp-yCA7BNESAJmfT5=w988-h978-no</item>
+        <item>https://lh6.googleusercontent.com/-znlbuEGRN9g/U3VRz4dtYlI/AAAAAAADgns/0tGHpsELN9Y/w1066-h1386-no/ashley-tisdale-maxim-may-cover-girl-photos-21.jpg</item>
+        <item>https://lh6.googleusercontent.com/FWmxfi2z_jz4KtvwIh7DTadEC_nRTtebSXHDHs5PCJt5=w1280-h1262-no</item>
+        <item>https://lh4.googleusercontent.com/-bbuhBl_pXew/UjSfbjsvzOI/AAAAAAAAL4g/m9JbKbK0s2Q/w1006-h1386-no/66608_84733_80618-1.jpg</item>
+        <item>https://lh4.googleusercontent.com/hGgBaed_gijhko2OE72RYfNjCsz7dPQora4Y91JGALOA=w1000-h996-no</item>
+        <item>https://lh4.googleusercontent.com/dGTzZIyxIznFuJ1dEt3pS28ja2sgjJERKe60lQHwt4_w=w1200-h1194-no</item>
+        <item>https://lh5.googleusercontent.com/-RJhkSxYl-zU/UzmnyZe25II/AAAAAAADZaw/eXuDqn-iuic/w1280-h1252-no/e22ed21e6060887b96c4ac563726bb1d.jpg</item>
+        <item>https://lh4.googleusercontent.com/-Y-JUBC1LVKkPVkoVgNGokuwOIHjj0JzAsGhBQ7lOpEN=s1000-no</item>
+        <item>https://lh3.googleusercontent.com/-PMyYzmuPqj8/UizhaJNAa4I/AAAAAAACt-g/x7JC5kY9Qdc/w1080-h1124-no/64a2d645520b037e567158f974bb0813.jpg</item>
+        <item>https://lh5.googleusercontent.com/-RUGpPumQQ-Q/Uh5ILqlLIjI/AAAAAAACsEs/lIKlchyCcpQ/s960-no/stretch-82-b24e6ede-sz480x480.jpg</item>
+        <item>https://lh5.googleusercontent.com/JftosFh7Jzre8O6oDyMbC04ODWJTjTdAYu2a9Wbvs29a=w1280-h1042-no</item>
+        <item>https://lh6.googleusercontent.com/_gpgzenqDCmrFxdGriqjZewMSvHegxerR45-VdP6TS28=w1000-h1134-no</item>
+        <item>https://lh5.googleusercontent.com/n1rUQ6dxAmaybpM9iMJCP7HrXoh2oBK0rBuSny--yDIu=w1200-h906-no</item>
+        <item>https://lh4.googleusercontent.com/DBlnZ9REzdxI41-xmzJ6DwEp-dg5WD2NNE4Prth-wbWS=w920-h1384-no</item>
+        <item>https://lh4.googleusercontent.com/2irV_XFuGU1np57WBNG3nxgrn9av2vE7qFBT31bU9YlH=w1140-h1288-no</item>
+        <item>https://lh6.googleusercontent.com/-gj_-Q4wyU5ydeyEGhBnDjjjQ06Z-HpT2roGR0TIovm4=w950-h610-no</item>
+        <item>https://lh3.googleusercontent.com/-udNBGbP2UF4/UEfR4QG6t1I/AAAAAAAA_yU/ENrHXXPj1xM/w938-h694-no/Screen+shot+2012-09-05+at+3.26.03+PM.png</item>
+        <item>https://lh4.googleusercontent.com/-fr3Ikw2E4AA/U1Fq9ShFMLI/AAAAAAADcXM/qzzM9a-LvEY/s852/Screen+Shot+2014-04-18+at+11.09.31+AM.png</item>
+    </array>
+
+    <array name="facebook_post_image_urls">
+        <item>https://lh6.googleusercontent.com/SCYsVilvN_XKjZRXl1PasUsr21X7v5_l7srOsWILKkJe=w1280-h1268-no</item>
+        <item>https://lh5.googleusercontent.com/-R8mLbZxcCQSel6FfSsfeSQ5X2th5LUY8O3CGkok1BrY=s1034-no</item>
+        <item>https://lh5.googleusercontent.com/4L-B0BoCQuhTIdRTD-cc5d1KOmtq8AWysEN5vBy9c3VV=w1192-h1186-no</item>
+        <item>https://lh4.googleusercontent.com/z-QyYoIY_AUOpp11hpFsPaSB9U8TyJy93u0PQijFBoai=w1210-h1194-no</item>
+        <item>https://lh3.googleusercontent.com/Gya2SMVZJS-MRGQX__emSkawO6EcF5515gSPo0a6wRFq=w854-h1280-no</item>
+        <item>https://lh5.googleusercontent.com/KKsHC5PUsyEJyKmSa8xDhfABnTzWp-yCA7BNESAJmfT5=w988-h978-no</item>
+        <item>https://lh6.googleusercontent.com/-znlbuEGRN9g/U3VRz4dtYlI/AAAAAAADgns/0tGHpsELN9Y/w1066-h1386-no/ashley-tisdale-maxim-may-cover-girl-photos-21.jpg</item>
+        <item>https://lh6.googleusercontent.com/FWmxfi2z_jz4KtvwIh7DTadEC_nRTtebSXHDHs5PCJt5=w1280-h1262-no</item>
+        <item>https://lh4.googleusercontent.com/-bbuhBl_pXew/UjSfbjsvzOI/AAAAAAAAL4g/m9JbKbK0s2Q/w1006-h1386-no/66608_84733_80618-1.jpg</item>
+        <item>https://lh4.googleusercontent.com/hGgBaed_gijhko2OE72RYfNjCsz7dPQora4Y91JGALOA=w1000-h996-no</item>
+        <item>https://lh4.googleusercontent.com/dGTzZIyxIznFuJ1dEt3pS28ja2sgjJERKe60lQHwt4_w=w1200-h1194-no</item>
+        <item>https://lh5.googleusercontent.com/-RJhkSxYl-zU/UzmnyZe25II/AAAAAAADZaw/eXuDqn-iuic/w1280-h1252-no/e22ed21e6060887b96c4ac563726bb1d.jpg</item>
+        <item>https://lh4.googleusercontent.com/-Y-JUBC1LVKkPVkoVgNGokuwOIHjj0JzAsGhBQ7lOpEN=s1000-no</item>
+        <item>https://lh3.googleusercontent.com/-PMyYzmuPqj8/UizhaJNAa4I/AAAAAAACt-g/x7JC5kY9Qdc/w1080-h1124-no/64a2d645520b037e567158f974bb0813.jpg</item>
+        <item>https://lh5.googleusercontent.com/-RUGpPumQQ-Q/Uh5ILqlLIjI/AAAAAAACsEs/lIKlchyCcpQ/s960-no/stretch-82-b24e6ede-sz480x480.jpg</item>
+        <item>https://lh5.googleusercontent.com/JftosFh7Jzre8O6oDyMbC04ODWJTjTdAYu2a9Wbvs29a=w1280-h1042-no</item>
+        <item>https://lh6.googleusercontent.com/_gpgzenqDCmrFxdGriqjZewMSvHegxerR45-VdP6TS28=w1000-h1134-no</item>
+        <item>https://lh5.googleusercontent.com/n1rUQ6dxAmaybpM9iMJCP7HrXoh2oBK0rBuSny--yDIu=w1200-h906-no</item>
+        <item>https://lh4.googleusercontent.com/DBlnZ9REzdxI41-xmzJ6DwEp-dg5WD2NNE4Prth-wbWS=w920-h1384-no</item>
+        <item>https://lh4.googleusercontent.com/2irV_XFuGU1np57WBNG3nxgrn9av2vE7qFBT31bU9YlH=w1140-h1288-no</item>
+        <item>https://lh6.googleusercontent.com/-gj_-Q4wyU5ydeyEGhBnDjjjQ06Z-HpT2roGR0TIovm4=w950-h610-no</item>
+        <item>https://lh3.googleusercontent.com/-udNBGbP2UF4/UEfR4QG6t1I/AAAAAAAA_yU/ENrHXXPj1xM/w938-h694-no/Screen+shot+2012-09-05+at+3.26.03+PM.png</item>
+        <item>https://lh4.googleusercontent.com/-fr3Ikw2E4AA/U1Fq9ShFMLI/AAAAAAADcXM/qzzM9a-LvEY/s852/Screen+Shot+2014-04-18+at+11.09.31+AM.png</item>
+    </array>
+
+    <array name="twitter_messages">
+        <item>I\'m incredibly late to the party but I\'m here nonetheless, so what now?</item>
+        <item>Hello world!</item>
+        <item>Everybody was talking yesterday about Twitter and Instagram and Tumblr. It was really confusing me and overwhelming me. I literally started losing my breath. People were showing me these hilarious things and I was like, \'I want to have this.\' What\'s Pinterest? I don’t have it. I know by the time I get it, it\'ll be something else. I bought a CD case less than a year ago.</item>
+        <item>Twitterworld! I\'m officially here! On the George Lopez show rt now. Took a DNA test...watch show for results. Hint: Spain</item>
+        <item>New Album Coming Soon http://perezhilton.com/2009-04-23-leighton-meester-nabs-recording-contract</item>
+        <item>What\'s up everyone! I\'ve finally joined the 21st century and created a twitter to keep you guys updated on what\'s goin on with me!</item>
+        <item>Video of the Week - Z100 Interview: Each Tuesday we\'ll be featuring a new video. It will be anything from interv.. http://tinyurl.com/6mzrmx</item>
+        <item>We spent the night in joy, we had fun, then we lost sight of each other.</item>
+        <item>Hi everyone~I may start tweeting soon, but in the mean time please follow my wonderful agency\'s twitter, @MarilynAgencyNY, for news! &lt;3 AL</item>
+        <item>Miami!!!!! so nice and warm!!!</item>
+        <item>ok, so finally got this thing set up, just getting the hang of it... stay tuned.</item>
+        <item>Im in new york this week!</item>
+        <item>http://bit.ly/KmYsk</item>
+        <item>Petra Nemcova now has her own official facebook page.... http://fb.me/Q522ayjX</item>
+        <item>\@bubbies84 Thank you!! Miss my @VictoriasSecret family ♥</item>
+        <item>I am trying to figure out how to make the background a picture of my boobs</item>
+        <item>On the plane to Canada with @bellahadid. Alaska Airlines, free internet, amazing.</item>
+        <item>hi everyone!im finally on twitter! will soon get the hang of it no doubt!</item>
+        <item>Why have peanut butter when you have have Cookie butter??  #traderjoes http://instagr.am/p/QfJhy6oYIl/</item>
+        <item>I don’t have a Facebook or a Twitter account, and I don’t know how I feel about this idea of, ‘Now, I’m eating dinner, and I want everyone to know that I\'m having dinner at this time,\' or \'I just mailed a letter and dropped off my kids.\' That, to me, is a very strange phenomenon. I can’t think of anything I\'d rather do less than have to continuously share details of my everyday life.</item>
+        <item>Hey, Everyone! This is my very first "tweet"...exciting! I want to tell you all to check out my "splash" contest at www.katharinemcphee.com!</item>
+        <item>It\'s been so frustrating not being able to go topless when I\'m abroad, just in case someone\'s there with a camera.</item>
+        <item>Just launched KORA Organics "Love Guaranteed" Pack and look forward to some feedback from the guys www.koraskincare.com</item>
+    </array>
+
+    <array name="google_plus_messages">
+        <item>Love this day to night look! #style #fashion</item>
+        <item>Blue tint french tips, trendy &amp; chic. #trendy #nailedit</item>
+        <item>\#OOTD: But first, let em take a #selfie! ;) #celfie</item>
+        <item>Post- run rejuvenation never looked so good! #smoothie #foodie</item>
+        <item>Heart Rock at the Nakahele Blowhole in Maui #takemethere</item>
+        <item>My fitness inspiration? This amazing view. What’s yours? #runitout #dontgiveup</item>
+        <item>\#TBT: Home is where the sun is! Agreed? #mymantra #calilovin #Maxim﻿</item>
+        <item>Home is where the heart is &lt;3 Nothing beats a beach day w/ my babes! #beachinit</item>
+        <item>Sometimes you just can\'t resist!</item>
+        <item>Nothing’s better than a beachside workout to get the day going! #perfectmorning</item>
+        <item>\#OOTD: Casual and chic...perfect for a summer vaca</item>
+        <item>How long do you think it’d take me to eat these? #givemeten #sweetsonsweets</item>
+        <item>Breakfast of champions #morningindulgence</item>
+        <item>Sun, sand and mimosas. Love #Sundays</item>
+        <item>Runnin to the beats of the beach #cantstopwontstop</item>
+        <item>Enjoying the lounge life. Can we wear sweaters forever? #socomfy #relaxed</item>
+        <item>Sunday sun daze xo</item>
+        <item>Always gonna be an uphill battle... #ItsTheClimb</item>
+        <item>Swing for the stars! Who\'s with me?</item>
+        <item>Heat sensitive coffee mug!? I need like 3 of these, too cute!</item>
+        <item>Guilty! ;) Who\'s ever done this?</item>
+        <item>This is going on my bucket list! What’s on yours? #SharkLove</item>
+        <item>Strawberry smoothie &amp; fruit plate = the perfect morning fuel. Agreed? #healthy #sweets</item>
+    </array>
+
+    <array name="google_plus_comments">
+        <item>That\'s a cute dress</item>
+        <item>Those nails are AMAZING i want them!!!﻿</item>
+        <item>I love that flannel/plaid shirt! And I also love how you put the clutch there to show how it will look altogether!</item>
+        <item>Omg that looks delicious yum</item>
+        <item>Reminded me what real love is. Solid like a rock forever! Sweet.:)﻿</item>
+        <item>$1,000,000 view right there !!!</item>
+        <item>Cute cowboy boots</item>
+        <item>Very cute pic :-) and very true caption :-) home is where the heart is :-) &lt;3</item>
+        <item>What flavor cupcake is that?</item>
+        <item>I know rite and also sets the tone for the day.</item>
+        <item>Luv the back of the dress</item>
+        <item>It depends if you take small or big bites or hand fulls of it﻿</item>
+        <item>Breakfast is the most important meal in the day.</item>
+        <item>Great drink, like to keep that brand on hand, smooth, wet and worry free.</item>
+        <item>Much admiration for anyone who is dedicated to keeping fit.</item>
+        <item>Are you wearing extensions?</item>
+        <item>Beautiful outfit</item>
+        <item>That\'s so beautiful I would love go there. I love that song The Climb</item>
+        <item>I\'m with you all the way</item>
+        <item>I sooooo need to get this</item>
+        <item>I do that all the time</item>
+        <item>Super freaky.  I don\'t think i could do that.</item>
+        <item>U have the best presentation and the best choice of food #loveuashley   xxxx</item>
+    </array>
+
+    <array name="google_plus_comment_counts">
+        <item>2</item>
+        <item>21</item>
+        <item>5</item>
+        <item>14</item>
+        <item>102</item>
+        <item>53</item>
+        <item>62</item>
+        <item>14</item>
+        <item>41</item>
+        <item>38</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>29</item>
+        <item>55</item>
+        <item>26</item>
+        <item>71</item>
+        <item>30</item>
+        <item>4</item>
+        <item>84</item>
+        <item>28</item>
+        <item>5</item>
+    </array>
+
+    <array name="google_plus_plus_one_counts">
+        <item>102</item>
+        <item>2</item>
+        <item>29</item>
+        <item>38</item>
+        <item>55</item>
+        <item>62</item>
+        <item>26</item>
+        <item>21</item>
+        <item>4</item>
+        <item>28</item>
+        <item>5</item>
+        <item>14</item>
+        <item>53</item>
+        <item>14</item>
+        <item>41</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>71</item>
+        <item>30</item>
+        <item>84</item>
+        <item>33</item>
+    </array>
+
+    <array name="facebook_messages">
+        <item>Love this day to night look! #style #fashion</item>
+        <item>Blue tint french tips, trendy &amp; chic. #trendy #nailedit</item>
+        <item>\#OOTD: But first, let em take a #selfie! ;) #celfie</item>
+        <item>Post- run rejuvenation never looked so good! #smoothie #foodie</item>
+        <item>Heart Rock at the Nakahele Blowhole in Maui #takemethere</item>
+        <item>My fitness inspiration? This amazing view. What’s yours? #runitout #dontgiveup</item>
+        <item>\#TBT: Home is where the sun is! Agreed? #mymantra #calilovin #Maxim﻿</item>
+        <item>Home is where the heart is &lt;3 Nothing beats a beach day w/ my babes! #beachinit</item>
+        <item>Sometimes you just can\'t resist!</item>
+        <item>Nothing’s better than a beachside workout to get the day going! #perfectmorning</item>
+        <item>\#OOTD: Casual and chic...perfect for a summer vaca</item>
+        <item>How long do you think it’d take me to eat these? #givemeten #sweetsonsweets</item>
+        <item>Breakfast of champions #morningindulgence</item>
+        <item>Sun, sand and mimosas. Love #Sundays</item>
+        <item>Runnin to the beats of the beach #cantstopwontstop</item>
+        <item>Enjoying the lounge life. Can we wear sweaters forever? #socomfy #relaxed</item>
+        <item>Sunday sun daze xo</item>
+        <item>Always gonna be an uphill battle... #ItsTheClimb</item>
+        <item>Swing for the stars! Who\'s with me?</item>
+        <item>Heat sensitive coffee mug!? I need like 3 of these, too cute!</item>
+        <item>Guilty! ;) Who\'s ever done this?</item>
+        <item>This is going on my bucket list! What’s on yours? #SharkLove</item>
+        <item>Strawberry smoothie &amp; fruit plate = the perfect morning fuel. Agreed? #healthy #sweets</item>
+    </array>
+
+    <array name="facebook_comment_counts">
+        <item>2</item>
+        <item>21</item>
+        <item>5</item>
+        <item>14</item>
+        <item>102</item>
+        <item>53</item>
+        <item>62</item>
+        <item>14</item>
+        <item>41</item>
+        <item>38</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>29</item>
+        <item>55</item>
+        <item>26</item>
+        <item>71</item>
+        <item>30</item>
+        <item>4</item>
+        <item>84</item>
+        <item>28</item>
+        <item>5</item>
+    </array>
+
+    <array name="facebook_like_counts">
+        <item>102</item>
+        <item>2</item>
+        <item>29</item>
+        <item>38</item>
+        <item>55</item>
+        <item>62</item>
+        <item>26</item>
+        <item>21</item>
+        <item>4</item>
+        <item>28</item>
+        <item>5</item>
+        <item>14</item>
+        <item>53</item>
+        <item>14</item>
+        <item>41</item>
+        <item>17</item>
+        <item>51</item>
+        <item>96</item>
+        <item>6</item>
+        <item>71</item>
+        <item>30</item>
+        <item>84</item>
+        <item>33</item>
+    </array>
+
+    <array name="countries">
+        <item>United States of America</item>
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua &amp; Deps</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina</item>
+        <item>Burma</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Central African Rep</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>People\'s Republic of China</item>
+        <item>Republic of China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Democratic Republic of the Congo</item>
+        <item>Republic of the Congo</item>
+        <item>Costa Rica,</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Danzig</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>East Timor</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Gabon</item>
+        <item>Gaza Strip</item>
+        <item>The Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Holy Roman Empire</item>
+        <item>Honduras</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Republic of Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Ivory Coast</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jonathanland</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>North Korea</item>
+        <item>South Korea</item>
+        <item>Kosovo</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mount Athos</item>
+        <item>Mozambique</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Newfoundland</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Ottoman Empire</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Prussia</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Rome</item>
+        <item>Russian Federation</item>
+        <item>Rwanda</item>
+        <item>St Kitts &amp; Nevis</item>
+        <item>St Lucia</item>
+        <item>Saint Vincent &amp; the</item>
+        <item>Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome &amp; Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad &amp; Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </array>
+</resources>

@@ -1,0 +1,43 @@
+<com.act.mbanking.manager.view.NavigationBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bank="http://schemas.android.com/apk/res/com.act.mbanking"
+    android:id="@+id/navigation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_bar" >
+
+    <TextView
+        android:id="@+id/left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:background="@drawable/back_btn_selector"
+        android:minWidth="89dip"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo" />
+
+    <com.act.mbanking.view.SimpleImageButton
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/menu_icon"
+        android:visibility="gone"
+        bank:autoAddFocusImg="true"
+        bank:focusMode="rect" />
+
+</com.act.mbanking.manager.view.NavigationBar>

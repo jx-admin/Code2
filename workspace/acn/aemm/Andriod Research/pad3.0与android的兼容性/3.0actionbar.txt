@@ -1,0 +1,154 @@
+pad 3.0 action bar
+
+Option menu 如果加入
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+会显示在action bar的右边的cascading menu,
+但是加入的图标不会显示，
+可以
+	menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+显示在action bar上并显示其设置的图标。
+
+/----代码：ActionBarMechanics
+
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // The Action Bar is a window feature. The feature must be requested
+        // before setting a content view. Normally this is set automatically
+        // by your Activity's theme in your manifest. The provided system
+        // theme Theme.WithActionBar enables this for you. Use it as you would
+        // use Theme.NoTitleBar. You can add an Action Bar to your own themes
+        // by adding the element <item name="android:windowActionBar">true</item>
+        // to your style definition.
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Menu items default to never show in the action bar. On most devices this means
+        // they will show in the standard options menu panel when the menu button is pressed.
+        // On xlarge-screen devices a "More" button will appear in the far right of the
+        // Action Bar that will display remaining items in a cascading menu.
+        menu.add("Normal item");
+
+        MenuItem actionItem = menu.add("Action Button");
+
+        // Items that show as actions should favor the "if room" setting, which will
+        // prevent too many buttons from crowding the bar. Extra items will show in the
+        // overflow area.
+        actionItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
+        // Items that show as actions are strongly encouraged to use an icon.
+        // These icons are shown without a text description, and therefore should
+        // be sufficiently descriptive on their own.
+        actionItem.setIcon(android.R.drawable.ic_menu_share);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        return true;
+    }
+---/
+
+action bar 标志
+	ActionBar.DISPLAY_HOME_AS_UP;
+	ActionBar.DISPLAY_SHOW_HOME;
+	ActionBar.DISPLAY_USE_LOGO;
+	ActionBar.DISPLAY_SHOW_TITLE;
+	ActionBar.DISPLAY_SHOW_CUSTOM;
+	ActionBar.NAVIGATION_MODE_STANDARD
+	ActionBar.NAVIGATION_MODE_TABS
+
+/---:ActionBarDisplayOptions
+
+public void onClick(View v) {
+        final ActionBar bar = getActionBar();
+        int flags = 0;
+        switch (v.getId()) {
+            case R.id.toggle_home_as_up:
+                flags = ActionBar.DISPLAY_HOME_AS_UP;
+                break;
+            case R.id.toggle_show_home:
+                flags = ActionBar.DISPLAY_SHOW_HOME;
+                break;
+            case R.id.toggle_use_logo:
+                flags = ActionBar.DISPLAY_USE_LOGO;
+                break;
+            case R.id.toggle_show_title:
+                flags = ActionBar.DISPLAY_SHOW_TITLE;
+                break;
+            case R.id.toggle_show_custom:
+                flags = ActionBar.DISPLAY_SHOW_CUSTOM;
+                break;
+
+            case R.id.toggle_navigation:
+                bar.setNavigationMode(
+                        bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_STANDARD
+                                ? ActionBar.NAVIGATION_MODE_TABS
+                                : ActionBar.NAVIGATION_MODE_STANDARD);
+                return;
+            case R.id.cycle_custom_gravity:
+                ActionBar.LayoutParams lp = (ActionBar.LayoutParams) mCustomView.getLayoutParams();
+                int newGravity = 0;
+                switch (lp.gravity & Gravity.HORIZONTAL_GRAVITY_MASK) {
+                    case Gravity.LEFT:
+                        newGravity = Gravity.CENTER_HORIZONTAL;
+                        break;
+                    case Gravity.CENTER_HORIZONTAL:
+                        newGravity = Gravity.RIGHT;
+                        break;
+                    case Gravity.RIGHT:
+                        newGravity = Gravity.LEFT;
+                        break;
+                }
+                lp.gravity = lp.gravity & ~Gravity.HORIZONTAL_GRAVITY_MASK | newGravity;
+                bar.setCustomView(mCustomView, lp);
+                return;
+        }
+
+        int change = bar.getDisplayOptions() ^ flags;
+        bar.setDisplayOptions(change, flags);
+    }
+
+ public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.display_options_actions, menu);
+        return true;
+    }
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/simple_item"
+          android:title="@string/display_options_menu_item" />
+</menu>
+
+---/
+
+ActionBarTabs Tab的添删显隐
+	if (bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_TABS) {
+            bar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+            bar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE, ActionBar.DISPLAY_SHOW_TITLE);
+        } else {
+            bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+            bar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE, ActionBar.DISPLAY_SHOW_TITLE);
+        }
+
+
+ActionBarUsage:menu菜单（action bar）的创建
+
+/--
+ public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actions, menu);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setOnQueryTextListener(this);
+        return true;
+    }
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+          android:icon="@android:drawable/ic_menu_search"
+          android:title="@string/action_bar_search"
+          android:showAsAction="ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+---/

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+
+    <!-- dialog layout,you can difine it free -->
+
+    <LinearLayout
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/login_margin_LR"
+        android:layout_marginTop="@dimen/login_text_margin_top"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/login_margin_LR" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_text_margin_bottom"
+            android:layout_marginTop="@dimen/login_text_margin_top"
+            android:textColor="@color/login_text_color"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/message_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_text_margin_bottom"
+            android:layout_marginTop="@dimen/login_text_margin_top"
+            android:gravity="center"
+            android:textColor="@color/login_text_color"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="2dip"
+        android:background="@drawable/dialog_bk_bottom" >
+
+        <Button
+            android:id="@+id/positive_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin_LR"
+            android:layout_weight="1"
+            android:background="@drawable/shapebutton"
+            android:text="@android:string/ok"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/neutral_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin_LR"
+            android:layout_weight="1"
+            android:background="@drawable/shapebutton"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/negative_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin_LR"
+            android:layout_weight="1"
+            android:background="@drawable/shapebutton"
+            android:text="@android:string/cancel"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

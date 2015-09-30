@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.CordorateCardChildLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/item_content" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="0dip" -->
+    <!-- android:layout_weight="24.2" -->
+    <!-- android:background="@drawable/box_details" > -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <RadioButton
+                    android:id="@+id/movements"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_btn_left_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/movements" />
+
+                <RadioButton
+                    android:id="@+id/details"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_btn_right_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/card_details_btn" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/shadow_payment_box" />
+
+        <LinearLayout
+            android:id="@+id/corporate_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/onwer"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/owner_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/state"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/card_state_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/card_number2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/card_number_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/expiration"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expiration_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/plafond"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/plafond_value"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/linea_di_separazione" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/corporate_movement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:weightSum="4" >
+
+                <TextView
+                    android:id="@+id/exp"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="left|center_vertical"
+                    android:lines="2"
+                    android:text="@string/opt_date1" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/amo"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/description_1" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sta"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/amount_1" >
+                </TextView>
+
+                <ToggleButton
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/toggle_button_height"
+                    android:layout_marginLeft="@dimen/space"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/cards_expand_selector"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="invisible" >
+                </ToggleButton>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:src="@drawable/account_line" >
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.accenture.mbank.view.CustomScrollView
+        android:id="@+id/child_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/child_item_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </com.accenture.mbank.view.CustomScrollView>
+    <!-- </LinearLayout> -->
+
+</com.accenture.mbank.view.CordorateCardChildLayout>

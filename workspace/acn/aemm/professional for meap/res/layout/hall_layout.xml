@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:scroll="http://www.test.scrolllayout.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/hall_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/install_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_d_margin"
+            android:layout_marginLeft="@dimen/title_l_margin"
+            android:layout_marginTop="@dimen/title_t_margin"
+            android:text="@string/installed" />
+
+        <LinearLayout
+            android:id="@+id/install_icons_linear"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <com.aess.aemm.view.ScrollLayout
+                android:id="@+id/installed_sl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                scroll:marginLeft="@dimen/icons_lr_margin"
+                scroll:marginRight="@dimen/icons_lr_margin" >
+            </com.aess.aemm.view.ScrollLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/install_index_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/index_td_margin"
+            android:layout_marginTop="@dimen/index_td_margin" >
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:id="@+id/uninstall_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_uninstall"
+            android:paddingBottom="@dimen/title_d_margin"
+            android:paddingLeft="@dimen/title_l_margin"
+            android:paddingTop="@dimen/title_t_margin"
+            android:text="@string/uninstalled" />
+
+        <LinearLayout
+            android:id="@+id/uninstall_icons_linear"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/c_uninstall" >
+
+            <com.aess.aemm.view.ScrollLayout
+                android:id="@+id/uninstalled_sl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                scroll:marginLeft="@dimen/icons_lr_margin"
+                scroll:marginRight="@dimen/icons_lr_margin" >
+            </com.aess.aemm.view.ScrollLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_uninstall"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/uninstall_index_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/index_td_margin"
+                android:layout_marginTop="@dimen/index_td_margin" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/c_uninstall" >
+
+            <ImageView
+                android:id="@+id/msg_hit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/msghit"
+                android:padding="1dip"
+                android:visibility="gone" />
+
+            <com.aess.aemm.view.TextFlipper
+                android:id="@+id/message_flipper"
+                android:layout_width="1dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/message_l_margin"
+                android:layout_weight="1"
+                android:flipInterval="2000" />
+
+            <ImageView
+                android:id="@+id/logo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/logo_l_margin"
+                android:background="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/update_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/update_l_margin"
+                android:background="@drawable/updata_drunning"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_d_margin"
+                android:layout_marginRight="@dimen/button_r_margin"
+                android:layout_marginTop="@dimen/button_t_margin"
+                android:background="@drawable/updata_btn_bk"
+                android:text="@string/operator_str" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/debug_lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/add_app_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加app" >
+            </Button>
+
+            <Button
+                android:id="@+id/del_app_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除app" >
+            </Button>
+
+            <Button
+                android:id="@+id/unable_app_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/add_apk_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加apk" >
+            </Button>
+
+            <Button
+                android:id="@+id/del_apk_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除apk" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

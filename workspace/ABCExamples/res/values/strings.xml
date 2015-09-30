@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Activity!</string>
+    <string name="app_name">Abc_Examples</string>
+    <string name="exit_application_activity">exit_application</string>
+    <string name="double_color_listview_activity">double_color_listview</string>
+    <string name="show_hide_softinputmethodmanager_activity">show_hide_softinputmethodmanager</string>
+    <string name="show_softinputmethodmanager_btn">show_softinputmethodmanager</string>
+    <string name="hide_softinputmethodmanager_btn">hide_softinputmethodmanager</string>
+    <string name="map_navi_poisearch_activity">map_navi_poisearch</string>
+    <string name="background_activity">background</string> 
+  <string name="btn_setbackground">setBackGround</string> 
+  <string name="btn_defaultbackground">defaultBackground</string> 
+</resources>

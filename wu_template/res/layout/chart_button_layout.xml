@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wu.a.lib.view.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/sircle_bk">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="1234567890,"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <wu.a.lib.view.ProportionBar
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:padding="4dip" />
+
+    <wu.a.lib.view.ProportionBar
+        android:id="@+id/pb2"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginTop="10dip"
+        android:padding="4dip" />
+
+    <wu.a.lib.view.TrapezoidImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trapezoid_btn_selector" />
+
+    <wu.a.lib.view.WheelButton
+        android:id="@+id/cb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+
+</wu.a.lib.view.ResizeLayout>

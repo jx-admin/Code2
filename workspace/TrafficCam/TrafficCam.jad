@@ -1,0 +1,8 @@
+MIDlet-Version: 1.0.25
+MIDlet-Vendor: Midlet Suite Vendor
+MIDlet-Jar-URL: TrafficCam.jar
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Permissions: javax.microedition.io.Connector.http
+MIDlet-1: TrafficView,/res/icons/command.png,com.ultrapower.midlet.TrafficView
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Name: TrafficCam Midlet Suite

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_marginRight="0dip"
+            android:src="@drawable/circle_black" />
+
+        <TextView
+            android:id="@+id/help_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_marginLeft="0dip"
+            android:singleLine="true"
+            android:text="activition"
+            android:textColor="#ff006400"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/help_detail_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:text="the application has not been activated yet"
+        android:textColor="#ff000000"
+        android:textSize="15sp"
+        android:textStyle="normal" >
+    </TextView>
+
+</LinearLayout>

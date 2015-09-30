@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_mid"
+    android:layout_marginRight="@dimen/margin_mid"
+    android:layout_weight="@integer/right_content_weight"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:gravity="left"
+            android:text="中国电信高清影视"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/text_xmiddle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:lines="3"
+            android:text="时尚 精彩 随心所欲电视新看法 我的电视我做主 4倍传统电视画面的清晰度 更宽广震撼的视听享受"
+            android:textColor="#ff8a00"
+            android:textSize="@dimen/text_normal" />
+
+        <GridView
+            android:id="@+id/colors_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:numColumns="3"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </GridView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/select_setmeal_pls" />
+
+        <Button
+            android:id="@+id/select_setmeal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_dark_yellow_radius_selector"
+            android:text="@string/click_select_setmeal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_to_shopping_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:background="@drawable/add_to_shopping_car_selector"
+        android:text="@string/add_to_shoping_cart" />
+
+</RelativeLayout>

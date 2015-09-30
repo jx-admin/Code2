@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/upper_shading"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:stretchColumns="*" >
+        </TableLayout>
+
+        <Gallery
+            android:id="@+id/provider_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <GridView
+            android:id="@+id/amount_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="5" >
+        </GridView>
+
+        <Button
+            android:id="@+id/confirmation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:background="@drawable/continue_button_click_selector" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/bper_askpin_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bper_askpin_input"
+        android:visibility="gone" />
+
+</RelativeLayout>

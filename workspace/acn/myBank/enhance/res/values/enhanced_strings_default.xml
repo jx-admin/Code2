@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sa_executed">EXECUTED</string>
+    <string name="sa_pending">PENDING</string>
+    <string name="loading">loading</string>
+    <string name="ss_date">Date</string>
+    <string name="app_name">mBanking</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="waiting">Waiting</string>
+    <string name="aggregated_view">Aggregated View</string>
+    <string name="products">Products</string>
+    <string name="accounts">Accounts</string>
+    <string name="investments">Investments</string>
+    <string name="cards">Cards</string>
+    <string name="loans">Loans</string>
+    <string name="payments">Payments</string>
+    <string name="new_payment">New Payment</string>
+    <string name="recent_payments">Recent Payments</string>
+    <string name="utilities">Utilities</string>
+    <string name="contacts">Contacts</string>
+    <string name="guide">Guide</string>
+    <string name="user_info">User info</string>
+    <string name="close_session">Close session</string>
+    <string name="not_value">n/a</string>
+    <string name="auto_login">auto login</string>
+    <string name="preferences_login">login</string>
+    <string name="btn_input">hand input</string>
+    <!-- login -->
+    <string name="welcome">Welcome! Please login with your credentials</string>
+    <string name="remember_password">remember me</string>
+    <string name="forgot_your_password">forgot_your_password?</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_error">login error</string>
+    <string name="sure_exit_msg">Are you sure you want to exit the application?</string>
+    <!-- new payments from old -->
+    <string name="beneficiaries">Beneficiaries</string>
+    <string name="type_of_payment">TYPE OF PAYMENT</string>
+    <string name="type_of_payment1">type of payment</string>
+    <string name="bank_transfer">BANK TRANSFER</string>
+    <string name="bank_transfer1">bank transfer</string>
+    <string name="transfer_entry">TRANSFER ENTRY</string>
+    <string name="transfer_entry1">transfer entry</string>
+    <string name="card_top_up">SIM TOP UP</string>
+    <string name="card_top_up1">sim top up</string>
+    <string name="phone_top_up">PREPAID CARD RELOAD</string>
+    <string name="phone_top_up1">prepaid card reload</string>
+    <string name="account">ACCOUNT</string>
+    <string name="account1">account</string>
+    <string name="frank_account">FRANK\' ACCOUNT</string>
+    <string name="income_house">INCOME HOUSE</string>
+    <string name="date">DATE</string>
+    <string name="date1">date</string>
+    <string name="payee">BENEFICIARY</string>
+    <string name="payee1">beneficiary</string>
+    <string name="insert_name_and_surname">insert name and surname</string>
+    <string name="enter_iban_code">enter iban code</string>
+    <string name="enter_bic_code">enter bic code</string>
+    <string name="ad_to_beneficiaries">Ad to the beneficiaries list</string>
+    <string name="first_name_and_last_name">Enter beneficiary name</string>
+    <string name="iban">iban</string>
+    <string name="endter_phone_number">Enter the Phone number</string>
+    <string name="phone_number1">Phone number:</string>
+    <string name="provider">Provider:</string>
+    <string name="cards_number">Enter the card number</string>
+    <string name="cancel">cancel</string>
+    <string name="yes">confirm</string>
+    <string name="no">cancel</string>
+    <string name="operator">Choose your operator</string>
+    <string name="enter_value">Enter value</string>
+    <string name="bic">bic</string>
+    <string name="amount">AMOUNT</string>
+    <string name="amount1">amount</string>
+    <string name="reason">reason</string>
+    <string name="fees">fees</string>
+    <string name="beneficiary1">beneficiary</string>
+    <string name="tap_to_set">TAP TO SET</string>
+    <string name="tap_to_set1">tap to set</string>
+    <string name="insert_amount">insert amount</string>
+    <string name="yuan"></string>
+    <string name="description_2">Description:</string>
+    <string name="description_1">Description</string>
+    <string name="enter_description">enter the description - max 250 characters</string>
+    <string name="confirm_transfer">confirm transfer</string>
+    <string name="require_pin">require pin</string>
+    <string name="business_hours">business hours:</string>
+    <string name="pin">pin</string>
+    <string name="description">DESCRIPTION</string>
+    <!-- new payments -->
+    <string name="new_payments_step1">Payment</string>
+    <string name="new_payments_step2">Verification</string>
+    <string name="new_payments_step3">Confirmation</string>
+    <string name="proceed">Proceed</string>
+    <string name="verify_data">Verify data</string>
+    <string name="verify_card">Verify Card</string>
+    <string name="verify_the_data_card">verify the data card</string>
+    <string name="vertify_data">Vertify data</string>
+    <string name="pin_">PIN</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="ask_pin">Ask PIN</string>
+    <string name="downloading">Downloading</string>
+    <string name="payment_executed_successfully">Payment executed successfully</string>
+    <string name="payment_transaction_failed">Payment transaction failed</string>
+    <string name="description_">description</string>
+    <string name="pls_select_payments_type">Select the type of payment</string>
+    <string name="missing_amount">Missing amount</string>
+    <string name="missing_date">Missing date</string>
+    <string name="missing_pin">Missing pin</string>
+    <string name="pls_input_right_amount">Warning! The amount entered is greater than the available balance.</string>
+    <string name="pls_select_payee">Select a payee</string>
+    <string name="pls_select_payer">Select a payer</string>
+    <string name="missing_description">Missing description</string>
+    <string name="payee_exist">This payee was exist</string>
+    <string name="card_verified">Card Verified</string>
+    <string name="no_card_found">No Card Found</string>
+    <string name="new_payee_done">Done</string>
+    <string name="new_payee_title">New Payee</string>
+    <string name="enter_beneficiary_name">Enter beneficiary name</string>
+    <string name="enter_the_card_number">Enter the phone number</string>
+    <string name="pin_success_by_email">ask pin success, please get pin by email</string>
+    <string name="pin_success_by_sms">ask pin success, please get pin by sms</string>
+    <string name="select_account_remind">Scroll and tap to select an account</string>
+    <string name="bill_holder">Bill holder</string>
+    <string name="bill_payment_remind">use capture code or fill in all requested fields manually</string>
+    <string name="capture_code">Capture code</string>
+    <string name="account_number">Account number</string>
+    <string name="amount_doller">Amount-$</string>
+    <string name="payable_to">Payable to</string>
+    <string name="bill_number">Bill number</string>
+    <string name="type">Type</string>
+    <string name="_674">674</string>
+    <string name="_896">896</string>
+    <!-- description from description_1 -->
+    <string name="_123">123</string>
+    <string name="_451">451</string>
+    <string name="due_to">Due to</string>
+    <string name="mav">MAV</string>
+    <string name="rav">RAV</string>
+    <string name="bill_holder1">bill holder</string>
+    <string name="account_number1">account number</string>
+    <string name="bank_free1">bank free</string>
+    <string name="postal_free1">postal free</string>
+    <string name="type_1">Type: </string>
+    <string name="payer_list_info">Scroll and tap to select an account</string>
+    <string name="payee_list_info">Scroll and tap to select a payee</string>
+    <string-array name="new_payments_types">
+        <item>--Type of payment--</item>
+        <item>bank transfer</item>
+        <item>transfer entry</item>
+        <item>card top up</item>
+        <item>phone top up</item>
+        <item>Precompiled bill</item>
+        <item>Blank bill</item>
+        <item>MAV/RAV</item>
+    </string-array>
+    <string-array name="new_payments_types1">
+        <item>--Type of payment--</item>
+        <item>bank transfer</item>
+        <item>card top up</item>
+        <item>phone top up</item>
+        <item>Precompiled bill</item>
+        <item>Blank bill</item>
+        <item>MAV/RAV</item>
+    </string-array>
+    <!-- new payee -->
+    <string name="missing_account_number">Missing account number</string>
+    <string name="missing_name">Missing name</string>
+    <string name="missing_iban">Missing IBAN</string>
+    <string name="missing_operator">Missing operator</string>
+    <string name="missing_number">Missing number</string>
+    <string name="missing_beneficiary_name">Missing beneficiary name</string>
+    <string name="missing_card_number">Missing card number</string>
+    <string name="verify_proceed">Verify &amp; Proceed</string>
+    <string name="new__payee">"New\nPayee"</string>
+    <string name="new_payee__by_phone">"New Payee\nby Phone"</string>
+    <string name="new_payee_by_phone_info">Use the \"Transfer by phone\" option by inserting the beneficiary\'s mobile number.</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="not_valid_phone_number">Not valid phone number</string>
+    <string name="holders_name">Holders name</string>
+    <string name="address_1st_line">Address 1st line</string>
+    <string name="city">City</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="missing_bill_number">Missing bill number</string>
+    <string name="state_1">State</string>
+    <string name="new_bill_holder">New bill holder</string>
+    <string name="_phone_number">Phone Number</string>
+    <!-- public -->
+    <string name="dollar">$</string>
+    <!-- recent payment -->
+    <string name="recover">recover</string>
+    <string name="login_text1">You are accessing myBank \n mobile banking system.</string>
+    <string name="login_text2">Please wait for all your data \nto be downloaded.</string>
+    <string name="login_text3">This process may take \n few minutes.</string>
+    <!-- AggregatedViewManager -->
+    <string name="legend_investments">Investments</string>
+    <string name="legend_accounts">Accounts</string>
+    <string name="legend_prepaid_cards">Prepaid cards</string>
+    <string name="legend_credit_cards">Credit cards</string>
+    <string name="legend_total_loans">Total Loans</string>
+    <!-- investment details -->
+    <string name="investment2">Investment 2</string>
+    <string name="title">Title</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="date_fu">Date</string>
+    <string name="ctv">CTV</string>
+    <!-- user info -->
+    <string name="last_update_on">Update on %1$s</string>
+    <string name="show_items">Show Items</string>
+    <string name="pin_manger">Pin Manager</string>
+    <string name="my_account">My Accounts</string>
+    <string name="my_cards">My Cards</string>
+    <string name="my_loans">My Loans</string>
+    <string name="my_invest">My Investments</string>
+    <string name="my_push">Push notifications</string>
+    <string name="save_success">save success</string>
+    <!-- items -->
+    <string name="list">list</string>
+    <string name="list_set">list order by</string>
+    <string name="ldate">date</string>
+    <string name="lamount">amount</string>
+    <string name="desplay_set">transactions displayed</string>
+    <string name="last20">last 20</string>
+    <string name="lasttwomonth">last two month</string>
+    <string name="tranfer_set">recent payments displayed</string>
+    <string name="num10">10</string>
+    <string name="num20">20</string>
+    <string name="num30">30</string>
+    <string name="isave">Save</string>
+    <!-- pin -->
+    <string name="pin_manager">Pin manager</string>
+    <string name="receive_set">receive pin by</string>
+    <string name="mail">mail</string>
+    <string name="sms">sms</string>
+    <!-- account -->
+    <string name="account_alias">account alias: </string>
+    <string name="last_name">last name: </string>
+    <string name="a_account">account: </string>
+    <string name="IBAN">IBAN: </string>
+    <string name="all">ALL</string>
+    <string name="deposits">DEPOSITS</string>
+    <string name="withdrawals">WITHDRAWALS</string>
+    <string name="account_details_title">Frank\'s account transations</string>
+    <string name="other_transactions">Other Transactions</string>
+    <string name="currentcy_rate_s__">currency rate:%1$s</string>
+    <string name="record_date_s__">record date:%1$s</string>
+    <string name="account_details_sutitle">From:%1$s To:%2$s</string>
+    <!-- card -->
+    <string name="card_alias">account alias: </string>
+    <string name="card_holder">card holder: </string>
+    <string name="card_num">card num: </string>
+    <string name="plafond">Plafond: %1$s</string>
+    <string name="transactions">TRANSACTIONS</string>
+    <string name="card_details">CARD DETAILS</string>
+    <string name="last_update">Last Update:</string>
+    <string name="expiration_date">Expiration Date:</string>
+    <string name="plafond_">Plafond:</string>
+    <string name="operation_date">Operation Date:</string>
+    <string name="currency_date">Currency Date:</string>
+    <string name="cards_amount">Amount:</string>
+    <string name="card_state">Card State:</string>
+    <string name="card_number">Card Number:</string>
+    <!-- loads -->
+    <string name="alias">alias: </string>
+    <string name="residual_capital">residual capital: </string>
+    <string name="total_loan">total loan</string>
+    <string name="interest_rate">interest rate</string>
+    <string name="payed_loan">payed loan</string>
+    <string name="outstanding_loan">outstanding loan</string>
+    <!-- AccountsManager -->
+    <string name="account_total_title">Total account</string>
+    <string name="account_available_balance">available balance</string>
+    <string name="account_balance">account balance</string>
+    <string name="account_deposits">deposits</string>
+    <string name="account_withdrawals">withdrawals</string>
+    <string name="account_transactions">transactions</string>
+    <!-- CardsManager -->
+    <string name="cards_total_title">Total cards</string>
+    <!-- loansManager -->
+    <string name="loans_total_title">Total Loans</string>
+    <string name="loans_total_outstanding">Total outstandings</string>
+    <string name="investments_deposit">monthly deposit</string>
+    <string name="investments_details">details</string>
+    <string name="cards_withdrawals">monthly withdrawals</string>
+    <!-- SecurityInfoActivity -->
+    <string name="back">Back</string>
+    <!-- Contacts -->
+    <string name="new_request">New request</string>
+    <string name="contact_us">Contact us</string>
+    <string name="search_branch">Search branch</string>
+    <string name="customer_service">customer service</string>
+    <string name="theft_and_loss">theft and loss</string>
+    <string name="us">US</string>
+    <string name="business_hours2">business hours</string>
+    <string name="e_mail">e-mail</string>
+    <string name="website">website</string>
+    <string name="block_debit_and">block debit and prepaid cards</string>
+    <string name="other_country">other country</string>
+    <string name="block_credit_cards">block credit cards</string>
+    <string name="enter_distance">Enter the maximum \ndistance of search(m):</string>
+    <string name="search">Search</string>
+    <string name="search_">search</string>
+    <string name="object">objects</string>
+    <string name="channel">channel</string>
+    <string name="details">details</string>
+    <string name="description_hint">Info new</string>
+    <string name="request_send">Send</string>
+    <string name="object_accounts">Accounts</string>
+    <string name="object_credit_cards">Credit Cards</string>
+    <string name="object_prepaid_cards">Prepaid Cards</string>
+    <string name="object_payments">Payments</string>
+    <string name="object_mortagage">Mortagage</string>
+    <string name="object_loans">Loans</string>
+    <string name="object_investments">Investments</string>
+    <string name="object_security">Security</string>
+    <string name="object_other">Other</string>
+    <string name="channel_email">Email</string>
+    <string name="channel_phone">Phone</string>
+    <string name="channel_branch">Branch</string>
+    <string name="details_email">Mail:</string>
+    <string name="details_email_hint">Enter e-mail</string>
+    <string name="details_phone">Phone:</string>
+    <string name="details_phone_hours">Hours:</string>
+    <string name="details_branch_email">Mail:</string>
+    <string name="details_branch_email_hint">Enter e-mail</string>
+    <string name="details_branch_phone">Phone:</string>
+    <string name="details_branch_date">Date:</string>
+    <string name="details_branch_hours">Hours:</string>
+    <string name="description_hint_2">Info new</string>
+    <string name="version">Version:</string>
+    <string name="request_successfully">Your contact request has been submitted successfully.</string>
+    <string name="crash_toast_text">Exception, saving to log..</string>
+    <string name="time_out">Network not available.Verify the connection.</string>
+    <string name="server_refused">Server refused!</string>
+    <string name="msg_material_number">您可以直接扫描物料编码。如果扫描不成功，可以通过点击按钮，进行手动输入。</string>
+    <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="button_ok">确定</string>
+    <!-- Device Admin -->
+    <string name="sample_device_admin">mBanking Device Admin</string>
+    <string name="sample_device_admin_description">This is mBanking more secure ...</string>
+    <!-- notifictions -->
+    <string name="is_receive_notifictions">Do you want to receive push notifictions on this phone?</string>
+    <string name="notifictions_confirmation">you have chosen to receive notifications, if you want to modify settings go to user info menu</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <!-- network -->
+    <string name="connection_error">connection error</string>
+    <string name="unknown_connection_error">connection error</string>
+    <!-- new string -->
+    <string name="none_payer">none payer account!</string>
+    <string name="recent_beneficiary">beneficiary:%s</string>
+    <string name="recent_number">number:%s</string>
+    <string name="recent_description">description:%s</string>
+    <string name="recent_state">state:%s</string>
+    <string name="horizontal_chart_total">Total:%s</string>
+    <!-- new string2 -->
+    <string name="day">day</string>
+    <string name="week">week</string>
+    <string name="month">month</string>
+    <string name="months">months</string>
+    <string name="year">year</string>
+    <string name="total">total</string>
+    <string name="ss_welcome">Welcome </string>
+    <string name="padyed_out_loans">Payed loans / Outstanding loans</string>
+    <string name="total_assets">Total assets</string>
+    <string name="last_update_on2">Last update on </string>
+    <string name="ss_total_investments">Total investments</string>
+    <string name="ss_total_loans">Total Loans</string>
+    <string name="ss_payed">Payed</string>
+    <string name="ss_outstanding">Outstanding</string>
+    <string name="ss_total_account">Total Account</string>
+    <string name="ss_total_cards ">Total Cards</string>
+    <string name="ss_all_assets">All assets</string>
+    <string name="ss_validate_password_">Validate Password....</string>
+    <string name="ss_restore_user_info_">Restore User Info....</string>
+    <string name="ss_ownloading_user_info_">Downloading User Info....</string>
+    <string name="ss_downloading_accounts_">Downloading Accounts....</string>
+    <string name="ss_ownload_recipientList_">Download RecipientList....</string>
+    <string name="select_correct_payee">select correct payee!</string>
+    <string name="ss_download_cards_synchchart_">Download Cards SynchChart....</string>
+    <string name="ss_download_account_synchchart_">Download Account SynchChart....</string>
+    <string name="ss_download_investments_synchchart_">Download Investments SynchChart....</string>
+    <string name="ss_download_financing_synchchart_">Download Financing SynchChart....</string>
+    <string name="ss_download_cards_synchdashboard_">Download Cards SynchDashBoard....</string>
+    <string name="ss_download_account_synchdashboard_">Download Account SynchDashBoard....</string>
+    <string name="ss_download_investments_synchdashboard_">Download Financing SynchDashBoard....</string>
+    <string name="ss_save_local_database_">Save Local DataBase....</string>
+    <string name="available_balance">available balance</string>
+    
+    <string name="email">email</string>
+    <string name="phone">phone</string>
+    <string name="branch">branch</string>
+    <string name="date_cannot_empty">Date cann\'be empty</string>
+    <string name="phone_cannot_empty">Phone cann\'t be empty</string>
+    <string name="email_cannot_empty">Email cann\'t be empty</string>
+    <string name="object_cannot_empty">Object cann\'t be empty</string>
+    <string name="today">today</string>
+    <string name="ago">ago</string>
+    <string name="search_branch2">search branch</string>
+    <string name="locate_a_branch">locate\na branch</string>
+    <string name="safety">safety</string>
+    <string name="watch_the_demo">watch\nthe demo</string>
+
+</resources>

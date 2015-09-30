@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     
+    <LinearLayout android:id="@+id/ll_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tv_step1"
+        	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step1:（纬度，经度）"
+            android:textSize="16sp"/>
+     <LinearLayout android:id="@+id/ll_start_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="起点："/>
+        <EditText android:id="@+id/et_start_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2254357"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入起点纬度"/>
+        <EditText android:id="@+id/et_start_y"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="11394122"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入起点经度"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/ll_end_node"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="终点："/>
+        <EditText android:id="@+id/et_end_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2281307"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入终点纬度"/>
+        <EditText android:id="@+id/et_end_y"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="11380124"
+            android:gravity="center"
+            android:numeric="integer"
+            android:textSize="12sp"
+            android:hint="输入终点经度"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/ll_calc_btn"
+        android:layout_below="@id/ll_node"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:padding="8dip"
+        android:orientation="horizontal">
+	     <TextView
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:textSize="16sp"
+	         android:text="Step2:" />
+	     <Button android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:textSize="14sp"
+	        android:id="@+id/online_calc_btn"
+	        android:text="在线规划"/>
+	      <Button android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:id="@+id/simulate_btn"
+	        android:textSize="14sp"
+	        android:text="模拟导航"/>   
+	     <Button android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:id="@+id/real_btn"
+	        android:textSize="14sp"
+	        android:text="真实导航"/>
+    </LinearLayout>
+
+	    <FrameLayout
+	        android:id="@+id/mapview_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_below="@id/ll_calc_btn" >
+
+    </FrameLayout>
+</RelativeLayout>

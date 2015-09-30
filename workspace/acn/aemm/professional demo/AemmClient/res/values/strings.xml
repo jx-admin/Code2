@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">企业应用大厅</string>
+    <string name="description">企业移动解决方案</string>
+    <string name="developer">Accenture Mobility Services</string>
+    
+    <string name="installed">已安装</string>
+    <string name="uninstalled">未安装</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="ignore">忽略</string>
+    <string name="open">打开</string>
+    <string name="alert">提示</string>
+    
+    <string name="update">更新</string>
+    <string name="install">安装</string>
+    <string name="apk_disable">该应用已禁止安装</string>
+    <string name="app_disable">该应用已禁止启动</string>
+    <string name="install_disable">该设备禁止安装程序</string>
+    <string name="lowermemerry">空间不足，无法下载</string>
+    <string name="apk_load_fail">下载失败</string>
+    <string name="new_app_load">新应用下发</string>
+    
+    <string name="updata_by_hand">手动更新</string>
+    <string name="hall_updata_title">企业大厅需要更新</string>
+    <string name="hall_updata_content">是否更新？</string>
+    <string name="app_unexsit">该程序不存在或被卸载,是否移到未安装区？</string>
+    <string name="apk_file_erro">安装包解析错误</string>
+    <string name="app_erro">程序错误</string>
+    <string name="is_install">是否要安装</string>
+    <string name="gps_unable">GPS不可用</string>
+    
+    <!-- updata -->
+    <string name="updata_executing">正在检查更新</string>
+    <string name="network_erro">网络异常</string>
+    <string name="update_over">更新结束</string>
+    <string name="update_failed">更新失败！</string>
+    <string name="updata_erro">检查更新出错</string>
+    <string name="updata_finish">检查更新完毕</string>
+    <string name="updata_app_push">您有%d个新增应用可以安装</string>
+    <string name="passpolicy">密码策略</string>
+    <string name="rootcertificate">CA 证书</string>
+    <string name="pkcscertificate">PSK 证书</string>
+    <string name="restrictions">限制</string>
+    
+     <!-- login -->
+    <string name="name_str">用户名</string>
+    <string name="password_str">密码</string>
+	<string name="imei_str">设备标识</string>
+    <string name="login_str">登录</string>
+    <string name="cancel_str">取消</string>
+    <string name="inputname_hint">请输入用户名</string>
+    <string name="inputpassword_hint">请输入密码</string>
+    <string name="username_null">请输入用户名</string>
+	<string name="password_null">请输入密码</string>	   
+    <string name="inputimei_hint">请输入设备标识I</string>
+	<string name="imei_null">请输入设备标识</string>
+	
+     <!-- message -->
+    <string name="notification_message">您有一条新消息</string>
+    <string name="checkupdate">正在更新...</string>
+    <string name="SerPushInfo">您有新的应用发布了!</string>
+    <string name="newapp">有新应用更新</string>
+    <string name="newapp_client">你有更新</string>
+    <string name="lock_client">设备已锁定，解锁密码请联系管理员</string>
+    
+    <string name="aemm_device_admin">企业应用大厅</string>
+    <string name="aemm_device_admin_description">企业应用大厅是移动设备上企业应用的管理控制程序。</string>
+    <string name="app_version">0.3.0718.001</string>
+    
+    <string name="device_showToast_onEnabled">设备管理：可用</string>
+    <string name="device_showToast_onDisabled">设备管理：不可用</string>
+    <string name="device_showToast_onDisableRequested">这是一个可选的消息，警告有关禁止用户的请求</string>
+    <string name="device_showToast_onPasswordChanged">设备管理：密码己经改变</string>
+    <string name="device_showToast_onPasswordFailed">设备管理：改变密码失败</string>
+    <string name="device_showToast_onPasswordSucceeded">设备管理：改变密码成功</string>
+        
+    <string name="label">AEMM 账户</string>
+    <string name="third_party_label">第三方账户</string>
+    <string name="ui_activity_authenticating">正在登录\u2026</string>
+    <string
+        name="login_activity_loginfail_text_both">登录失败，请检查用户名和密码是否有效，或者网络是否畅通!</string>
+    <string
+        name="login_activity_loginfail_text_pwmissing">输入密码.</string>
+    <string
+        name="login_activity_loginfail_text_pwonly">请重新输入密码.</string>
+    <string
+        name="login_error_user_already_exist">用户已存在.</string>
+    <string
+        name="login_error_invalid_username_password">无效用户名或密码.</string>
+    <string
+        name="login_error_user_doesnot_exist">用户不存在.</string>
+    <string
+        name="login_error_device_doesnot_exist">设备不存在.</string>
+    <string
+        name="login_activity_newaccount_text">输入AEMM账户.</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/media_button_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:text="Mbtn注册" />
+
+    <Button
+        android:id="@+id/media_button_unreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/media_button_reg"
+        android:onClick="onClick"
+        android:text="Mbtn注销" />
+
+    <Button
+        android:id="@+id/headset_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/media_button_unreg"
+        android:onClick="onClick"
+        android:text="耳机注册" />
+
+    <Button
+        android:id="@+id/headset_unreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/headset_reg"
+        android:onClick="onClick"
+        android:text="耳机注销" />
+
+    <TextView
+        android:id="@+id/info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/media_button_reg"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_customize"
+        android:showAsAction="ifRoom"
+        android:title="@string/customize"
+        android:icon="@drawable/ic_action_customize" />
+
+    <item android:id="@+id/menu">
+
+        <item
+            android:id="@+id/action_reset"
+            android:showAsAction="ifRoom"
+            android:icon="@drawable/ic_action_reset"
+            android:title="@string/reset" />
+        <item
+            android:id="@+id/action_open_activities"
+            android:showAsAction="ifRoom"
+            android:title="@string/open_activities"
+            android:checkable="true" />
+        <item
+            android:id="@+id/action_about"
+            android:showAsAction="ifRoom"
+            android:icon="@drawable/ic_action_customize"
+            android:title="@string/about" />
+    </item>
+</menu>

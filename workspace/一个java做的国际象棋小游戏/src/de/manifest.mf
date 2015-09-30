@@ -1,0 +1,12 @@
+Manifest-Version: 2.0
+Created-By: 1.2 (Sun Microsystems Inc.) 
+Main-Class: de.java_chess.javaChess.JavaChess
+Class-Path: javaChess.jar
+
+Name: de/andreas_rueckert/javaChess/
+Specification-Title: java chess specs
+Specification-Version: 0.1
+Specification-Vendor: Andreas Rueckert <mail@andreas-rueckert.de>
+Implementation-Vendor: Andreas Rueckert <mail@andreas-rueckert.de>
+Implementation-Version: 0.0.1
+Implementation-Title: javaChess chess game

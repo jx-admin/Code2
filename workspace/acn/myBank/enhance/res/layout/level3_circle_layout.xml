@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/datebox_center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/layout_title_tv"
+            style="@style/gray_text_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Title Account" 
+            android:textSize="@dimen/text_big_size"/>
+
+        <TextView
+            android:id="@+id/layout_subtitle_tv"
+            style="@style/gray_text_white_shadow_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Here is the subtitle account"
+            android:textSize="@dimen/text_small_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/margin_xlarge" >
+
+        <com.custom.view.CircleLinearView
+            android:id="@+id/content_cirlin"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/time_selector"/>
+
+</LinearLayout>

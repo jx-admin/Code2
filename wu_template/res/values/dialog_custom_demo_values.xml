@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="test">Show CustomDialog</string>
+    <string name="dialog_custom_name">CustomDialog</string>
+    <string name="TextView01">看到我了吗，呵呵山寨的图片勉强可以吧,不要点XX关了我！</string>
+    <string name="TextView02">额，En文不行啊！android.view.Window和android.view.WindowManager很多属性看不懂，不然前景图上面就不会出现留空了。：）</string>
+
+</resources>

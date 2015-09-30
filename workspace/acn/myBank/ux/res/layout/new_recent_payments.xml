@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:weightSum="8" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            layout="@layout/main_title" />
+        <include
+            android:id="@+id/content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7.2"
+            layout="@layout/recent_payment" />
+
+         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_layout" />
+
+</FrameLayout>

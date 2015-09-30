@@ -1,0 +1,71 @@
+﻿生成启动时间为 2013/4/13 11:58:28。
+     1>项目“C:\Users\junxu.wang\Downloads\中国象棋源代码\Chess.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Debug\Chess.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\Chess.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\Chess.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt BaiDlg.cpp BaseClasses.cpp BaseDef.cpp Chess.cpp ChessDlg.cpp CoolButton.cpp OpenDlg.cpp OptionDlg.cpp StepList.cpp Thinker.cpp ThinkOptionDlg.cpp
+         ThinkOptionDlg.cpp
+         Thinker.cpp
+         StepList.cpp
+         OptionDlg.cpp
+         OpenDlg.cpp
+         CoolButton.cpp
+         ChessDlg.cpp
+         Chess.cpp
+     1>c:\users\junxu.wang\downloads\中国象棋源代码\chess.cpp(52): warning C4996: 'CWinApp::Enable3dControlsStatic': CWinApp::Enable3dControlsStatic is no longer needed. You should remove this call.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\atlmfc\include\afxwin.h(5347) : 参见“CWinApp::Enable3dControlsStatic”的声明
+         BaseDef.cpp
+         BaseClasses.cpp
+         BaiDlg.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /l"0x0804" /nologo /fo".\Debug\Chess.res" Chess.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\Chess.exe.embed.manifest.res" .\Debug\Chess_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\Chess.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:".\Debug\Chess.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\junxu.wang\Downloads\中国象棋源代码\Debug\Chess.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\Chess.lib" /MACHINE:X86 .\Debug\Chess.res
+         .\Debug\Chess.exe.embed.manifest.res
+         .\Debug\BaiDlg.obj
+         .\Debug\BaseClasses.obj
+         .\Debug\BaseDef.obj
+         .\Debug\Chess.obj
+         .\Debug\ChessDlg.obj
+         .\Debug\CoolButton.obj
+         .\Debug\OpenDlg.obj
+         .\Debug\OptionDlg.obj
+         .\Debug\StdAfx.obj
+         .\Debug\StepList.obj
+         .\Debug\Thinker.obj
+         .\Debug\ThinkOptionDlg.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\Chess.exe.embed.manifest" /manifest .\Debug\Chess.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\Chess.exe.embed.manifest.res" .\Debug\Chess_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\Chess.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:".\Debug\Chess.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\junxu.wang\Downloads\中国象棋源代码\Debug\Chess.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\Chess.lib" /MACHINE:X86 .\Debug\Chess.res
+         .\Debug\Chess.exe.embed.manifest.res
+         .\Debug\BaiDlg.obj
+         .\Debug\BaseClasses.obj
+         .\Debug\BaseDef.obj
+         .\Debug\Chess.obj
+         .\Debug\ChessDlg.obj
+         .\Debug\CoolButton.obj
+         .\Debug\OpenDlg.obj
+         .\Debug\OptionDlg.obj
+         .\Debug\StdAfx.obj
+         .\Debug\StepList.obj
+         .\Debug\Thinker.obj
+         .\Debug\ThinkOptionDlg.obj
+         Chess.vcxproj -> C:\Users\junxu.wang\Downloads\中国象棋源代码\.\Debug\Chess.exe
+       BscMake:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\Chess.bsc" .\Debug\BaiDlg.sbr .\Debug\BaseClasses.sbr .\Debug\BaseDef.sbr .\Debug\Chess.sbr .\Debug\ChessDlg.sbr .\Debug\CoolButton.sbr .\Debug\OpenDlg.sbr .\Debug\OptionDlg.sbr .\Debug\StdAfx.sbr .\Debug\StepList.sbr .\Debug\Thinker.sbr .\Debug\ThinkOptionDlg.sbr
+       FinalizeBuildStatus:
+         正在删除文件“.\Debug\Chess.unsuccessfulbuild”。
+         正在对“.\Debug\Chess.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\junxu.wang\Downloads\中国象棋源代码\Chess.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:28.56

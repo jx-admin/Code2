@@ -1,0 +1,25 @@
+测试用的包名为：com.aemm.demo
+******************************************************************************************************
+方法：修改弹出窗口deviceAdmin的activity。
+*******************************************************************************************************
+在onCreata里增加如下代码，在line147附近 
+protected void onCreate(Bundle icicle) {
+......
+if (cn.getPackageName().equals(String.valueOf("com.aemm.demo")))
+        {
+        	 if (mDPM.isAdminActive(mDeviceAdmin.getComponent())) {
+        		 Log.w(TAG, "already isAdminActive");
+                 setResult(Activity.RESULT_OK);
+                 finish();
+                 
+             }
+        	 else
+        	 {
+        		 Log.w(TAG, "set isAdminActive");
+        		 mDPM.setActiveAdmin(mDeviceAdmin.getComponent());
+        		 setResult(Activity.RESULT_OK);
+        		 finish();
+        	 }
+        }
+......
+}

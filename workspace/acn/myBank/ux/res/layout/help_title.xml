@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5" >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="3"
+            android:background="@null"
+            android:scaleType="fitStart"
+            
+            android:src="@drawable/back_selector" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="help"
+        android:textColor="#ffffffff" >
+    </TextView>
+
+</RelativeLayout>

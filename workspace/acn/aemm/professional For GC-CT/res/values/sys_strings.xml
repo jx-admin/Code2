@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="title_sys_app">广东电信</string>
+  <string name="title_sys_manage">系统管理</string>
+  <string name="title_sys_dataupdate">数据更新</string>
+  <string name="title_sys_logUpload">日志上传</string>
+  <string name="title_sys_changPassword">密码修改</string>
+  <string name="title_sys_traffic">流量信息</string>
+  <string name="title_sys_location">GPS星云图</string>
+  <string name="title_sys_camera">拍照上传</string>
+  
+  <string name="back_to_top">返回上层</string>
+	<string name="query">查询</string>
+	<string name="yes">是</string>
+	<string name="define">确定</string>
+	<string name="nativenetid">本地网：</string>
+	<string name="more">更多</string>
+	<string name="save">保存</string>
+	<string name="submit">提交</string>	
+	<string name="download">下载</string>
+	<string name="download_fail">下载失败</string>
+	<string name="upload">上传</string>
+	<string name="uploading">正在上传...</string>
+	<string name="upload_sucess">上传成功</string>
+	<string name="upload_fail">上传失败</string>
+	<string name="system_tip">系统提示</string>
+	<string name="start_fail">启动[%1$s]出现异常</string>
+	<string name="upgrade">升级</string>
+	<string name="doing">正在</string>
+	<string name="sevice_returnNull">服务端返回空数据！</string>
+	<string name="please_selectOne">请先选择一项</string>
+	<string name="tree_window">树形窗口</string>
+	
+	<string name="sys_network_enabled">没有找到网络，无法连接服务器！</string>
+	<string name="sys_upgrade_immediately">是否立刻升级？</string>
+	<string name="sys_discover_newVersion">发现新版本</string>
+	<string name="sys_exit_title">退出确认</string>
+	<string name="sys_exit_confirm">确定退出系统吗？</string>
+	<string name="sys_logout_title">注销确认</string>
+	<string name="sys_logout_confirm">确定注销[%1$s]吗？</string>
+	<string name="sys_uninstall_tip">您未安装[%1$s],是否安装？</string>
+	<string name="sys_install_tip">安装程序下载</string>
+	<string name="sys_install_downloading">正在下载安装程序包</string>
+	<string name="sys_unknown_error">未知异常</string>
+	<string name="sys_error_title">系统异常</string>
+	<string name="sys_error_reportConfrim">系统出现异常,是否发送报告？</string>
+	<string name="sys_dataUpdate_sucess">数据更新成功！</string>
+	<string name="sys_upgrade_callbackFail_request">出现错误,是否继续升级？</string>
+	
+	<string name="sys_logining">正在登录系统...</string>
+	<string name="sys_login_denial">帐号或密码不能为空。</string>
+	<string name="sys_login_fail">登录失败:</string>
+	<string name="sys_login_passwordError">密码不正确！</string>
+	<string name="sys_login_noLocalAccount">本地帐号不存在</string>
+	<string name="sys_login_userMessage">无法获取用户帐号信息</string>
+	
+	<string name="sys_dataUpdate_ing">正在更新[%1$s]</string>
+	<string name="sys_dataUpdate_fail">更新[%1$s]失败!</string>
+  <string name="sys_dataUpdate_exception">更新[%1$s]异常!</string>
+		
+	<string name="sys_traffic_today">今日</string>
+	<string name="sys_traffic_week">本周</string>
+	<string name="sys_traffic_month">本月</string>
+	
+	<string name="sys_uploadLog_sucess">日志上传成功</string>
+	<string name="sys_uploadLog_fail">日志上传失败</string>
+	
+	<string name="sys_location_state">状态：</string>
+	<string name="sys_location_satelliteNum">卫星：</string>
+	<string name="sys_location_longitude">经度：</string>
+	<string name="sys_location_latitude">纬度：</string>
+	<string name="sys_location_altitude">高度：</string>
+	<string name="sys_location_accuracy">精度：</string>
+	<string name="sys_location_time">时间：</string>
+	<string name="sys_location_speed">速率：</string>
+	<string name="sys_location_positioning">定位中...</string>
+	<string name="sys_location_positioned">已定位</string>	
+	<string name="sys_location_providerEnabled">请先开启GPS模块</string>	
+	
+	<string name="sys_camera_nophoto">请先点击拍照</string>	
+	<string name="sys_sign_title">电子签名</string>
+	<string name="sys_sign_define">确认签名</string>
+	<string name="sys_sign_clear">双击签名板可清除内容。</string>
+	<string name="sys_sign_save_successed">签名文件保存成功。</string>
+	<string name="sys_sign_no_signed">您还没有开始签名。</string>
+</resources>

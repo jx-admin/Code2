@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_left">&lt;</string>
+    <string name="app_name">Wuliu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="LOADING">LOADING...</string>
+    <string name="near_cars">附近有超过10两货车可提供服务</string>
+    <string name="select_city">选择城市</string>
+    <string name="submiting">正在提交。。。</string>
+    <string name="service_times">服务：%1$d次</string>
+    <string name="driver_city">籍贯：%1$s</string>
+    <string name="cargo_goods">帮货运</string>
+    <string name="cargo_goods_des">适合无需搬运的搬家、大件物品同城运速</string>
+    <string name="cargo_home">帮搬家</string>
+    <string name="cargo_home_des">专业培训、标注化服务、业内最低价格</string>
+    <string name="feedback">反馈</string>
+    <string name="feedback_title">意见反馈</string>
+    <string name="feedback_des">家来帮致力于给您提供优质的上门家庭服务，欢迎您提供宝贵的意见和建议~</string>
+    <string name="submit_feedback">提交反馈</string>
+    <string name="money_start">元起</string>
+    <string name="money_start_kl">元(5公里)</string>
+    <string name="xiaomianbao">小型面包</string>
+    <string name="xiaomianbao_des">适合少量软包裹/编织袋/行李箱为主的个人搬家</string>
+    <string name="zhongmianbao">中型面包</string>
+    <string name="zhongmianbao_des">适合少量软包裹/编织袋/行李箱为主的个人搬家</string>
+    <string name="xianghuo">厢货</string>
+    <string name="xianghuo_des">适合床柜、冰箱等大家电、家具为主的家庭、公司搬家</string>
+    <string name="select_driver">选司机</string>
+    <string name="kuaisuyuyue">快速预约</string>
+    <string name="user_comment">用户评价</string>
+    <string name="_comment_count">（%1d人评价）</string>
+    <string name="history_book_list">历史订单</string>
+    <string name="pls_select_boot_to_time_hint">请选择下单时间</string>
+    <string name="pls_select_boot_to_dest_hint">请选搬家目的地</string>
+    <string name="pls_select_boot_to_from_hint">请选搬家出发地</string>
+    <string name="book_time_info">到达时间有半小时浮动</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="share">分享</string>
+
+    <color name="debug_coldr">#99ff0000</color>
+    <color name="window_bk">#FFdddddd</color>
+    <color name="item_bg">#ffffffff</color>
+    <color name="button_bg">#ffff0000</color>
+    <color name="title_font2">#ff000000</color>
+    <color name="title_font">#ffff0000</color>
+    <color name="title_black">#ff000000</color>
+    <color name="button_text">#ffffffff</color>
+    <color name="grade">#ffC8C8C8</color>
+    <color name="tab_bg">#72cccccc</color>
+    <color name="icon_font">#7c7c7c</color>
+    <color name="title_bg">#cc232323</color>
+    <color name="item_dis_bg">#3c3a2f</color>
+    <color name="menu_back">#88888888</color>
+    <color name="menu_selected">#88880000</color>
+    <color name="menu_text_color_focus">#ffff0000</color>
+    <color name="ratingbar_p1">#ff969696</color>
+    <color name="ratingbar_p2">#ffF06065</color>
+    <color name="transcolor">#00000000</color>
+    <color name="transparent">#80000000</color>
+
+    <!-- 边距 -->
+    <dimen name="menu_item_divider">2dp</dimen>
+    <dimen name="menu_group_divider">20dp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="margin_big">18dp</dimen>
+    <!-- text size -->
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_title_size">25sp</dimen>
+
+</resources>

@@ -1,0 +1,19 @@
+主要涉及3个地方的代码
+
+1 、packages/apps/Settings/src 
+     DeviceAdminAdd.java ->激活窗口
+     DeviceAdminSettings.java -> 显示出手机中所有的device admin
+
+2 、frameworks/base/core/java/android/app/admin
+    DeviceAdminInfo.java-> specify meta information of a device administrator component.
+    DeviceAdminReceiver.java ->Base class for implementing a device administration component
+    DevicePolicyManager.java ->Public interface for managing policies enforced on a device.
+
+3、 frameworks/base/services/java/com/android/server/
+      DevicePolicyManagerService.java ->Implementation of the device policy APIs
+
+如果需要禁止其他app使用设备管理，可以在这DeviceAdminAdd.java ,DevicePolicyManager.java,DevicePolicyManagerService.java
+这3个地方进行设置
+如果需要实现激活状态不能被取消，也是可以在这3个地方进行设置
+如果需要静默获取设备管理权限，目前试验了，在DeviceAdminAdd.java处进行修改，不用显示出窗口，
+直接设置active admin.

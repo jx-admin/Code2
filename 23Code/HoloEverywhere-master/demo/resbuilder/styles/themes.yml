@@ -1,0 +1,27 @@
+blocks:
+  DemoTheme:
+    demoListRowViewStyle: :style/Holo.Demo.ListRowView
+  DemoThemeBar: null
+  DemoThemeBarDark < DemoThemeBar: null
+  DemoThemeBarLight < DemoThemeBar: null
+  DemoThemeDark < DemoTheme: null
+  DemoThemeLight < DemoTheme: null
+  Fullscreen:
+    android:windowContentOverlay: :null
+    android:windowFullscreen: true
+    windowContentOverlay: :null
+styles:
+  Holo.Demo: null
+  Holo.Demo.FontViewer:
+    android:gravity: center
+    android:layout_height: ?listPreferredItemHeightSmall
+    android:layout_width: match_parent
+    android:textAppearance: ?android:textAppearanceMedium
+  Holo.Demo.ListRowView:
+    android:background: ?selectableItemBackground
+  Holo.Demo.Theme | DemoThemeDark DemoThemeBarDark < Holo.Theme.Slider: null
+  Holo.Demo.Theme.Fullscreen | Fullscreen: null
+  Holo.Demo.Theme.Light | DemoThemeLight DemoThemeBarLight < Holo.Theme.Slider.Light: null
+  Holo.Demo.Theme.Light.DarkActionBar | DemoThemeLight DemoThemeBarDark < Holo.Theme.Slider.Light.DarkActionBar: null
+  Holo.Demo.Theme.Light.DarkActionBar.Fullscreen | Fullscreen: null
+  Holo.Demo.Theme.Light.Fullscreen | Fullscreen: null

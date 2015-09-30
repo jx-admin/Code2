@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/write_weibo"
+        android:icon="?write_weibo"
+        android:title="@string/write_weibo"
+        android:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/switch_theme"
+        android:title="@string/switch_to_another_theme"
+        android:showAsAction="never"/>
+
+</menu>

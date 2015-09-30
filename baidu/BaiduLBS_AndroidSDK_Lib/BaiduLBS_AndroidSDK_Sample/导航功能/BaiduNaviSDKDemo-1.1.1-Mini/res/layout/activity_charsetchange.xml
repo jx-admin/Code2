@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    
+    <Button 
+        android:id="@+id/simplified_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:layout_margin="15dip"
+        android:text="@string/change_to_simplified" /> 
+        
+    <Button 
+        android:id="@+id/traditional_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:layout_margin="15dip"
+        android:text="@string/change_to_traditional" /> 
+
+
+</LinearLayout>

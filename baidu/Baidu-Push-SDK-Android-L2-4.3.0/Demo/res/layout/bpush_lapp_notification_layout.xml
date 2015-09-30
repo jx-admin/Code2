@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/bpush_lapp_notification_big_icon_imageview"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8.0dip"
+        android:gravity="center"
+        android:scaleType="fitXY" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/bpush_lapp_notification_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@+id/bpush_lapp_notification_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9.0dip"
+        android:layout_marginRight="3.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_toLeftOf="@id/bpush_lapp_notification_time_textview"
+        android:layout_toRightOf="@id/bpush_lapp_notification_big_icon_imageview"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="20.0dip" />
+
+    <TextView
+        android:id="@+id/bpush_lapp_notification_content_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bpush_lapp_notification_title_textview"
+        android:layout_marginLeft="9.0dip"
+        android:layout_marginTop="1.0dip"
+        android:layout_toRightOf="@id/bpush_lapp_notification_big_icon_imageview"
+        android:singleLine="true"
+        android:textSize="14.0dip" />
+
+</RelativeLayout>

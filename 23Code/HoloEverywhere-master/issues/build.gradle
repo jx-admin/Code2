@@ -1,0 +1,17 @@
+apply plugin: 'holoeverywhere-app'
+
+holoeverywhere {
+    apply 'android_default.gradle'
+    publish.artifactId = 'issues'
+}
+
+dependencies {
+    compile project(':library')
+    compile project(':addons:preferences')
+    compile project(':addons:slider')
+    compile 'com.google.android.gms:play-services:3.2.25@aar'
+}
+
+android.defaultConfig.minSdkVersion 8
+
+apply plugin: 'holoeverywhere-publish'

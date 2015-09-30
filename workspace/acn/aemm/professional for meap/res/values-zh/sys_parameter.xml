@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 系统参数初始值 -->
+<resources>
+	<!-- 系统服务端地址 -->
+	<string name="sys_ws_ip">http://172.16.29.77:8082</string>
+	<!-- 是否自动登录  Y(是)  (否) -->
+	<string name="autoLogin">Y</string>	
+	<!-- 是否只允许在线使用  1(是)  其它是允许离线与在线(否) -->
+	<item name="onlyOnline" type="integer" format="integer">0</item>
+	<string name="wsdlUri">/services/MopServerService?wsdl</string>
+	<string name="downloadUri">/download</string>
+	<string name="uploadUri">/upload</string>
+	<string name="author_key">js025abcdefghijklm</string>
+	<!-- 是否在登陆时弹出提示“系统出错  是否上传日志”的错误框  Y:弹出  其他：否 -->
+	<string name="isPopErrorRep">N</string>
+	<!-- 是否显示设置推送界面 Y:显示  N：不显示 -->
+		<string name="isShowPush">N</string>
+	<!-- 是否被外部集成 -->
+	<string name="integrated">N</string>
+	<!-- 登陆主页是九宫格还是其他(如：列表) N:其他  Y：九宫格 -->
+	<string name="isGrid">Y</string>
+	<!-- 接口入参出参是否要进行压缩    Y:压缩或解压缩  其它：不压缩或解压缩-->
+	 <string name="isCompress">Y</string>
+	 
+	  <string name="list">Y</string>
+	  <string name="mapSP">baidu</string>
+	
+</resources>

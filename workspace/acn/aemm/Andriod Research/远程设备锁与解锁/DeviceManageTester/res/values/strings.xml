@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">DevicesTest</string>
+    <string name="description">设备管理可以对系统的一些安全进行设置</string>
+    <string name="extr_add">这里可以输入一些额外的说明,比如提示用户什么的</string>
+    <string name="not_manager">你不能对我的屏幕进行操作，因为你不是管理员</string>
+    <string name="word_no_same">两次密码不一致</string>
+    <string name="re_input">重新输入</string>
+    <string name="reset">恢复出厂设置</string>
+    <string name="time_out">屏幕亮光间隔</string>
+    <string name="force_lock">锁屏</string>
+    <string name="auto_clear_word">1分钟后自动清除密码</string>
+    <string name="clear_word">清除密码</string>
+    <string name="change_word">设置密码</string>
+    <string name="reword">重复新密码</string>
+    <string name="new_word">新密码</string>
+    <string name="disable_admin">停用设备管理</string>
+    <string name="enable_admin">启用设备管理</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+android:background="#00000000"
+android:orientation="vertical"
+android:gravity="bottom"
+>
+
+<LinearLayout 
+android:layout_width="fill_parent" 
+android:layout_height="wrap_content" 
+android:background="@drawable/menu_bar_background"
+android:orientation="vertical"
+android:gravity="bottom"
+>
+
+<LinearLayout android:id="@+id/topLayout" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:background="@android:color/transparent"
+android:orientation="horizontal"
+>
+<LinearLayout android:orientation="vertical" android:gravity="center" android:id="@+id/add_layout"
+	android:layout_width="161dp" android:layout_height="wrap_content">
+	<ImageView android:id="@+id/add_image" android:src="@drawable/ic_menu_add"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></ImageView>
+	<TextView android:id="@+id/add_text" 
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/menu_add" android:layout_marginBottom="2dp"></TextView>
+	<ImageView android:background="@drawable/menu_bar_separater_horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		></ImageView>
+</LinearLayout>
+
+<ImageView android:background="@drawable/menu_bar_separater_vertical"
+		android:layout_width="wrap_content" android:layout_height="fill_parent" 
+		></ImageView>
+		
+<LinearLayout android:orientation="vertical" android:gravity="center" android:id="@+id/personalizationLineLayout"
+	android:layout_width="161dp" android:layout_height="wrap_content" >
+	<ImageView android:id="@+id/personalization_image" android:src="@drawable/ic_menu_customize"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></ImageView>
+	<TextView android:id="@+id/personalization_text" 
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/menu_personalization" android:layout_marginBottom="2dp"></TextView>
+	<ImageView android:background="@drawable/menu_bar_separater_horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		></ImageView>
+</LinearLayout>
+</LinearLayout>
+
+<LinearLayout android:id="@+id/topLayout" android:layout_gravity="center" 
+android:layout_width="wrap_content"
+android:layout_height="wrap_content" 
+android:background="@android:color/transparent"
+android:orientation="horizontal"
+>
+<LinearLayout android:orientation="vertical" android:gravity="center" android:id="@+id/appmanageLayout"
+	android:layout_width="106dp" android:layout_height="wrap_content" >
+	<ImageView android:id="@+id/appmanange_image" android:src="@drawable/ic_menu_manage"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></ImageView>
+	<TextView android:id="@+id/appmanange_text" 
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/menu_manage_apps" android:layout_marginBottom="2dp"></TextView>
+</LinearLayout>
+<ImageView android:background="@drawable/menu_bar_separater_vertical"
+		android:layout_width="wrap_content" android:layout_height="fill_parent" 
+		></ImageView>
+<LinearLayout android:orientation="vertical" android:gravity="center" android:id="@+id/notificationLayout"
+	android:layout_width="106dp" android:layout_height="wrap_content" >
+	<ImageView android:id="@+id/notification_image" android:src="@drawable/ic_menu_notifications"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></ImageView>
+	<TextView android:id="@+id/notification_text" 
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/menu_notifications" android:layout_marginBottom="2dp"></TextView>
+</LinearLayout>
+<ImageView android:background="@drawable/menu_bar_separater_vertical"
+		android:layout_width="wrap_content" android:layout_height="fill_parent" 
+		></ImageView>
+<LinearLayout android:orientation="vertical" android:gravity="center" android:id="@+id/settingLayout"
+	android:layout_width="106dp" android:layout_height="wrap_content" >
+	<ImageView android:id="@+id/setttin_image" android:src="@drawable/ic_menu_preferences"
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"></ImageView>
+	<TextView android:id="@+id/setttin_text" 
+		android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/menu_settings" android:layout_marginBottom="2dp"></TextView>
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,451 @@
+Android3.0新特性调研资料整理
+
+
+---pad 3.0 action bar
+
+Option menu 如果加入
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+会显示在action bar的右边的cascading menu,
+但是加入的图标不会显示，
+可以
+	menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+显示在action bar上并显示其设置的图标。
+
+/----代码：ActionBarMechanics
+
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // The Action Bar is a window feature. The feature must be requested
+        // before setting a content view. Normally this is set automatically
+        // by your Activity's theme in your manifest. The provided system
+        // theme Theme.WithActionBar enables this for you. Use it as you would
+        // use Theme.NoTitleBar. You can add an Action Bar to your own themes
+        // by adding the element <item name="android:windowActionBar">true</item>
+        // to your style definition.
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Menu items default to never show in the action bar. On most devices this means
+        // they will show in the standard options menu panel when the menu button is pressed.
+        // On xlarge-screen devices a "More" button will appear in the far right of the
+        // Action Bar that will display remaining items in a cascading menu.
+        menu.add("Normal item");
+
+        MenuItem actionItem = menu.add("Action Button");
+
+        // Items that show as actions should favor the "if room" setting, which will
+        // prevent too many buttons from crowding the bar. Extra items will show in the
+        // overflow area.
+        actionItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
+        // Items that show as actions are strongly encouraged to use an icon.
+        // These icons are shown without a text description, and therefore should
+        // be sufficiently descriptive on their own.
+        actionItem.setIcon(android.R.drawable.ic_menu_share);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        return true;
+    }
+---/
+
+action bar 标志
+	ActionBar.DISPLAY_HOME_AS_UP;
+	ActionBar.DISPLAY_SHOW_HOME;
+	ActionBar.DISPLAY_USE_LOGO;
+	ActionBar.DISPLAY_SHOW_TITLE;
+	ActionBar.DISPLAY_SHOW_CUSTOM;
+	ActionBar.NAVIGATION_MODE_STANDARD
+	ActionBar.NAVIGATION_MODE_TABS
+
+/---:ActionBarDisplayOptions
+
+public void onClick(View v) {
+        final ActionBar bar = getActionBar();
+        int flags = 0;
+        switch (v.getId()) {
+            case R.id.toggle_home_as_up:
+                flags = ActionBar.DISPLAY_HOME_AS_UP;
+                break;
+            case R.id.toggle_show_home:
+                flags = ActionBar.DISPLAY_SHOW_HOME;
+                break;
+            case R.id.toggle_use_logo:
+                flags = ActionBar.DISPLAY_USE_LOGO;
+                break;
+            case R.id.toggle_show_title:
+                flags = ActionBar.DISPLAY_SHOW_TITLE;
+                break;
+            case R.id.toggle_show_custom:
+                flags = ActionBar.DISPLAY_SHOW_CUSTOM;
+                break;
+
+            case R.id.toggle_navigation:
+                bar.setNavigationMode(
+                        bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_STANDARD
+                                ? ActionBar.NAVIGATION_MODE_TABS
+                                : ActionBar.NAVIGATION_MODE_STANDARD);
+                return;
+            case R.id.cycle_custom_gravity:
+                ActionBar.LayoutParams lp = (ActionBar.LayoutParams) mCustomView.getLayoutParams();
+                int newGravity = 0;
+                switch (lp.gravity & Gravity.HORIZONTAL_GRAVITY_MASK) {
+                    case Gravity.LEFT:
+                        newGravity = Gravity.CENTER_HORIZONTAL;
+                        break;
+                    case Gravity.CENTER_HORIZONTAL:
+                        newGravity = Gravity.RIGHT;
+                        break;
+                    case Gravity.RIGHT:
+                        newGravity = Gravity.LEFT;
+                        break;
+                }
+                lp.gravity = lp.gravity & ~Gravity.HORIZONTAL_GRAVITY_MASK | newGravity;
+                bar.setCustomView(mCustomView, lp);
+                return;
+        }
+
+        int change = bar.getDisplayOptions() ^ flags;
+        bar.setDisplayOptions(change, flags);
+    }
+
+ public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.display_options_actions, menu);
+        return true;
+    }
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/simple_item"
+          android:title="@string/display_options_menu_item" />
+</menu>
+
+---/
+
+ActionBarTabs Tab的添删显隐
+	if (bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_TABS) {
+            bar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+            bar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE, ActionBar.DISPLAY_SHOW_TITLE);
+        } else {
+            bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+            bar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE, ActionBar.DISPLAY_SHOW_TITLE);
+        }
+
+
+ActionBarUsage:menu菜单（action bar）的创建
+
+/--
+ public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actions, menu);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setOnQueryTextListener(this);
+        return true;
+    }
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+          android:icon="@android:drawable/ic_menu_search"
+          android:title="@string/action_bar_search"
+          android:showAsAction="ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+---/
+
+
+
+一、 Fragments（碎片）
+	在3.0中引入的Fragment的概念，主要是为了能够在大尺寸的屏幕上（如Tablet）支持更加灵活的UI设计。在大尺寸屏幕上有更多的空间可以放置更多的视图控件，这也意味着应用程序可能要处理更多的用户交互。
+没有Fragment的概念之前，Activity会负责整个的布局管理，如果用户交互逻辑很多，Activity就会非常臃肿且难以维护。而Fragment的主要作用就是帮Activity分担这些布局管理工作，把对布局、视图的操作和一些业务逻辑分拆到多个Fragment中。
+总之，Activity（Controller）和Layout（View）之间加入Fragment的概念的好处，首先是将Acitivty对用户交互的逻辑模块化，其次是可以非常灵活的重用这些Fragment。
+
+
+	（一）Fragments要点 : 
+
+	a) Fragment表现为一个Activity用户界面的一部分； 
+	b)你可以合并多个fragment在一个单独的activity中; 
+	c)也可以在多个activity中重复使用一个Fragment； 
+	d) Fragment有自己的生命周期； 
+	e)接收自己的输入事件； 
+	f)在activity运行的过程中，你可以添加或移除一个Fragment; 
+	g)一个Fragment必须嵌入在一个Activity中使用，Fragment的生命周期由其宿主Activity控制；
+	例如：一个Activity A，含有两个Fragment（F1、F2），当A进入pause()时，F1、F2也都会进入pause()状态；而当A进入destroy状态时，F1、F2也都会进入destroy状态.
+但是，当A正在运行时（处于resume状态），可以单独的管理每一个Fragment（F1、F2），比如添加F1或者删除F2。
+	h) Activity在管理Fragment时是通过FragmentManager和FragmentTransaction进行的，对Fragment的add()、remove()和replace()的操作都需要在一个Transaction中管理； 
+	i)当对Fragment进行操作时，可以把这些操作放在一个由Activity维护的后台堆栈中（Stack），Stack中的每一个元素都是对Fragment进行操作的事务记录；当用户按下
+回退键（Back）时，可以从Stack中回溯一个事务； 
+	j) Fragment可以作为布局（Layout）的一部分添加到Activity中，也可以作为一个没有视图界面的单纯的工作器（Worker）添加到Activity中。
+当fragment作为Layout添加时，Fragment就相当于Activity的总体视图系统的一部分，它应当被添加到某一个ViewGroup中。可以使用<fragment>标签在Activity的layout文件中添加，也可以用编码方式添加。
+
+	（二）创建Fragment
+
+	创建Fragment和创建Activity类似，只需要继承Fragment类（或其子类）并实现一些必要的生命周期回调方法。
+
+	应当实现的生命周期方法有： 
+	onCreate() – 当Fragment被创建时会被调用； 
+	onCreateView() – 第一次绘制界面时会被调用，如果要创建一个有界面的Fragment，则需要返回它的Layout的根视图；如果要创建一个没有界面的工作器，则可以直接返回null； 
+	onPause() – 用户离开Fragment界面时会被调用。
+
+	已有的Fragment子类:DialogFragment、ListFragment、PreferenceFragment
+
+
+	Fragment的生命周期： 
+
+	1. 添加用户接口使用Fragment添加用户界面，需要定义自己的Fragment类，并实现必要的方法，例如： 
+
+
+	public static class ExampleFragment extends Fragment { 
+
+
+	@Override 
+
+
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, 
+
+
+		Bundle savedInstanceState) { 
+
+
+		// Inflate the layout for this fragment 
+
+
+		return inflater.inflate(R.layout.example_fragment, container, false); 
+
+
+		} 
+
+
+	}
+
+
+	创建好了Fragment，下一步就是将其添加到 Activity中。 
+
+
+	2. 添加Fragment到Activity中如之前所说的，有两种方法将Fragment添加到Activity中。 
+
+
+	1.1.在Activity的layout文件中添加Fragment使用这种方式，可以把Fragment理解为一个普通的View，可以制定它的布局属性： 
+
+
+	<?xml version="1.0" encoding="utf-8"?> 
+
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:orientation="horizontal" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent"> 
+	<fragment android:name="com.example.news.ArticleListFragment" 
+	android:id="@+id/list" 
+	android:layout_weight="1" 
+	android:layout_width="0dp" 
+	android:layout_height="match_parent" /> 
+	
+
+	<fragment android:name="com.example.news.ArticleReaderFragment" 
+	android:id="@+id/viewer" 
+	android:layout_weight="2" 
+	android:layout_width="0dp" 
+	android:layout_height="match_parent" /> 
+
+
+	</LinearLayout>
+
+
+	注意<fragment>标签的“android:name”属性的值是你自定义的Fragment类的全路径名。
+
+	当系统创建Activity的布局时，会初始化每一个Fragment，调用它们的onCreateView(...)方法获取Layout，并用Layout替换掉相应的<fragment>标签。
+
+	注意：
+	每一个Fragment都需要有一个唯一的标识符（ID），如果Activity进入restart状态，系统可以根据这个ID重新载入对应的Fragment；另外，你也可以用这个ID对相应的
+Fragment做一些事务性操作，如remove()。有三种方式可以为一个Fragment设置ID：
+	·在<fragment>标签中设置“android:id”属性，提供一个唯一的ID； 
+	·在<fragment>标签中设置“android:tag”属性，提供一个唯一的字符串；
+	·如果以上两种属性都没有设置，系统会使用这个Fragment的父容器的ID。 
+	1.2.用编码的方式添加Fragment到一个已存在ViewGroup中在activity运行的任何时刻，都可以将一个Fragment添加到Activity的Layout中，只需要简单的提供一个	viewGroup来放置这个Fragment即可。
+	具体要对Fragment进行操作时，需要在Activity中使用FragmentTransaction，以事务的方式对Fragment进行add、remove和replace。
+	用以下的方式可以从Activity中获取一个FragmentTransaction实例： 
+
+
+		FragmentManager fragmentMgr = getFragmentManager()； 
+		FragmentTransaction fragmentTransaction = fragmentMgr.beginTransaction();
+
+
+	然后可以用add()方法添加一个Fragment，需要指定要添加哪个Fragment和要添加到哪个ViewGroup中： 
+
+	ExampleFragment fragment = new ExampleFragment(); 
+	fragmentTransaction.add(R.id.fragment_container, fragment); 
+	fragmentTransaction.commit(); 
+
+
+	3.添加一个无UI的Fragment可以使用add(Fragment, String)方法向Activity添加一个Fragment实例。第一个参数是要添加的Fragment实例，因为是无UI的（即这个
+Fragment实例不会和Activity的Layout中的任何一个View有关联），所以系统不会去调用这个Fragment实例的onCreateView(...)方法，我们也不需要去实现这个方法。第二个参数是该Fragment实例的唯一标识符（不是一个资源ID），同时也是能够标识该实例的唯一途径(无法为其设置资源ID）。例如希望在Activity运行过程中获得该Fragment的引用，可以使用findFragmentByTag(String tag)方法。
+无UI的Fragment的代码示例：FragmentRetainInstance.java。
+
+	（四）管理Fragment要在Activity中管理Fragment，需要使用FragmentManager，通过调用Activity的方法getFragmentManager()获得FramentManager的对象。你可以使用 
+FragmentManager做这样一些事情： 
+
+
+	1.1.获取在 
+		Activity中存在的某个Fragment：
+			getFragmentById(int id) – 有UI的Fragment
+			getFragmentByTag(String tag) – 有UI或无UI的Fragment都可以
+	1.2.从后台的BackStack中弹出存放的Fragment： 
+		popBackStack(...) 
+	1.3.为后台的 
+		BackStack添加监听器，监听其任何改动： 
+		addOnBackStackChangedListener(...) 
+	1.4.像之前提到过的，可以使用FragmentManager打开一个事务： 
+		FragmentTransaction beginTransaction(); 
+
+	（五）执行Fragment事务
+使用Fragment的一个非常好的特性，是为了能够和用户交互，可以灵活的add、remove、replace（或其他操作）一个Fragment。你向Activity提交的任何对Fragment的修改都被作为一个事务（Transaction）。可以将每一个Transaction都保存在一个BackStack中（由Activity维护），这样用户就可以使用BACK键回退之前每一次对Fragment的修改了，就像是从一个Activity回退到以前的一个Activity一样。
+
+	通过以下代码可以获得一个FragmentTransaction对象： 
+
+
+	FragmentManager fragmentMgr = getFragmentManager(); 
+	FragmentTransaction fragmentTransaction = fragmentMgr.beginTransaction();
+
+
+	一个FragmentTransaction是在同一时刻对Fragment做出的一组更改。这些更改包括add()、remove()、replace()等，最终使用commit()提交这些更改。在执行commit()之前，可以调用addToBackStack()方法将当前的FragmentTransaction压到BackStack中。 
+
+
+	// Create new fragment and transaction 
+
+	Fragment newFragment = new ExampleFragment();
+
+	FragmentTransaction transaction = getFragmentManager().beginTransaction(); 
+
+	// Replace whatever is in the fragment_container view with this fragment,and add the transaction to the back stack 
+
+	transaction.replace(R.id.fragment_container, newFragment); 
+
+	transaction.addToBackStack(null); 
+
+	// Commit the transaction 
+
+	transaction.commit();
+
+	注意:
+	一次更改的所有的操作都包含在一个FragmentTransaction实例中；
+	BackStack中存放的是FragmentTransaction实例；
+	commit()操作必须在整个事务的最后执行，其他操作的顺序没有要求（addToBackStack()的调用顺序在文档中没有特别说明，可以认为是只要在commit()之前即可）。 
+
+	addToBackStack()的作用：假设在一个FragmentTransaction中remove了一个Fragment，如果没有调用addToBackStack()，那么系统会destroy掉这个Fragment，如果调用了 addToBackStack()，系统仅仅会stop这个Fragment而不会destroy掉，当用户回退的remove操作的时候，系统会resume这个Fragment。
+
+	提示：对于每一个FragmentTransaction，都可以应用一个转换动画（transition animation），使用方法是在commit()之前调用setTransition()方法。
+
+	事务在commit()之后，并不会立即执行，而是会被安排在UI线程中尽可能快的执行（应该放在了MessageQueue中）。如果确实有必要，例如在另一个线程中的一项任务要依赖于UI线程中的一个事务执行完毕，那么可以在UI线程中调用executePendingTransactions()去立即执行该事务，除此之外通常没有必要这样做。
+
+	注意：
+	你只能在一个activity保存它的状态(onPause、onStop)之前执行commit()，否则的话将会抛出异常，这是因为如果这个Activity需要restore的话，那commit()之后的状态会丢失（不明白，再调查）。
+
+如果某些情况下允许丢失commit，可以调用commitAllowingStateLoss()。
+
+	（六）与Activity通信
+
+	尽管Fragment是独立于Activity的，并且可以被多个Activity使用，但是一个给定的Fragment实例是直接与包含它的Activity绑定的。在Fragment中可以使用getActivity()方法访问其宿主Activity，例如：
+
+		View listView = getActivity().findViewById(R.id.list);
+
+
+	同样的，在Activity中可以通过FragmentManager获取某个Fragment实例的应用，并调用这个Fragment实例的各个方法（使用getFragmentById(...)和getFragmentByTag(...)），例如：
+	ExampleFragment fragment = (ExampleFragment)getFragmentManager().findFragmentById(R.id.example_fragment); 
+
+	1.向Activity创建事件回调有时我们希望能够将在Fragment中获得到的事件共享到Activity中，一种非常好的方式是在Fragment中定义一个回调接口，同时需要宿主Activity实现这个接口。这样，当宿主Activity中接口中获得回调事件时，就可以将事件信息共享到它维护的其他的Fragment中。
+
+	2.向ActionBar中添加项目 
+	Fragment可以向其宿主Activity的选项菜单（Options Menu）中添加项目（因此也可以向ActionBar中），方法： 
+	. 在Fragment中重写onCreateOptionsMenu()方法； 
+	. 在onCreate()方法中调用setHasOptionsMenu()，否则系统不会调用Fragment的onCreateOptionsMenu()方法； 
+	Fragment也可以使用registerForContextMenu()来注册一个上下文菜单（Context Menu），当用户要打开一个Context Menu时，会调用onCreateContextMenu()，当用户选择一个条目时，会调用onContextItemSelected()。
+
+	注意：尽管Fragment会接收到用户选择菜单选项的事件，但这个事件首先会被Activity获取，如果Activity没有处理这个事件的话，才会把它传给Fragment。
+
+	（七）处理Fragment的生命周期 
+
+	Fragment的生命周期和Activity很像，它可以存在于三种状态下： 
+	Resumed、Paused、Stopped。
+	像Activity一样，Fragment也可以使用Bundle，当Activity进程被kill掉的时候，为了能够在Activity被重新创建时恢复Fragment之前的状态，就需要使用onSaveInstanceState()保存Fragment被kill之前的状态，当Fragment被重新创建时，之前保存数据的Bundle就会被传递到Fragment的onCreate()、onCreateView()、和onActivityCreated()方法中。 
+
+Fragment的生命周期和Activity相比，最大的区别在于他们是如何被保存在后台堆栈中的。Activity是被stop时，默认的被保存在Task中，Task是一个Activity的堆栈，由系统维护；而Fragment是在被remove时，需要显示指定addToBackStack()，才会被压入由Activity维护的一个事务堆栈。此外，管理Fragment的生命周期与Activity是非常相似的。还需要掌握的一个知识点是Activity的生命周期是如何影响Fragment的生命周期的。
+
+	1.协调与Activity的生命周期
+	Activity的生命周期直接影响了它所包含的Fragment的生命周期，当Activity进入到某一种状态时会调用Fragment中相应的状态的方法（如上图所示）。 
+	Fragment还有一些额外的状态方法： 
+	onAttach() – 当Fragment被关联到Activity中时； 
+	onCreateView() – 当创建与Fragment关联的视图结构时； 
+	onActivityCreated() – 当activity的onCreate()方法返回时； 
+	onDestroyView() – 当移除与Fragment关联的视图结构时； 
+	onDetach() – 当从Activity中移除Fragment时；
+
+	一旦Activity进入resumed状态后，你就可以自由的添加或移除Fragment了。但是当Activity离开resumed状态后，Fragment又会被Activity的生命周期所影响。
+
+（八）例子：ApiDemos –>FragmentLayout.java
+	
+	二、 
+	App Widgets 
+	Android3.0新增了几个支持的Widget的控件，包括： 
+	GridView、ListView、StackView、ViewFlipper和AdapterViewFlipper。
+
+	更重要的是可以用RemoteViewsService使用集合来创建AppWidget，例如使用GridView、ListView、StackView，并由一个ContentProvider为他们提供远程数据。 
+AppWidgetProviderInfo类（定义在<appwidget-provider>）也支持了两个新的属性：
+	autoAdvanceViewId – 指定了你的Widget中的一个View的ID，这个View就可以自动更新（auto-advanced）了。
+	previewImage – 指定了这个Widget的预览图片（给用户看的），如果没有指定这个属性，则会使用这个Widget应用的图标。
+	Android3.0中有个应用 – WidgetPreview，可以帮你生成一个Widget应用的预览图片。
+
+	三、Animation Framework 
+
+Android3.0增加了一套全新的Animation API（android.animation包），较之于原先的Animation Framework（android.view.animation），新的API更加灵活、健壮、强大，被称作属性动画系统（Property Animatin System）。
+
+原先的 Animation Framework的局限性（缺点）： 
+. 只能操作视图对象（View Objects）； 
+. 只能对View Objects进行很小一部分的动画操作，如rotate、scale、translate、alpha； 
+. 动画更改的仅仅是View Objects显示的位置，但实际上没有更改它的“物理”位置（如一个 
+Button，经过动画操作后，还必须点击原先的位置才会有反映）；
+新的Animation Framework完全没有这些局限。 
+.除了操作View Objects，也可以操作无视图的对象，例如一个变化的背景颜色值； 
+.可以对一个对象的任何属性做动画演进处理，例如颜色、宽度、高度等； 
+.控件的属性会被实际的改变。但是，老的框架执行速度要快一些，API使用起来相对比较简单，如果老的框架或者
+你自己的代码能够满足你的需求，也没有必要使用新框架（Property Animation System）。
+
+四、其他 
+
+
+1. ActionBar 
+2. System clipboard 
+3. Drag and drop 
+4. Status bar notifications 
+5. Content loaders 
+6. Bluetooth A2DP and headset APIs 
+7. Extended UI framework 
+* 支持ListView和 GridView的多项选择 
+* 转换 View（transform views）的新APIs 
+* 新的全息（Holographic）主题 
+* 新的 Widget类：AdapterViewAnimator、AdapterViewFlipper、CalendarView、ListPopupWindow、NumberPicker、PopupMenu、SearchView、StackView。 
+8. Graphics 
+* 支持2D硬件加速
+* 支持View的硬件层和软件层 
+* Renderscript 3D图形引擎 
+9. Media 
+* Time lapse video 
+* Texture support for image streams 
+* HTTP Live streaming 
+* EXIF data 
+* Camcorder profiles 
+* Digital media file transfer 
+* Digital rights management(DRM)一套新的 
+DRM框架
+10. Keyboard support 
+11. Split touch events 
+12. Webkit 
+13. Browser 
+14. JSON utilities 
+15. New feature constants 
+16. New permissions 
+17. New platform technologies (Storage, Linux Kernel, DVM, Dalvik core libraries) 
+18. API Level → 11

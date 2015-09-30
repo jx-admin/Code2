@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ExpandableListView
+            android:id="@+id/elist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ExpandableListView>
+
+        <TextView
+            android:id="@+id/nomsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/selection_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:drawable/bottom_bar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="1dip"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
+        android:paddingTop="5dip"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/msgdel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/del" />
+
+        <Button
+            android:id="@+id/msgundo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+</LinearLayout>

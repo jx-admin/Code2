@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/legend"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/legend_bg"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <com.act.mbanking.manager.view.LegendLinearLayout
+            android:id="@+id/legend_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/legend_bar_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/legend_bar_closed" />
+
+    <LinearLayout
+        android:id="@+id/legend_invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/legend_opened_tv"
+            style="@style/legend_money"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/accounts_legend_opened"
+            android:gravity="center"
+            android:text="40.000$" />
+    </LinearLayout>
+
+</LinearLayout>

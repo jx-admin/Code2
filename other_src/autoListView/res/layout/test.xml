@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity" >
+
+    <com.example.autolistview.widget.AutoListView
+        android:id="@+id/lstv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/head_btn"
+        android:text="head"/>
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/head_btn"
+        android:id="@+id/foot_btn"
+        android:text="foot"/>
+</RelativeLayout>

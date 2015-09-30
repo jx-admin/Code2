@@ -1,0 +1,23 @@
+<resources>
+
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="radio_button_text_padding">40dip</dimen>
+    <dimen name="radio_button_top_padding">5dip</dimen>
+    <dimen name="radio_button_bottom_padding">5dip</dimen>
+    <dimen name="radio_button_left_padding">40dip</dimen>
+    <dimen name="radio_button_left_padding_2">80dip</dimen>
+    <dimen name="radio_button_right_padding">40dip</dimen>
+    <dimen name="toggle_button_width">20dip</dimen>
+    <dimen name="toggle_button_height">10dip</dimen>
+
+    <dimen name="payment_account_card_size">100dip</dimen>
+    <dimen name="payment_new_payee_plus_icon_size">30dip</dimen>
+	<dimen name="v5dp">5dp</dimen>
+	<dimen name="v3dp">3dp</dimen>
+</resources>

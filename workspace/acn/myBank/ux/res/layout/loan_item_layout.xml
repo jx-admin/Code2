@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.LoanItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/loan_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="fitEnd"
+                android:src="@drawable/loans_sphere" />
+
+            <RelativeLayout
+                android:id="@+id/loan_section_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/loan_value"
+                    android:layout_centerHorizontal="true"
+                    android:text="Residual Capital" />
+
+                <TextView
+                    android:id="@+id/loan_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/available_loan"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:text="600.022,00" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="5dip"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_line" >
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/loan_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/loan_name"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="House motage" />
+
+            <TextView
+                android:id="@+id/loan_name_value"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Person loan" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/update_to" />
+
+            <TextView
+                android:id="@+id/loan_date"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="12.04.2012" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loan_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_details"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <RadioGroup
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="285" >
+
+                    <RadioButton
+                        android:id="@+id/details"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="123"
+                        android:background="@drawable/btn_details_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="" />
+
+                    <RadioButton
+                        android:id="@+id/installments"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="162"
+                        android:background="@drawable/btn_installments_selector"
+                        android:button="@null"
+                        android:text="" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/loan_total"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:text="Total:+1000" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/shadow_payment_box" />
+
+            <LinearLayout
+                android:id="@+id/loan_detail_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/loan_account_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/type" />
+
+                    <TextView
+                        android:id="@+id/loan_type_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/remaining_installments" />
+
+                    <TextView
+                        android:id="@+id/loan_remanin_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/rate_over" />
+
+                    <TextView
+                        android:id="@+id/loan_rate_over_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/benchmark_applied" />
+
+                    <TextView
+                        android:id="@+id/loan_benchmark_applied_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loan_install_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small" >
+
+                    <TextView
+                        android:id="@+id/exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/expiration_1" />
+
+                    <TextView
+                        android:id="@+id/amo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/amount_1" />
+
+                    <TextView
+                        android:id="@+id/sta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/state_1" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:src="@drawable/account_line" >
+                </ImageView>
+
+                <com.accenture.mbank.view.InnerListView
+                    android:id="@+id/loan_item_list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dip"
+                    android:cacheColorHint="#00000000"
+                    android:listSelector="#00000000" >
+                </com.accenture.mbank.view.InnerListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/loan_show_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitStart"
+        android:src="@drawable/loan_show_selector" />
+
+</com.accenture.mbank.view.LoanItemLayout>

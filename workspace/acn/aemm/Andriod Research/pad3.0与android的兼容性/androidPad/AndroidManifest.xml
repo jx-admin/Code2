@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.android.test.demo" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-sdk android:targetSdkVersion="11" android:minSdkVersion="4"></uses-sdk>
+
+
+	<application android:icon="@drawable/icon" android:label="androdpad">
+		<activity android:name=".ApiDemos" android:label="androdpad">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".fragment.FragmentAlertDialog"
+			android:label="FragmentAlertDialog">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentContextMenu"
+			android:label="FragmentContextMenu">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentDialog"
+			android:label="FragmentDialog">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentDialogOrActivity" android:label="FragmentDialogOrActivity"
+		 android:logo="@drawable/icon">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentHideShow" android:label="FragmentHideShow">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentLayout" android:label="FragmentLayout">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentListArray" android:label="FragmentListArray">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentListCursorLoader"
+			android:label="FragmentMenursorLoader">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentMenu" android:label="FragmentMenu">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentReceiveResult"
+			android:label="FragmentReceiveResult">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentRetainInstance"
+			android:label="FragmentRetainInstance">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.FragmentStack" android:label="FragmentStack">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".fragment.SendResult" android:label="SendResult">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".actionbar.ActionBarDisplayOptions" android:label="ActionBarDisplayOptions">
+		<item name="android:windowActionBar">true</item>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="CATEGORY_DEMO"/>
+			</intent-filter>
+		</activity> 
+		<activity android:name=".actionbar.ActionBarMechanics" android:label="ActionBarMechanics">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".actionbar.ActionBarTabs" android:label="ActionBarTabs">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".actionbar.ActionBarUsage" android:label="ActionBarUsage">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".actionbar.MenuTest" android:label="MenuTest">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+		<activity android:name="AddActivity"/>
+		<activity android:name=".anmation.a3danim" android:label="a3danim">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+	<activity android:name=".anmation.Ballanim" android:label="Ballanim">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+		</activity>
+	<activity android:name=".anmation.Viewflipper" android:label="Viewflipper">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+	</activity>
+	<activity android:name=".anmation.Translate" android:label="Translate">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+	</activity>
+	<activity android:name=".anmation.Scaleanim" android:label="Scaleanim">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="CATEGORY_DEMO"></category>
+			</intent-filter>
+	</activity>
+	</application>
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+</manifest>

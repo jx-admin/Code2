@@ -1,0 +1,39 @@
+<com.accenture.mbank.view.TabHeaderControl xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4" >
+
+    <com.accenture.mbank.view.ReHeightImageButton
+        android:id="@+id/user_info_hide_img"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/label_btn_synthesis"
+        android:visibility="visible" />
+
+    <com.accenture.mbank.view.ReHeightImageButton
+        android:id="@+id/user_info_hide_img"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/label_btn_accounts"
+        android:visibility="visible" />
+
+    <com.accenture.mbank.view.ReHeightImageButton
+        android:id="@+id/user_info_hide_img"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/label_btn_cards"
+        android:visibility="visible" />
+
+    <com.accenture.mbank.view.ReHeightImageButton
+        android:id="@+id/user_info_hide_img"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/label_btn_payments"
+        android:visibility="visible" />
+
+</com.accenture.mbank.view.TabHeaderControl>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.AmountExpandedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium"
+    android:paddingTop="@dimen/padding_small" >
+
+    <EditText
+        android:id="@+id/amount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_box_selector"
+        android:hint="@string/insert_amount"
+
+        android:digits="1234567890,"
+        android:visibility="gone"
+        android:singleLine="true" />
+    
+      <TextView
+        android:id="@+id/get_amount_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/text_box_selector"
+        android:singleLine="true"
+        android:gravity="center"
+        android:hint="@string/enter_value" />
+
+</com.accenture.mbank.view.AmountExpandedLayout>

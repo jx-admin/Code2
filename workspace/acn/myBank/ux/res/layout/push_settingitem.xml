@@ -1,0 +1,33 @@
+<com.accenture.mbank.view.BasePushContainer xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/settingitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/pushname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="dfdfasdfsdfsdf" />
+
+        <com.accenture.mbank.view.SlipButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="100dip"
+            android:layout_height="40dip" />
+        <!-- <ToggleButton -->
+        <!-- android:id="@+id/toggleButton1" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:checked="true" -->
+        <!-- android:textOn="Open" -->
+        <!-- android:textOff="Close" -->
+        <!-- /> -->
+    </LinearLayout>
+
+</com.accenture.mbank.view.BasePushContainer>

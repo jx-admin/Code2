@@ -1,0 +1,6 @@
+android 服务器：http://aemm.imolife.com:8001/Device/IssueCfg.aspx
+user：administrator 111
+
+
+模拟器：zZ7o1R_a   ID_000 
+真机：ID_355921042700722	  Sn35lC$f

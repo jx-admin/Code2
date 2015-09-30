@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical"
+    android:weightSum="7" >
+
+    <LinearLayout
+        android:id="@+id/log_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2.5"
+                layout="@layout/main_title" />
+
+            <LinearLayout
+                android:id="@+id/adv"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:background="@drawable/adv_bar_background"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.9"
+                    android:orientation="horizontal" >
+
+                    <com.accenture.mbank.view.ZoomImageView
+                        android:id="@+id/adv_image"
+                        android:layout_width="2dip"
+                        android:layout_height="@dimen/adv_image_height"
+                        android:layout_gravity="left|center"
+                        android:background="@color/transparent" />
+
+                    <com.accenture.mbank.view.AutoScrollTextView
+                        android:id="@+id/adv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <com.accenture.mbank.view.ZoomImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/adv_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/welcome1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/welcome2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3.8"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="7" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@id/username_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="2"
+                        android:hint="@string/username"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="0.5" />
+
+                    <EditText
+                        android:id="@id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="2"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                    <CheckBox
+                        android:id="@+id/remember_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/remember"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <com.accenture.mbank.view.BankImageButton
+                    android:id="@id/login_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/login_btn_selector" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.5"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:weightSum="3" >
+
+            <ImageButton
+                android:id="@id/safety_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_safety_selector"
+                android:text="@string/safety" />
+
+            <ImageButton
+                android:id="@id/locate_branch_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_locate_selector"
+                android:text="@string/locate_a_branch" />
+
+            <ImageButton
+                android:id="@id/watch_demo_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_demo_selector"
+                android:text="@string/watch_the_demo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="10dip"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.9"
+                android:orientation="vertical"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:text="@string/bank_information1"
+                    android:textSize="10dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:text="@string/bank_information2"
+                    android:textSize="10dip" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:textSize="10dip" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1.1"
+                android:scaleType="centerInside"
+                android:src="@drawable/gruppo_bper_logo" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

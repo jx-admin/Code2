@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <EditText
+        android:id="@+id/description_of_payment_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="@string/description_digits"
+        android:gravity="top|left"
+        android:hint="@string/description_of_payment_hint"
+        android:minLines="5"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    
+    <!-- infoMainView -->
+    <dimen name="marginTB">10dp</dimen>
+    <dimen name="marginR">15dp</dimen>
+    <dimen name="bodyMarginLR">20dp</dimen>
+    <dimen name="itemGap">25dp</dimen>
+    
+    <!-- infoMainView -->
+    <color name="titleBK">#888</color>
+    <color name="bodyBK">#000</color>
+    <color name="fontC">#FFF</color>
+    <color name="titleFontC">#EEE</color>
+
+</resources>

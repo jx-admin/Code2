@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- app item -->
+<LinearLayout android:id="@+id/app_item_lin"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:orientation="vertical" android:gravity="center">
+
+	<LinearLayout android:id="@+id/icon_layout"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal">
+		<FrameLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<LinearLayout android:layout_width="@dimen/app_icon_w"
+				android:layout_height="@dimen/app_icon_h" android:gravity="center">
+				<ImageView android:layout_height="fill_parent" android:id="@+id/icon_iv"
+					android:layout_width="fill_parent" android:src="@drawable/bg"
+					android:layout_marginLeft="@dimen/app_icon_margin"
+					android:layout_marginRight="@dimen/app_icon_margin"
+					android:layout_marginTop="@dimen/app_icon_margin"
+					android:layout_gravity="center">
+				</ImageView>
+			</LinearLayout>
+			<ImageView android:id="@+id/edit_iv" android:layout_width="@dimen/app_icon_edit_w"
+				android:layout_height="@dimen/app_icon_edit_h"
+				android:layout_margin="@dimen/app_icon_edit_margin" android:src="@drawable/del"
+				android:layout_gravity="right" android:visibility="gone"></ImageView>
+		</FrameLayout>
+	</LinearLayout>
+
+	<LinearLayout android:layout_below="@+id/name_layout"
+		android:gravity="center_horizontal" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<ProgressBar android:layout_width="fill_parent"
+			android:layout_height="@dimen/app_item_download_progressbar_h" style="?android:attr/progressBarStyleHorizontal"
+			android:id="@+id/load_pb" android:visibility="gone" />
+		<TextView android:id="@+id/name_tv" android:layout_width="@dimen/app_item_w"
+			android:layout_height="wrap_content" android:textColor="#fff"
+			android:layout_gravity="center_horizontal" android:gravity="center"
+			android:singleLine="true" android:textSize="@dimen/app_name_size"
+			android:text="appdddddddfsfasfsdfasfasdfs"
+			android:focusableInTouchMode="false">
+		</TextView>
+	</LinearLayout>
+</LinearLayout>

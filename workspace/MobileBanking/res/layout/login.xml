@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="7" >
+
+    <LinearLayout
+        android:id="@+id/log_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2.5"
+                layout="@layout/main_title" />
+
+            <LinearLayout
+                android:id="@+id/adv"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:background="@drawable/adv_bar_background"
+                android:orientation="horizontal"
+                android:weightSum="20" >
+
+                <com.accenture.mbank.view.ZoomImageView
+                    android:id="@+id/adv_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="5"
+                    android:background="@color/black"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adv_small" />
+
+                <TextView
+                    android:id="@+id/adv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="14.5"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    android:textColor="@color/black" />
+
+                <com.accenture.mbank.view.ZoomImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/adv_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Welcome!" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Please login with your credentials." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3.8"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="7" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@id/username_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="2"
+                        android:hint="username" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="0.5" />
+
+                    <EditText
+                        android:id="@id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="2"
+                        android:hint="password"
+                        android:password="true" />
+
+                    <CheckBox
+                        android:id="@+id/remember_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/remember"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.accenture.mbank.view.BankImageButton
+                    android:id="@id/login_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/login_btn_selector" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.5"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:weightSum="3" >
+
+            <ImageButton
+                android:id="@id/safety_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/safety_btn" />
+
+            <ImageButton
+                android:id="@id/locate_branch_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/locate_branch_btn" />
+
+            <ImageButton
+                android:id="@id/watch_demo_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/watch_demo_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="10dip"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="vertical"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:textSize="10dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:text="myBank corp, n.a.member fdic."
+                    android:textSize="10dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:text="ⓒ2012 myBank american corparation.all rights reseved."
+                    android:textSize="8dip" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_weight="0.5"
+                android:src="@drawable/mb_tm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<com.accenture.mbank.view.PaymentConfirmLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_confirm_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box_details" >
+
+    <LinearLayout
+        android:id="@+id/slid_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/typeof_payment_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/account_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/date_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/payee_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/amount_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/description_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander" />
+
+        <include
+            android:id="@+id/pin_step"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_expander"
+            android:visibility="gone" />
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/validate_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/validate_selector" />
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/confirm_transfer_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_confirm_treansfer"
+            android:visibility="gone" />
+
+        <com.accenture.mbank.view.BankImageButton
+            android:id="@+id/confirm_transaction_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_confirm_transaction"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dip" />
+    </LinearLayout>
+
+</com.accenture.mbank.view.PaymentConfirmLayout>

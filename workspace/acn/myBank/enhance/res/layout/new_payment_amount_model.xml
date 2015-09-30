@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <com.custom.view.CustomEditText
+        android:id="@+id/amount_doller_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:digits="1234567890"
+        android:gravity="right"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <TextView
+        style="@style/gray_text_white_shadow_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="." />
+
+    <com.custom.view.CustomEditText
+        android:id="@+id/amount_et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="1234567890"
+        android:gravity="right"
+        android:maxLength="2"
+        android:ems="2"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="00"  />
+
+</LinearLayout>

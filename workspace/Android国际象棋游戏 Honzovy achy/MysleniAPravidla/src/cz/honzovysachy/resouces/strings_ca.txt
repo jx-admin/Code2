@@ -1,0 +1,109 @@
+HONZOVY_SACHY Escacs d'Honza
+FLIP_BOARD Gira el tauler
+MOVE Moviment
+NEW_GAME Partida nova
+UNDO Desfés
+REDO Refés
+THINKING S'està pensant...
+SAVE_GAME Desa la partida
+HUMAN_OPONENT Persona-Persona
+SAVED_AS S'ha desat com
+SAVE_ERROR Error en desar
+KNIGHT Cavall
+BISHOP Alfil
+ROOK Torre
+QUEEN Reina
+SAVE_PGN Desa PGN
+FILE_NAME nom de fitxer
+GAME partida
+SAVE desa
+WHITE blanques
+BLACK negres
+RESULT resultat
+EVENT esdeveniment
+SITE lloc
+PRAGUE Praga
+DATE data
+ROUND ronda
+WHITE_ELO elo de les blanques
+BLACK_ELO elo de les negres
+PAWN_PROMOTION Promoció del peó
+WHITE_WINS Blanques guanyen
+BLACK_WINS Negres guanyen
+DRAW Peó
+COMMA_BLACK_CHECKMATED , escac i mat a les negres
+COMMA_WHITE_CHECKMATED , escac i mat a les blanques
+COMMA_STALEMATE , taules per ofegat
+COMMA_MATERIAL , material
+COMMA_50_MOVES_RULE , regla dels 50 moviments
+COMMA_3_TIMES_REPETITION , posició repetida 3 vegades
+SETTINGS Configuració
+ABOUT Quant a
+OK D'acord
+CZECH Txec
+ENGLISH Anglès
+DEFAULT Predeterminat
+LOCALE Llengua
+SETUP_BOARD Configuració del tauler
+CANCEL Cancel·la
+SETUP_TEXT Moveu-vos pel tauler i pitgeu 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD El tauler no és correcte
+TIME_PER_MOVE Temps per moviment
+LEVEL Nivell
+MOVE_NOW Moveu ara
+SPANISH Castellà
+CATALAN CatalàHONZOVY_SACHY Escacs d'Honza
+FLIP_BOARD Gira el tauler
+MOVE Moviment
+NEW_GAME Partida nova
+UNDO Desf\u00e9s
+REDO Ref\u00e9s
+THINKING S'est\u00e0 pensant...
+SAVE_GAME Desa la partida
+HUMAN_OPONENT Persona-Persona
+SAVED_AS S'ha desat com
+SAVE_ERROR Error en desar
+KNIGHT Cavall
+BISHOP Alfil
+ROOK Torre
+QUEEN Reina
+SAVE_PGN Desa PGN
+FILE_NAME nom de fitxer
+GAME partida
+SAVE desa
+WHITE blanques
+BLACK negres
+RESULT resultat
+EVENT esdeveniment
+SITE lloc
+PRAGUE Praga
+DATE data
+ROUND ronda
+WHITE_ELO elo de les blanques
+BLACK_ELO elo de les negres
+PAWN_PROMOTION Promoci\u00f3 del pe\u00f3
+WHITE_WINS Blanques guanyen
+BLACK_WINS Negres guanyen
+DRAW Pe\u00f3
+COMMA_BLACK_CHECKMATED , escac i mat a les negres
+COMMA_WHITE_CHECKMATED , escac i mat a les blanques
+COMMA_STALEMATE , taules per ofegat
+COMMA_MATERIAL , material
+COMMA_50_MOVES_RULE , regla dels 50 moviments
+COMMA_3_TIMES_REPETITION , posici\u00f3 repetida 3 vegades
+SETTINGS Configuraci\u00f3
+ABOUT Quant a
+OK D'acord
+CZECH Txec
+ENGLISH Angl\u00e8s
+DEFAULT Predeterminat
+LOCALE Llengua
+SETUP_BOARD Configuraci\u00f3 del tauler
+CANCEL Cancel\u00b7la
+SETUP_TEXT Moveu-vos pel tauler i pitgeu 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD El tauler no \u00e9s correcte
+TIME_PER_MOVE Temps per moviment
+LEVEL Nivell
+MOVE_NOW Moveu ara
+SPANISH Castell\u00e0
+CATALAN Catal\u00e0

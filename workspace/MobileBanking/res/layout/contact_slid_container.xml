@@ -1,0 +1,214 @@
+<com.accenture.mbank.view.ContactSlidContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slid_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="676" >
+
+        <View
+            android:id="@+id/slid_top_margin"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="20" >
+        </View>
+
+        <com.accenture.mbank.view.BankImageButton
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/slid_1_cycle_top_img"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="187"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sphere_new_payment" >
+        </com.accenture.mbank.view.BankImageButton>
+
+        <ScrollView
+            android:id="@+id/slid_1_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="469"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="texst" />
+        </ScrollView>
+
+        <com.accenture.mbank.view.BankImageButton
+              android:layout_gravity="center_horizontal"
+            android:id="@+id/slid_1_cycle_bottom_img"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="111"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/show_selector" >
+        </com.accenture.mbank.view.BankImageButton>
+
+        <View
+            android:id="@+id/slid_mid_margin"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0" >
+        </View>
+
+        <com.accenture.mbank.view.BankImageButton
+              android:layout_gravity="center_horizontal"
+            android:id="@+id/slid_2_cycle_top_img"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="187"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sphere_new_payment" >
+        </com.accenture.mbank.view.BankImageButton>
+
+        <LinearLayout
+            android:id="@+id/slid_2_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="469"
+            android:background="#ff00ff00"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="texst" />
+        </LinearLayout>
+
+        <com.accenture.mbank.view.BankImageButton
+              android:layout_gravity="center_horizontal"
+            android:id="@+id/slid_2_cycle_bottom_img"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="111"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/show_selector" >
+        </com.accenture.mbank.view.BankImageButton>
+
+        <View
+            android:id="@+id/slid_bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="60" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="676" >
+
+        <LinearLayout
+            android:id="@+id/slid_container_ani"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="505"
+            android:orientation="vertical"
+            android:weightSum="505" >
+
+            <View
+                android:id="@+id/slid_top_margin_ani"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20" >
+            </View>
+
+            <com.accenture.mbank.view.BankImageButton
+                  android:layout_gravity="center_horizontal"
+                android:id="@+id/slid_1_cycle_top_img_ani"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="187"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_new_payment" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <ScrollView
+                android:id="@+id/slid_1_content_ani"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="469"
+                android:background="#ff00ffff"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="texst" />
+            </ScrollView>
+
+            <com.accenture.mbank.view.BankImageButton
+                  android:layout_gravity="center_horizontal"
+                android:id="@+id/slid_1_cycle_bottom_img_ani"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="111"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/show_selector" >
+            </com.accenture.mbank.view.BankImageButton>
+
+            <View
+                android:id="@+id/slid_mid_margin_ani"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0" >
+            </View>
+
+            <com.accenture.mbank.view.BankImageButton
+                  android:layout_gravity="center_horizontal"
+                android:id="@+id/slid_2_cycle_top_img_ani"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="187"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sphere_new_payment" >
+            </com.accenture.mbank.view.BankImageButton>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/slid_2_content_ani"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="469"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="texst" />
+        </ScrollView>
+
+        <com.accenture.mbank.view.BankImageButton
+              android:layout_gravity="center_horizontal"
+            android:id="@+id/slid_2_cycle_bottom_img_ani"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="111"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/show_selector" >
+        </com.accenture.mbank.view.BankImageButton>
+
+        <View
+            android:id="@+id/slid_bottom_margin_ani"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="60" >
+        </View>
+    </LinearLayout>
+
+</com.accenture.mbank.view.ContactSlidContainer>

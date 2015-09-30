@@ -1,0 +1,188 @@
+package com.aemm.demo;
+
+
+
+
+
+//import com.android.email.AccountBackupRestore;
+//import com.android.email.mail.store.ExchangeStore;
+//import com.android.email.provider.EmailContent;
+
+//import com.android.email.provider.EmailContent.AccountColumns;
+//import com.android.email.provider.EmailContent.HostAuth;
+
+
+
+
+import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class TestExchange extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+      
+        Log.i("TestExchange", "TestExchange enter");
+        String HostAuthUri = "content://com.android.email.provider/hostauth";
+        
+        Uri uri = Uri.parse(HostAuthUri);
+        String []projection =  new String[] {
+                "_id", "protocol", "address","port",
+                "flags", "login",
+                "password", "domain",
+                "accountKey"
+            };
+       
+        Cursor cursor = getContentResolver().query(uri, null, null,null,null);
+        if (cursor.moveToFirst()) 
+        {
+        	String  name = cursor.getString(cursor.getColumnIndex("address"));
+            String phoneNo = cursor.getString(cursor.getColumnIndex("protocol"));
+            Log.i("TestExchange", name+ phoneNo);
+           //insert a record
+            String protocol = "eas";
+            String emailaddress = "yunfeng0619@gmail.com";
+    		String password = "y12345678";
+    		String mlogin = "gmail.com\\yunfeng0619@gmail.com";
+    		String address = "m.google.com";
+    		String domain = null;
+    		int port = 0;
+    		int flags = 5;
+    		long key = 0;
+    		
+            ContentValues values = new ContentValues();
+            values.put(projection[1], protocol);
+            values.put(projection[2], address);
+            values.put(projection[3], port);
+            values.put(projection[4], flags);
+            values.put(projection[5], mlogin);
+            values.put(projection[6], password);
+            values.put(projection[7], domain);
+            values.put(projection[8], key);
+            
+            getContentResolver().insert(uri, values);
+
+        }
+        
+        Log.i("TestExchange", "TestExchange enter add account");
+        
+      //  Button addCountBtn = (Button)findViewById(R.id.addCount);
+      //  addCountBtn.setOnClickListener(addCountListener);
+        
+       // 
+       // HostAuth aemmHostAuth = TestExchange.TestSetupHostAuth("eas","TestHostAuth",0,false,this);
+       // EmailContent.Account account1 = TestSetupAccount("account-hostauth", false, context);
+        // add hostauth data, which should be saved the first time
+       // account1.mHostAuthRecv = TestSetupHostAuth("eas","account-hostauth-recv", -1, false,
+        		//context);
+       // account1.mHostAuthSend = TestSetupHostAuth("eas","account-hostauth-send", -1, false,
+        		//context);
+       // account1.save(context);
+       /* long account1Id = account1.mId;
+
+        // Confirm account reads back correctly
+        Account account1get = EmailContent.Account.restoreAccountWithId(mMockContext, account1Id);
+        ProviderTestUtils.assertAccountEqual("testAccountSave", account1, account1get);
+
+        // Confirm hostauth fields can be accessed & read back correctly
+        HostAuth hostAuth1get = EmailContent.HostAuth.restoreHostAuthWithId(mMockContext,
+                account1get.mHostAuthKeyRecv);
+        ProviderTestUtils.assertHostAuthEqual("testAccountSaveHostAuth-recv",
+                account1.mHostAuthRecv, hostAuth1get);
+        HostAuth hostAuth2get = EmailContent.HostAuth.restoreHostAuthWithId(mMockContext,
+                account1get.mHostAuthKeySend);
+        ProviderTestUtils.assertHostAuthEqual("testAccountSaveHostAuth-send",
+                account1.mHostAuthSend, hostAuth2get);*/
+    //}
+  /*  public static EmailContent.Account TestSetupAccount(String name, boolean saveIt, Context context) {
+    	EmailContent.Account account = new EmailContent.Account();
+
+        account.mDisplayName = name;
+        account.mEmailAddress = name + "@android.com";
+        account.mSyncKey = "sync-key-" + name;
+        account.mSyncLookback = 1;
+        account.mSyncInterval = EmailContent.Account.CHECK_INTERVAL_NEVER;
+        account.mHostAuthKeyRecv = 0;
+        account.mHostAuthKeySend = 0;
+        account.mFlags = 4;
+        account.mIsDefault = true;
+        account.mCompatibilityUuid = "test-uid-" + name;
+        account.mSenderName = name;
+        account.mRingtoneUri = "content://ringtone-" + name;
+        account.mProtocolVersion = "2.5" + name;
+        account.mNewMessageCount = 5 + name.length();
+        account.mSecurityFlags = 7;
+        account.mSecuritySyncKey = "sec-sync-key-" + name;
+        account.mSignature = "signature-" + name;
+        if (saveIt) {
+            account.save(context);
+        }
+        return account;
+    }
+    public static HostAuth TestSetupHostAuth(String protocol, String name, long accountId,
+            boolean saveIt, Context context) {
+        HostAuth hostAuth = new HostAuth();
+
+        hostAuth.mProtocol = protocol + "-" + name;
+        hostAuth.mAddress = "address-" + name;
+        hostAuth.mPort = 100;
+        hostAuth.mFlags = 200;
+        hostAuth.mLogin = "login-" + name;
+        hostAuth.mPassword = "password-" + name;
+        hostAuth.mDomain = "domain-" + name;
+        hostAuth.mAccountKey = accountId;
+
+        if (saveIt) {
+            hostAuth.save(context);
+        }
+        return hostAuth;
+    }
+  
+    private OnClickListener addCountListener = new OnClickListener()
+    {
+    	public void onClick(View v)
+    	{
+    		//add count
+    		Uri uir = Uri.parse("yunfeng0617@gmail.com");
+    		String emailaddress = "yunfeng0617@gmail.com";
+    		String password = "y12345678";
+    		String mlogin = "gmail.com\\yunfeng0617@gmail.com";
+    		String address = "m.google.com";
+    		EmailContent.Account aemmAcount = new  EmailContent.Account();
+    		aemmAcount.setSenderName("aemm");
+    		aemmAcount.setEmailAddress(emailaddress);
+    		aemmAcount.setSyncInterval(-2); //15
+    		aemmAcount.setSyncLookback(2);
+    		
+    		//addcount(aemmAcount);
+    		
+    	
+    		/*aemmHostAuth.mLogin = mlogin;
+    		aemmHostAuth.mPassword = password;
+    		aemmHostAuth.mAddress = address;
+    		aemmHostAuth.mPort = 0;
+    		aemmHostAuth.mProtocol = "eas";
+    		aemmHostAuth.mFlags = 5;*/
+    		
+    		
+    		  
+    		//addcount(uir,password);
+    	//}
+        
+  
+    };
+  
+  
+
+}

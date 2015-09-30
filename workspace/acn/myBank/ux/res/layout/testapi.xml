@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+     >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4"
+         >
+
+        <Button
+            android:id="@+id/bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bank"
+            android:layout_weight="1"
+             />
+
+        <EditText
+            android:id="@+id/bank_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/bank_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bank_otp" 
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/bank_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BankTextView" 
+            android:layout_weight="1"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4"
+         >
+
+        <Button
+            android:id="@+id/sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sim"
+            android:layout_weight="1"
+             />
+
+        <EditText
+            android:id="@+id/sim_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/sim_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sim_otp" 
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/simText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="simTextView" 
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4"
+         >
+
+        <Button
+            android:id="@+id/cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cards"
+            android:layout_weight="1"
+             />
+
+        <EditText
+            android:id="@+id/cards_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/cards_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cards_otp" 
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/cards_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CardsText" 
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+	
+</LinearLayout>

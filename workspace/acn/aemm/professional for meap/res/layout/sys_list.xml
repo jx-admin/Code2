@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/sys_background">
+	<include layout="@layout/sys_head" />
+	<TextView android:id="@+id/sys_list_nodataTip"
+		android:textColor="@android:color/white"
+		android:gravity="center_vertical" android:layout_width="wrap_content"
+		android:layout_height="fill_parent" android:visibility="gone"
+		android:layout_centerInParent="true" android:layout_marginTop="5dip"
+		android:textSize="20dip" android:padding="70dip" />
+	<ListView android:id="@+id/sys_list_view"
+		android:paddingBottom="48dip" android:isScrollContainer="true"
+		android:layout_height="fill_parent" android:cacheColorHint="#00000000"
+		android:divider="#00000000" android:layout_width="fill_parent">
+	</ListView>
+	<LinearLayout android:layout_marginTop="-50dip"
+		android:id="@+id/sys_list_more"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<Button android:layout_gravity="center" android:textSize="20dip"
+			android:textColor="#FFFFFF" android:layout_width="fill_parent"
+			android:layout_height="50dip" android:text="全部更新"
+			android:id="@+id/sys_list_button"
+			android:background="@drawable/sys_button_toolbar" />
+	</LinearLayout>
+</LinearLayout>

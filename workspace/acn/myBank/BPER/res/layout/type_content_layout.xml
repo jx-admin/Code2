@@ -1,0 +1,92 @@
+<com.accenture.mbank.view.TypeContentLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/typeContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.accenture.mbank.view.DrawerLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffff000f" >
+         <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="aaa" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="bbb" />
+
+        <com.accenture.mbank.view.DrawerLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff0f" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="aaa" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="bbb" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="cccc" />
+        </com.accenture.mbank.view.DrawerLayout>
+
+        <com.accenture.mbank.view.DrawerLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+            
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ee" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ffff" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ggg" />
+        </com.accenture.mbank.view.DrawerLayout>
+    </com.accenture.mbank.view.DrawerLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff00fff"
+        android:text="bbbbbb" >
+    </TextView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fffff00f"
+        android:text="ccccc" >
+    </TextView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:text="dddddd" >
+    </TextView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff00"
+        android:text="eeeeeee" >
+    </TextView>
+
+</com.accenture.mbank.view.TypeContentLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, EncDemo!</string>
+    <string name="app_name">EncDemo</string>
+    <string name="maintitle">AEMM EncDemo</string>
+    <string name="enctext">加密</string>
+    <string name="dectext">解密</string>
+    <string name="exittext">退出</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>    
+    <string name="backtopro">返回</string>
+    <string name="save">保存数据</string>
+    <string name="read">读取数据</string>
+    <string name="filename">Enc.txt</string>
+    <string name="backtomain">返回主页面</string>
+    <string name="abouttext">关于</string>
+    <string name="nextstep">下一步</string>
+    <string name="encinputtext">加密输入内容</string>
+    <string name="setok">确定</string>
+    
+    <string name="startenc">开始加密</string>
+    
+    <string name="fileenc">文件加密</string>
+    <string name="inputenc">内容加密</string>
+    <string name="choosefile">浏览</string>
+    <string name="inputpass">请输入解密密码：</string>
+    <string name="setpass">请输入密码：</string>
+    <string name="confirmpass">请确认密码：</string>
+    
+    <string name="selectenctype">选择加密操作</string>
+    <string name="emptycode">要加密的字符串为空</string>    
+    <string name="exittip">确定要退出么？</string>
+    <string name="content">这是文件内容</string>
+    <string name="read_success">读取数据成功</string>
+    <string name="read_fail">读取数据失败</string>
+    <string name="empty_filename">文件名为空</string>
+    <string name="empty_content">文件内容为空</string>
+    <string name="inputfname">请输入文件名</string>
+    <string name="selectfname">请选择要加密的文件</string>
+    <string name="inputcontent">请输入要加密的内容</string>
+    
+</resources>

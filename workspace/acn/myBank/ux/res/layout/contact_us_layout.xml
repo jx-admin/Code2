@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_details"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/customer_service"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_expander" />
+
+            <include
+                android:id="@+id/thief_and_loss"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_expander" />
+
+            <include
+                android:id="@+id/new_request"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_expander"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dip" />
+    </LinearLayout>
+
+</ScrollView>

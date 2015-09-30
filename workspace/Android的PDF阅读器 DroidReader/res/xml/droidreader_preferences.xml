@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<ListPreference
+		android:key="zoom_type"
+		android:title="@string/prefs_zoom"
+		android:dialogTitle="@string/prefs_zoom"
+		android:entries="@array/prefs_zoom_entries"
+		android:entryValues="@array/prefs_zoom_values"
+		/>
+	
+	<EditTextPreference
+		android:key="zoom_percent"
+		android:title="@string/prefs_zoom_percent"
+		android:dialogTitle="@string/prefs_zoom_percent"
+		android:defaultValue="50"
+		/>
+
+	<PreferenceScreen
+		android:title="@string/prefs_cid_fonts"
+		android:key="cid_fonts"
+		>
+	
+		<EditTextPreference
+			android:key="cid_font_Adobe-CNS1_mincho"
+			android:title="@string/prefs_cid_font_Adobe_CNS1_mincho"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-CNS1_gothic"
+			android:title="@string/prefs_cid_font_Adobe_CNS1_gothic"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-GB1_mincho"
+			android:title="@string/prefs_cid_font_Adobe_GB1_mincho"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-GB1_gothic"
+			android:title="@string/prefs_cid_font_Adobe_GB1_gothic"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Japan1_mincho"
+			android:title="@string/prefs_cid_font_Adobe_Japan1_mincho"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Japan1_gothic"
+			android:title="@string/prefs_cid_font_Adobe_Japan1_gothic"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Japan2_mincho"
+			android:title="@string/prefs_cid_font_Adobe_Japan2_mincho"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Japan2_gothic"
+			android:title="@string/prefs_cid_font_Adobe_Japan2_gothic"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Korea1_mincho"
+			android:title="@string/prefs_cid_font_Adobe_Korea1_mincho"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+		<EditTextPreference
+			android:key="cid_font_Adobe-Korea1_gothic"
+			android:title="@string/prefs_cid_font_Adobe_Korea1_gothic"
+			android:defaultValue="@string/prefs_cid_default_font"
+			/>
+
+	</PreferenceScreen>
+
+	<PreferenceScreen android:key="advanced" android:title="@string/prefs_advanced">
+		<PreferenceCategory
+			android:title="@string/prefs_dpi"
+			android:key="dpi"
+			>
+			
+			<CheckBoxPreference
+				android:key="dpi_auto"
+				android:title="@string/prefs_dpi_auto"
+				android:defaultValue="true"
+				/>
+			
+			<EditTextPreference
+				android:key="dpi_manual"
+				android:title="@string/prefs_dpi_manual"
+				android:dialogTitle="@string/prefs_dpi_manual"
+				android:defaultValue="160"
+				/>
+		</PreferenceCategory>
+	
+		<PreferenceCategory
+			android:title="@string/prefs_tile_size"
+			android:key="tilesize"
+			>
+			
+			<CheckBoxPreference
+				android:key="tilesize_by_factor"
+				android:title="@string/prefs_tile_size_by_factor"
+				android:defaultValue="true"
+				/>
+			
+			<EditTextPreference
+				android:key="tilesize_factor"
+				android:title="@string/prefs_tile_size_factor"
+				android:dialogTitle="@string/prefs_tile_size_factor"
+				android:defaultValue="1.5"
+				/>
+			
+			<EditTextPreference
+				android:key="tilesize_x"
+				android:title="@string/prefs_tile_size_x"
+				android:dialogTitle="@string/prefs_tile_size_x"
+				/>
+			
+			<EditTextPreference
+				android:key="tilesize_y"
+				android:title="@string/prefs_tile_size_y"
+				android:dialogTitle="@string/prefs_tile_size_y"
+				/>
+		</PreferenceCategory>
+	
+	</PreferenceScreen>
+</PreferenceScreen>

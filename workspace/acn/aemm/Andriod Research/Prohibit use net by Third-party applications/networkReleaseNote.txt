@@ -1,0 +1,28 @@
+
+Android为上层的应用提供了四组接口，分别为：
+
+java.net 中的 HttpURLConnection类(包含HttpGet与HttpPost两个接口)
+
+org.apache.http包中的HttpGet和HttpPost类
+
+所有通过上面给出的接口创建和使用网络的时候，都会调到底层的初始化Socket接口，(JNI层的接口)
+
+\Android\libcore\luni\src\main\native\org_apache_harmony_luni_platform_OSNetworkSystem.cpp
+
+中的static void OSNetworkSystem_socket(JNIEnv* env, jobject, jobject fileDescriptor, jboolean stream) 方法，
+
+为了屏蔽接口的使用，所以在Socket的初始化的时候对其进行屏蔽，在line 421 加入如下代码：
+
+int fd = 0 ; 
+	int nUid = getuid() ; 
+	printf("by wh jni log getuid() = %d " , nUid) ; 
+	if( nUid == 10034 ) // by wh 
+	{
+	    fd = -1 ; 
+		jniThrowSocketException(env, errno);
+        return; 
+	}
+	
+PS: 
+
+    这个只能用做屏蔽从HttpURLConnection与HttpGet、HttpPost调用的上网请求，对于用户自行实现的JNI接口，因为其封装在Kernel层，没有相应的源代码，无法进行更深层的屏蔽。	

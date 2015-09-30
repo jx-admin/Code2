@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/ButtonBackward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backword">
+            <requestFocus />
+        </Button>
+        <TextView android:textColor="@drawable/white" android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blank" />
+        <Button android:id="@id/ButtonRefresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_reload" />
+    </LinearLayout>
+    <com.google.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" ads:adUnitId="a150eebb10ac218" ads:adSize="BANNER" ads:testDevices="TEST_EMULATOR, TEST_DEVICE_ID" />
+    <WebView android:scrollbarSize="0.0dip" android:id="@id/webViewApp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

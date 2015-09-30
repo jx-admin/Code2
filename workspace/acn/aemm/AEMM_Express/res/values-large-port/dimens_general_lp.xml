@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- port  -->
+    <!-- hall -->
+    <dimen name="hall_margin_LR">10dip</dimen>
+    <dimen name="install_area_margin_top">10dip</dimen>
+    <dimen name="area_install_h">295dip</dimen>
+    <dimen name="uninstall_area_margin_top">10dip</dimen>
+    <dimen name="area_uninstall_h">290dip</dimen>
+    <dimen name="botem_info_h">63dip</dimen>
+    <dimen name="install_page_lines">3px</dimen>
+    <dimen name="install_page_columns">4px</dimen>
+    <dimen name="uninstall_page_lines">3px</dimen>
+    <dimen name="uninstall_page_columns">2px</dimen>
+    
+    <!-- message -->
+    <dimen name="message_width">150dip</dimen>
+    <dimen name="updata_btn_margin_t">0dip</dimen>
+    <dimen name="updata_btn_margin_r">5dip</dimen>
+    <dimen name="message_margin_l">18dip</dimen>
+    <dimen name="message_margin_r">0dip</dimen>
+    <dimen name="message_margin_t">0dip</dimen>
+    <dimen name="message_margin_d">4dip</dimen>
+</resources>

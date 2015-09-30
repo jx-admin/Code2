@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.+'
+    }
+}
+
+allprojects {
+    version = VERSION_NAME
+    group = GROUP
+
+    repositories {
+        jcenter()
+    }
+}

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/root_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bper_payment_step_layout" />
+
+        <LinearLayout
+            android:id="@+id/payment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/page_title"
+                style="@style/bper_payment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/transfer_entry_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/account_include"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bper_payment_account_medel" />
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        </TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:orientation="vertical" >
+
+                                <TableLayout
+                                    android:id="@+id/recent_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_small"
+                                    android:orientation="vertical"
+                                    android:shrinkColumns="1"
+                                    android:stretchColumns="0,1,2" >
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/padding_small"
+                                android:layout_marginRight="@dimen/padding_small"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/margin_small"
+                                    android:text="@string/select_benefica" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/upper_shading" />
+
+                                <TableLayout
+                                    android:id="@+id/beneficiary_rg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+                                </TableLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <TextView
+                                        android:id="@+id/currency_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/margin_small"
+                                        android:text="€" />
+
+                                    <EditText
+                                        android:id="@+id/amount_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:digits="0123456789,."
+                                        android:hint="@string/amount_field_hint"
+                                        android:inputType="numberDecimal"
+                                        android:singleLine="true" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone" >
+
+                                    <TextView
+                                        android:id="@+id/optional_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/cup_e_cig_switch" />
+									<ImageView
+                                        android:id="@+id/optional_tv_info"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@id/optional_tv"
+                                        android:src="@drawable/pulsante_tooltip"/>
+                                    <RadioButton
+                                        android:id="@+id/switchbutton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@id/optional_tv_info"
+                                        android:visibility="gone" />
+
+                                    <com.custom.view.SwitchButton
+                                        android:id="@+id/cup_e_cig_sbtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true" />
+                                </RelativeLayout>
+
+                                <EditText
+                                    android:id="@+id/cup_et"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/cup_hint"
+                                    android:singleLine="true"
+                                    android:visibility="gone" >
+                                </EditText>
+
+                                <EditText
+                                    android:id="@+id/cig_et"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/cig_hint"
+                                    android:singleLine="true"
+                                    android:visibility="gone" >
+                                </EditText>
+
+                                <EditText
+                                    android:id="@+id/description_of_payment_et"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|left"
+                                    android:hint="@string/description_of_payment_hint"
+                                    android:minLines="5" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <TextView
+                                        android:id="@+id/des_length_alerter_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/currency_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/data_text" />
+
+                                    <EditText
+                                        android:id="@+id/data_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:focusable="false"
+                                        android:hint="@string/data_hint"
+                                        android:inputType="date"
+                                        android:singleLine="true" />
+
+                                    <ImageButton
+                                        android:id="@+id/data_ibtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:src="@drawable/button_date_small_click_selector" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/purpose_currency_liner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:visibility="gone" >
+
+                                    <EditText
+                                        android:id="@+id/purpose_currency_et"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="@string/purpose_currency_hint"
+                                        android:singleLine="true" />
+
+                                    <ImageButton
+                                        android:id="@+id/purpose_currency_ibtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:src="@drawable/button_small_phonebook_click_selector" />
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/confirmation_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/padding_medium"
+                                    android:layout_marginRight="@dimen/padding_medium"
+                                    android:background="@drawable/continue_button_click_selector" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

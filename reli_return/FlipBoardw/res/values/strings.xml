@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlipBoard</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_title">FlipView Demo By Aphid Mobile</string>
+    <string name="item_about">about</string>
+    <string name="hide_fragment">Hide Fragment</string>
+    <string name="show_fragment">Show Fragment</string>
+
+    <item name="tag_async_image_view_position" type="id"/>
+
+</resources>

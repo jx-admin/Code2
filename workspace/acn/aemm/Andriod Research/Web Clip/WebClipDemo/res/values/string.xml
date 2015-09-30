@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">accenture web clip demo.\n输入网址与名称进行添加与删除\n\n注意：名字和地址完全一致才会认为是同一个webclip.\n</string>
+    <string name="app_name">WebClip测试程序</string>
+    <string name="name_str">名称：</string>
+    <string name="name_default">埃森哲</string>
+    <string name="adress_str">地址：[不要丢掉http://]</string>
+    <string name="adress_default">http://www.accenture.com/cn-zh/Pages/index.aspx</string>
+    <string name="del_str">删除</string>
+    <string name="add_str">添加</string>
+</resources>

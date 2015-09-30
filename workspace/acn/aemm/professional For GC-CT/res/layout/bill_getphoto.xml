@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:background="@drawable/index_new_bg"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/titleBK"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/user_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bodyMarginLR"
+            android:text="@string/gps_photo"
+            android:textColor="@color/titleFontC" />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/marginTB"
+            android:layout_marginRight="@dimen/marginR"
+            android:layout_marginTop="@dimen/marginTB"
+            android:text="@string/submitSTR"
+            android:visibility="invisible" />
+    </RelativeLayout>
+	<TextView android:layout_width="fill_parent"   android:layout_height="45dip" 
+	    android:textSize="25sp" android:textColor="@color/white" android:gravity="center_vertical|center_horizontal" android:textStyle="bold" android:text="@string/gps_photo"
+	    
+            android:visibility="gone" />
+	<LinearLayout
+		android:orientation="vertical" android:layout_width="wrap_content"
+		android:layout_height="wrap_content"  
+		android:background="@drawable/gpscamera_bg"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginBottom="50dip"
+		>
+		<TextView android:id="@+id/position_title" android:textSize="20sp" 
+		     android:layout_marginTop="10dip"
+		   android:gravity="center_vertical" 
+		    android:drawableLeft="@drawable/index_listitem_lefticon" android:drawablePadding="20dp"
+		    android:layout_width="fill_parent" android:layout_height="35dp" 
+		    android:text="当前位置信息" android:textColor="#aa8833"/>
+		
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    >
+		    <TextView android:textColor="#222210" android:layout_marginLeft="10dp" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="经度 : "/>
+			<TextView android:id="@+id/longitude_text" 
+			    android:gravity="center"  
+			   
+			    android:text=""  android:textColor="#FF8C00" 
+			    android:textSize="16sp" 
+			
+              
+			    android:layout_width="0dp" 
+			    android:layout_weight="1" android:layout_height="wrap_content"/>
+			<TextView android:textColor="#332255"  android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="纬度 : "/>
+			<TextView android:id="@+id/latitude_text" 
+			 
+			    android:text="" android:textColor="#FF8C00" 
+			    android:textSize="16sp" android:layout_width="0dp" 
+			    android:gravity="center"
+			
+			    android:focusable="true" 
+               
+           
+			    android:layout_weight="1" android:layout_height="wrap_content"/>
+		</LinearLayout>
+		
+		<LinearLayout 
+		    android:layout_height="2dip"
+		    android:layout_marginTop="15dip" android:layout_width="fill_parent" android:background="@drawable/gpscameraline"/>
+		    
+		
+		<TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+		    		
+		    		android:drawableLeft="@drawable/index_listitem_lefticon" 
+		        	android:drawablePadding="10dp" android:gravity="center_vertical"
+					android:text="拍照预览" android:layout_height="35dp" 
+				
+					android:textColor="#998833"  android:textSize="20sp"/>
+		
+		<RelativeLayout android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="0dp">
+		    
+		
+		<ImageView  android:id="@+id/photo_previewimage2" android:layout_marginTop="5dp"
+		    		android:layout_marginLeft="50dp" android:layout_marginRight="50dp"  android:scaleType="fitXY"
+		    		android:layout_width="fill_parent"  android:layout_centerHorizontal="true" android:background="@drawable/gpscamera_bg"
+					 android:layout_height="170dp"/>
+		
+		<LinearLayout android:id="@+id/linear"  android:layout_below="@+id/photo_previewimage2" 
+		           android:layout_marginTop="20dip"
+		           android:layout_marginLeft="20dip"   android:layout_marginRight="20dip"
+	    android:layout_width="fill_parent"  android:layout_height="wrap_content" android:orientation="horizontal"> 
+		     
+			   	<ImageButton  android:id="@+id/photoBtn"   android:layout_gravity="right" 
+			   	  android:contentDescription="拍照"   android:layout_weight="1"
+			   	android:src="@drawable/camera_photo" android:layout_width="fill_parent" android:layout_height="40dip"/>
+			   		   	
+			   	<ImageButton  			   	 
+			   	    android:id="@+id/delphotoBtn" android:layout_gravity="center_horizontal" 
+			   	    android:layout_weight="1"   android:contentDescription="删除"
+			   	    android:src="@drawable/camera_del"
+			   	    android:layout_width="fill_parent" android:layout_height="40dip"/>
+			   		<ImageButton  android:visibility="visible"
+			   	 
+			   	    android:id="@+id/uploadphotoBtn" android:layout_gravity="center_horizontal" 
+			   	    android:layout_weight="1"   android:contentDescription="上传"
+			   	    android:src="@drawable/camera_upload"
+			   	    android:layout_width="fill_parent" android:layout_height="40dip"/>
+			   	<!--  
+			    <Button android:id="@+id/photoBtn" android:layout_weight="1"   android:text="@string/photo_btn" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+			    <Button android:id="@+id/delphotoBtn" android:layout_weight="1" android:text="@string/delete_btn" android:layout_width="wrap_content" android:layout_height="wrap_content"/>-->
+		</LinearLayout>   
+		</RelativeLayout>
+		
+	</LinearLayout>	
+
+	<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="0dip" 
+		android:layout_weight="1" android:gravity="bottom"
+		android:orientation="horizontal" >
+				<Button android:id="@+id/bill$photo_bn_upload2"  android:textStyle="bold"
+				  android:text="上      传" android:background="@drawable/sys_footbtn_style"
+				 android:layout_width="0dp" android:textSize="18sp" android:layout_margin="3dp"
+				 android:layout_height="45dp"  android:textColor="#ffffff" 
+				 android:layout_weight="1"/>
+			<Button android:id="@+id/bill$photo_bn_cancle2"  
+				 android:layout_width="0dp" android:background="@drawable/sys_footbtn_style"
+				android:layout_height="45dp" android:layout_margin="3dp" android:textStyle="bold"
+				android:text="返      回 " android:textSize="18sp" android:textColor="#ffffff" 
+				 android:layout_weight="1"/>
+	</LinearLayout>
+	</LinearLayout>
+	

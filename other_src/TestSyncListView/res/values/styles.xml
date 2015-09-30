@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <style name="loading_l" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">@anim/loading_l</item>
+    </style>
+
+    <style name="Btn">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">#ff57721c</item>
+        <item name="android:background">@drawable/btn</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40.0dip</item>
+    </style>
+
+    <style name="topbar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/topbar_bg</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">48.0dip</item>
+    </style>
+
+    <style name="topbar_text">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/write</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textSize">13.0sp</item>
+    </style>
+
+</resources>

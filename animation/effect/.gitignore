@@ -1,0 +1,32 @@
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Eclipse project files
+bin/
+gen/
+proguard/
+.classpath
+.project
+local.properties
+project.properties
+
+# Ant files
+build.xml
+ant.properties
+
+# Android Studio project files
+.gradle/
+.idea/
+build/
+*/build/
+local.properties
+*.iml
+
+# Intellij IDEA project files
+
+# Gradle files
+#keystore.properties
+

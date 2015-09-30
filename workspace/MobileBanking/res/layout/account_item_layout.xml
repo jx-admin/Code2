@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.AccountItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/account_close_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="fitStart"
+                android:src="@drawable/accounts_sphere" />
+
+            <RelativeLayout
+                android:id="@+id/account_section_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/balance_account_value"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/balance_account" />
+
+                <TextView
+                    android:id="@+id/balance_account_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/available_account"
+                    android:layout_centerHorizontal="true"
+                    android:text="600.022,00"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/available_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/available_account_value"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/available_account" />
+
+                <TextView
+                    android:id="@+id/available_account_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="600.022,00"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="5dip"
+            android:layout_height="wrap_content"
+            android:src="@drawable/account_line" >
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/account_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/account_name"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="Person Account" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="@string/update_to" />
+
+            <TextView
+                android:id="@+id/account_date"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="12.04.2012" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_details"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5" >
+
+                <RadioGroup
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="346" >
+
+                    <RadioButton
+                        android:id="@+id/all"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="115"
+                        android:background="@drawable/btn_all_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="" />
+
+                    <RadioButton
+                        android:id="@+id/deposit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="106"
+                        android:background="@drawable/btn_deposits_selector"
+                        android:button="@null"
+                        android:text="" />
+
+                    <RadioButton
+                        android:id="@+id/withdraoals"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="125"
+                        android:background="@drawable/btn_withdrawals_selector"
+                        android:button="@null"
+                        android:text="" />
+                </RadioGroup>
+
+                <com.accenture.mbank.view.BankImageButton
+                    android:id="@+id/account_payments"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/account_payments_selector" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/padding_small" >
+
+                <TextView
+                    android:id="@+id/account_date_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/opt_date_2" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/account_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_toLeftOf="@+id/account_amount"
+                    android:layout_toRightOf="@+id/account_date_1"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/description_1" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/account_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/amount_1" >
+                </TextView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/account_all_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+            </LinearLayout>
+
+            <com.accenture.mbank.view.InnerListView
+                android:id="@+id/account_all_record_list"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:cacheColorHint="#00000000"
+                android:gravity="center" >
+            </com.accenture.mbank.view.InnerListView>
+
+            <com.accenture.mbank.view.InnerListView
+                android:id="@+id/account_deposit_record_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:visibility="gone" >
+            </com.accenture.mbank.view.InnerListView>
+			
+            <com.accenture.mbank.view.InnerListView
+                android:id="@+id/account_with_record_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:visibility="gone" >
+            </com.accenture.mbank.view.InnerListView>
+			
+            <com.accenture.mbank.view.BankImageButton
+                android:id="@+id/btn_older_operations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_older_operations_selector" />
+            
+            <LinearLayout
+                android:id="@+id/account_deposit_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/account_with_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/account_show_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitStart"
+        android:src="@drawable/account_show_selector" />
+
+</com.accenture.mbank.view.AccountItemLayout>

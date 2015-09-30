@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <LinearLayout
+        android:id="@+id/account_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2.5"
+        android:background="@color/gray"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <RadioButton
+                android:id="@+id/movements"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_left_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/movements" />
+
+            <RadioButton
+                android:id="@+id/details"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_right_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/account_details" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_movement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/account_movement_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5" >
+
+                <RadioGroup
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="346" >
+
+                    <RadioButton
+                        android:id="@+id/all"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="115"
+                        android:background="@drawable/btn_left_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/all"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/deposit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="106"
+                        android:background="@drawable/btn_center_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/deposits"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/withdraoals"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="125"
+                        android:background="@drawable/btn_right_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/withdrawals"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+
+                <com.accenture.mbank.view.BankImageButton
+                    android:id="@+id/account_payments"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/account_payments_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loan_install_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:weightSum="4" >
+
+                <TextView
+                    android:id="@+id/account_date_1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:gravity="left|center_vertical"
+                    android:lines="2"
+                    android:text="@string/opt_date1" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/account_description"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/description_1" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/account_amount"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/amount_1" >
+                </TextView>
+
+                <ToggleButton
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/toggle_button_height"
+                    android:layout_marginLeft="@dimen/space"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/cards_expand_selector"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="invisible" >
+                </ToggleButton>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

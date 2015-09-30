@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.xuye.TestContentProvider"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <!--  
+	<premission
+		android:name="com.xuye.TestContentProvider.READ"
+		android:protectionLevel="signatureOrSystem" />
+	<premission
+		android:name="com.xuye.TestContentProvider.WRITE"
+		android:protectionLevel="signatureOrSystem" />
+     -->
+    <permission android:name="android.permission.READ_XUYE" 
+    android:description="@string/read_permission_dis" 
+    android:icon="@drawable/icon" 
+    android:label="@string/readPermison" android:protectionLevel="signatureOrSystem">
+    </permission>
+    
+    <permission android:name="android.permission.WRITE_XUYE" 
+    android:icon="@drawable/icon" 
+    android:protectionLevel="signatureOrSystem" android:description="@string/write_persmission_dis" android:label="@string/writePermission">
+    </permission>
+    
+	 	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+		<provider android:name=".TestContentProvider"
+			android:authorities="com.xuye.TestContentProvider"
+			android:writePermission="android.permission.WRITE_XUYE"
+			/>
+    </application>
+</manifest>

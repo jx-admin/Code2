@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.accenture.mbank.view.CardsDescriptionItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/line" />
+    <!-- credit cards Items -->
+
+    <RelativeLayout
+        android:id="@+id/cards_expander_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/personalizedName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Card 2153" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/availableBalanceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/available_balance_name" />
+
+                <TextView
+                    android:id="@+id/availableBalanceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="500000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/cards_expand_btn"
+            android:layout_width="@dimen/toggle_button_width"
+            android:layout_height="@dimen/toggle_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_large"
+            android:background="@drawable/cards_expand_selector"
+            android:textOff=""
+            android:textOn="" >
+        </ToggleButton>
+    </RelativeLayout>
+    <!-- cards 展开的内容 -->
+
+    <LinearLayout
+        android:id="@+id/cards_expanded_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- transactions button / cards details button -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="15dip"
+                    android:layout_height="fill_parent" />
+
+                <RadioGroup
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="346" >
+
+                    <RadioButton
+                        android:id="@+id/transactions"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="115"
+                        android:background="@drawable/btn_transactions_details_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="" />
+
+                    <RadioButton
+                        android:id="@+id/cardsDetails"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="125"
+                        android:background="@drawable/btn_cards_details_selector"
+                        android:button="@null"
+                        android:text="" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- desc item title start -->
+
+            <LinearLayout
+                android:id="@+id/transactions_details_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_small" >
+
+                    <TextView
+                        android:id="@+id/cards_date_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/opt_date_1" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/cards_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_toLeftOf="@+id/cards_amount"
+                        android:layout_toRightOf="@+id/cards_date_1"
+                        android:ellipsize="end"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/description_1" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/cards_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:ellipsize="end"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="@string/amount_1" >
+                    </TextView>
+                </RelativeLayout>
+
+                <com.accenture.mbank.view.InnerListView
+                    android:id="@+id/cards_record"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:orientation="vertical" >
+                </com.accenture.mbank.view.InnerListView>
+
+                <com.accenture.mbank.view.BankImageButton
+                    android:id="@+id/btn_carica_movimenti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_carica_movimenti_carte_selector" />
+            </LinearLayout>
+            <!-- desc Item end -->
+
+
+            <!-- card details start -->
+
+            <LinearLayout
+                android:id="@+id/cards_details_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="@string/alias" />
+
+                    <TextView
+                        android:id="@+id/alias_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="123321" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="@string/state" />
+
+                    <TextView
+                        android:id="@+id/state_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="state" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="@string/number_Card" />
+
+                    <TextView
+                        android:id="@+id/number_card_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="@string/expiration" />
+
+                    <TextView
+                        android:id="@+id/expiration_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="expiration" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/plafond_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/plafond_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="left"
+                        android:text="@string/plafond" />
+
+                    <TextView
+                        android:id="@+id/plafond_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="plafond" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- cards details end -->
+        </LinearLayout>
+    </LinearLayout>
+
+</com.accenture.mbank.view.CardsDescriptionItem>

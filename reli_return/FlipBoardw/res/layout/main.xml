@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/background" 
+        android:background="@color/red">
+
+        <com.aphidmobile.flip.FlipViewController
+            xmlns:flip="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/flip_controller1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            flip:orientation="vertical_top" />
+
+        <com.aphidmobile.flip.FlipViewController
+            xmlns:flip="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/flip_controller2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            flip:orientation="vertical_top" />
+    </LinearLayout>
+
+    <com.aphidmobile.flip.FlipViewController
+        xmlns:flip="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/flip_controller3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        flip:orientation="horizontal_right" /> 
+
+</FrameLayout>

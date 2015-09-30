@@ -1,0 +1,105 @@
+<com.accenture.mbank.view.SynthesisExpandedContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/dashboard_accounts" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/interval" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6" >
+
+        <TextView
+            android:id="@+id/dashboard_account_tv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#ffffffff" />
+
+        <SeekBar
+            android:id="@+id/seekbar_accounts"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:max="5"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:progress="0"
+            android:progressDrawable="@drawable/seek_back"
+            android:thumb="@drawable/seek_img" >
+        </SeekBar>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/dashboard_cards" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/interval" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6" >
+
+        <TextView
+            android:id="@+id/dashboard_cards_tv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/box_number"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#ffffffff" />
+
+        <SeekBar
+            android:id="@+id/seekbar_cards"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:max="8"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:progress="0"
+            android:progressDrawable="@drawable/seek_back"
+            android:thumb="@drawable/seek_img" >
+        </SeekBar>
+    </LinearLayout>
+
+    <com.accenture.mbank.view.BankImageButton
+        android:id="@+id/syntheis_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:paddingTop="@dimen/padding_small"
+        android:src="@drawable/btn_save_selector" >
+    </com.accenture.mbank.view.BankImageButton>
+
+</com.accenture.mbank.view.SynthesisExpandedContainer>

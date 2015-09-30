@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/item_bg" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_big"
+        android:text="@string/feedback_des" />
+
+    <EditText
+        android:id="@+id/feedback_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:gravity="start"
+        android:background="@drawable/corners_bk_input"
+		android:minLines="8" />
+
+    <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/corners_bk_button"
+        android:text="@string/submit_feedback"
+        android:textColor="@color/button_text"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="horizontal" android:id="@+id/layout"
+	android:gravity="center">
+
+	<FrameLayout android:orientation="vertical"
+
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<ImageButton android:id="@+id/messageButton"
+			android:layout_width="240dp" android:padding="0dp"
+			android:background="#00000000" android:scaleType="fitXY"
+			android:layout_height="wrap_content" android:src="@drawable/wizard_message_selector">
+		</ImageButton>
+		<!--
+			
+		-->
+
+		<!-- <org.accenture.product.lemonade.view.SystemWizardMessageLayout -->
+		<RelativeLayout android:layout_width="240dp"
+			android:layout_height="fill_parent" android:paddingLeft="10dp"
+			android:paddingTop="10dp" android:paddingBottom="10dp"
+			android:paddingRight="15dp">
+			<TextView android:id="@+id/wizard_title"
+				android:layout_width="240dp" android:layout_height="wrap_content"
+				android:text="" android:textSize="15dp" android:textColor="@color/white"
+				android:layout_alignParentTop="true" android:layout_alignParentLeft="true"></TextView>
+
+			<TextView android:id="@+id/wizard_description"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="" android:textSize="12dp" android:textColor="@color/white1"
+				android:layout_below="@+id/wizard_title"
+				android:layout_alignParentLeft="true"></TextView>
+
+			<TextView android:id="@+id/wizard_number"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="" android:textSize="10dp" android:textColor="@color/white2"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentRight="true"></TextView>
+		</RelativeLayout>
+		<!--
+			</org.accenture.product.lemonade.view.SystemWizardMessageLayout>
+		-->
+
+
+		<!--
+			<ImageButton android:layout_width="358px"
+			android:scaleType="fitStart" android:layout_height="124px"
+			android:src="@drawable/message_bg"></ImageButton>
+		-->
+	</FrameLayout>
+	<ImageView android:layout_width="80dp" android:layout_height="wrap_content"
+		android:id="@+id/wizard_head" android:src="@drawable/head1">
+	</ImageView>
+
+</LinearLayout>

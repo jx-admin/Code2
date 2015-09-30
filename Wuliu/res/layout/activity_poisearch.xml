@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/searchkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="餐厅" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchButtonProcess"
+            android:padding="10dip"
+            android:text="开始" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/map_next_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:onClick="goToNextPage"
+            android:padding="10dip"
+            android:text="下一组数据" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/poi_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.baidu.mapapi.map.SupportMapFragment" />
+
+</LinearLayout>

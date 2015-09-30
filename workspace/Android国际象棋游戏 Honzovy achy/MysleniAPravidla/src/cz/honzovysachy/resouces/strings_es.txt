@@ -1,0 +1,109 @@
+HONZOVY_SACHY Ajedrez de Honza
+FLIP_BOARD El tablero de ajedrez
+MOVE Lance
+NEW_GAME Nueva partida
+UNDO Undo
+REDO Redo
+THINKING Está pensando...
+SAVE_GAME Guardar la partida
+HUMAN_OPONENT Hombre-Hombre
+SAVED_AS Guardar como 
+SAVE_ERROR Guardar error
+KNIGHT Caballo
+BISHOP Alfil
+ROOK Torre
+QUEEN Dama
+SAVE_PGN Guardar PGN
+FILE_NAME Nombre de fichero
+GAME partida
+SAVE Guardar
+WHITE blanco
+BLACK negro
+RESULT resultado
+EVENT evento
+SITE página
+PRAGUE Praga
+DATE fecha
+ROUND partida
+WHITE_ELO blanco elo
+BLACK_ELO negro elo
+PAWN_PROMOTION Pawn promotion
+WHITE_WINS Blanco ganó
+BLACK_WINS Negro ganó
+DRAW Empate
+COMMA_BLACK_CHECKMATED , negro checkmated
+COMMA_WHITE_CHECKMATED , white checkmated
+COMMA_STALEMATE , empate
+COMMA_MATERIAL , material
+COMMA_50_MOVES_RULE , 50 moves rule
+COMMA_3_TIMES_REPETITION , 3 veces repetición
+SETTINGS Opciones
+ABOUT De programa
+OK OK
+CZECH checo
+ENGLISH inglés
+DEFAULT Lengua inicial
+LOCALE Locale localización
+SETUP_BOARD Setup board
+CANCEL Cancelar
+SETUP_TEXT Move on the board and press 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD Posición incorrecta
+TIME_PER_MOVE Tiempo para mover
+LEVEL Level
+MOVE_NOW Move now
+SPANISH Spanish
+CATALAN CatalanHONZOVY_SACHY Ajedrez de Honza
+FLIP_BOARD El tablero de ajedrez
+MOVE Lance
+NEW_GAME Nueva partida
+UNDO Undo
+REDO Redo
+THINKING Est\u00e1 pensando...
+SAVE_GAME Guardar la partida
+HUMAN_OPONENT Hombre-Hombre
+SAVED_AS Guardar como 
+SAVE_ERROR Guardar error
+KNIGHT Caballo
+BISHOP Alfil
+ROOK Torre
+QUEEN Dama
+SAVE_PGN Guardar PGN
+FILE_NAME Nombre de fichero
+GAME partida
+SAVE Guardar
+WHITE blanco
+BLACK negro
+RESULT resultado
+EVENT evento
+SITE p\u00e1gina
+PRAGUE Praga
+DATE fecha
+ROUND partida
+WHITE_ELO blanco elo
+BLACK_ELO negro elo
+PAWN_PROMOTION Pawn promotion
+WHITE_WINS Blanco gan\u00f3
+BLACK_WINS Negro gan\u00f3
+DRAW Empate
+COMMA_BLACK_CHECKMATED , negro checkmated
+COMMA_WHITE_CHECKMATED , white checkmated
+COMMA_STALEMATE , empate
+COMMA_MATERIAL , material
+COMMA_50_MOVES_RULE , 50 moves rule
+COMMA_3_TIMES_REPETITION , 3 veces repetici\u00f3n
+SETTINGS Opciones
+ABOUT De programa
+OK OK
+CZECH Checo
+ENGLISH Ingl\u00e9s
+DEFAULT Lengua inicial
+LOCALE Locale localizaci\u00f3n
+SETUP_BOARD Setup board
+CANCEL Cancelar
+SETUP_TEXT Move on the board and press 0, 1, 2, 3, 4, 5, 6, q, w, e, r, t, y
+INCORRECT_BOARD Posici\u00f3n incorrecta
+TIME_PER_MOVE Tiempo para mover
+LEVEL Level
+MOVE_NOW Move now
+SPANISH Spanish
+CATALAN Catalan

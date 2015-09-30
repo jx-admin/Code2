@@ -1,0 +1,21 @@
+<com.accenture.mbank.view.ContactNewRequestDescription xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small" >
+
+        <EditText
+            android:id="@+id/request_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"/>
+    </LinearLayout>
+
+</com.accenture.mbank.view.ContactNewRequestDescription>

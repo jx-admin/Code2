@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#ff646464</color>
+    <color name="lighter_gray">#ffa8a8a8</color>
+
+    <!-- aggre view manager -->
+    <color name="legend_investments_color">#8ea32d</color>
+    <color name="legend_accounts_color">#ff444499</color>
+    <color name="legend_prepaid_cards_color">#ffA4CFEB</color>
+    <color name="legend_credit_cards_color">#ffcc296b</color>
+    <color name="legend_total_loans_color">#ffff9826</color>
+    <color name="account_1">#ff171733</color>
+    <color name="account_2">#ff22224d</color>
+    <color name="account_3">#ff2a2a66</color>
+    <color name="account_4">#ff373780</color>
+    <color name="account_5">#ff444499</color>
+    <color name="account_6">#ff5050b3</color>
+    <color name="account_7">#ff6060cc</color>
+    <color name="account_8">#ff7373e6</color>
+    <color name="account_9">#ff8c8cff</color>
+
+    <!--  -->
+    <color name="investment_1">#ff353d11</color>
+    <color name="investment_2">#ff475216</color>
+    <color name="investment_3">#ff59661c</color>
+    <color name="investment_4">#ff6b7a21</color>
+    <color name="investment_5">#ff7d8f27</color>
+    <color name="investment_6">#ff8ea32d</color>
+    <color name="investment_7">#ffa0b832</color>
+    <color name="investment_8">#ffb1cc38</color>
+    <color name="investment_9">#ffcadb67</color>
+
+    <!--  -->
+    <color name="loan_1">#ff990202</color>
+    <color name="loan_2">#ffb33000</color>
+    <color name="loan_3">#ffcc3d00</color>
+    <color name="loan_4">#ffe64d00</color>
+    <color name="loan_5">#ffff5e00</color>
+    <color name="loan_6">#ffff7300</color>
+    <color name="loan_7">#ffff8907</color>
+    <color name="loan_8">#ffff9826</color>
+    <color name="loan_9">#ffffaa4d</color>
+    <color name="loan_10">#ffffbc73</color>
+
+    <!--  -->
+    <color name="prepaid_card_1">#ff195180</color>
+    <color name="prepaid_card_2">#ff1f6199</color>
+    <color name="prepaid_card_3">#ff2471b3</color>
+    <color name="prepaid_card_4">#ff2981cc</color>
+    <color name="prepaid_card_5">#ff2e91e6</color>
+    <color name="prepaid_card_6">#ff33a1ff</color>
+    <color name="prepaid_card_7">#ff57b2ff</color>
+    <color name="prepaid_card_8">#ff73beff</color>
+    <color name="prepaid_card_9">#ff99d0ff</color>
+
+    <!--  -->
+    <color name="credit_card_1">#ff660a2f</color>
+    <color name="credit_card_2">#ff800d3b</color>
+    <color name="credit_card_3">#ff990f47</color>
+    <color name="credit_card_4">#ffb31253</color>
+    <color name="credit_card_5">#ffcc296b</color>
+    <color name="credit_card_6">#ffe6377e</color>
+    <color name="credit_card_7">#ffff4791</color>
+    <color name="credit_card_8">#ffff66a4</color>
+    <color name="credit_card_9">#ffff8fbc</color>
+	<color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+	<color name="possible_result_points">#c0ffff00</color>
+	<color name="result_view">#b0000000</color>
+	<color name="dimgray2">#88494949</color>
+	<color name="status_text">#ffffffff</color>
+    
+    <!--  -->
+    <color name="transparent">#0000</color>
+
+</resources>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="30" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lighter_gray"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/business_summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/recent_deposits" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/account_viewPager"
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="@drawable/legend_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="20dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:src="@drawable/arrow_payments_left_selector"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/arrow_payments_right_selector" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/point_viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:background="@drawable/legend_bg"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RadioButton
+            android:id="@+id/distinte_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_left_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/distinte_btn" />
+
+        <RadioButton
+            android:id="@+id/effetti_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_right_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/effetti_btn" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/effetti_radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="5" >
+
+            <RadioButton
+                android:id="@+id/all"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_left_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/pending"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/pending"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/not_payed"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/not_payed"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/payed"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_center_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/payed"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/other"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/distinte_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_small_mini"
+                android:gravity="center_vertical"
+                android:weightSum="5" >
+
+                <TextView
+                    android:id="@+id/insertionDateTextView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="left|center_vertical"
+                    android:lines="2"
+                    android:paddingLeft="@dimen/padding_small_mini"
+                    android:text="@string/insertionDate1" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/type_1" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/state_1" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/amount_1" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/arrow_payment_details"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:src="@drawable/account_line" >
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+         <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/recent_deposit_item" />
+    -->
+
+</LinearLayout>

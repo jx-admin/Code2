@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_height"
+    android:layout_marginLeft="@dimen/margin_large"
+    android:layout_marginRight="@dimen/margin_large" >
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_height"
+        android:layout_marginLeft="@dimen/margin_xsmall"
+        android:divider="@drawable/menu_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="1dp"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#33b5e5" />
+
+</RelativeLayout>
