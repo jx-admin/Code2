@@ -21,6 +21,10 @@ public class Test {
 		show();
 		show("sss","sss1");
 		show(new String[]{"ddd","ddd1"});
+		
+		Object a=null;
+		Object b=null;
+		show("a==b",(null==null)+"");
 	}
 	
 	public static void show(String ...strs){

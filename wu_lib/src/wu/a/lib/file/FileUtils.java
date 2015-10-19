@@ -25,18 +25,21 @@ import wu.a.lib.device.DeviceUtils;
  * @author junxu.wang
  * 
  *         <pre>
- *         android.os.Environment 提供访问环境变量
- * 
- *         1.从 resource 中的 raw 文件夹中获取文件并读取数据（资源文件只能读不能写） 2. 从 asset
- *         中获取文件并读取数据（资源文件只能读不能写） 3. 从 sdcard 中去读文件，首先要把文件通过
- *         \android-sdk-windows\tools\adb.exe * 把本地计算 机上的文件 copy 到 sdcard 上去，
- *         adb.exe push e:/Y.txt /sdcard/, 不可以用 adb.exe push e:\Y.txt \sdcard\
- *         同样： 把仿真器上的文件 copy 到本地计算机上用： adb pull
- *         ./data/data/com.tt/files/Test.txt e:/ 4. 写文件， 一般写在
- *         \data\data\com.test\files\ 里面， 打开 DDMS 查看 file explorer 是可以看
- *         到仿真器文件存放目录的结构的 5. 写， 读 data/data/ 目录 ( 相当 AP 工作目录 ) 上的文件，用
- *         openFileOutput 6. 写， 读 sdcard 目录上的文件，要用 FileOutputStream ， 不能用
- *         openFileOutput
+ * android.os.Environment 提供访问环境变量\
+ * 1.从 resource 中的 raw 文件夹中获取文件并读取数据（资源文件只能读不能写）
+ * 2.从 asset中获取文件并读取数据（资源文件只能读不能写）
+ * 3.从 sdcard 中去读文件，首先要把文件通过
+ * 		\android-sdk-windows\tools\adb.exe 
+ * 把本地计算 机上的文件 copy 到 sdcard 上去，
+ * 		adb.exe push e:/Y.txt /sdcard/, 
+ * 不可以用 adb.exe push e:\Y.txt \sdcard\
+ * 同样： 把仿真器上的文件 copy 到本地计算机上用：
+ * 		adb pull ./data/data/com.tt/files/Test.txt e:/ 
+ * 4.写文件， 一般写在\data\data\com.test\files\ 里面，
+ * 打开 DDMS 查看 file explorer 是可以看到仿真器文件存放目录的结构的 
+ * 5.写， 读 data/data/ 目录 ( 相当 AP 工作目录 ) 上的文件，用openFileOutput 
+ * 6.写， 读 sdcard 目录上的文件，要用 FileOutputStream ， 不能用openFileOutput
+ *         </pre>
  */
 public class FileUtils {
 	public static final int ERROR = -1;
@@ -211,7 +214,7 @@ public class FileUtils {
 			if (DeviceUtils.isAfterApiLevel18()) {
 				return statfs.getAvailableBytes();
 			} else {
-				return statfs.getBlockSize() * statfs.getAvailableBlocks();
+				return (long) statfs.getBlockSize() * (long) statfs.getAvailableBlocks();
 			}
 		} else {
 			return ERROR;
