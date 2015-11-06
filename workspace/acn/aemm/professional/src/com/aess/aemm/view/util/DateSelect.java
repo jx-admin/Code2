@@ -103,7 +103,7 @@ public class DateSelect {
 		if(null != mOldDate && mOldDate.length() > 1) {
 			String hint = null;
 			if (MORE == mType) {
-				hint = mCxt.getString(R.string.better);
+				hint = mCxt.getString(R.string.more);
 			} else if (LESS == mType) {
 				hint = mCxt.getString(R.string.less);
 			}
