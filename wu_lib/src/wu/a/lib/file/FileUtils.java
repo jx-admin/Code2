@@ -371,12 +371,12 @@ public class FileUtils {
 		for (int i = 0; i < list.length; i++) {
 			String name = list[i];
 			if (name.indexOf('.') >= 0) {
-				writeAssetsToSdcard(context, new File(destPath + "/" + path + "/" + name), path + "/" + name);
-				Log.d(FileUtils.class.getSimpleName(), path + "/" + name);
+				writeAssetsToSdcard(context, new File(destPath +File.pathSeparatorChar + path + File.pathSeparatorChar + name), path + File.pathSeparatorChar + name);
+				Log.d(FileUtils.class.getSimpleName(), path + File.pathSeparatorChar + name);
 			} else if (path.length() == 0) {
 				getAssetsList(context, name, destPath);
 			} else {
-				getAssetsList(context, path + "/" + name, destPath);
+				getAssetsList(context, path + File.pathSeparatorChar + name, destPath);
 			}
 		}
 	}
