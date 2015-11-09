@@ -14,7 +14,7 @@ import android.widget.TextView;
  *
  */
 public class Main extends Activity implements OnClickListener {
-	private Button del_btn,mod_btn,add_btn;
+	private Button del_btn, mod_btn, add_btn;
 	private TextView meg_tv;
 	private EditText old_ssid_et;
 	private EditText ssid_et;
@@ -22,114 +22,134 @@ public class Main extends Activity implements OnClickListener {
 	private Button offon_btn;
 	private WifiManageWrap mWifiManageWrap;
 	private String info;
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        init();
-    }
-    private void init(){
-    	 meg_tv=(TextView) findViewById(R.id.meg_tv);
-    	 old_ssid_et=(EditText) findViewById(R.id.old_ssid_et);
-         ssid_et=(EditText) findViewById(R.id.ssid_et);
-         word_et=(EditText) findViewById(R.id.word_et);
-         offon_btn=(Button) findViewById(R.id.offon_btn);
-         offon_btn.setOnClickListener(this);
-         del_btn=((Button)findViewById(R.id.del_btn));
-         del_btn.setOnClickListener(this);
-         mod_btn=((Button)findViewById(R.id.mod_btn));
-         mod_btn.setOnClickListener(this);
-         add_btn=((Button)findViewById(R.id.add_btn));
-         add_btn.setOnClickListener(this);
-         info="";
-         mWifiManageWrap=new WifiManageWrap(this);
-         print(R.string.load_success);
-    }
-    private void fresh(boolean state){
-    	if(state){
-    		del_btn.setEnabled(true);
-    		mod_btn.setEnabled(true);
-    		add_btn.setEnabled(true);
-    	}else{
-    		del_btn.setEnabled(false);
-    		mod_btn.setEnabled(false);
-    		add_btn.setEnabled(false);
-    	}
-    }
-    @Override
-    protected void onResume() {
-        // TODO Auto-generated method stub
-        super.onResume();
-        setButtonState(mWifiManageWrap.mWifiManager.isWifiEnabled());
-    }
-    private void setButtonState(boolean state){
-    	if(state){
-    		offon_btn.setText(R.string.close);
-    		print(R.string.open_success);
-    	}else{
-    		offon_btn.setText(R.string.open);
-    		print(R.string.close_success);
-    	}
-    	fresh(state);
-    }
+
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		init();
+	}
+
+	private void init() {
+		meg_tv = (TextView) findViewById(R.id.meg_tv);
+		old_ssid_et = (EditText) findViewById(R.id.old_ssid_et);
+		ssid_et = (EditText) findViewById(R.id.ssid_et);
+		word_et = (EditText) findViewById(R.id.word_et);
+		offon_btn = (Button) findViewById(R.id.offon_btn);
+		offon_btn.setOnClickListener(this);
+		del_btn = ((Button) findViewById(R.id.del_btn));
+		del_btn.setOnClickListener(this);
+		mod_btn = ((Button) findViewById(R.id.mod_btn));
+		mod_btn.setOnClickListener(this);
+		add_btn = ((Button) findViewById(R.id.add_btn));
+		add_btn.setOnClickListener(this);
+		info = "";
+		mWifiManageWrap = new WifiManageWrap(this);
+		print(R.string.load_success);
+
+		mWifiManageWrap.startScan();
+		print("WifiInfo:\n" + mWifiManageWrap.wifiInfoToString());
+		print("…®√ËΩ·π˚:\n" + mWifiManageWrap.scanResultListToString());
+		print("≈‰÷√¡–±Ì:\n" + mWifiManageWrap.wifiConfigurationListToString());
+	}
+
+	private void fresh(boolean state) {
+		if (state) {
+			del_btn.setEnabled(true);
+			mod_btn.setEnabled(true);
+			add_btn.setEnabled(true);
+		} else {
+			del_btn.setEnabled(false);
+			mod_btn.setEnabled(false);
+			add_btn.setEnabled(false);
+		}
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		setButtonState(mWifiManageWrap.isWifiEnabled());
+	}
+
+	private void setButtonState(boolean state) {
+		if (state) {
+			offon_btn.setText(R.string.close);
+			print(R.string.open_success);
+		} else {
+			offon_btn.setText(R.string.open);
+			print(R.string.close_success);
+		}
+		fresh(state);
+	}
+
 	@Override
 	public void onClick(View v) {
-		switch(v.getId()){
+		switch (v.getId()) {
 		case R.id.offon_btn:
-			if(mWifiManageWrap.mWifiManager.isWifiEnabled()){
+			if (mWifiManageWrap.isWifiEnabled()) {
 				mWifiManageWrap.mWifiManager.setWifiEnabled(false);
 				setButtonState(false);
-			}else{
+			} else {
 				mWifiManageWrap.mWifiManager.setWifiEnabled(true);
 				setButtonState(true);
 			}
 			break;
 		case R.id.del_btn:
-			WifiConfiguration conf=mWifiManageWrap.getWifiConfig(ssid_et.getText().toString().trim());
-			if(conf!=null){
-				print("Õ¯¬Á“∆≥˝:"+mWifiManageWrap.mWifiManager.removeNetwork(conf.networkId));
+			WifiConfiguration conf = mWifiManageWrap.getWifiConfig(ssid_et
+					.getText().toString().trim());
+			if (conf != null) {
+				print("Õ¯¬Á“∆≥˝:"
+						+ mWifiManageWrap.mWifiManager
+								.removeNetwork(conf.networkId));
 				mWifiManageWrap.mWifiManager.saveConfiguration();
-			}else{
+			} else {
 				print(R.string.not_find);
 			}
 			break;
 		case R.id.mod_btn:
-			conf=mWifiManageWrap.getWifiConfig(old_ssid_et.getText().toString().trim());
-			if(conf!=null){
-				WifiConfiguration newCong=new WifiConfiguration();
-				newCong.SSID = "\""+ssid_et.getText().toString().trim()+"\"";
-				newCong.preSharedKey = "\""+word_et.getText()+"\"";
-				newCong.networkId=conf.networkId;
-				print("Õ¯¬Á≈‰÷√–ﬁ∏ƒ:"+mWifiManageWrap.mWifiManager.updateNetwork(newCong));
+			conf = mWifiManageWrap.getWifiConfig(old_ssid_et.getText()
+					.toString().trim());
+			if (conf != null) {
+				WifiConfiguration newCong = new WifiConfiguration();
+				newCong.SSID = "\"" + ssid_et.getText().toString().trim()
+						+ "\"";
+				newCong.preSharedKey = "\"" + word_et.getText() + "\"";
+				newCong.networkId = conf.networkId;
+				print("Õ¯¬Á≈‰÷√–ﬁ∏ƒ:"
+						+ mWifiManageWrap.mWifiManager.updateNetwork(newCong));
 				mWifiManageWrap.mWifiManager.saveConfiguration();
 				old_ssid_et.setText(ssid_et.getText());
-			}else{
+			} else {
 				print(R.string.not_find);
 			}
 			break;
 		case R.id.add_btn:
-			if(mWifiManageWrap.addNetWordLink(getWifiConfiguration())){
+			if (mWifiManageWrap.addNetWordLink(getWifiConfiguration())) {
 				print(R.string.add_success);
 				old_ssid_et.setText(ssid_et.getText());
-			}else{
+			} else {
 				print(R.string.add_fail);
 			}
 			break;
 		}
 	}
-	private void print(String mes){
-		info+=mes+"\n";
+
+	private void print(String mes) {
+		info += mes + "\n";
 		meg_tv.setText(info);
 	}
-	private void print(int id){
+
+	private void print(int id) {
 		print(getString(id));
 	}
-	 /**WifiConfiguration ∂‘œÛ*/
-	public WifiConfiguration getWifiConfiguration(){
+
+	/** WifiConfiguration ∂‘œÛ */
+	public WifiConfiguration getWifiConfiguration() {
 		WifiConfiguration conf = new WifiConfiguration();
-		conf.SSID = "\""+ssid_et.getText().toString().trim()+"\"";
-		conf.preSharedKey = "\""+word_et.getText()+"\"";
+		conf.SSID = "\"" + ssid_et.getText().toString().trim() + "\"";
+		conf.preSharedKey = "\"" + word_et.getText() + "\"";
 		conf.status = WifiConfiguration.Status.ENABLED;
 		conf.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
 		conf.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
