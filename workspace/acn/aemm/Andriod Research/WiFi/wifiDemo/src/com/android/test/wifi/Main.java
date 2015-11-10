@@ -49,9 +49,9 @@ public class Main extends Activity implements OnClickListener {
 		print(R.string.load_success);
 
 		mWifiManageWrap.startScan();
-		print("WifiInfo:\n" + mWifiManageWrap.wifiInfoToString());
-		print("扫描结果:\n" + mWifiManageWrap.scanResultListToString());
-		print("配置列表:\n" + mWifiManageWrap.wifiConfigurationListToString());
+		print("WifiInfo:\n" + mWifiManageWrap.toString(mWifiManageWrap.getwifiInfo()));
+		print("扫描结果:\n" + mWifiManageWrap.scanResultListToString(mWifiManageWrap.getScanResults()));
+		print("配置列表:\n" + mWifiManageWrap.wifiConfigurationListToString(mWifiManageWrap.getConfiguredNetworks()));
 	}
 
 	private void fresh(boolean state) {

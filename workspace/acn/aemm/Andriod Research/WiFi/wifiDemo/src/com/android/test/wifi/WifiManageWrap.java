@@ -38,7 +38,7 @@ import android.util.Log;
  * <uses-permission android:name="android.permission.INTERNET"/>
  * <uses-permission android:name="adnroid.permission.CHANGE_WIFI_STATE"/>
  * <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
- * </pre>
+ *         </pre>
  */
 public class WifiManageWrap {
 	// 声明管理对象
@@ -54,8 +54,7 @@ public class WifiManageWrap {
 
 	public WifiManageWrap(Context context) {
 		// 获取Wifi服务
-		this.mWifiManager = (WifiManager) context
-				.getSystemService(Context.WIFI_SERVICE);
+		this.mWifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		// 得到Wifi信息
 		this.mWifiInfo = mWifiManager.getConnectionInfo();
 	}
@@ -111,17 +110,18 @@ public class WifiManageWrap {
 		mWifiManager.startScan();
 		// 扫描返回结果列表
 		scanResultList = mWifiManager.getScanResults();
-		// 扫描配置列表
-		wifiConfigList = mWifiManager.getConfiguredNetworks();
 	}
 
 	/** ScanResult List */
-	public List<ScanResult> getWifiList() {
+	public List<ScanResult> getScanResults() {
+		scanResultList = mWifiManager.getScanResults();
 		return scanResultList;
 	}
 
 	/** WifiConfiguration list */
-	public List<WifiConfiguration> getWifiConfigList() {
+	public List<WifiConfiguration> getConfiguredNetworks() {
+		// 扫描配置列表
+		wifiConfigList = mWifiManager.getConfiguredNetworks();
 		return wifiConfigList;
 	}
 
@@ -150,8 +150,8 @@ public class WifiManageWrap {
 	}
 
 	/** 返回WifiInfo信息 */
-	public String getwifiInfo() {
-		return (mWifiInfo == null) ? null : mWifiInfo.toString();
+	public WifiInfo getwifiInfo() {
+		return mWifiInfo;
 	}
 
 	/** 获取IP地址 */
@@ -161,9 +161,7 @@ public class WifiManageWrap {
 
 	/** 添加一个连接 */
 	public boolean addNetWordLink(WifiConfiguration config) {
-		Log.v("V", "start add WifiConfiguration");
 		int NetId = mWifiManager.addNetwork(config);
-		Log.v("V", "start save WifiConfiguration.." + NetId);
 		return mWifiManager.saveConfiguration();
 		// return wifiManager.enableNetwork(NetId, true);
 	}
@@ -193,8 +191,7 @@ public class WifiManageWrap {
 	public WifiConfiguration getWifiConfig(String ssid) {
 		WifiConfiguration reWifiConfiguration = null;
 		wifiConfigList = mWifiManager.getConfiguredNetworks();
-		String findSsid = new StringBuilder().append("\"").append(ssid)
-				.append("\"").toString();
+		String findSsid = new StringBuilder().append("\"").append(ssid).append("\"").toString();
 		if (wifiConfigList != null) {
 			for (WifiConfiguration conf : wifiConfigList) {
 				if (conf.SSID.equals(findSsid)) {
@@ -207,8 +204,7 @@ public class WifiManageWrap {
 	}
 
 	/** WifiConfiguration复制 */
-	public static WifiConfiguration copyWifiConfiguration(
-			WifiConfiguration srcWifiConfiguration) {
+	public static WifiConfiguration copyWifiConfiguration(WifiConfiguration srcWifiConfiguration) {
 		WifiConfiguration newWifiConfiguration = new WifiConfiguration();
 		if (srcWifiConfiguration != null) {
 			newWifiConfiguration.SSID = "new" + srcWifiConfiguration.SSID;
@@ -231,26 +227,27 @@ public class WifiManageWrap {
 	}
 
 	/** 获取扫描列表 */
-	public String scanResultListToString() {
-		scanResultList.size();
+	public static String scanResultListToString(List<ScanResult> scanResultList) {
 		if (scanResultList == null) {
 			return null;
 		}
 		StringBuffer scanBuilder = new StringBuffer();
 		int i = 0;
+		scanBuilder.append("ScanResult ");
+		scanBuilder.append(scanResultList.size());
 		for (ScanResult sr : scanResultList) {
 			scanBuilder.append(i);
 			scanBuilder.append('\n');
 			// 所有信息
-			scanBuilder.append(scanResultList.get(i).toString());
+			scanBuilder.append(toString(sr));
 			scanBuilder.append('\n');
+			++i;
 		}
 		return scanBuilder.toString();
 	}
 
 	/** wifiConfigList信息 */
-	public String wifiConfigurationListToString() {
-		wifiConfigList = mWifiManager.getConfiguredNetworks();
+	public static String wifiConfigurationListToString(List<WifiConfiguration> wifiConfigList) {
 		if (wifiConfigList == null) {
 			return null;
 		}
@@ -262,14 +259,14 @@ public class WifiManageWrap {
 		for (WifiConfiguration wifiConfig : wifiConfigList) {
 			sb.append(i);
 			sb.append('\n');
-			sb.append(wifiConfigurationToString(wifiConfig));
+			sb.append(toString(wifiConfig));
 			sb.append('\n');
+			++i;
 		}
 		return sb.toString();
 	}
 
-	public String wifiConfigurationToString(
-			WifiConfiguration srcWifiConfiguration) {
+	public static String toString(WifiConfiguration srcWifiConfiguration) {
 		if (srcWifiConfiguration == null) {
 			return null;
 		}
@@ -332,25 +329,35 @@ public class WifiManageWrap {
 	}
 
 	@SuppressLint("NewApi")
-	public String wifiInfoToString() {
+	public static String toString(WifiInfo mWifiInfo) {
 		if (mWifiInfo == null) {
 			return null;
 		}
 		StringBuilder sb = new StringBuilder();
 		sb.append("SSID：").append(mWifiInfo.getSSID()).append('\n');
 		sb.append("BSSID").append(mWifiInfo.getBSSID()).append('\n');
-		sb.append("describeContents：").append(mWifiInfo.describeContents())
-				.append('\n');
+		sb.append("describeContents：").append(mWifiInfo.describeContents()).append('\n');
 		sb.append("HiddenSSID：").append(mWifiInfo.getHiddenSSID()).append('\n');
-		sb.append("IpAddress：")
-				.append(Formatter.formatIpAddress(mWifiInfo.getIpAddress()))
-				.append('\n');
+		sb.append("IpAddress：").append(Formatter.formatIpAddress(mWifiInfo.getIpAddress())).append('\n');
 		sb.append("LinkSpeed：").append(mWifiInfo.getLinkSpeed()).append('\n');
 		sb.append("MacAddress：").append(mWifiInfo.getMacAddress()).append('\n');
 		sb.append("NetworkId：").append(mWifiInfo.getNetworkId()).append('\n');
 		sb.append("Rssi：").append(mWifiInfo.getRssi()).append('\n');
-		sb.append("SupplicantState：").append(mWifiInfo.getSupplicantState())
-				.append('\n');
+		sb.append("SupplicantState：").append(mWifiInfo.getSupplicantState()).append('\n');
+		return sb.toString();
+	}
+
+	public static String toString(ScanResult sr) {
+		if (sr == null) {
+			return null;
+		}
+		StringBuilder sb = new StringBuilder();
+		sb.append("SSID:").append(sr.SSID).append('\n');
+		sb.append("BSSID:").append(sr.BSSID).append('\n');
+		sb.append("level:").append(sr.level).append('\n');
+		sb.append("frequency:").append(sr.frequency).append('\n');
+		sb.append("capabilities:").append(sr.capabilities).append('\n');
+		sb.append("describeContents:").append(sr.describeContents()).append('\n');
 		return sb.toString();
 	}
 }
