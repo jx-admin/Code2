@@ -50,8 +50,8 @@ public class Main extends Activity implements OnClickListener {
 
 		mWifiManageWrap.startScan();
 		print("WifiInfo:\n" + mWifiManageWrap.toString(mWifiManageWrap.getwifiInfo()));
-		print("É¨Ãè½á¹û:\n" + mWifiManageWrap.scanResultListToString(mWifiManageWrap.getScanResults()));
-		print("ÅäÖÃÁĞ±í:\n" + mWifiManageWrap.wifiConfigurationListToString(mWifiManageWrap.getConfiguredNetworks()));
+		print("æ‰«æç»“æœ:\n" + mWifiManageWrap.scanResultListToString(mWifiManageWrap.getScanResults()));
+		print("é…ç½®åˆ—è¡¨:\n" + mWifiManageWrap.wifiConfigurationListToString(mWifiManageWrap.getConfiguredNetworks()));
 	}
 
 	private void fresh(boolean state) {
@@ -100,7 +100,7 @@ public class Main extends Activity implements OnClickListener {
 			WifiConfiguration conf = mWifiManageWrap.getWifiConfig(ssid_et
 					.getText().toString().trim());
 			if (conf != null) {
-				print("ÍøÂçÒÆ³ı:"
+				print("ç½‘ç»œç§»é™¤:"
 						+ mWifiManageWrap.mWifiManager
 								.removeNetwork(conf.networkId));
 				mWifiManageWrap.mWifiManager.saveConfiguration();
@@ -109,6 +109,7 @@ public class Main extends Activity implements OnClickListener {
 			}
 			break;
 		case R.id.mod_btn:
+			WifiManagerUtils.getScanResult(this);
 			conf = mWifiManageWrap.getWifiConfig(old_ssid_et.getText()
 					.toString().trim());
 			if (conf != null) {
@@ -117,7 +118,7 @@ public class Main extends Activity implements OnClickListener {
 						+ "\"";
 				newCong.preSharedKey = "\"" + word_et.getText() + "\"";
 				newCong.networkId = conf.networkId;
-				print("ÍøÂçÅäÖÃĞŞ¸Ä:"
+				print("ç½‘ç»œé…ç½®ä¿®æ”¹:"
 						+ mWifiManageWrap.mWifiManager.updateNetwork(newCong));
 				mWifiManageWrap.mWifiManager.saveConfiguration();
 				old_ssid_et.setText(ssid_et.getText());
@@ -145,7 +146,7 @@ public class Main extends Activity implements OnClickListener {
 		print(getString(id));
 	}
 
-	/** WifiConfiguration ¶ÔÏó */
+	/** WifiConfiguration å¯¹è±¡ */
 	public WifiConfiguration getWifiConfiguration() {
 		WifiConfiguration conf = new WifiConfiguration();
 		conf.SSID = "\"" + ssid_et.getText().toString().trim() + "\"";

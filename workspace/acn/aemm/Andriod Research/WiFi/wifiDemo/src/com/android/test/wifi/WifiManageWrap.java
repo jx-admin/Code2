@@ -15,23 +15,23 @@ import android.util.Log;
  * @author abc
  * 
  *         <pre>
- * Í¨¹ıÍøÂçÊé¼®ÓëÎÄµµ,¾­¹ıÕûÀí, ×ö³öÀ´µÄÒ»¸öÀà.
+ * é€šè¿‡ç½‘ç»œä¹¦ç±ä¸æ–‡æ¡£,ç»è¿‡æ•´ç†, åšå‡ºæ¥çš„ä¸€ä¸ªç±».
  * 
- * ÆäÊµ²Ù×÷WifiÒ²ÊÇºÜ¼òµ¥µÄ£¬Ö÷ÒªÊ¹ÓÃÒÔÏÂ¼¸¸ö¶ÔÏó»ò±äÁ¿£º
+ * å…¶å®æ“ä½œWifiä¹Ÿæ˜¯å¾ˆç®€å•çš„ï¼Œä¸»è¦ä½¿ç”¨ä»¥ä¸‹å‡ ä¸ªå¯¹è±¡æˆ–å˜é‡ï¼š
  * 
- * private WifiManager wifiManager;// ÉùÃ÷¹ÜÀí¶ÔÏóOpenWifi
- * private WifiInfo wifiInfo;// WifiĞÅÏ¢
- * private List&lt;ScanResult&gt; scanResultList; // É¨Ãè³öÀ´µÄÍøÂçÁ¬½ÓÁĞ±í
- * private List&lt;WifiConfiguration&gt; wifiConfigList;// ÍøÂçÅäÖÃÁĞ±í
- * private WifiLock wifiLock;// WifiËø
+ * private WifiManager wifiManager;// å£°æ˜ç®¡ç†å¯¹è±¡OpenWifi
+ * private WifiInfo wifiInfo;// Wifiä¿¡æ¯
+ * private List&lt;ScanResult&gt; scanResultList; // æ‰«æå‡ºæ¥çš„ç½‘ç»œè¿æ¥åˆ—è¡¨
+ * private List&lt;WifiConfiguration&gt; wifiConfigList;// ç½‘ç»œé…ç½®åˆ—è¡¨
+ * private WifiLock wifiLock;// Wifié”
  * 
  * 
- * µ±È»²Ù×÷Wifi²»ÄÜÔÚÄ£ÄâÆ÷ÖĞ½øĞĞ£¬±ØĞëÒª·Åµ½´øÓĞWifiµÄÕæ»úÉÏ½øĞĞ£¬
- * »¹ÓĞ´ËÀàÃ»ÓĞ¶Ô¿ÉÄÜ´æÔÚµÄ´íÎó½øĞĞÏàÓ¦µÄ²¶»ñÓë´¦Àí£¬Ï£Íû²Î¿¼µÄÅóÓÑ×¢ÒâÕâÒ»µã£¬
- * ·ñÔò¿ÉÄÜÈİÒ×±»Í»È»³öÀ´µÄ´íÎóÎóµ¼£¬Ò²ÕÒ²»µ½ÎÊÌâ£¬ÎÒÔÚ¿ª·¢µÄÊ±ºò¾ÍÓöµ½¹ıÕâÑùµÄÎÊÌâ£¡
- * Òò´Ë¶Ô¿ÉÄÜ´æÔÚµÄÎÊÌâ£¬Ò»¶¨Òª½øĞĞÏàÓ¦µÄ´¦Àí£¡
- * ÏÂÃæÊÇ²Ù×÷ÕâĞ©ËùĞèÒªµÄÈ¨ÏŞ£¬µ±È»¸ù¾İ²Ù×÷µÄÄÚÈİ²»Í¬£¬¿ÉÄÜÈ¨ÏŞÒ²²»Í¬£¬
- * ÏÂÃæµÄÈ¨ÏŞ½ö¹©²Î¿¼£º
+ * å½“ç„¶æ“ä½œWifiä¸èƒ½åœ¨æ¨¡æ‹Ÿå™¨ä¸­è¿›è¡Œï¼Œå¿…é¡»è¦æ”¾åˆ°å¸¦æœ‰Wifiçš„çœŸæœºä¸Šè¿›è¡Œï¼Œ
+ * è¿˜æœ‰æ­¤ç±»æ²¡æœ‰å¯¹å¯èƒ½å­˜åœ¨çš„é”™è¯¯è¿›è¡Œç›¸åº”çš„æ•è·ä¸å¤„ç†ï¼Œå¸Œæœ›å‚è€ƒçš„æœ‹å‹æ³¨æ„è¿™ä¸€ç‚¹ï¼Œ
+ * å¦åˆ™å¯èƒ½å®¹æ˜“è¢«çªç„¶å‡ºæ¥çš„é”™è¯¯è¯¯å¯¼ï¼Œä¹Ÿæ‰¾ä¸åˆ°é—®é¢˜ï¼Œæˆ‘åœ¨å¼€å‘çš„æ—¶å€™å°±é‡åˆ°è¿‡è¿™æ ·çš„é—®é¢˜ï¼
+ * å› æ­¤å¯¹å¯èƒ½å­˜åœ¨çš„é—®é¢˜ï¼Œä¸€å®šè¦è¿›è¡Œç›¸åº”çš„å¤„ç†ï¼
+ * ä¸‹é¢æ˜¯æ“ä½œè¿™äº›æ‰€éœ€è¦çš„æƒé™ï¼Œå½“ç„¶æ ¹æ®æ“ä½œçš„å†…å®¹ä¸åŒï¼Œå¯èƒ½æƒé™ä¹Ÿä¸åŒï¼Œ
+ * ä¸‹é¢çš„æƒé™ä»…ä¾›å‚è€ƒï¼š
  * <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
  * <uses-permission android:name="adnroid.permission.ACCESS_CHECKIN_PROPERTTES"/>
  * <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -41,30 +41,30 @@ import android.util.Log;
  *         </pre>
  */
 public class WifiManageWrap {
-	// ÉùÃ÷¹ÜÀí¶ÔÏó
+	// å£°æ˜ç®¡ç†å¯¹è±¡
 	WifiManager mWifiManager;
-	// WifiĞÅÏ¢
+	// Wifiä¿¡æ¯
 	private WifiInfo mWifiInfo;
-	// É¨Ãè³öÀ´µÄÍøÂçÁ¬½ÓÁĞ±í
+	// æ‰«æå‡ºæ¥çš„ç½‘ç»œè¿æ¥åˆ—è¡¨
 	private List<ScanResult> scanResultList;
-	// ÍøÂçÅäÖÃÁĞ±í
+	// ç½‘ç»œé…ç½®åˆ—è¡¨
 	private List<WifiConfiguration> wifiConfigList;
-	// WifiËø
+	// Wifié”
 	private WifiLock mWifiLock;
 
 	public WifiManageWrap(Context context) {
-		// »ñÈ¡Wifi·şÎñ
+		// è·å–WifiæœåŠ¡
 		this.mWifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-		// µÃµ½WifiĞÅÏ¢
+		// å¾—åˆ°Wifiä¿¡æ¯
 		this.mWifiInfo = mWifiManager.getConnectionInfo();
 	}
 
-	/** WIfiÊÇ·ñÒÑ¾­¿ªÆô */
+	/** WIfiæ˜¯å¦å·²ç»å¼€å¯ */
 	public boolean isWifiEnabled() {
 		return mWifiManager.isWifiEnabled();
 	}
 
-	/** ´ò¿ªwifi */
+	/** æ‰“å¼€wifi */
 	public boolean openWifi() {
 		if (!mWifiManager.isWifiEnabled()) {
 			return mWifiManager.setWifiEnabled(true);
@@ -73,7 +73,7 @@ public class WifiManageWrap {
 		}
 	}
 
-	/** ¹Ø±Õ wifi */
+	/** å…³é—­ wifi */
 	public boolean closeWifi() {
 		if (!mWifiManager.isWifiEnabled()) {
 			return true;
@@ -82,33 +82,33 @@ public class WifiManageWrap {
 		}
 	}
 
-	// ÆäÊµËø¶¨WiFI¾ÍÊÇÅĞ¶ÏwifiÊÇ·ñ½¨Á¢³É¹¦£¬ÔÚÕâÀïÊ¹ÓÃµÄÊÇheld£¬ÎÕÊÖµÄÒâË¼acquire µÃµ½£¡
-	/** Ëø¶¨wifi */
+	// å…¶å®é”å®šWiFIå°±æ˜¯åˆ¤æ–­wifiæ˜¯å¦å»ºç«‹æˆåŠŸï¼Œåœ¨è¿™é‡Œä½¿ç”¨çš„æ˜¯heldï¼Œæ¡æ‰‹çš„æ„æ€acquire å¾—åˆ°ï¼
+	/** é”å®šwifi */
 	public void lockWifi() {
 		mWifiLock.acquire();
 	}
 
-	/** ½âËøwifi */
+	/** è§£é”wifi */
 	public void unLockWifi() {
 		if (!mWifiLock.isHeld()) {
-			// ÊÍ·Å×ÊÔ´
+			// é‡Šæ”¾èµ„æº
 			mWifiLock.release();
 		}
 	}
 
-	/** Wifi Ëø */
+	/** Wifi é” */
 	public WifiLock createWifiLock() {
 		if (mWifiLock == null) {
-			// ´´½¨Ò»¸öËøµÄ±êÖ¾
+			// åˆ›å»ºä¸€ä¸ªé”çš„æ ‡å¿—
 			mWifiLock = mWifiManager.createWifiLock("flyfly");
 		}
 		return mWifiLock;
 	}
 
-	/** É¨ÃèÍøÂç */
+	/** æ‰«æç½‘ç»œ */
 	public void startScan() {
 		mWifiManager.startScan();
-		// É¨Ãè·µ»Ø½á¹ûÁĞ±í
+		// æ‰«æè¿”å›ç»“æœåˆ—è¡¨
 		scanResultList = mWifiManager.getScanResults();
 	}
 
@@ -120,22 +120,22 @@ public class WifiManageWrap {
 
 	/** WifiConfiguration list */
 	public List<WifiConfiguration> getConfiguredNetworks() {
-		// É¨ÃèÅäÖÃÁĞ±í
+		// æ‰«æé…ç½®åˆ—è¡¨
 		wifiConfigList = mWifiManager.getConfiguredNetworks();
 		return wifiConfigList;
 	}
 
-	/** »ñÈ¡Ö¸¶¨ĞÅºÅµÄÇ¿¶È */
+	/** è·å–æŒ‡å®šä¿¡å·çš„å¼ºåº¦ */
 	public int getLevel(int NetId) {
 		return scanResultList.get(NetId).level;
 	}
 
-	/** »ñÈ¡±¾»úMacµØÖ· */
+	/** è·å–æœ¬æœºMacåœ°å€ */
 	public String getMac() {
 		return (mWifiInfo == null) ? "" : mWifiInfo.getMacAddress();
 	}
 
-	/** »ñÈ¡BSSID */
+	/** è·å–BSSID */
 	public String getBSSID() {
 		return (mWifiInfo == null) ? null : mWifiInfo.getBSSID();
 	}
@@ -144,50 +144,50 @@ public class WifiManageWrap {
 		return (mWifiInfo == null) ? null : mWifiInfo.getSSID();
 	}
 
-	/** ·µ»Øµ±Ç°Á¬½ÓµÄÍøÂçµÄID */
+	/** è¿”å›å½“å‰è¿æ¥çš„ç½‘ç»œçš„ID */
 	public int getCurrentNetId() {
 		return (mWifiInfo == null) ? null : mWifiInfo.getNetworkId();
 	}
 
-	/** ·µ»ØWifiInfoĞÅÏ¢ */
+	/** è¿”å›WifiInfoä¿¡æ¯ */
 	public WifiInfo getwifiInfo() {
 		return mWifiInfo;
 	}
 
-	/** »ñÈ¡IPµØÖ· */
+	/** è·å–IPåœ°å€ */
 	public int getIP() {
 		return (mWifiInfo == null) ? null : mWifiInfo.getIpAddress();
 	}
 
-	/** Ìí¼ÓÒ»¸öÁ¬½Ó */
+	/** æ·»åŠ ä¸€ä¸ªè¿æ¥ */
 	public boolean addNetWordLink(WifiConfiguration config) {
 		int NetId = mWifiManager.addNetwork(config);
 		return mWifiManager.saveConfiguration();
 		// return wifiManager.enableNetwork(NetId, true);
 	}
 
-	/** ½ûÓÃÒ»¸öÁ´½Ó */
+	/** ç¦ç”¨ä¸€ä¸ªé“¾æ¥ */
 	public boolean disableNetWordLick(int NetId) {
 		mWifiManager.disableNetwork(NetId);
 		return mWifiManager.disconnect();
 	}
 
-	/** ÒÆ³ıÒ»¸öÁ´½Ó */
+	/** ç§»é™¤ä¸€ä¸ªé“¾æ¥ */
 	public boolean removeNetworkLink(int NetId) {
 		return mWifiManager.removeNetwork(NetId);
 	}
 
-	/** ²»ÏÔÊ¾SSID */
+	/** ä¸æ˜¾ç¤ºSSID */
 	public void hiddenSSID(int NetId) {
 		wifiConfigList.get(NetId).hiddenSSID = true;
 	}
 
-	/** ÏÔÊ¾SSID */
+	/** æ˜¾ç¤ºSSID */
 	public void displaySSID(int NetId) {
 		wifiConfigList.get(NetId).hiddenSSID = false;
 	}
 
-	/** wifiConfigList È¥Ö¸¶¨µÄWifiConfiguration */
+	/** wifiConfigList å»æŒ‡å®šçš„WifiConfiguration */
 	public WifiConfiguration getWifiConfig(String ssid) {
 		WifiConfiguration reWifiConfiguration = null;
 		wifiConfigList = mWifiManager.getConfiguredNetworks();
@@ -203,7 +203,7 @@ public class WifiManageWrap {
 		return reWifiConfiguration;
 	}
 
-	/** WifiConfiguration¸´ÖÆ */
+	/** WifiConfigurationå¤åˆ¶ */
 	public static WifiConfiguration copyWifiConfiguration(WifiConfiguration srcWifiConfiguration) {
 		WifiConfiguration newWifiConfiguration = new WifiConfiguration();
 		if (srcWifiConfiguration != null) {
@@ -226,7 +226,7 @@ public class WifiManageWrap {
 		return newWifiConfiguration;
 	}
 
-	/** »ñÈ¡É¨ÃèÁĞ±í */
+	/** è·å–æ‰«æåˆ—è¡¨ */
 	public static String scanResultListToString(List<ScanResult> scanResultList) {
 		if (scanResultList == null) {
 			return null;
@@ -238,7 +238,7 @@ public class WifiManageWrap {
 		for (ScanResult sr : scanResultList) {
 			scanBuilder.append(i);
 			scanBuilder.append('\n');
-			// ËùÓĞĞÅÏ¢
+			// æ‰€æœ‰ä¿¡æ¯
 			scanBuilder.append(toString(sr));
 			scanBuilder.append('\n');
 			++i;
@@ -246,7 +246,7 @@ public class WifiManageWrap {
 		return scanBuilder.toString();
 	}
 
-	/** wifiConfigListĞÅÏ¢ */
+	/** wifiConfigListä¿¡æ¯ */
 	public static String wifiConfigurationListToString(List<WifiConfiguration> wifiConfigList) {
 		if (wifiConfigList == null) {
 			return null;
@@ -334,16 +334,16 @@ public class WifiManageWrap {
 			return null;
 		}
 		StringBuilder sb = new StringBuilder();
-		sb.append("SSID£º").append(mWifiInfo.getSSID()).append('\n');
+		sb.append("SSIDï¼š").append(mWifiInfo.getSSID()).append('\n');
 		sb.append("BSSID").append(mWifiInfo.getBSSID()).append('\n');
-		sb.append("describeContents£º").append(mWifiInfo.describeContents()).append('\n');
-		sb.append("HiddenSSID£º").append(mWifiInfo.getHiddenSSID()).append('\n');
-		sb.append("IpAddress£º").append(Formatter.formatIpAddress(mWifiInfo.getIpAddress())).append('\n');
-		sb.append("LinkSpeed£º").append(mWifiInfo.getLinkSpeed()).append('\n');
-		sb.append("MacAddress£º").append(mWifiInfo.getMacAddress()).append('\n');
-		sb.append("NetworkId£º").append(mWifiInfo.getNetworkId()).append('\n');
-		sb.append("Rssi£º").append(mWifiInfo.getRssi()).append('\n');
-		sb.append("SupplicantState£º").append(mWifiInfo.getSupplicantState()).append('\n');
+		sb.append("describeContentsï¼š").append(mWifiInfo.describeContents()).append('\n');
+		sb.append("HiddenSSIDï¼š").append(mWifiInfo.getHiddenSSID()).append('\n');
+		sb.append("IpAddressï¼š").append(Formatter.formatIpAddress(mWifiInfo.getIpAddress())).append('\n');
+		sb.append("LinkSpeedï¼š").append(mWifiInfo.getLinkSpeed()).append('\n');
+		sb.append("MacAddressï¼š").append(mWifiInfo.getMacAddress()).append('\n');
+		sb.append("NetworkIdï¼š").append(mWifiInfo.getNetworkId()).append('\n');
+		sb.append("Rssiï¼š").append(mWifiInfo.getRssi()).append('\n');
+		sb.append("SupplicantStateï¼š").append(mWifiInfo.getSupplicantState()).append('\n');
 		return sb.toString();
 	}
 
