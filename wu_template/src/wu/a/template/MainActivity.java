@@ -10,6 +10,7 @@ import wu.a.template.app.AppListActivity;
 import wu.a.template.bmp.BmpActivity;
 import wu.a.template.bmp.CropImgActivity;
 import wu.a.template.bmp.TouchImageViewActivity;
+import wu.a.template.math.AESActivity;
 import wu.a.template.media.AudioFocusChangeActivity;
 import wu.a.template.media.MediaAcitivity;
 import wu.a.template.media.MediaButtonSenderActivity;
@@ -75,6 +76,7 @@ public class MainActivity extends ListActivity {
 	    addItem(data, "TouchImageViewActivity", TouchImageViewActivity.class);
 	    addItem(data, "CustomView", wu.a.lib.view.MainActivity.class);
 	    addItem(data, "DisplayActivity", DisplayActivity.class);
+	    addItem(data, "MathAes", AESActivity.class);
 
 	    return data;
 	  }
