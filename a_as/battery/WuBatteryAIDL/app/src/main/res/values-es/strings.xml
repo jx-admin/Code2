@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">SuperCargador</string>
+    <string name="kill_app_while_charging">Método de carga en 3 etapas: mata automáticamente aplicaciones vacía-batería para protegerla y cargarla un 20% más rápido.</string>
+    <string name="enable">HABILITAR</string>
+    <string name="enable_suc">Habilitado correctamente</string>
+    <string name="charging_quickly">Haz que tu cargador sea más rápido y saludable</string>
+    <string name="fullcharge">CARGA COMPLETA</string>
+    <string name="remaining">QUEDAN</string>
+    <string name="plz_charge">HAY QUE CARGAR</string>
+    <string name="charge_finish">CARGA COMPLETA</string>
+    <string name="avai_times">%1$sh %2$smin</string>
+    <string name="avai_time_hour">h</string>
+    <string name="avai_time_minute">min</string>
+    <string name="speed">RÁPIDA</string>
+    <string name="continuous">CONTINUA</string>
+    <string name="trickle">GOTEO</string>
+    <string name="slide_unlock">Desliza para desbloquear</string>
+    <string name="full_unplug">Cargada por completo. Desenchufa el cargador.</string>
+    <string name="available_time">Tiempo disponible</string>
+    <string name="calling">Llamadas</string>
+    <string name="internet_on_wifi">Internet con WiFi</string>
+    <string name="internet_on_2g">Internet con 2G</string>
+    <string name="internet_on_3g">Internet con 3G</string>
+    <string name="internet_on_4g">Internet con 4G</string>
+    <string name="movie_Watching">Ver películas</string>
+    <string name="charge_save_time">BoostCharge ha ahorrado %s m de tiempo de carga.</string>
+    <string name="charging_kill_apps">Se han matado %s aplicaciones vacía-batería:</string>
+    <string name="disable_speed_charge_title">¿Desactivar SuperCargador?</string>
+    <string name="disable_speed_charge_msg">"Dejarás de disfrutar de la carga acelerada.
+¿Deshabilitar?"</string>
+    <string name="enable_speed_charge_title">¿Activar SuperCargador?</string>
+    <string name="fast_charge_guide_dialog_msg">Puede cargar su teléfono un 25% más rápido si detiene las aplicaciones que consumen la batería.</string>
+    <string name="enable_speed_charge_msg">"Haz que tu teléfono se cargue mejor y más rápido.
+¿Confirmar la activación?"</string>
+    <string name="not_now">Ahora no</string>
+    <string name="disable">Deshabilitar</string>
+    <string name="maintanence">MANTENIMIENTO</string>
+    
+</resources>

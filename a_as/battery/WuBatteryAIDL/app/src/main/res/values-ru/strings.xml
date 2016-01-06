@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">Супер-зарядка</string>
+    <string name="kill_app_while_charging">Закрытие программ, расходующих заряд, с оптимизацией/ускорением зарядки на 20% благодаря 3-этапному методу зарядки</string>
+    <string name="enable">ВКЛЮЧИТЬ</string>
+    <string name="enable_suc">Успешно включено</string>
+    <string name="charging_quickly">Заряжайте телефон быстрее и правильнее</string>
+    <string name="fullcharge">ПОЛНЫЙ ЗАРЯД</string>
+    <string name="remaining">ОСТАЛОСЬ</string>
+    <string name="plz_charge">ЗАРЯДИТЕ БАТАРЕЮ</string>
+    <string name="charge_finish">ЗАРЯДКА ЗАВЕРШЕНА</string>
+    <string name="avai_times">%1$s ч. %2$s м.</string>
+    <string name="avai_time_hour">Ч.</string>
+    <string name="avai_time_minute">М.</string>
+    <string name="speed">БЫСТРО</string>
+    <string name="continuous">НЕПРЕРЫВНО</string>
+    <string name="trickle">КАПЕЛЬНО</string>
+    <string name="slide_unlock">Проведите, чтобы разблокировать</string>
+    <string name="full_unplug">Полностью заряжено, отсоедините зарядное устройство</string>
+    <string name="available_time">Расчетное время работы</string>
+    <string name="calling">Звонки</string>
+    <string name="internet_on_wifi">Интернет через WIFI</string>
+    <string name="internet_on_2g">Интернет через 2G</string>
+    <string name="internet_on_3g">Интернет через 3G</string>
+    <string name="internet_on_4g">Интернет через 4G</string>
+    <string name="movie_Watching">Просмотр видео</string>
+    <string name="charge_save_time">BoostCharge сократил время зарядки на %s мин.</string>
+    <string name="charging_kill_apps">Закрыты %s программ(-ы), расходующих заряд:</string>
+    <string name="disable_speed_charge_title">Отключить «Супер-зарядку»?</string>
+    <string name="disable_speed_charge_msg">"Зарядка больше не будет оптимизироваться.
+Отключить?"</string>
+    <string name="enable_speed_charge_title">Включить «Супер-зарядку»?</string>
+    <string name="fast_charge_guide_dialog_msg">Время заряда телефона может уменьшиться более чем на 25%, если остановить приложения, которые сильно расходуют заряд аккумулятора.</string>
+    <string name="enable_speed_charge_msg">"Заряжайте телефон быстрее и правильнее.
+Подтвердить включение?"</string>
+    <string name="not_now">Не сейчас</string>
+    <string name="disable">Отключить</string>
+    <string name="maintanence">ТЕХ.ОБСЛУЖИВАНИЕ</string>
+    
+</resources>

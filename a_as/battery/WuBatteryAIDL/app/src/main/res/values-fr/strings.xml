@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">Booster de charge</string>
+    <string name="kill_app_while_charging">Fermez automatiquement les apps énergivores afin de charger 20% plus rapidement et de protéger votre batterie en la chargeant en 3 temps</string>
+    <string name="enable">ACTIVER</string>
+    <string name="enable_suc">Activé avec succès</string>
+    <string name="charging_quickly">Rendez votre téléphone plus rapide et plus performant</string>
+    <string name="fullcharge">CHARGE COMPLÈTE</string>
+    <string name="remaining">TEMPS RESTANT</string>
+    <string name="plz_charge">VEUILLEZ CHARGER VOTRE TÉLÉPHONE</string>
+    <string name="charge_finish">CHARGEMENT TERMINÉ</string>
+    <string name="avai_times">%1$sh %2$sm</string>
+    <string name="avai_time_hour">H</string>
+    <string name="avai_time_minute">M</string>
+    <string name="speed">RAPIDE</string>
+    <string name="continuous">CONTINU</string>
+    <string name="trickle">LENT</string>
+    <string name="slide_unlock">Faire glisser pour déverrouiller</string>
+    <string name="full_unplug">Complètement chargé, veuillez retirer le chargeur</string>
+    <string name="available_time">Temps disponible</string>
+    <string name="calling">Appels</string>
+    <string name="internet_on_wifi">Internet via WIFI</string>
+    <string name="internet_on_2g">Internet en 2G</string>
+    <string name="internet_on_3g">Internet en 3G</string>
+    <string name="internet_on_4g">Internet en 4G</string>
+    <string name="movie_Watching">Visionnage vidéo</string>
+    <string name="charge_save_time">Le Booster de charge a économisé %s min de temps de charge</string>
+    <string name="charging_kill_apps">Économisez en fermant %s applications énergivores :</string>
+    <string name="disable_speed_charge_title">Désactiver le Booster de charge ?</string>
+    <string name="disable_speed_charge_msg">"La vitesse de chargement sera réduite.
+Confirmer la désactivation ?"</string>
+    <string name="enable_speed_charge_title">Activer le Booster de charge ?</string>
+    <string name="fast_charge_guide_dialog_msg">Votre téléphone peut se recharger 25 % plus rapidement en bloquant toutes les applications qui vident la batterie.</string>
+    <string name="enable_speed_charge_msg">"Rendez votre téléphone plus rapide et plus performant lors de son chargement.
+Confirmer l'activation ?"</string>
+    <string name="not_now">Pas maintenant</string>
+    <string name="disable">Désactiver</string>
+    <string name="maintanence">MAINTENANCE</string>
+    
+</resources>

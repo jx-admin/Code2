@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="boostcharge">ブーストチャージ</string>
+    <string name="kill_app_while_charging">バッテリーの消耗が激しいアプリを自動的に終了することで、充電速度を20%向上させ、3段階充電方法でバッテリーを守ります</string>
+    <string name="enable">有効化</string>
+    <string name="enable_suc">正常に有効化されました</string>
+    <string name="charging_quickly">携帯電話の充電時間を短縮し、さらにバッテリーを長持ちさせます</string>
+    <string name="fullcharge">充電完了</string>
+    <string name="remaining">残り</string>
+    <string name="plz_charge">充電してください</string>
+    <string name="charge_finish">充電完了</string>
+    <string name="avai_times">%1$s時間 %2$s分</string>
+    <string name="avai_time_hour">時間</string>
+    <string name="avai_time_minute">分</string>
+    <string name="speed">スピード</string>
+    <string name="continuous">連続</string>
+    <string name="trickle">スロー</string>
+    <string name="slide_unlock">スライドでロック解除</string>
+    <string name="full_unplug">充電完了。充電器を外してください</string>
+    <string name="available_time">使用可能時間</string>
+    <string name="calling">通話</string>
+    <string name="internet_on_wifi">Wi-Fi経由でのインターネット</string>
+    <string name="internet_on_2g">2Gでのインターネット</string>
+    <string name="internet_on_3g">3Gでのインターネット</string>
+    <string name="internet_on_4g">4Gでのインターネット</string>
+    <string name="movie_Watching">動画鑑賞</string>
+    <string name="charge_save_time">BoostCharge により、%s 分の充電時間が節約できました</string>
+    <string name="charging_kill_apps">以下の%s個のバッテリー消耗アプリを終了しました:</string>
+    <string name="disable_speed_charge_title">BoostChargeを無効にしますか？</string>
+    <string name="disable_speed_charge_msg">"充電スピードはブーストされなくなります。
+無効化してよろしいですか？"</string>
+    <string name="enable_speed_charge_title">BoostChargeを有効にしますか？</string>
+    <string name="fast_charge_guide_dialog_msg">バッテリーの消耗が激しいアプリを終了することで、充電速度を25 %向上させることができます。</string>
+    <string name="enable_speed_charge_msg">"携帯電話の充電時間を短縮し、さらにバッテリーを長持ちさせます。
+有効にしてもよろしいですか？"</string>
+    <string name="not_now">今はしない</string>
+    <string name="disable">無効化する</string>
+    <string name="maintanence">メンテナンス</string>
+    
+</resources>

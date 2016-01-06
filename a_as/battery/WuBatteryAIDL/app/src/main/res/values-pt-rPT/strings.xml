@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">Otimizar Carga</string>
+    <string name="kill_app_while_charging">Termine as apps que drenam bateria para carregar 20% mais rápido e proteja a mesma (mét. de carreg. em 3 etapas</string>
+    <string name="enable">ATIVAR</string>
+    <string name="enable_suc">Ativado com sucesso</string>
+    <string name="charging_quickly">Faça com que o seu dispositivo carregue rapidamente e saudável</string>
+    <string name="fullcharge">CARGA</string>
+    <string name="remaining">RESTANTE</string>
+    <string name="plz_charge">POR FAVOR, CARREGUE</string>
+    <string name="charge_finish">CARREGAMENTO CONCLUÍDO</string>
+    <string name="avai_times">%1$sH %2$sM</string>
+    <string name="avai_time_hour">H</string>
+    <string name="avai_time_minute">M</string>
+    <string name="speed">RÁPIDA</string>
+    <string name="continuous">CONTÍNUO</string>
+    <string name="trickle">LENTA</string>
+    <string name="slide_unlock">Deslize para desbloquear</string>
+    <string name="full_unplug">Bateria carregada, desligue o carregador</string>
+    <string name="available_time">Tempo Disponível</string>
+    <string name="calling">A ligar</string>
+    <string name="internet_on_wifi">Internet em WI-FI</string>
+    <string name="internet_on_2g">Internet em 2G</string>
+    <string name="internet_on_3g">Internet em 3G</string>
+    <string name="internet_on_4g">Internet em 4G</string>
+    <string name="movie_Watching">Reprodução de Filmes</string>
+    <string name="charge_save_time">Otimizar Carga poupou %s do tempo de carregamento</string>
+    <string name="charging_kill_apps">Terminadas as seguintes %s aplicações que drenam a bateria:</string>
+    <string name="disable_speed_charge_title">"Desativar 'Otimizar Carga'?"</string>
+    <string name="disable_speed_charge_msg">"A sua velocidade de carregamento não será otimizada.
+Confirma a desativação?"</string>
+    <string name="enable_speed_charge_title">"Ativar 'Otimizar Carga'?"</string>
+    <string name="fast_charge_guide_dialog_msg">O seu dispositivo pode ser carregado 25% mais rápido, parando as aplicações que drenam a bateria.</string>
+    <string name="enable_speed_charge_msg">"Torne o seu dispositivo mais rápido e saudável.
+Confirma a ativação?"</string>
+    <string name="not_now">Agora Não</string>
+    <string name="disable">Desativar</string>
+    <string name="maintanence">MANUTENÇÃO</string>
+    
+</resources>

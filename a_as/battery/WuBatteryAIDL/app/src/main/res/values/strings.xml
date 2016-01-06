@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Charging</string>
+    <string name="boostcharge">BoostCharge</string>
+    <string name="kill_app_while_charging">Automatically kill battery-draining apps to charge 20% faster and protect your battery with 3-stage charging method</string>
+    <string name="enable">ENABLE</string>
+    <string name="enable_suc">Enabled Successfully</string>
+    <string name="charging_quickly">Make your phone charge faster and healthier</string>
+    <string name="fullcharge">FULLCHARGE</string>
+    <string name="remaining">REMAINING</string>
+    <string name="plz_charge">PLEASE CHARGE</string>
+    <string name="charge_finish">CHARGE COMPLETE</string>
+    <string name="avai_times">%1$sH %2$sM</string>
+    <string name="avai_time_hour">H</string>
+    <string name="avai_time_minute">M</string>
+    <string name="speed">SPEED</string>
+    <string name="continuous">CONTINUOUS</string>
+    <string name="trickle">TRICKLE</string>
+    <string name="slide_unlock">Slide to unlock</string>
+    <string name="full_unplug">Fully charged, unplug charger</string>
+    <string name="available_time">Available Time</string>
+    <string name="calling">Calling</string>
+    <string name="internet_on_wifi">Internet on WIFI</string>
+    <string name="internet_on_2g">Internet on 2G</string>
+    <string name="internet_on_3g">Internet on 3G</string>
+    <string name="internet_on_4g">Internet on 4G</string>
+    <string name="movie_Watching">Movie Watching</string>
+    <string name="charge_save_time">BoostCharge has saved %s min in charging time</string>
+    <string name="charging_kill_apps">Killed following %s battery-draining apps:</string>
+    <string name="disable_speed_charge_title">Disable BoostCharge?</string>
+    <string name="disable_speed_charge_msg">"Your charging speed will no longer be boosted.
+Confirm disable?"</string>
+    <string name="enable_speed_charge_title">Enable BoostCharge?</string>
+    <string name="fast_charge_guide_dialog_msg">Your phone can be charged over 25% faster by stopping battery-draining apps.</string>
+    <string name="enable_speed_charge_msg">"Make your phone charge faster and healthier.
+Confirm enable?"</string>
+    <string name="not_now">Not Now</string>
+    <string name="disable">Disable</string>
+    <string name="maintanence">MAINTENENCE</string>
+    <string name="cl_settings">setting</string>
+</resources>

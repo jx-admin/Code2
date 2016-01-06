@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">快速充电</string>
+    <string name="kill_app_while_charging">充电时清理耗电应用，加速充电20%</string>
+    <string name="enable">立即开启</string>
+    <string name="enable_suc">开启成功</string>
+    <string name="charging_quickly">手机充电更快，更健康</string>
+    <string name="fullcharge">充满电</string>
+    <string name="remaining">剩余时间</string>
+    <string name="plz_charge">请充电</string>
+    <string name="charge_finish">充电完成</string>
+    <string name="avai_times">%1$s小时 %2$s分钟</string>
+    <string name="avai_time_hour">小时</string>
+    <string name="avai_time_minute">分钟</string>
+    <string name="speed">快速充电</string>
+    <string name="continuous">连续充电</string>
+    <string name="trickle">涓流充电</string>
+    <string name="slide_unlock">滑动解锁</string>
+    <string name="full_unplug">已充满电，请拔掉电源</string>
+    <string name="available_time">可用时间</string>
+    <string name="calling">通话</string>
+    <string name="internet_on_wifi">WIFI上网</string>
+    <string name="internet_on_2g">2G上网</string>
+    <string name="internet_on_3g">3G上网</string>
+    <string name="internet_on_4g">4G上网</string>
+    <string name="movie_Watching">看电影</string>
+    <string name="charge_save_time">快速充电成功为您节省%s充电时间</string>
+    <string name="charging_kill_apps">成功清理了下列 %s 个应用</string>
+    <string name="disable_speed_charge_title">确认关闭快速充电？</string>
+    <string name="disable_speed_charge_msg">"关闭之后，充电过程中将不再加快充电。确认关闭？"</string>
+    <string name="enable_speed_charge_title">开启快速充电？</string>
+    <string name="fast_charge_guide_dialog_msg">开启后，自动清理耗电应用，手机充电提速25%！</string>
+    <string name="enable_speed_charge_msg">"手机充电更快，更健康。确认开启快速充电？"</string>
+    <string name="not_now">暂不开启</string>
+    <string name="disable">关闭</string>
+    <string name="maintanence">电池保养</string>
+    <string name="cl_settings">设置</string>
+</resources>

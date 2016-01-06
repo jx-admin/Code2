@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <string name="boostcharge">Schnellaufladung</string>
+    <string name="kill_app_while_charging">Schaltet energiefressende Apps automatisch ab, um 20 % schneller aufzuladen und Ihre Batterie mittels eines dreistufigen Ladeverfahrens zu schützen</string>
+    <string name="enable">AKTIVIEREN</string>
+    <string name="enable_suc">Erfolgreich aktiviert</string>
+    <string name="charging_quickly">Sorgt dafür, dass Ihr Telefon schneller und schonender geladen wird</string>
+    <string name="fullcharge">VOLLAUFLADUNG</string>
+    <string name="remaining">VERBLEIBEND</string>
+    <string name="plz_charge">BITTE AUFLADEN</string>
+    <string name="charge_finish">AUFLADEN BEENDET</string>
+    <string name="avai_times">%1$s Std %2$s Min</string>
+    <string name="avai_time_hour">Std.</string>
+    <string name="avai_time_minute">Min.</string>
+    <string name="speed">GESCHWINDIGKEIT</string>
+    <string name="continuous">FORTLAUFEND</string>
+    <string name="trickle">TRÖPFELN</string>
+    <string name="slide_unlock">Wischen um zu entsperren</string>
+    <string name="full_unplug">Komplett aufgeladen, Ladegerät entfernen</string>
+    <string name="available_time">Verfügbare Zeit</string>
+    <string name="calling">Anruf</string>
+    <string name="internet_on_wifi">Internet über WLAN</string>
+    <string name="internet_on_2g">Internet mit 2G</string>
+    <string name="internet_on_3g">Internet mit 3G</string>
+    <string name="internet_on_4g">Internet mit 4G</string>
+    <string name="movie_Watching">Filme sehen</string>
+    <string name="charge_save_time">BoostCharge hat %s Minuten Ladezeit gespart.</string>
+    <string name="charging_kill_apps">Hat folgende %s energiefressende Apps abgeschaltet:</string>
+    <string name="disable_speed_charge_title">Schnellaufladung deaktivieren?</string>
+    <string name="disable_speed_charge_msg">"Ihre Ladegeschwindigkeit wird nicht mehr beschleunigt.
+Deaktivierung bestätigen."</string>
+    <string name="enable_speed_charge_title">Schnellaufladung aktivieren?</string>
+    <string name="fast_charge_guide_dialog_msg">Ihr Telefon kann über 25 % schneller geladen werden, wenn batterieverbrauchende Apps beendet werden.</string>
+    <string name="enable_speed_charge_msg">"Sorgt dafür, dass Ihr Telefon schneller und schonender geladen wird.
+Aktivierung bestätigen?"</string>
+    <string name="not_now">Jetzt nicht</string>
+    <string name="disable">Deaktivieren</string>
+    <string name="maintanence">WARTUNG</string>
+    
+</resources>

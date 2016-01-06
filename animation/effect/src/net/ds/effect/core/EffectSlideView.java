@@ -1,8 +1,8 @@
 package net.ds.effect.core;
 
-import net.ds.effect.framework.MySlideView2;
 import net.ds.effect.utils.Constants;
 import net.ds.effect.utils.HardwareAccelerationUtils2;
+import wu.a.view.MySlideView2;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wu.batteryaidl.view.ChargingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chargeview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/unlock_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80D4FF"
+        android:clickable="true">
+
+        <wu.batteryaidl.view.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/tip_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/tip_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="96dp" />
+
+            <TextView
+                android:id="@+id/tip_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="@string/remaining"
+                android:textColor="#FFF"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <wu.batteryaidl.view.DigitalClock
+                android:id="@+id/time_label"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="30dp"
+                android:gravity="right"
+                android:textColor="#fff"
+                android:textSize="46dp" />
+
+            <TextView
+                android:id="@+id/time_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="passed : 122"
+                android:textColor="#FFF"
+                android:textSize="13dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step_view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="220dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/charge_model_quick_icon"
+                android:gravity="center"
+                android:text="@string/speed"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+
+
+            <ImageView
+                android:id="@+id/model_divider_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:src="@drawable/charge_model_arrow" />
+
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/charge_model_continu_icon"
+                android:gravity="center"
+                android:text="@string/continuous"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/model_divider_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.5dp"
+                android:src="@drawable/charge_model_arrow" />
+
+            <TextView
+                android:id="@+id/step3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/charge_model_trickle_icon"
+                android:gravity="center"
+                android:text="@string/trickle"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+        <wu.batteryaidl.view.BubblesView
+            android:id="@+id/bubbles"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+        <wu.batteryaidl.view.AdView
+            android:id="@+id/ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+
+            <LinearLayout
+                android:id="@+id/message_layer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:background="#4BFFFFFF"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4BFFFFFF"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/charging_ad_icon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/chargin_step1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/charging_ad_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:text="QQQddd"
+                            android:textColor="#4d4d4d"
+                            android:textSize="14.66sp" />
+
+                        <TextView
+                            android:id="@+id/charging_ad_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:text="demo"
+                            android:textColor="#4d4d4d" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/charging_ad_button"
+                        android:layout_width="66.66dp"
+                        android:layout_height="29.33dp"
+                        android:background="#00aaff"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Install"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/charging_ad_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/demo" />
+            </LinearLayout>
+
+        </wu.batteryaidl.view.AdView>
+
+        <LinearLayout
+            android:id="@+id/unlock_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/gradien_cover"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/slide_unlock"
+                android:textColor="#FFF"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/charging_arrow" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/charging_setting_layout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/charging_btn_selector"
+            android:clickable="true" />
+
+        <FrameLayout
+            android:id="@+id/setting_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/black"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/menu_item_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cl_settings"
+                    android:textColor="#FFF"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</wu.batteryaidl.view.ChargingView>

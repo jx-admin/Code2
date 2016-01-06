@@ -17,8 +17,17 @@ local.properties
 
 # Eclipse project files
 .classpath
-/workspace/.metadata
+.metadata
 
 #shared
 android-support-v4.jar
 !/workspace/lib/android-support-v4.jar
+local.properties
+gradle.properties
+
+.gradle
+.DS_Store
+build
+captures
+.idea
+gradle/*

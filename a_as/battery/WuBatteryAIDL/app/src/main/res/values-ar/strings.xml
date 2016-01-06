@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="boostcharge">مسرّع الشحن</string>
+    <string name="kill_app_while_charging">أغلق التطبيقات التي تستنزف البطارية للشحن 20% أسرع وحماية بطاريتك مع طريقة الشحن ثلاثية المراحل</string>
+    <string name="enable">تمكين</string>
+    <string name="enable_suc">تم التمكين بنجاح</string>
+    <string name="charging_quickly">اجعل هاتفك يشحن أسرع وبشكل أصح</string>
+    <string name="fullcharge">الشحن الكامل</string>
+    <string name="remaining">المتبقي</string>
+    <string name="plz_charge">الرجاء شحن البطارية</string>
+    <string name="charge_finish">اكتمل الشحن</string>
+    <string name="avai_times">%1$s س %2$s د</string>
+    <string name="avai_time_hour">سا</string>
+    <string name="avai_time_minute">د</string>
+    <string name="speed">سريع</string>
+    <string name="continuous">مستمر</string>
+    <string name="trickle">تقطير</string>
+    <string name="slide_unlock">مرّر لفتح القفل</string>
+    <string name="full_unplug">اكتمل الشحن، افصل الشاحن</string>
+    <string name="available_time">الوقت المتاح</string>
+    <string name="calling">المكالمات</string>
+    <string name="internet_on_wifi">الإنترنت على WiFi</string>
+    <string name="internet_on_2g">الإنترنت على شبكة 2G</string>
+    <string name="internet_on_3g">الإنترنت على شبكة 3G</string>
+    <string name="internet_on_4g">الإنترنت على شبكة 4G</string>
+    <string name="movie_Watching">مشاهدة الأفلام</string>
+    <string name="charge_save_time">وفَّر BoostCharge لك %s دقيقة في وقت الشحن</string>
+    <string name="charging_kill_apps">أغلق الـ %s تطبيقات التالية التي كانت تستنزف البطارية:</string>
+    <string name="disable_speed_charge_title">أ تريد تعطيل مسرّع الشحن؟</string>
+    <string name="disable_speed_charge_msg">"لن يتم تسريع عملية الشحن بعد الآن
+هل تريد التأكيد؟"</string>
+    <string name="enable_speed_charge_title">أتريد تمكين مسرّع الشحن؟</string>
+    <string name="fast_charge_guide_dialog_msg">يمكن شحن هاتفك أكثر من 25% من خلال إيقاف التطبيقات التي تستنزف البطارية.</string>
+    <string name="enable_speed_charge_msg">"اجعل هاتفك يشحن أسرع وبشكل أصح.
+تأكيد التمكين؟"</string>
+    <string name="not_now">ليس الآن</string>
+    <string name="disable">تعطيل</string>
+    <string name="maintanence">الصيانة</string>
+    
+</resources>

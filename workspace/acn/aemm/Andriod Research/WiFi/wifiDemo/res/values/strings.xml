@@ -4,9 +4,9 @@
     <string name="app_name">wifi测试程序</string>
     <string name="old_ssid_str">需要修改的网络SSID：</string>
     <string name="ssid_str">网络SSID：</string>
-    <string name="ssid_default">accenture</string>
+    <string name="ssid_default">wjx</string>
     <string name="word_str">无线密码：</string>
-    <string name="word_default">1234567890</string>
+    <string name="word_default">wangjunxu</string>
     <string name="del_str">删除</string>
     <string name="mod_str">修改</string>
     <string name="add_str">添加</string>

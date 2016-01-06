@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boostcharge">Otimizador de Carga</string>
+    <string name="kill_app_while_charging">Extermine automaticamente os aplicativos que consomem muita bateria para uma recarga 20% mais rápida e proteja a bateria com um método de carregamento de 3 fases</string>
+    <string name="enable">ATIVAR</string>
+    <string name="enable_suc">Ativação com sucesso</string>
+    <string name="charging_quickly">Recarregue seu celular mais rapidamente e deixe-o mais saudável</string>
+    <string name="fullcharge">CARGA COMPLETA</string>
+    <string name="remaining">RESTANTE</string>
+    <string name="plz_charge">POR FAVOR, CARREGAR</string>
+    <string name="charge_finish">CARGA COMPLETA</string>
+    <string name="avai_times">%1$sH %2$sM</string>
+    <string name="avai_time_hour">H</string>
+    <string name="avai_time_minute">Min</string>
+    <string name="speed">RÁPIDO</string>
+    <string name="continuous">CONTÍNUO</string>
+    <string name="trickle">LENTO</string>
+    <string name="slide_unlock">Deslize para desbloquear</string>
+    <string name="full_unplug">Carga completa. Desconecte o carregador</string>
+    <string name="available_time">Tempo disponível</string>
+    <string name="calling">Ligações</string>
+    <string name="internet_on_wifi">Internet com Wi-Fi</string>
+    <string name="internet_on_2g">Internet 2G</string>
+    <string name="internet_on_3g">Internet 3G</string>
+    <string name="internet_on_4g">Internet 4G</string>
+    <string name="movie_Watching">Reprodução de vídeos</string>
+    <string name="charge_save_time">O BoostCharge poupou %s min do tempo de carregamento</string>
+    <string name="charging_kill_apps">Exterminados %s aplicativos que consomem muita bateria:</string>
+    <string name="disable_speed_charge_title">Desativar Otimizador de Carga</string>
+    <string name="disable_speed_charge_msg">"Sua velocidade para carregar não será mais otimizada.
+Confirmar desativação?"</string>
+    <string name="enable_speed_charge_title">Ativar o Otimizador de Carga?</string>
+    <string name="fast_charge_guide_dialog_msg">Seu telefone pode ser carregado 25% mais rápido ao interromper aplicativos que esgotam a bateria.</string>
+    <string name="enable_speed_charge_msg">"Recarregue seu celular mais rapidamente e deixe-o mais saudável.
+Confirmar a ativação?"</string>
+    <string name="not_now">Agora não</string>
+    <string name="disable">Desativar</string>
+    <string name="maintanence">MANUTENÇÃO</string>
+    
+</resources>
