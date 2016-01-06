@@ -71,6 +71,7 @@
         <activity android:name="wu.a.template.bmp.BmpActivity" />
         <activity android:name="wu.a.template.bmp.CropImgActivity" />
         <activity android:name="wu.a.template.bmp.TouchImageViewActivity" />
+        <activity android:name="wu.a.template.math.AESActivity" />
         
         <!-- view -->
         <activity
