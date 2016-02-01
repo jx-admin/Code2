@@ -11,7 +11,7 @@ public class Test {
 //		 System.out.printf("%d=%x=%s=\n",((-2)),((-2)),Integer.toBinaryString((-2)));
 //		 System.out.printf("%d=%x\n",((byte)0xfe),((byte)0xfe));
 //		 
-//		 System.out.println("æš—é¦™".compareTo("æ˜¥æš–")+ " "+CharacterParser.getInstance().getSelling("æš—é¦™")+" "+CharacterParser.getInstance().getSelling("æ˜¥æš–"));
+//		 System.out.println("°µÏã".compareTo("´ºÅ¯")+ " "+CharacterParser.getInstance().getSelling("°µÏã")+" "+CharacterParser.getInstance().getSelling("´ºÅ¯"));
 //		 
 //		 System.out.println("a".compareTo("b"));
 //		 
