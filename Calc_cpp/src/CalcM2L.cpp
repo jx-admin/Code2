@@ -151,55 +151,50 @@
 //
 //int evalRPN(vector<string> &tokens) {
 //
-//        int result = 0;
-//        int i;
-//        stack<int> opd;         //存储操作数
-//        int size = tokens.size();
-//        for(i=0;i<size;i++)
-//        {
-//            if(tokens[i]=="*")
-//            {
-//                int rOpd = opd.top();   //右操作数
-//                opd.pop();
-//                int lOpd = opd.top();  //左操作数
-//                opd.pop();
-//                result = lOpd*rOpd;
-//                opd.push(result);
-//            }
-//            else if(tokens[i]=="/")
-//            {
-//                int rOpd = opd.top();
-//                opd.pop();
-//                int lOpd = opd.top();
-//                opd.pop();
-//                result = lOpd/rOpd;
-//                opd.push(result);
-//            }
-//            else if(tokens[i]=="+")
-//            {
-//                int rOpd = opd.top();
-//                opd.pop();
-//                int lOpd = opd.top();
-//                opd.pop();
-//                result = lOpd+rOpd;
-//                opd.push(result);
-//            }
-//            else if(tokens[i]=="-")
-//            {
-//                int rOpd = opd.top();
-//                opd.pop();
-//                int lOpd = opd.top();
-//                opd.pop();
-//                result = lOpd-rOpd;
-//                opd.push(result);
-//            }
-//            else
-//            {
-//                opd.push(atoi(tokens[i].c_str()));
-//            }
-//        }
-//        return opd.top();
-//    }
+//	int result = 0;
+//	int i;
+//	stack<int> opd;         //存储操作数
+//	int size = tokens.size();
+//	for (i = 0; i < size; i++) {
+//		if (tokens[i] == "#") {
+//			int rOpd = opd.top();
+//			opd.pop();
+//			result = 0 - rOpd;
+//			opd.push(result);
+//		} else if (tokens[i] == "*") {
+//			int rOpd = opd.top();   //右操作数
+//			opd.pop();
+//			int lOpd = opd.top();  //左操作数
+//			opd.pop();
+//			result = lOpd * rOpd;
+//			opd.push(result);
+//		} else if (tokens[i] == "/") {
+//			int rOpd = opd.top();
+//			opd.pop();
+//			int lOpd = opd.top();
+//			opd.pop();
+//			result = lOpd / rOpd;
+//			opd.push(result);
+//		} else if (tokens[i] == "+") {
+//			int rOpd = opd.top();
+//			opd.pop();
+//			int lOpd = opd.top();
+//			opd.pop();
+//			result = lOpd + rOpd;
+//			opd.push(result);
+//		} else if (tokens[i] == "-") {
+//			int rOpd = opd.top();
+//			opd.pop();
+//			int lOpd = opd.top();
+//			opd.pop();
+//			result = lOpd - rOpd;
+//			opd.push(result);
+//		} else {
+//			opd.push(atoi(tokens[i].c_str()));
+//		}
+//	}
+//	return opd.top();
+//}
 //
 //int main(int argc, char *argv[]) {
 //	char *str = "((3+5*2)+3)/5+(-6)/4*2+3";
@@ -208,6 +203,6 @@
 //	for (int i = 0; i < size; i++)
 //		cout << suffix[i] << " ";
 //	cout << endl;
-//	cout <<evalRPN(suffix);
+//	cout << evalRPN(suffix);
 //	return 0;
 //}
