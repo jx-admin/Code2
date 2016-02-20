@@ -1,4 +1,5 @@
-///*2014.5.6 测试环境: mingw*/
+///*中缀转后缀与求值
+// 2014.5.6 测试环境: mingw*/
 //#include <iostream>
 //#include <vector>
 //#include <stack>
@@ -91,6 +92,7 @@
 //	return priority;
 //}
 //
+///**中缀转后缀*/
 //vector<string> toSuffix(char *str)  //转变为后缀形式
 //		{
 //	vector<string> tokens = preParse(str);
@@ -149,6 +151,9 @@
 //	return suffix;
 //}
 //
+///**
+// * 后缀表达式求值
+// */
 //int evalRPN(vector<string> &tokens) {
 //
 //	int result = 0;
