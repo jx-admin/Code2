@@ -1,1 +1,2 @@
 include ':app', ':batterylib'
+project(":batterylib").projectDir = new File('../WuBattery/batterylib')
