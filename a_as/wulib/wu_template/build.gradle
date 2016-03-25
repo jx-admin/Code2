@@ -9,6 +9,14 @@ android {
     compileSdkVersion 16
     buildToolsVersion "23.0.2"
 
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1000
+        versionName "1.0"
+    }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -32,4 +40,20 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "_v${defaultConfig.versionName}_${releaseTime()}.apk")
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
 }

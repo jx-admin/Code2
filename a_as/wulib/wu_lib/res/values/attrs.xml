@@ -2,7 +2,6 @@
 <resources>
 
     <declare-styleable name="CoverFlow">
-
         <!-- y坐标上的文字大小 -->
         <attr name="isTranslateModeZ" format="boolean" />
         <attr name="isTranslateModeY" format="boolean" />
@@ -20,6 +19,12 @@
         <attr name="withReflection" format="boolean" />
         <attr name="reflectionGap" format="dimension" />
         <attr name="imageReflectionRatio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawableSize" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="ReHeightImageViewStyle">
+        <attr name="heightMultiplier" format="float" />
     </declare-styleable>
 
 </resources>
