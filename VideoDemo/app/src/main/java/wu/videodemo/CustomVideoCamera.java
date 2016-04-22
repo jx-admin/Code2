@@ -31,6 +31,8 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
     private boolean previewRunning;
     private Button io_btn, play_btn;
 
+    private CMediaRecoder mCMediaRecoder;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +44,14 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
         io_btn = (Button) findViewById(R.id.io_btn);
         io_btn.setOnClickListener(this);
         findViewById(R.id.play_btn).setOnClickListener(this);
+        mCMediaRecoder = new CMediaRecoder();
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         camera = Camera.open();
+        mCMediaRecoder.create(surfaceHolder, camera);
+        camera.setDisplayOrientation(90);
         if (camera != null) {
             Camera.Parameters params = camera.getParameters();
             camera.setParameters(params);
@@ -62,9 +67,13 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
             camera.stopPreview();
         }
         Camera.Parameters p = camera.getParameters();
-        p.setPreviewSize(width, height);
-        p.setPreviewFormat(PixelFormat.JPEG);
-//        camera.setParameters(p);
+//        p.setPreviewSize(width, height);
+        Log.d("dddd"," onchanged "+width+" "+height);
+        p.setPreviewSize(1280,720);
+//        p.setPreviewFormat(PixelFormat.JPEG);
+        p.setPictureSize(1280,720);
+        camera.setParameters(p);
+
 
         try {
             camera.setPreviewCallback(new Camera.PreviewCallback() {
@@ -75,6 +84,13 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
             });
             camera.setPreviewDisplay(holder);
             camera.startPreview();
+
+            camera.autoFocus(new Camera.AutoFocusCallback() {
+                @Override
+                public void onAutoFocus(boolean success, Camera camera) {
+                    Log.d(TAG, "onAutoFocus " + success);
+                }
+            });
             previewRunning = true;
         } catch (IOException e) {
             Log.e(TAG, e.getMessage());
@@ -89,71 +105,6 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
         camera.release();
     }
 
-    private MediaRecorder mediaRecorder;
-    private final int maxDurationInMs = 20000;
-    private final long maxFileSizeInBytes = 500000;
-    private final int videoFramesPerSecond = 20;
-    private int BitRate = 5 * 1024 * 1024;
-    private File tempFile;
-    private String cacheFileName = "abc.mp4";
-    private boolean isStart;
-
-    public boolean startRecording() {
-        try {
-            camera.unlock();
-
-            mediaRecorder = new MediaRecorder();
-
-            mediaRecorder.setCamera(camera);
-            mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            mediaRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);// 设置录制视频源为Camera(相机)
-
-// 设置录制完成后视频的封装格式THREE_GPP为3gp.MPEG_4为mp4
-            mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-
-//            mediaRecorder.setMaxDuration(maxDurationInMs);
-
-            tempFile = new File(getSdcardForWrite(), cacheFileName);
-            Log.d("dddd", tempFile.getPath());
-            mediaRecorder.setOutputFile(tempFile.getAbsolutePath());
-
-            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
-            // 设置录制的视频编码h263 h264
-            mediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
-
-
-            // 设置视频录制的分辨率。必须放在设置编码和格式的后面，否则报错
-            mediaRecorder.setVideoSize(640, 480);
-
-// 设置录制的视频帧率。必须放在设置编码和格式的后面，否则报错
-            mediaRecorder.setVideoFrameRate(videoFramesPerSecond);
-            //设置编码比特率,不设置会使视频图像模糊
-            mediaRecorder.setVideoEncodingBitRate(BitRate);
-            mediaRecorder.setPreviewDisplay(surfaceHolder.getSurface());
-
-            mediaRecorder.setMaxFileSize(maxFileSizeInBytes);
-
-            mediaRecorder.prepare();
-
-            mediaRecorder.start();
-
-            isStart = true;
-            return true;
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    public void stopRecording() {
-        isStart = false;
-        mediaRecorder.stop();
-        mediaRecorder.release();
-        camera.lock();
-    }
 
     private MediaPlayer mPlayer;
 
@@ -193,13 +144,18 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.play_btn) {
-            play(getSdcardForWrite().getPath() + File.separator + cacheFileName, (SurfaceView) findViewById(R.id.surface_play));
+        int id = v.getId();
+        if (id == R.id.play_btn) {
+//            play(getSdcardForWrite().getPath() + File.separator + cacheFileName, (SurfaceView) findViewById(R.id.surface_play));
+        } else if (id == R.id.resume_btn) {
+            mCMediaRecoder.resume();
+        } else if (id == R.id.pause_btn) {
+            mCMediaRecoder.pause();
         } else {
-            if (isStart) {
-                stopRecording();
+            if (mCMediaRecoder.isRecoding()) {
+                mCMediaRecoder.stop();
             } else {
-                startRecording();
+                mCMediaRecoder.start();
             }
         }
     }
@@ -216,5 +172,16 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
 
         }
         return null;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mCMediaRecoder.destroy();
     }
 }

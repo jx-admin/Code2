@@ -17,25 +17,25 @@ public class GetIP extends Activity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // ÉèÖÃÈ«ÆÁ
+        // è®¾ç½®å…¨å±
         requestWindowFeature(Window.FEATURE_NO_TITLE);
      	getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.main);        
       
-      	final Builder builder = new AlertDialog.Builder(this);   //¶¨ÒåÒ»¸öAlertDialog.Builder¶ÔÏó   	      			
-		builder.setTitle("µÇÂ¼·şÎñÆ÷¶Ô»°¿ò");                          // ÉèÖÃ¶Ô»°¿òµÄ±êÌâ
+      	final Builder builder = new AlertDialog.Builder(this);   //å®šä¹‰ä¸€ä¸ªAlertDialog.Builderå¯¹è±¡   	      			
+		builder.setTitle("ç™»å½•æœåŠ¡å™¨å¯¹è¯æ¡†");                          // è®¾ç½®å¯¹è¯æ¡†çš„æ ‡é¢˜
 		
-		//×°ÔØ/res/layout/login.xml½çÃæ²¼¾Ö
+		//è£…è½½/res/layout/login.xmlç•Œé¢å¸ƒå±€
 		TableLayout loginForm = (TableLayout)getLayoutInflater().inflate( R.layout.login, null);		
 		final EditText iptext = (EditText)loginForm.findViewById(R.id.ipedittext);				
-		builder.setView(loginForm);                              // ÉèÖÃ¶Ô»°¿òÏÔÊ¾µÄView¶ÔÏó
-		// Îª¶Ô»°¿òÉèÖÃÒ»¸ö¡°µÇÂ¼¡±°´Å¥
-		builder.setPositiveButton("µÇÂ¼"
-			// Îª°´Å¥ÉèÖÃ¼àÌıÆ÷
+		builder.setView(loginForm);                              // è®¾ç½®å¯¹è¯æ¡†æ˜¾ç¤ºçš„Viewå¯¹è±¡
+		// ä¸ºå¯¹è¯æ¡†è®¾ç½®ä¸€ä¸ªâ€œç™»å½•â€æŒ‰é’®
+		builder.setPositiveButton("ç™»å½•"
+			// ä¸ºæŒ‰é’®è®¾ç½®ç›‘å¬å™¨
 			, new OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					//´Ë´¦¿ÉÖ´ĞĞµÇÂ¼´¦Àí
+					//æ­¤å¤„å¯æ‰§è¡Œç™»å½•å¤„ç†
 					ipname = iptext.getText().toString().trim();
 					Bundle data = new Bundle();
 					data.putString("ipname",ipname);					
@@ -44,18 +44,18 @@ public class GetIP extends Activity {
 					startActivity(intent);
 				}
 			});
-		// Îª¶Ô»°¿òÉèÖÃÒ»¸ö¡°È¡Ïû¡±°´Å¥
-		builder.setNegativeButton("È¡Ïû"
+		// ä¸ºå¯¹è¯æ¡†è®¾ç½®ä¸€ä¸ªâ€œå–æ¶ˆâ€æŒ‰é’®
+		builder.setNegativeButton("å–æ¶ˆ"
 			,  new OnClickListener()
 			{
 				@Override
 				public void onClick(DialogInterface dialog, int which)
 				{
-					//È¡ÏûµÇÂ¼£¬²»×öÈÎºÎÊÂÇé¡£
+					//å–æ¶ˆç™»å½•ï¼Œä¸åšä»»ä½•äº‹æƒ…ã€‚
 					System.exit(1);
 				}
 			});
-		//´´½¨¡¢²¢ÏÔÊ¾¶Ô»°¿ò
+		//åˆ›å»ºã€å¹¶æ˜¾ç¤ºå¯¹è¯æ¡†
 		builder.create().show();
 	}
 }
