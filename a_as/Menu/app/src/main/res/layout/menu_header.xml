@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toolbar_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.funny.video.widgets.RoundImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/menu_user_icon"
+        android:src="@drawable/default_user_icon" />
+
+    <TextView
+        android:id="@+id/menu_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:textSize="14dp"
+        android:maxLength="20"
+        android:textColor="#FFF"
+        android:text="Login with Facebook" />
+
+</LinearLayout>

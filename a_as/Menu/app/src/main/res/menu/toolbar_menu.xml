@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="home_tool_bar_upload"
+        android:id="@+id/upload_btn"
+        android:icon="@drawable/ic_upload"
+        app:showAsAction="ifRoom" />
+
+</menu>

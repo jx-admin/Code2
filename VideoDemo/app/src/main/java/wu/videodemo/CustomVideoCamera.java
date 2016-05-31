@@ -1,11 +1,10 @@
 package wu.videodemo;
 
 import android.app.Activity;
-import android.graphics.PixelFormat;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -28,8 +27,11 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
     private Camera camera;
-    private boolean previewRunning;
+    private boolean isPreview;
     private Button io_btn, play_btn;
+
+    private int screenWidth = 640;
+    private int screenHeight = 480;
 
     private CMediaRecoder mCMediaRecoder;
 
@@ -63,45 +65,13 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        if (previewRunning) {
-            camera.stopPreview();
-        }
-        Camera.Parameters p = camera.getParameters();
-//        p.setPreviewSize(width, height);
-        Log.d("dddd"," onchanged "+width+" "+height);
-        p.setPreviewSize(1280,720);
-//        p.setPreviewFormat(PixelFormat.JPEG);
-        p.setPictureSize(1280,720);
-        camera.setParameters(p);
-
-
-        try {
-            camera.setPreviewCallback(new Camera.PreviewCallback() {
-                @Override
-                public void onPreviewFrame(byte[] data, Camera camera) {
-//                    Log.d("dddd","onPrebac "+data.length);
-                }
-            });
-            camera.setPreviewDisplay(holder);
-            camera.startPreview();
-
-            camera.autoFocus(new Camera.AutoFocusCallback() {
-                @Override
-                public void onAutoFocus(boolean success, Camera camera) {
-                    Log.d(TAG, "onAutoFocus " + success);
-                }
-            });
-            previewRunning = true;
-        } catch (IOException e) {
-            Log.e(TAG, e.getMessage());
-            e.printStackTrace();
-        }
+        initCamera(holder);
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         camera.stopPreview();
-        previewRunning = false;
+        isPreview = false;
         camera.release();
     }
 
@@ -183,5 +153,35 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
     protected void onDestroy() {
         super.onDestroy();
         mCMediaRecoder.destroy();
+    }
+
+    private void initCamera(SurfaceHolder holder) {
+        if (!isPreview) {
+            camera = Camera.open();
+        }
+        if (camera != null && !isPreview) {
+            try {
+                Camera.Parameters parameters = camera.getParameters();
+                parameters.setPreviewSize(screenWidth, screenHeight);    // 设置预览照片的大小
+                parameters.setPreviewFpsRange(20, 30);                    // 每秒显示20~30帧
+                parameters.setPictureFormat(ImageFormat.NV21);           // 设置图片格式
+                parameters.setPictureSize(screenWidth, screenHeight);    // 设置照片的大小
+                //camera.setParameters(parameters);                      // android2.3.3以后不需要此行代码
+                camera.setPreviewDisplay(surfaceHolder);                 // 通过SurfaceView显示取景画面
+                camera.setPreviewCallback(new Camera.PreviewCallback() {
+                    @Override
+                    public void onPreviewFrame(byte[] data, Camera camera) {
+//                    Log.d("dddd","onPrebac "+data.length);
+                    }
+                });         // 设置回调的类
+                camera.setPreviewDisplay(holder);
+                camera.startPreview();                                   // 开始预览
+                camera.autoFocus(null);
+                isPreview = true;                                 // 自动对焦
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MenuDemo</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <array name="planets_array">
+        <item>sdfa11</item>
+        <item>sdfa22</item>
+        <item>sdfa333</item>
+        <item>sdfa44</item>
+        <item>sdfa55</item>
+        <item>sdfa66</item>
+        <item>sdfa777</item>
+    </array>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="policy">Privacy Policy</string>
+    <string name="contact_us">Contact us</string>
+    <string name="rate_us">Rate us</string>
+    <string name="check_version">Check Version %s</string>
+</resources>

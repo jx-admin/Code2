@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/terms_of_service"
+        android:icon="@drawable/terms_of_service"
+        android:orderInCategory="0"
+        android:title="@string/terms_of_service" />
+    <item
+        android:id="@+id/policy"
+        android:icon="@drawable/policy"
+        android:orderInCategory="1"
+        android:title="@string/policy" />
+    <item
+        android:id="@+id/contactus"
+        android:icon="@drawable/contactus"
+        android:orderInCategory="2"
+        android:title="@string/contact_us" />
+    <item
+        android:id="@+id/rateus"
+        android:icon="@drawable/rateus"
+        android:orderInCategory="3"
+        android:title="@string/rate_us" />
+    <item
+        android:id="@+id/update"
+        android:icon="@drawable/check_version"
+        android:orderInCategory="4"
+        android:title="@string/check_version" />
+</menu>

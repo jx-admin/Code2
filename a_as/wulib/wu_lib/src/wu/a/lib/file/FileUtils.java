@@ -27,23 +27,23 @@ import wu.a.lib.device.DeviceUtils;
 
 /**
  * @author junxu.wang
- *         <p>
+ *         <p/>
  *         <pre>
- *                                                                                                                                                                         android.os.Environment 提供访问环境变量\
- *                                                                                                                                                                         1.从 resource 中的 raw 文件夹中获取文件并读取数据（资源文件只能读不能写）
- *                                                                                                                                                                         2.从 asset中获取文件并读取数据（资源文件只能读不能写）
- *                                                                                                                                                                         3.从 sdcard 中去读文件，首先要把文件通过
- *                                                                                                                                                                         		\android-sdk-windows\tools\adb.exe
- *                                                                                                                                                                         把本地计算 机上的文件 copy 到 sdcard 上去，
- *                                                                                                                                                                         		adb.exe push e:/Y.txt /sdcard/,
- *                                                                                                                                                                         不可以用 adb.exe push e:\Y.txt \sdcard\
- *                                                                                                                                                                         同样： 把仿真器上的文件 copy 到本地计算机上用：
- *                                                                                                                                                                         		adb pull ./data/data/com.tt/files/Test.txt e:/
- *                                                                                                                                                                         4.写文件， 一般写在\data\data\com.test\files\ 里面，
- *                                                                                                                                                                         打开 DDMS 查看 file explorer 是可以看到仿真器文件存放目录的结构的
- *                                                                                                                                                                         5.写， 读 data/data/ 目录 ( 相当 AP 工作目录 ) 上的文件，用openFileOutput
- *                                                                                                                                                                         6.写， 读 sdcard 目录上的文件，要用 FileOutputStream ， 不能用openFileOutput
- *                                                                                                                                                                                 </pre>
+ *                                                                                                                                                                                                                                                                                                         android.os.Environment 提供访问环境变量\
+ *                                                                                                                                                                                                                                                                                                         1.从 resource 中的 raw 文件夹中获取文件并读取数据（资源文件只能读不能写）
+ *                                                                                                                                                                                                                                                                                                         2.从 asset中获取文件并读取数据（资源文件只能读不能写）
+ *                                                                                                                                                                                                                                                                                                         3.从 sdcard 中去读文件，首先要把文件通过
+ *                                                                                                                                                                                                                                                                                                         		\android-sdk-windows\tools\adb.exe
+ *                                                                                                                                                                                                                                                                                                         把本地计算 机上的文件 copy 到 sdcard 上去，
+ *                                                                                                                                                                                                                                                                                                         		adb.exe push e:/Y.txt /sdcard/,
+ *                                                                                                                                                                                                                                                                                                         不可以用 adb.exe push e:\Y.txt \sdcard\
+ *                                                                                                                                                                                                                                                                                                         同样： 把仿真器上的文件 copy 到本地计算机上用：
+ *                                                                                                                                                                                                                                                                                                         		adb pull ./data/data/com.tt/files/Test.txt e:/
+ *                                                                                                                                                                                                                                                                                                         4.写文件， 一般写在\data\data\com.test\files\ 里面，
+ *                                                                                                                                                                                                                                                                                                         打开 DDMS 查看 file explorer 是可以看到仿真器文件存放目录的结构的
+ *                                                                                                                                                                                                                                                                                                         5.写， 读 data/data/ 目录 ( 相当 AP 工作目录 ) 上的文件，用openFileOutput
+ *                                                                                                                                                                                                                                                                                                         6.写， 读 sdcard 目录上的文件，要用 FileOutputStream ， 不能用openFileOutput
+ *                                                                                                                                                                                                                                                                                                                 </pre>
  */
 public class FileUtils {
     public static final int ERROR = -1;
@@ -53,44 +53,42 @@ public class FileUtils {
 
     public String getFileInfo(Context context) {
         StringBuilder sb = new StringBuilder();
-        sb.append("FileUtils.getAvailableMemory();=");
-        sb.append(FileUtils.formatFileSize(FileUtils.getAvailableMemory(context), false));
+        sb.append("内存MemoryInfo：");
+        sb.append(" -总容量：");
+        sb.append(FileUtils.formatFileSize(getMemoryTotalBytes(context), false));
+        sb.append(" -剩余：");
+        sb.append(FileUtils.formatFileSize(FileUtils.getAvailableMemoryBytes(context), false));
         sb.append('\n');
 
-        sb.append("FileUtils.externalMemoryAvailable();=");
-        sb.append(FileUtils.externalMemoryAvailable());
+
+        sb.append("externalStorage Available()=");
+        sb.append(FileUtils.externalStorageAvailable());
         sb.append('\n');
 
-        sb.append("getSdcardForWrite()=");
-        sb.append(FileUtils.getSdcardForWrite());
+        sb.append("WriteAbleExternalStoragePath()=");
+        sb.append(FileUtils.getWriteAbleExternalStoragePath());
         sb.append('\n');
 
-        sb.append("getSdcardForRead()=");
-        sb.append(FileUtils.getSdcardForRead());
+        sb.append("getReadAbleStoragePath()=");
+        sb.append(FileUtils.getReadAbleStoragePath());
         sb.append('\n');
 
-        sb.append("getSdcardSize()=");
-        sb.append(FileUtils.formateFileSize(context, FileUtils.getSdcardSize()));
+        File externalStoragePath = getWriteAbleExternalStoragePath();
+        sb.append("externalStoragePath:").append('\n');
+        sb.append(externalStoragePath.getPath());
+        sb.append("-总容量：");
+        sb.append(FileUtils.formatFileSize(getStorageTotalBytes(externalStoragePath), false));
+        sb.append(" -剩余：");
+        sb.append(FileUtils.formatFileSize(getStorageAvailableBytes(externalStoragePath), false));
         sb.append('\n');
 
-        sb.append("getSdcardFreeSize()=");
-        sb.append(FileUtils.formateFileSize(context, FileUtils.getSdcardFreeSize()));
-        sb.append('\n');
-
-        sb.append("getSdcardAvailableSize()=");
-        sb.append(FileUtils.formateFileSize(context, FileUtils.getSdcardAvailableSize()));
-        sb.append('\n');
-
-        sb.append("getAvailableInternalMemorySize()=");
-        sb.append(FileUtils.formateFileSize(context, FileUtils.getAvailableInternalMemorySize()));
-        sb.append('\n');
-
-        sb.append("getTotalInternalMemorySize()=");
-        sb.append(FileUtils.formateFileSize(context, FileUtils.getTotalInternalMemorySize()));
-        sb.append('\n');
-
-        sb.append("getAvailableExternalMemorySize()=");
-        sb.append(FileUtils.formatFileSize(FileUtils.getAvailableExternalMemorySize(), false));
+        File dataPath = getDataDirectory();
+        sb.append("DataDirectory:").append('\n');
+        sb.append(dataPath.getPath());
+        sb.append("-总容量：");
+        sb.append(FileUtils.formatFileSize(getStorageTotalBytes(dataPath), false));
+        sb.append(" -剩余：");
+        sb.append(FileUtils.formatFileSize(getStorageAvailableBytes(dataPath), false));
         sb.append('\n');
 
 //        sb.append("getMntFile()...");
@@ -108,10 +106,10 @@ public class FileUtils {
         List<File> mntFiles = getStorageFile();
         for (File item : mntFiles) {
             sb.append(item.getPath());
-            sb.append("-总大小：");
-            sb.append(FileUtils.formatFileSize(getTotalMemorySize(item), false));
-            sb.append("-可用：");
-            sb.append(FileUtils.formatFileSize(getAvailableMemorySize(item), false));
+            sb.append("-总容量：");
+            sb.append(FileUtils.formatFileSize(getStorageTotalBytes(item), false));
+            sb.append(" -剩余：");
+            sb.append(FileUtils.formatFileSize(getStorageAvailableBytes(item), false));
             sb.append('\n');
         }
 
@@ -119,10 +117,10 @@ public class FileUtils {
         mntFiles = getMntFiles("/storage/emulated/");
         for (File item : mntFiles) {
             sb.append(item.getPath());
-            sb.append("-总大小：");
-            sb.append(FileUtils.formatFileSize(getTotalMemorySize(item), false));
-            sb.append("-可用：");
-            sb.append(FileUtils.formatFileSize(getAvailableMemorySize(item), false));
+            sb.append("-总容量：");
+            sb.append(FileUtils.formatFileSize(getStorageTotalBytes(item), false));
+            sb.append(" -剩余：");
+            sb.append(FileUtils.formatFileSize(getStorageAvailableBytes(item), false));
             sb.append('\n');
         }
         return sb.toString();
@@ -159,12 +157,12 @@ public class FileUtils {
     }
 
     /**
-     * 获取当前可用内存，返回数据以字节为单位。
+     * 获取内存当前可用字节数
      *
      * @param context 可传入应用程序上下文。
-     * @return 当前可用内存单位为B。
+     * @return 可用内存字节数
      */
-    public static long getAvailableMemory(Context context) {
+    public static long getAvailableMemoryBytes(Context context) {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(memoryInfo);
@@ -172,29 +170,42 @@ public class FileUtils {
     }
 
     /**
+     * 获取内存总字节数
+     *
+     * @param context 可传入应用程序上下文。
+     * @return 可用内存总字节数
+     */
+    public static long getMemoryTotalBytes(Context context) {
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+        am.getMemoryInfo(memoryInfo);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            return memoryInfo.totalMem;
+        } else {
+            return ERROR;
+        }
+    }
+
+    /**
      * sdcard是否存在
      *
      * @return
      */
-    public static boolean externalMemoryAvailable() {
+    public static boolean externalStorageAvailable() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
     }
 
     /**
-     * 获取可写sdcard目录
+     * 获取可写sdcard路径
      *
      * @return
      */
-    public static File getSdcardForWrite() {
+    public static File getWriteAbleExternalStoragePath() {
         String mExternalStorageState = Environment.getExternalStorageState();
         // 拥有可读写权限
         if (Environment.MEDIA_MOUNTED.equals(mExternalStorageState)) {
             // 获取扩展存储设备的文件目录
             return android.os.Environment.getExternalStorageDirectory();
-            // 打开文件
-            // Stirng sdcardPath=SDFile.getAbsolutePath();
-        } else if (mExternalStorageState.endsWith(Environment.MEDIA_MOUNTED_READ_ONLY)) {// 拥有只读权限
-
         }
         return null;
     }
@@ -204,7 +215,7 @@ public class FileUtils {
      *
      * @return
      */
-    public static File getSdcardForRead() {
+    public static File getReadAbleStoragePath() {
         String mExternalStorageState = Environment.getExternalStorageState();
         // 拥有可读写权限// 拥有只读权限
         if (Environment.MEDIA_MOUNTED.equals(mExternalStorageState)
@@ -257,66 +268,25 @@ public class FileUtils {
         return 0;
     }
 
-    /**
-     * sdcard available size
-     *
-     * @return
-     */
-    public static long getSdcardAvailableSize() {
-        return getAvailableExternalMemorySize();
-    }
-
-    /**
-     * 获取SDCARD剩余存储空间
-     *
-     * @return
-     */
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    public static long getAvailableExternalMemorySize() {
-        if (externalMemoryAvailable()) {
-            File pathFile = android.os.Environment.getExternalStorageDirectory();
-            android.os.StatFs statfs = new android.os.StatFs(pathFile.getPath());
-            if (DeviceUtils.isAfterApiLevel18()) {
-                return statfs.getAvailableBytes();
-            } else {
-                return (long) statfs.getBlockSize() * (long) statfs.getAvailableBlocks();
-            }
-        } else {
-            return ERROR;
-        }
-    }
 
     /**
      * 获取手机内部剩余存储空间
      *
      * @return
      */
-    public static long getAvailableInternalMemorySize() {
+    public static File getDataDirectory() {
         File path = Environment.getDataDirectory();
-        StatFs stat = new StatFs(path.getPath());
-        long blockSize = stat.getBlockSize();
-        long availableBlocks = stat.getAvailableBlocks();
-        return availableBlocks * blockSize;
+        return path;
     }
 
     /**
-     * 获取手机内部总的存储空间
+     * 获取指定存储卡的总字节数
      *
-     * @return
+     * @param path 存储卡路径
+     * @return 总字节数
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    public static long getTotalInternalMemorySize() {
-        File path = Environment.getDataDirectory();
-        return getTotalMemorySize(path);
-    }
-
-    /**
-     * 获取存储空间
-     *
-     * @return
-     */
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    public static long getTotalMemorySize(File path) {
+    public static long getStorageTotalBytes(File path) {
         if (path.exists()) {
             StatFs statfs = new StatFs(path.getPath());
             if (DeviceUtils.isAfterApiLevel18()) {
@@ -330,12 +300,13 @@ public class FileUtils {
     }
 
     /**
-     * 获取SDCARD剩余存储空间
+     * 获取指定存储卡可用字节数
      *
-     * @return
+     * @param file 存储卡目录
+     * @return 可用字节数
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    public static long getAvailableMemorySize(File file) {
+    public static long getStorageAvailableBytes(File file) {
         if (file.exists()) {
             android.os.StatFs statfs = new android.os.StatFs(file.getPath());
             if (DeviceUtils.isAfterApiLevel18()) {
