@@ -1,0 +1,2 @@
+include ':wu_lib'
+project(":wu_lib").projectDir = new File('../wu_lib')
