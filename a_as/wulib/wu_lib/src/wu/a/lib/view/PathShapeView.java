@@ -65,7 +65,7 @@ public class PathShapeView extends View{
 		mDrawable = new ShapeDrawable(new PathShape(path, 250, 250));
 
 		//mDrawable.getPaint().setColor(Color.RED);
-		Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.img0200);
+		Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.girl);
 		float w=255.0f/bitmap.getWidth();
 		float h=255.0f/bitmap.getHeight();
 		Matrix matrix=new Matrix();

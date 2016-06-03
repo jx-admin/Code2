@@ -49,7 +49,7 @@ public class FaceView extends View {
 		BitmapFactory.Options bfo = new BitmapFactory.Options();
 		bfo.inPreferredConfig = Bitmap.Config.RGB_565;
 		
-		sourceImage = BitmapFactory.decodeResource( getResources() ,R.drawable.img0200, bfo);
+		sourceImage = BitmapFactory.decodeResource( getResources() ,R.drawable.girl, bfo);
 
 		picWidth = sourceImage.getWidth();
 		picHeight = sourceImage.getHeight();

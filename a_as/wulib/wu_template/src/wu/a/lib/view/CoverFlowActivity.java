@@ -74,7 +74,7 @@ public class CoverFlowActivity extends Activity {
 		CoverFlow cf = new CoverFlow(this);
 		cf.setBackgroundColor(Color.BLUE);
 		Integer[] images = { R.drawable.img0001, R.drawable.img0030,
-				R.drawable.img0100, R.drawable.img0130, R.drawable.img0200,
+				R.drawable.img0100, R.drawable.img0130, R.drawable.girl,
 				R.drawable.img0230, R.drawable.img0300, R.drawable.img0330,
 				R.drawable.img0354 };
 
