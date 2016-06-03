@@ -43,3 +43,5 @@ captures
 
 /a_as/wulib/gradlew
 /a_as/wulib/gradlew.bat
+/a_as/wulib/wu_lib/.settings
+/a_as/wulib/wu_template/.settings
