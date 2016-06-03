@@ -41,3 +41,5 @@ gradle
 .DS_Store
 captures
 
+/a_as/wulib/gradlew
+/a_as/wulib/gradlew.bat
