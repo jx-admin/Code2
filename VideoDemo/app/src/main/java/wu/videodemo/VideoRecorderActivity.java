@@ -17,64 +17,34 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
+import wu.a.media.recorder.CameraRecorder;
+
 /**
  * Created by jx on 2016/3/30.
  */
-public class CustomVideoCamera extends Activity implements SurfaceHolder.Callback, View.OnClickListener {
+public class VideoRecorderActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "CAMERA_TUTORIAL";
 
     private SurfaceView surfaceView;
-    private SurfaceHolder surfaceHolder;
-    private Camera camera;
-    private boolean isPreview;
     private Button io_btn, play_btn;
 
-    private int screenWidth = 640;
-    private int screenHeight = 480;
-
-    private CMediaRecoder mCMediaRecoder;
+    private CameraRecorder mCMediaRecoder;
+    private String path = "/storage/emulated/0/Pictures/FunnyVideo/recorder_demo.mp4";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camera_surface);
         surfaceView = (SurfaceView) findViewById(R.id.surface_camera);
-        surfaceHolder = surfaceView.getHolder();
-        surfaceHolder.addCallback(this);
-        surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-        io_btn = (Button) findViewById(R.id.io_btn);
+        io_btn = (Button) findViewById(R.id.record_btn);
         io_btn.setOnClickListener(this);
+        findViewById(R.id.switch_btn).setOnClickListener(this);
         findViewById(R.id.play_btn).setOnClickListener(this);
-        mCMediaRecoder = new CMediaRecoder();
-    }
+        mCMediaRecoder = new CameraRecorder();
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        camera = Camera.open();
-        mCMediaRecoder.create(surfaceHolder, camera);
-        camera.setDisplayOrientation(90);
-        if (camera != null) {
-            Camera.Parameters params = camera.getParameters();
-            camera.setParameters(params);
-        } else {
-            Toast.makeText(getApplicationContext(), "Camera not available!", Toast.LENGTH_LONG).show();
-            finish();
-        }
+        mCMediaRecoder.create(surfaceView);
     }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        initCamera(holder);
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        camera.stopPreview();
-        isPreview = false;
-        camera.release();
-    }
-
 
     private MediaPlayer mPlayer;
 
@@ -115,17 +85,19 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.play_btn) {
+        if (id == R.id.switch_btn) {
+            mCMediaRecoder.changeCamera();
+        } else if (id == R.id.play_btn) {
 //            play(getSdcardForWrite().getPath() + File.separator + cacheFileName, (SurfaceView) findViewById(R.id.surface_play));
         } else if (id == R.id.resume_btn) {
-            mCMediaRecoder.resume();
+            mCMediaRecoder.startRecorder(path);
         } else if (id == R.id.pause_btn) {
-            mCMediaRecoder.pause();
+            mCMediaRecoder.stopRecorder();
         } else {
-            if (mCMediaRecoder.isRecoding()) {
-                mCMediaRecoder.stop();
+            if (mCMediaRecoder.isRecording()) {
+                mCMediaRecoder.stopRecorder();
             } else {
-                mCMediaRecoder.start();
+                mCMediaRecoder.startRecorder(path);
             }
         }
     }
@@ -153,35 +125,5 @@ public class CustomVideoCamera extends Activity implements SurfaceHolder.Callbac
     protected void onDestroy() {
         super.onDestroy();
         mCMediaRecoder.destroy();
-    }
-
-    private void initCamera(SurfaceHolder holder) {
-        if (!isPreview) {
-            camera = Camera.open();
-        }
-        if (camera != null && !isPreview) {
-            try {
-                Camera.Parameters parameters = camera.getParameters();
-                parameters.setPreviewSize(screenWidth, screenHeight);    // 设置预览照片的大小
-                parameters.setPreviewFpsRange(20, 30);                    // 每秒显示20~30帧
-                parameters.setPictureFormat(ImageFormat.NV21);           // 设置图片格式
-                parameters.setPictureSize(screenWidth, screenHeight);    // 设置照片的大小
-                //camera.setParameters(parameters);                      // android2.3.3以后不需要此行代码
-                camera.setPreviewDisplay(surfaceHolder);                 // 通过SurfaceView显示取景画面
-                camera.setPreviewCallback(new Camera.PreviewCallback() {
-                    @Override
-                    public void onPreviewFrame(byte[] data, Camera camera) {
-//                    Log.d("dddd","onPrebac "+data.length);
-                    }
-                });         // 设置回调的类
-                camera.setPreviewDisplay(holder);
-                camera.startPreview();                                   // 开始预览
-                camera.autoFocus(null);
-                isPreview = true;                                 // 自动对焦
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 }

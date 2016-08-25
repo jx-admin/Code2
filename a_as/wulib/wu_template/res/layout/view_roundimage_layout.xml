@@ -14,7 +14,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:src="@drawable/girl" />
+            android:src="@drawable/girl"
+            zhy:borderColor="#fff"
+            zhy:borderWidth="2dp"
+            android:padding="10dp"
+            android:background="#892389"/>
 
         <wu.a.lib.view.RoundImageView
             android:layout_width="200dp"
@@ -34,8 +38,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:src="@drawable/girl2"
+            zhy:borderColor="#f99"
             zhy:borderRadius="20dp"
-            zhy:type="round" />
+            zhy:borderWidth="2dp"
+            zhy:type="round"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="13dp"
+            android:background="#892389" />
 
         <wu.a.lib.view.RoundImageView
             android:layout_width="wrap_content"

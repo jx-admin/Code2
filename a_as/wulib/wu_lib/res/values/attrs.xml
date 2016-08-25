@@ -37,6 +37,8 @@
     <declare-styleable name="RoundImageView">
         <attr name="borderRadius" />
         <attr name="type" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
     </declare-styleable>
 
 </resources>
