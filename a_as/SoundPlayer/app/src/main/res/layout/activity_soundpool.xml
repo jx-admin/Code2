@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SoundPoolActivity">
+
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载" />
+
+
+    <Button
+        android:id="@+id/btn_play2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放声音2" />
+
+    <Button
+        android:id="@+id/btn_play3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放声音3" />
+
+    <Button
+        android:id="@+id/btn_play4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放声音4" />
+
+    <Button
+        android:id="@+id/btn_play5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放声音5" />
+
+    <Button
+        android:id="@+id/btn_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="释放SoundPool" />
+
+</LinearLayout>
