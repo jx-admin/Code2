@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import wu.a.lib.device.DisplayActivity;
+import wu.a.lib.device.HomeKeyPressReceiver;
 import wu.a.template.app.AppListActivity;
 import wu.a.template.bmp.BmpActivity;
 import wu.a.template.bmp.CropImgActivity;
@@ -32,12 +33,14 @@ public class MainActivity extends ListActivity {
 	  protected void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setListAdapter(
-	        new SimpleAdapter(
-	            this, getData(), android.R.layout.simple_list_item_1, new String[]{"title"},
-	            new int[]{android.R.id.text1}
-	        )
-	    );
+				new SimpleAdapter(
+						this, getData(), android.R.layout.simple_list_item_1, new String[]{"title"},
+						new int[]{android.R.id.text1}
+				)
+		);
 	    getListView().setScrollbarFadingEnabled(false);
+
+		new HomeKeyPressReceiver().register(getApplication());
 	  }
 
 	  @Override

@@ -14,9 +14,7 @@ public abstract class BaseBroadcastReceiver extends BroadcastReceiver implements
         return context != null;
     }
 
-    public IntentFilter getintentFilter() {
-        return null;
-    }
+    public abstract IntentFilter getintentFilter();
 
     public void register(Context context) {
         if (isRegister()) {
@@ -25,7 +23,7 @@ public abstract class BaseBroadcastReceiver extends BroadcastReceiver implements
         if (context != null) {
             IntentFilter filter = getintentFilter();
             if (filter != null) {
-                context.registerReceiver(this, getintentFilter());
+                context.registerReceiver(this, filter);
                 this.context = context;
             }
         }
