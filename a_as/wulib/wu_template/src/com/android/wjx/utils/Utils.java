@@ -18,8 +18,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-import org.apache.http.util.EncodingUtils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Paint;
@@ -363,7 +361,7 @@ public class Utils {
             int length = fin.available();
             byte[] buffer = new byte[length];
             fin.read(buffer);
-            res = EncodingUtils.getString(buffer, "UTF-8");
+            res = new String(buffer, "UTF-8");
             fin.close();
         } catch (Exception e) {
             e.printStackTrace();

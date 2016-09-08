@@ -12,7 +12,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.util.EncodingUtils;
 
 import android.annotation.TargetApi;
 import android.app.ActivityManager;
@@ -522,7 +521,7 @@ public class FileUtils {
         int available = fis.available();
         byte[] buffer = new byte[available];
         fis.read(buffer);
-        content = EncodingUtils.getString(buffer, "UTF-8");
+        content =new String(buffer, "UTF-8");
         fis.close();
         return content;
     }
@@ -559,7 +558,7 @@ public class FileUtils {
         int available = is.available();
         byte[] buffer = new byte[available];
         is.read(buffer);
-        msg = EncodingUtils.getString(buffer, "UTF-8");
+        msg = new String(buffer, "UTF-8");
         return msg;
     }
     // Uri uri = Uri.fromFile(new

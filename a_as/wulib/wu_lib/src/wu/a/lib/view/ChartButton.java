@@ -111,12 +111,6 @@ public class ChartButton extends View {
 	}
 
 	@Override
-	protected void initializeFadingEdge(TypedArray a) {
-		// TODO Auto-generated method stub
-		super.initializeFadingEdge(a);
-	}
-
-	@Override
 	public int getVerticalFadingEdgeLength() {
 		// TODO Auto-generated method stub
 		return super.getVerticalFadingEdgeLength();
@@ -144,12 +138,6 @@ public class ChartButton extends View {
 	protected int getHorizontalScrollbarHeight() {
 		// TODO Auto-generated method stub
 		return super.getHorizontalScrollbarHeight();
-	}
-
-	@Override
-	protected void initializeScrollbars(TypedArray a) {
-		// TODO Auto-generated method stub
-		super.initializeScrollbars(a);
 	}
 
 	@Override
