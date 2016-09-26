@@ -21,6 +21,7 @@ public class DividerLinearLayout extends LinearLayout {
         init(context);
     }
 
+
     public DividerLinearLayout(Context context) {
         super(context);
         init(context);

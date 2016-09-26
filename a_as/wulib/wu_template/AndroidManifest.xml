@@ -91,6 +91,7 @@
         <activity android:name="wu.a.lib.view.PathShapeActivity"></activity>
         <activity android:name="wu.a.lib.view.SwitchButtonActivity"></activity>
         <activity android:name="wu.a.lib.view.ViewRoundImageViewActivityDemo"></activity>
+        <activity android:name="wu.a.lib.view.MatrixAbleActivity"></activity>
         <activity android:name="wu.a.lib.data.json.JsonActivity"></activity>
         <!-- device -->
         <activity android:name="wu.a.lib.device.DisplayActivity"></activity>

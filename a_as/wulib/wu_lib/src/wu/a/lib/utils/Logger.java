@@ -17,7 +17,7 @@ public class Logger {
 
 	public static void log(String log) {
 		if (DEBUG) {
-			Log.d(TAG, log);
+			Log.e(TAG, log);
 		}
 	}
 
