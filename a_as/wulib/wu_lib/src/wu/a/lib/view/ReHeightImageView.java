@@ -28,10 +28,10 @@ public class ReHeightImageView extends ImageView {
 
     private void init(Context context, AttributeSet attrs, int defStyle) {
         TypedArray a = context.getTheme().obtainStyledAttributes(
-                attrs, R.styleable.ReHeightImageViewStyle, defStyle, 0);
+                attrs, R.styleable.MultiplierSizeViewStyle, defStyle, 0);
         if (null != a) {
             try {
-                heightMultiplier = a.getFloat(R.styleable.ReHeightImageViewStyle_heightMultiplier, 0);
+                heightMultiplier = a.getFloat(R.styleable.MultiplierSizeViewStyle_heightMultiplier, 0);
             } finally {
                 a.recycle();
             }

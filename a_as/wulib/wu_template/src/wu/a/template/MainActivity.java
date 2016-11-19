@@ -8,6 +8,7 @@ import java.util.Map;
 import wu.a.lib.device.DisplayActivity;
 import wu.a.lib.device.HomeKeyPressReceiver;
 import wu.a.lib.view.MatrixAbleActivity;
+import wu.a.lib.view.RecyclerBannerViewActivity;
 import wu.a.template.app.AppListActivity;
 import wu.a.template.bmp.BmpActivity;
 import wu.a.template.bmp.CropImgActivity;
@@ -82,6 +83,7 @@ public class MainActivity extends ListActivity {
 	    addItem(data, "DisplayActivity", DisplayActivity.class);
 	    addItem(data, "MathAes", AESActivity.class);
 	    addItem(data, "MatrixAbleActivity", MatrixAbleActivity.class);
+	    addItem(data, "RecyclerBannerView", RecyclerBannerViewActivity.class);
 
 	    return data;
 	  }

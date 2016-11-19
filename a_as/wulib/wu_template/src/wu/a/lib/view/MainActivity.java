@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
             "SwitchButtonActivity",
             "CircleLinearActivity",
             "ViewRoundImageViewActivityDemo",
+            "RecyclerBannerView",
             "JsonActivity"
 
     };

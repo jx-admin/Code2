@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="wu.a.template"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -21,10 +21,10 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name">
         <activity
             android:name="wu.a.template.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,7 +39,7 @@
         <!-- aidl -->
         <service
             android:name="wu.a.template.aidl.RemoteMediaPlayerService"
-            android:process=":remote" >
+            android:process=":remote">
             <intent-filter>
                 <action android:name="wu.a.template.aidl.RemoteMediaPlayerService" />
             </intent-filter>
@@ -50,10 +50,9 @@
         Media button receiver 
         该广播必须在AndroidManifest.xml文件中进行声明，否则就监听不到该MEDIA_BUTTON广播了
         -->
-        <receiver android:name="wu.a.template.media.MediaButtonReceiver" >
-            <intent-filter android:priority="1000" >
-                <action android:name="android.intent.action.MEDIA_BUTTON" >
-                </action>
+        <receiver android:name="wu.a.template.media.MediaButtonReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_BUTTON"></action>
             </intent-filter>
         </receiver>
 
@@ -67,17 +66,16 @@
         <activity android:name="wu.a.template.app.AppListActivity" />
         <!-- xml -->
         <activity android:name="wu.a.template.xml.XMLParserSerializerActivity" />
-		<!-- bmp -->
+        <!-- bmp -->
         <activity android:name="wu.a.template.bmp.BmpActivity" />
         <activity android:name="wu.a.template.bmp.CropImgActivity" />
         <activity android:name="wu.a.template.bmp.TouchImageViewActivity" />
         <activity android:name="wu.a.template.math.AESActivity" />
-        
+
         <!-- view -->
         <activity
             android:name="wu.a.lib.view.MainActivity"
-            android:launchMode="standard" >
-        </activity>
+            android:launchMode="standard"></activity>
         <activity android:name="wu.a.lib.view.ChartButtonActivity"></activity>
         <activity android:name="wu.a.lib.view.CircleLinearActivity"></activity>
         <activity android:name="wu.a.lib.view.CoverFlowActivity"></activity>
@@ -92,6 +90,7 @@
         <activity android:name="wu.a.lib.view.SwitchButtonActivity"></activity>
         <activity android:name="wu.a.lib.view.ViewRoundImageViewActivityDemo"></activity>
         <activity android:name="wu.a.lib.view.MatrixAbleActivity"></activity>
+        <activity android:name="wu.a.lib.view.RecyclerBannerViewActivity"></activity>
         <activity android:name="wu.a.lib.data.json.JsonActivity"></activity>
         <!-- device -->
         <activity android:name="wu.a.lib.device.DisplayActivity"></activity>
