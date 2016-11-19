@@ -40,4 +40,12 @@ public class Logger {
 			Log.v(tag, msg);
 		}
 	}
+	
+	public static StringBuilder toString(int[]a){
+		StringBuilder sb = new StringBuilder();
+		for (int d : a) {
+			sb.append(d).append(',');
+		}
+		return sb;
+	}
 }
