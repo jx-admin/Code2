@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<books>
-	<book>
-		<id>1001</id>
+<!--xmlns在sax中是attrs的uri，android:layout_width是qName，layout_width是localNmae-->
+<books  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content">qq
+	<book version="1001">
 		<name>Thinking In Java</name>
 		<price>80.00</price>
 	</book>
-	<book>
-		<id>1002</id>
+	<book version="1002">
 		<name>Core Java</name>
 		<price>90.00</price>
 	</book>
-	<book>
-		<id>1003</id>
-		<name>Hello, Andriod</name>
-		<price>100.00</price>
-	</book>
-</books>
+	<book><!--sax会显示处理换行符，和开头的空白符，注释除外（注释读取会过滤，不会回调）-->
+		<name>Hello, Andriod</name><price>100.00</price></book></books>

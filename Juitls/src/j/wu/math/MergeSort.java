@@ -32,7 +32,7 @@ public class MergeSort {
 		}
 	}
 
-	public static void merge(int[] a, int l, int m, int r) {
+	private static void merge(int[] a, int l, int m, int r) {
 		int[] temp = new int[r - l + 1];
 		int i = l;// 左指针
 		int j = m + 1;// 右指针
@@ -54,8 +54,8 @@ public class MergeSort {
 			temp[k++] = a[j++];
 		}
 		// 把新数组中的数覆盖nums数组
-		for (i = l, j = 0; i <= r; j++, i++) {
-			a[i] = temp[j];
+		for (i = l, k = 0; i <= r;k++, i++) {
+			a[i] = temp[k];
 		}
 	}
 }

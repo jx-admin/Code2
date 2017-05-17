@@ -11,15 +11,20 @@ public class InsertionSort {
 	}
 
 	public static void instertionSort(int[] a) {
-		for (int i = 1; i < a.length; i++) {
-			if (a[i - 1] > a[i]) {
-				int temp = a[i];
-				int j = i;
-				while (j > 0 && a[j - 1] > temp) {
-					a[j] = a[j - 1];
+		if (a == null || a.length == 0) {
+			return;
+		}
+		int n = a.length;
+		int temp;
+		for (int i = 1; i < n; i++) {
+			if (a[i] < a[i - 1]) {
+				temp = a[i];
+				int j = i - 1;
+				while (j >= 0 && temp < a[j]) {
+					a[j + 1] = a[j];
 					j--;
 				}
-				a[j] = temp;
+				a[j + 1] = temp;
 			}
 		}
 	}

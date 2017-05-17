@@ -97,18 +97,20 @@ public class AESActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.math_aes_main);
-		String masterPassword = "a";
+		String masterPassword = "abc";
 		String originalText = "junxu";
 		byte[] text = new byte[] { '0', '1', '2', '3', '4', '5', '6', '7', '8',
 				'9' };
 		byte[] password ="1234".getBytes();// new byte[] { '1234' };
+		Log.d("dddd","onCrate--------d");
+		Log.e("dddd","onCrate--------e");
 		try {
 			String encryptingCode = encrypt(masterPassword, originalText);
 			// System.out.println("加密结果为 " + encryptingCode);
-			Log.i("加密结果为 ", encryptingCode);
+			Log.e("加密结果为 ", encryptingCode);
 			String decryptingCode = decrypt(masterPassword, encryptingCode);
 			System.out.println("解密结果为 " + decryptingCode);
-			Log.i("解密结果", decryptingCode);
+			Log.e("解密结果", decryptingCode);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

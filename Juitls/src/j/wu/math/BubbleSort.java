@@ -5,7 +5,7 @@ import j.wu.utils.Logger;
 public class BubbleSort {
 
 	public static void main(String[]args){
-		int[] src = new int[] { 3, 10, 7, 12, 90, 1, 4, 23, 90 };
+		int[] src = new int[] { 3, 10, 7, 12, 90, 1, 4, 23, 90,-1 };
 		Logger.d("src",Logger.toString(src).toString());
 		bubbleSort(src);
 		Logger.d("src",Logger.toString(src).toString());
@@ -32,10 +32,11 @@ public class BubbleSort {
 		}
 	}
 	public static void bubbleSort(int[]a){
+		int n=a.length;
 		boolean sort=true;
-		for(int i=1;sort&&i<a.length;i++){
+		for(int i=1;sort&&i<n;i++){
 			sort=false;
-			for(int j=a.length-2;j>=i;j--){
+			for(int j=n-1;j>=i;j--){
 				if(a[j]<a[j-1]){
 					a[j]+=a[j-1];
 					a[j-1]=a[j]-a[j-1];

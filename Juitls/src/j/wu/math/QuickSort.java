@@ -5,9 +5,9 @@ import j.wu.utils.Logger;
 public class QuickSort {
 	public static void main(String[] agrs) {
 		int[] src = new int[] { 3, 10, 7, 12, 90, 1, 4, 23, 90 };
-		Logger.d("src",Logger.toString(src).toString());
+		Logger.d("src", Logger.toString(src).toString());
 		quickSort(src, 0, src.length - 1);
-		Logger.d("src",Logger.toString(src).toString());
+		Logger.d("src", Logger.toString(src).toString());
 	}
 
 	public static void quickSort(int[] a, int l, int r) {

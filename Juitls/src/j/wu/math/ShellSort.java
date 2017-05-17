@@ -12,13 +12,15 @@ public class ShellSort {
 	}
 
 	public static void shellSort(int[] a) {
-		int d = a.length;
+		int n=a.length;
+		int d = n;
+		int temp;
 		while (true) {
 			d /= 2;
 			for (int x = 0; x < d; x++) {
-				for (int i = x + d; i < a.length; i += d) {
+				for (int i = x + d; i < n; i += d) {
 					if (a[i - d] > a[i]) {
-						int temp = a[i];
+						temp = a[i];
 						int j = i - d;
 						for (; j >= 0 && a[j] > temp; j -= d) {
 							a[j + d] = a[j];
